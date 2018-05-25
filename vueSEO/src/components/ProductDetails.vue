@@ -3,7 +3,7 @@
 
     img(v-bind:src="product.image" v-bind:alt="product.name" class="thumbnail" height="200")
 
-    div(class="product-description" v-bind:href="url")
+    div(class="product-description")
       p {{ product.name }}
       p {{ product. description}}
 
