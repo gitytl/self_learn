@@ -99,14 +99,14 @@
 /*图片轮播动画*/
 .ytl_picAnimation{
   width: 600px;
-  height: 400px;
   margin: 40px auto;
   /*overflow: hidden;*/
   position: relative;
 }
 .ytl_picCarousel{
-  width: 100%;
-  height: 100%;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
   position: relative;
 }
 .ytl_picCarousel li{
@@ -116,6 +116,10 @@
   left: 0;
   top: 0;
   overflow: hidden;
+}
+.ytl_picCarousel li img{
+  width: 100%;
+  height: 100%;
 }
 .ytl_pointLists{
   position: absolute;

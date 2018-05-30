@@ -39,20 +39,29 @@
                 direction:'top',//有top和down两个方向
             });
             /*百合窗*/
-            $('.picAnimation1').picAnimation({
+            /*$('.picAnimation1').picAnimation({
                 timer: 2000,
                 autoPlay:true,
                 moseOver:true,
-                deleteCarousel:"2,3,4,5,6,7,8,9,10,11,12,13",         //去除百合窗某种动画,1：淡入淡出；2，3，4，5：整块移动动画；6，7，8，9：先后移动动画；10，11：交叉动画；12，13：格子动画
+                deleteCarousel:"1,2,3,4,5,6,7,8,9,10,11,12,13",         //去除百合窗某种动画,1：淡入淡出；2，3，4，5：整块移动动画；6，7，8，9：先后移动动画；10，11：交叉动画；12，13：格子动画
                 createPoint:true,
                 pointNum:this.pointNum,
                 pointClick:true,
+            });*/
+            $('.ytl_picAnimation').lilyWindow({
+                timer: 2000,
+                /*autoPlay:true,
+                moseOver:true,
+                deleteCarousel:"1,2,3,4,5,6,7,8,9,10,11,12,13",         //去除百合窗某种动画,1：淡入淡出；2，3，4，5：整块移动动画；6，7，8，9：先后移动动画；10，11：交叉动画；12，13：格子动画
+                createPoint:true,
+                pointNum:this.pointNum,
+                pointClick:true,*/
             });
         })();
     </script>
 </head>
 <body>
-<!--新闻滚动-->
+<!--新闻滚动
 <div class="ytl_move">
     <ul class="ytl_moveCon">
         <li><a href="#">测试1</a></li>
@@ -60,7 +69,7 @@
         <li><a href="#">测试3</a></li>
     </ul>
 </div>
-<!--手风琴-->
+&lt;!&ndash;手风琴&ndash;&gt;
 <div>
     <ul class="ytl_sfq clearFix">
         <li class="ytl_sfqListLtR">
@@ -81,32 +90,32 @@
         </li>
     </ul>
 </div>
-<!--左右，滚动和无缝滚动-->
+&lt;!&ndash;左右，滚动和无缝滚动&ndash;&gt;
 <div class="ytl_conLrLB">
     <ul class="ytl_lrLbList clearFix">
-        <li class="element"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3318756932,4101953169&fm=200&gp=0.jpg" alt=""></li>
-        <li class="element"><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2153927957,342443939&fm=200&gp=0.jpg" alt=""></li>
-        <li class="element"><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3535515084,3761125132&fm=200&gp=0.jpg" alt=""></li>
-        <li class="element"><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=100411959,3910062140&fm=27&gp=0.jpg" alt=""></li>
+        <li class="element"><img src="images/animal/201510221452093659724.jpg" alt=""></li>
+        <li class="element"><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt=""></li>
+        <li class="element"><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt=""></li>
+        <li class="element"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
     </ul>
 </div>
-<!--上下，滚动和无缝滚动-->
+&lt;!&ndash;上下，滚动和无缝滚动&ndash;&gt;
 <div class="ytl_conTdLB">
     <ul class="ytl_tdLbList clearFix">
-        <li class="element"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3318756932,4101953169&fm=200&gp=0.jpg" alt=""></li>
-        <li class="element"><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2153927957,342443939&fm=200&gp=0.jpg" alt=""></li>
-        <li class="element"><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3535515084,3761125132&fm=200&gp=0.jpg" alt=""></li>
-        <li class="element"><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2153927957,342443939&fm=200&gp=0.jpg" alt=""></li>
-        <li class="element"><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3535515084,3761125132&fm=200&gp=0.jpg" alt=""></li>
-        <li class="element"><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=100411959,3910062140&fm=27&gp=0.jpg" alt=""></li>
+        <li class="element"><img src="images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt=""></li>
+        <li class="element"><img src="images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt=""></li>
+        <li class="element"><img src="images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt=""></li>
+        <li class="element"><img src="images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt=""></li>
+        <li class="element"><img src="images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt=""></li>
+        <li class="element"><img src="images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt=""></li>
     </ul>
-</div>
+</div>-->
 <!--百合窗-->
-<div class="ytl_picAnimation picAnimation1">
+<div class="ytl_picAnimation">
     <ul class="ytl_picCarousel">
-        <li><img src="http://l.b2b168.com/2015/10/22/14/201510221452093659724.jpg" alt=""></li>
-        <li><img src="http://www.pp3.cn/uploads/allimg/c111231/13253002J520-9A58.jpg" alt=""></li>
-        <li><img src="http://img1.xiazaizhijia.com/walls/20160421/mid_f7b14383c07ea3e.jpg" alt=""></li>
+        <li><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt=""></li>
+        <li><img src="images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt=""></li>
+        <li><img src="images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt=""></li>
     </ul>
 </div>
 </body>
