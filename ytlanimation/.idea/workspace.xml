@@ -13,16 +13,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.57117647">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="608">
-                  <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+                <state relative-caret-position="605">
+                  <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
                   <folding>
                     <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
                   </folding>
                 </state>
               </provider>
@@ -59,14 +62,18 @@
           <file leaf-file-name="ytl.min.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ytl.min.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="646">
-                  <caret line="292" column="57" selection-start-line="292" selection-start-column="57" selection-end-line="292" selection-end-column="57" />
+                <state relative-caret-position="395">
+                  <caret line="335" selection-start-line="335" selection-end-line="335" selection-end-column="28" />
                   <folding>
                     <element signature="e#92#1100#0" />
                     <element signature="e#1156#4116#0" />
                     <element signature="e#4168#10597#0" />
-                    <element signature="e#4952#7846#0" />
                     <element signature="e#7925#10571#0" />
+                    <element signature="e#11996#12115#0" />
+                    <element signature="e#12478#12850#0" />
+                    <element signature="e#12701#14924#0" />
+                    <element signature="e#15132#15350#0" />
+                    <element signature="e#15406#17174#0" />
                   </folding>
                 </state>
               </provider>
@@ -79,8 +86,17 @@
           <file leaf-file-name="bak.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/bak.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="833">
-                  <caret line="462" column="33" selection-start-line="462" selection-start-column="33" selection-end-line="462" selection-end-column="33" />
+                <state relative-caret-position="57">
+                  <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+                  <folding>
+                    <element signature="e#99#24530#0" />
+                    <element signature="e#1524#1578#0" />
+                    <element signature="e#1611#1776#0" />
+                    <element signature="e#1835#3794#0" />
+                    <element signature="e#3864#4260#0" />
+                    <element signature="e#4314#4372#0" />
+                    <element signature="e#4421#4479#0" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -114,14 +130,18 @@
       <find>moseHover</find>
       <find>autoPlay</find>
       <find>$this.find(liBox).eq(s-1).stop().css({'opacity':'1'});</find>
+      <find>isCreatePoint</find>
+      <find>createPrevNext</find>
+      <find>clearCss</find>
+      <find>arr</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/bak.js" />
         <option value="$PROJECT_DIR$/ytl.min.css" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/ytl.min.js" />
       </list>
     </option>
@@ -163,7 +183,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../project/dan_project/changhejituan" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -200,11 +220,13 @@
       <workItem from="1527489749525" duration="543000" />
       <workItem from="1527492056409" duration="599000" />
       <workItem from="1527493232088" duration="112000" />
+      <workItem from="1527929675675" duration="1246000" />
+      <workItem from="1528965655643" duration="5102000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29517000" />
+    <option name="totallyTimeSpent" value="35865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -241,13 +263,89 @@
           <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ytl.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2052">
+        <state relative-caret-position="589">
+          <caret line="108" column="19" selection-start-line="108" selection-start-column="19" selection-end-line="108" selection-end-column="19" />
+          <folding>
+            <element signature="e#22#150#0" />
+            <element signature="e#165#190#0" />
+            <element signature="e#207#276#0" />
+            <element signature="e#292#369#0" />
+            <element signature="e#386#420#0" />
+            <element signature="e#438#519#0" />
+            <element signature="e#535#580#0" />
+            <element signature="e#596#630#0" />
+            <element signature="e#647#728#0" />
+            <element signature="e#757#852#0" />
+            <element signature="e#866#944#0" />
+            <element signature="e#967#1088#0" />
+            <element signature="e#1115#1149#0" />
+            <element signature="e#1178#1273#0" />
+            <element signature="e#1287#1363#0" />
+            <element signature="e#1386#1464#0" />
+            <element signature="e#1491#1525#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ytl.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1482">
+          <caret line="167" column="39" lean-forward="true" selection-start-line="145" selection-start-column="24" selection-end-line="167" selection-end-column="39" />
+          <folding>
+            <element signature="e#92#1100#0" />
+            <element signature="e#1156#4116#0" />
+            <element signature="e#4168#10597#0" />
+            <element signature="e#7925#10571#0" />
+            <element signature="e#11996#12115#0" />
+            <element signature="e#12478#12850#0" />
+            <element signature="e#12701#14924#0" />
+            <element signature="e#15132#15350#0" />
+            <element signature="e#15406#17174#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bak.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8303">
+          <caret line="437" column="19" selection-start-line="437" selection-start-column="19" selection-end-line="437" selection-end-column="19" />
+          <folding>
+            <element signature="e#99#24530#0" />
+            <element signature="e#1524#1578#0" />
+            <element signature="e#1611#1776#0" />
+            <element signature="e#1835#3794#0" />
+            <element signature="e#3864#4260#0" />
+            <element signature="e#4314#4372#0" />
+            <element signature="e#4421#4479#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ytl.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
           <caret line="108" column="19" selection-start-line="108" selection-start-column="19" selection-end-line="108" selection-end-column="19" />
           <folding>
             <element signature="e#22#150#0" />
@@ -279,8 +377,12 @@
             <element signature="e#92#1100#0" />
             <element signature="e#1156#4116#0" />
             <element signature="e#4168#10597#0" />
-            <element signature="e#4952#7846#0" />
             <element signature="e#7925#10571#0" />
+            <element signature="e#11996#12115#0" />
+            <element signature="e#12478#12850#0" />
+            <element signature="e#12701#14924#0" />
+            <element signature="e#15132#15350#0" />
+            <element signature="e#15406#17174#0" />
           </folding>
         </state>
       </provider>
@@ -298,6 +400,9 @@
           <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -336,8 +441,76 @@
             <element signature="e#92#1100#0" />
             <element signature="e#1156#4116#0" />
             <element signature="e#4168#10597#0" />
-            <element signature="e#4952#7846#0" />
             <element signature="e#7925#10571#0" />
+            <element signature="e#11996#12115#0" />
+            <element signature="e#12478#12850#0" />
+            <element signature="e#12701#14924#0" />
+            <element signature="e#15132#15350#0" />
+            <element signature="e#15406#17174#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bak.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8778">
+          <caret line="462" column="33" selection-start-line="462" selection-start-column="33" selection-end-line="462" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ytl.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2052">
+          <caret line="108" column="19" selection-start-line="108" selection-start-column="19" selection-end-line="108" selection-end-column="19" />
+          <folding>
+            <element signature="e#22#150#0" />
+            <element signature="e#165#190#0" />
+            <element signature="e#207#276#0" />
+            <element signature="e#292#369#0" />
+            <element signature="e#386#420#0" />
+            <element signature="e#438#519#0" />
+            <element signature="e#535#580#0" />
+            <element signature="e#596#630#0" />
+            <element signature="e#647#728#0" />
+            <element signature="e#757#852#0" />
+            <element signature="e#866#944#0" />
+            <element signature="e#967#1088#0" />
+            <element signature="e#1115#1149#0" />
+            <element signature="e#1178#1273#0" />
+            <element signature="e#1287#1363#0" />
+            <element signature="e#1386#1464#0" />
+            <element signature="e#1491#1525#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ytl.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1406">
+          <caret line="292" column="57" selection-start-line="292" selection-start-column="57" selection-end-line="292" selection-end-column="57" />
+          <folding>
+            <element signature="e#92#1100#0" />
+            <element signature="e#1156#4116#0" />
+            <element signature="e#4168#10597#0" />
+            <element signature="e#7925#10571#0" />
+            <element signature="e#11996#12115#0" />
+            <element signature="e#12478#12850#0" />
+            <element signature="e#12701#14924#0" />
+            <element signature="e#15132#15350#0" />
+            <element signature="e#15406#17174#0" />
           </folding>
         </state>
       </provider>
@@ -355,6 +528,9 @@
           <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -393,8 +569,12 @@
             <element signature="e#92#1100#0" />
             <element signature="e#1156#4116#0" />
             <element signature="e#4168#10597#0" />
-            <element signature="e#4952#7846#0" />
             <element signature="e#7925#10571#0" />
+            <element signature="e#11996#12115#0" />
+            <element signature="e#12478#12850#0" />
+            <element signature="e#12701#14924#0" />
+            <element signature="e#15132#15350#0" />
+            <element signature="e#15406#17174#0" />
           </folding>
         </state>
       </provider>
@@ -412,6 +592,9 @@
           <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -450,8 +633,12 @@
             <element signature="e#92#1100#0" />
             <element signature="e#1156#4116#0" />
             <element signature="e#4168#10597#0" />
-            <element signature="e#4952#7846#0" />
             <element signature="e#7925#10571#0" />
+            <element signature="e#11996#12115#0" />
+            <element signature="e#12478#12850#0" />
+            <element signature="e#12701#14924#0" />
+            <element signature="e#15132#15350#0" />
+            <element signature="e#15406#17174#0" />
           </folding>
         </state>
       </provider>
@@ -469,6 +656,9 @@
           <caret line="103" column="7" selection-start-line="103" selection-start-column="7" selection-end-line="103" selection-end-column="7" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -486,30 +676,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../插件/百合窗/jiaoben5356/js/velocity.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-912" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../插件/百合窗/jiaoben5356/js/shutter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9633" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../插件/百合窗/jiaoben5356/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="38" column="29" lean-forward="true" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bak.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="462" column="33" selection-start-line="462" selection-start-column="33" selection-end-line="462" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../插件/百合窗/jiaoben5356/js/velocity.js" />
+    <entry file="file://$PROJECT_DIR$/../../插件/百合窗/jiaoben5356/js/shutter.js" />
+    <entry file="file://$PROJECT_DIR$/../../插件/百合窗/jiaoben5356/index.html" />
     <entry file="file://$PROJECT_DIR$/ytl.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
@@ -538,24 +707,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+        <state relative-caret-position="605">
+          <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bak.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+          <folding>
+            <element signature="e#99#24530#0" />
+            <element signature="e#1524#1578#0" />
+            <element signature="e#1611#1776#0" />
+            <element signature="e#1835#3794#0" />
+            <element signature="e#3864#4260#0" />
+            <element signature="e#4314#4372#0" />
+            <element signature="e#4421#4479#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ytl.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="292" column="57" selection-start-line="292" selection-start-column="57" selection-end-line="292" selection-end-column="57" />
+        <state relative-caret-position="395">
+          <caret line="335" selection-start-line="335" selection-end-line="335" selection-end-column="28" />
           <folding>
             <element signature="e#92#1100#0" />
             <element signature="e#1156#4116#0" />
             <element signature="e#4168#10597#0" />
-            <element signature="e#4952#7846#0" />
             <element signature="e#7925#10571#0" />
+            <element signature="e#11996#12115#0" />
+            <element signature="e#12478#12850#0" />
+            <element signature="e#12701#14924#0" />
+            <element signature="e#15132#15350#0" />
+            <element signature="e#15406#17174#0" />
           </folding>
         </state>
       </provider>
