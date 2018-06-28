@@ -477,4 +477,58 @@
             });
         }
     });
+    /*    function pointClick($this,s,fn){
+     $this.find(".pointLists>li").click(function(){
+     $(this).addClass("pointActive").siblings().removeClass("pointActive");
+     s=$(this).index();
+     fn();
+     })
+     }*/
+
+    /*/!*创建点点*!/
+    function isCreatePoint(createPoint, $this) {
+        var $PointListsBox = ".ytl_pointLists";//存放点点的ol
+        var $UlLiNum = 'ul>li'//找到存放大图的li
+        if (createPoint) {
+            var pointLists = "<ol class='ytl_pointLists'></ol>";
+            $this.append(pointLists);
+            var pointList = "";
+            for (var i = 0; i < 3; i++) {
+                pointList += "<li class='ytl_pointList'></li>";
+            }
+            $this.find($PointListsBox).append(pointList);
+            $this.find(".ytl_pointLists>li").eq(0).addClass("ytl_pointActive");
+        }
+    }
+
+    /!*创建左右箭头*!/
+    function createPrevNext(createPrevNext, $this) {
+        var $PrevNextBox = ".ytl_prevNext";//左右箭头的div
+        if (createPrevNext) {
+            /!*var prevNexts = "<div class='ytl_prevNext'></div>";
+             $this.append(prevNexts);*!/
+            var prevNext = "<div class='ytl_prev'></div><div class='ytl_next'></div>";
+            $this.parent().find($PrevNextBox).append(prevNext);
+        }
+    }
+
+    /!*创建缩略图*!/
+    function createImg(createImg, $this) {
+        var $Li = ".ytl_picCarousel>li";//获取轮播图大图展示的li
+        var $LiImg = 'img';//获取大图li展示的图片标签
+        var $BigImgBox = ".ytl_bigImg";//存放缩略图的ol
+        var $BigImg = ".ytl_bigImg li";//获取缩略图的li
+        var $BigImgActive = "ytl_bigImgActive";//当前缩略图添加的类名
+
+
+        if (createImg) {
+            var bigImgList = "";
+            for (var i = 0; i < $this.find($Li).length; i++) {
+                var imgCon = $this.find($Li).eq(i).find($LiImg).attr('src');
+                bigImgList += "<li><img src=" + imgCon + " alt=''></li>";
+            }
+            $this.find($BigImgBox).append(bigImgList);
+            $this.find($BigImg).eq(0).addClass($BigImgActive);
+        }
+    }*/
 })(window.jQuery);
