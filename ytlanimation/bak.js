@@ -1,15 +1,101 @@
 (function ($) {
     $.fn.extend({
-        //轮播图(banner)
-        "picAnimation": function (options) {
-            var $Li = ".ytl_picCarousel>li";//获取轮播图大图展示的li
-            var $LiImg = 'img';//获取大图li展示的图片标签
-            var $BigImgBox = ".ytl_bigImg";//存放缩略图的ol
-            var $BigImg = ".ytl_bigImg li";//获取缩略图的li
-            var $BigImgActive = "ytl_bigImgActive";//当前缩略图添加的类名
-            if (!isValid) {
-                return this
+        //新闻向上逐条滚动
+        "newsMove": function (options) {
+            if (!isValid(options))
+                return this;
+            if (options) {
+                //存在参数时覆盖默认参数
+                var opts = $.extend({}, defaluts, options);
             }
+            else {
+                //不存在参数时使用默认参数
+                var opts = $.extend({}, defaluts);
+            }
+            return this.each(function () {
+                var $this = $(this);
+                var s = 0;
+                var time = null;
+
+                function move() {
+                    s++;
+                    if (s > $this.find('li').length - 1) {
+                        s = 0;
+                    }
+                    var move = s * -$this.height();
+                    $this.find('ul').animate({
+                        marginTop: move
+                    }, opts.timer / 2);
+                }
+
+                time = setInterval(function () {
+                    move();
+                }, opts.timer);
+                moseHover(opts, $this, time, move);
+            });
+        },
+        //手风琴
+        "accordion": function (options) {
+            if (!isValid(options))
+                return this;
+            if (options) {
+                //存在参数时覆盖默认参数
+                var opts = $.extend({}, defaluts, options);
+            }
+            else {
+                //不存在参数时使用默认参数
+                var opts = $.extend({}, defaluts);
+            }
+            return this.each(function () {
+                var $this = $(this);
+                var LtRBox = '.ytl_sfqListLtR',
+                    leftBox = '.ytl_sfqListLeft',
+                    rightBox = '.ytl_sfqListRight',
+                    TtDBox = '.ytl_sfqListTtD',
+                    topBox = '.ytl_sfqListTop',
+                    downBox = '.ytl_sfqListDown';
+                var LtRClass = 'ytl_sfqListLtR',
+                    leftClass = 'ytl_sfqListLeft',
+                    rightClass = 'ytl_sfqListRight',
+                    TtDClass = 'ytl_sfqListTtD',
+                    topClass = 'ytl_sfqListTop',
+                    downClass = 'ytl_sfqListDown';
+                var leftRightW = $(leftBox).width() + $(rightBox).width();
+                if (opts.accordion == 'LtR') {
+                    $(LtRBox).eq(0).css({'width': leftRightW});
+                    var $thisLeftClick = $this.find(leftBox).width();
+                    if (opts.clickHover == 'click') {
+                        $(LtRBox).click(function () {
+                            $(this).stop().animate({width: leftRightW}, opts.timer).siblings().stop().animate({width: $thisLeftClick}, opts.timer);
+                        });
+                    } else {
+                        $(LtRBox).hover(function () {
+                            $(this).stop().animate({width: leftRightW}, opts.timer).siblings().stop().animate({width: $thisLeftClick}, opts.timer);
+                        });
+                    }
+                }
+                else {
+                    $this.find(LtRBox).addClass(TtDClass).removeClass(LtRClass);
+                    $this.find(leftBox).addClass(topClass).removeClass(leftClass);
+                    $this.find(rightBox).addClass(downClass).removeClass(rightClass);
+                    var topDownH = $(topBox).height() + $(downBox).height();
+                    $this.find(TtDBox).eq(0).css({'height': topDownH});
+                    var $thisTopClick = $(this).find(topBox).height();
+                    if (opts.clickHover == 'click') {
+                        $this.find(TtDBox).click(function () {
+                            $(this).stop(true).animate({height: topDownH}, opts.timer).siblings().stop(true).animate({height: $thisTopClick}, opts.timer)
+                        });
+                    } else {
+                        $this.find(TtDBox).hover(function () {
+                            $(this).stop(true).animate({height: topDownH}, opts.timer).siblings().stop(true).animate({height: $thisTopClick}, opts.timer)
+                        });
+                    }
+                }
+            });
+        },
+        //滚动
+        "scroll": function (options) {
+            if (!isValid(options)) return this;
             if (options) {
                 var opts = $.extend({}, defaluts, options);
             }
@@ -18,517 +104,684 @@
             }
             return this.each(function () {
                 var $this = $(this);
+                var divBox = '.ytl_conLrLB',
+                    ulBox = '.ytl_lrLbList',
+                    liBox = '.ytl_lrLbList .element';
+                var tdDivBox = '.ytl_conTdLB',
+                    tdUlBox = '.ytl_tdLbList',
+                    tdLiBox = '.ytl_tdLbList .element';
+                var time = null;
+                clearInterval(time);
                 var s = 0;
-                var nums = 1;
-                var timer = null, timeAgain = null;
-                for (var i = 0; i < $this.find($Li).length; i++) {
-                    $this.find($Li).eq(i).css({
-                        zIndex: $this.find($Li).length - i
-                    });
+                if (opts.scroll == 'lrScroll' || opts.scroll == 'wfLrScroll') {
+                    var $thisW = $(liBox).outerWidth() * opts.showNum + parseInt($(liBox).css('margin-right')) * (opts.showNum - 1);
+                    $this.width($thisW);
+                    $this.height($(liBox).outerHeight());
+                    $this.find(ulBox).width(($(liBox).outerWidth() + parseInt($(liBox).css('margin-right'))) * $(liBox).length);
+                    var moveNum = $(liBox).outerWidth() + parseInt($(liBox).css('margin-right'));
+
+                    /*左右滚动*/
+                    if (opts.scroll == 'lrScroll') {
+                        function lrScroll() {
+                            (opts.direction == 'left') ? s++ : s--;
+                            if (s > $this.find(liBox).length - opts.showNum) {
+                                s = 0;
+                            }
+                            if (s < 0) {
+                                s = $this.find(liBox).length - opts.showNum;
+                            }
+                            var move = s * -moveNum;
+                            $this.find(ulBox).stop(true).animate({
+                                left: move
+                            }, opts.timer / $this.find(liBox).length);
+                        }
+
+                        time = setInterval(function () {
+                            lrScroll();
+                        }, opts.timer);
+                        moseHover(opts, $this, time, lrScroll);
+                    }
+                    /*左右无缝滚动*/
+                    if (opts.scroll == 'wfLrScroll') {
+                        var i = 0;
+                        for (i; i < opts.showNum; i++) {
+                            var htm = $this.find(liBox).eq(i).clone();
+                            $this.find(liBox).eq($this.find(liBox).length - 1).after(htm);
+                        }
+                        $this.find(ulBox).width(($(liBox).outerWidth() + parseInt($(liBox).css('margin-right'))) * $(liBox).length);
+
+                        function wfLrScroll() {
+                            (opts.direction == 'left') ? s += -1 : s -= -1;
+                            if (s < -($this.find(ulBox).width() - $this.width() - parseInt($(liBox).css('margin-right')))) {
+                                s = 0;
+                            }
+                            if (s > 0) {
+                                s = -($this.find(ulBox).width() - $this.width() - parseInt($(liBox).css('margin-right')));
+                            }
+                            if (opts.showNum < $this.find(liBox).length) {
+                                $this.find(ulBox).css({'left': s});
+                            }
+                        }
+
+                        time = setInterval(function () {
+                            wfLrScroll();
+                        }, opts.timer);
+                        moseHover(opts, $this, time, wfLrScroll);
+                    }
                 }
-                /*var j = 0;*/
-                var arr = [];
-                arr = opts.deleteCarousel.split(",");
-
-                createImg(opts.createImg, $this);
-                isCreatePoint(opts.createPoint, $this);
-                createPrevNext(opts.createPrevNext, $this);
-
-                function move(id) {
-                    (id == "next") ? s++ : s--;
-                    (id == "prev") ? nums = -1 : nums = nums;
-                    if (s > $this.find($Li).length - 1) {
-                        s = 0;
-                    }
-                    if (s < -1) {
-                        s = $this.find($Li).length - 2;
-                        /*$($BigImgBox).css({left:$($BigImg).length-opts.showNum});*/
-                    }
-                    if ($($BigImg).length > opts.showNum) {
-                        if (id == "next") {
-                            if (s > opts.showNum - 2) {
-
-                                if (s == $($BigImg).length - 1) {
-                                    $($BigImgBox).stop(true, true).animate({
-                                        left: -$($BigImg).outerWidth(true) * ($($BigImg).length - opts.showNum)
-                                    }, opts.timer / opts.showNum);
-                                }
-                                else {
-                                    $($BigImgBox).stop(true, true).animate({
-                                        left: -$($BigImg).outerWidth(true) * (s - (opts.showNum - 2))
-                                    }, opts.timer / opts.showNum);
-                                }
+                if (opts.scroll == 'tdScroll' || opts.scroll == 'wfTdScroll') {
+                    var thisH = $(tdLiBox).outerHeight() * opts.showNum + parseInt($(tdLiBox).css('margin-bottom')) * (opts.showNum - 1);
+                    $this.width($this.find(tdLiBox).outerWidth());
+                    $this.height(thisH);
+                    var moveNum = $(liBox).outerHeight() + parseInt($(liBox).css('margin-bottom'));
+                    /*上下滚动*/
+                    if (opts.scroll == 'tdScroll') {
+                        function tdScroll() {
+                            (opts.direction == 'top') ? s++ : s--;
+                            if (s > $this.find(liBox).length - opts.showNum) {
+                                s = 0;
                             }
-                            else {
-                                $($BigImgBox).stop(true, true).animate({left: 0}, opts.timer * 2 / $($BigImg).length);
+                            if (s < 0) {
+                                s = $this.find(liBox).length - opts.showNum;
                             }
-                        } else {
-                            console.log(s);
-                            if (s >= 0) {
-                                if (s <= 2) {
-                                    $($BigImgBox).stop(true, true).animate({left: 0}, opts.timer * 2 / $($BigImg).length);
-                                } else {
-                                    $($BigImgBox).stop(true, true).animate({
-                                        left: -$($BigImg).outerWidth(true) * (s - (opts.showNum - 1))
-                                    }, opts.timer / opts.showNum);
-                                }
-                            } else {
-                                $($BigImgBox).stop(true, true).animate({
-                                    left: -$($BigImg).outerWidth(true) * ($($BigImg).length - opts.showNum)
-                                }, opts.timer / opts.showNum);
+                            var move = s * -moveNum;
+                            $this.find(tdUlBox).stop(true).animate({
+                                top: move
+                            }, opts.timer / 2);
+                        }
+
+                        time = setInterval(function () {
+                            tdScroll();
+                        }, opts.timer);
+                        moseHover(opts, $this, time, tdScroll);
+                    }
+                    /*上下无缝滚动*/
+                    if (opts.scroll == 'wfTdScroll') {
+                        var i = 0;
+                        for (i; i < opts.showNum; i++) {
+                            var htm = $this.find(tdLiBox).eq(i).clone();
+                            $this.find(tdLiBox).eq($this.find(tdLiBox).length - 1).after(htm);
+                        }
+
+                        function wfTdScroll() {
+                            (opts.direction == 'top') ? s += -1 : s -= -1;
+                            if (s < -($this.find(tdUlBox).height() - $this.height() - parseInt($(tdLiBox).css('margin-bottom')))) {
+                                s = 0;
+                            }
+                            if (s > 0) {
+                                s = -($this.find(tdUlBox).height() - $this.height() - parseInt($(tdLiBox).css('margin-bottom')));
+                            }
+                            if (opts.showNum < $this.find(tdLiBox).length) {
+                                $this.find(tdUlBox).css({'top': s});
                             }
                         }
+
+                        time = setInterval(function () {
+                            wfTdScroll();
+                        }, opts.timer);
+                        moseHover(opts, $this, time, wfTdScroll);
                     }
-                    for (var i = 0; i < $this.find($Li).length; i++) {
-                        $this.find($Li).eq(i).css({
-                            zIndex: $this.find($Li).length - i
-                        });
-                        var imgCon = $this.find($Li).eq(i).find($LiImg).attr('src');
-                        $this.find($Li).eq(i).html('');
-                        $this.find($Li).eq(i).append("<img src=" + imgCon + " alt=''>");
-                    }
-                    $this.find($Li).eq(s - nums).css({
-                        zIndex: 20
-                    });
-                    $this.find($Li).eq(s).css({
-                        zIndex: 19
-                    });
-                    /*if (s < $this.find('.picCarousel>li').length + 1) {
-                     var num = Math.ceil(Math.random() * 13);
-                     }*/
-                    /*数组比较取出不相同的值存放在数组arr3中*/
-                    var arr3 = [];
-                    var arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
-                    for (var i = 0; i < arr1.length; i++) {
-                        var stra = arr1[i];
-                        var count = 0;
-                        for (var j = 0; j < arr.length; j++) {
-                            var strb = arr[j];
-                            if (stra == strb) {
-                                count++;
-                            }
-                        }
-                        if (count == 0) {//表示数组1的这个值没有重复的，放到返回列表中
-                            arr3.push(stra);
-                        }
-                    }
+                }
+            });
+        },
+        //百合窗
+        "lilyWindow": function (options) {
+            if (!isValid) {
+                return this;
+            }
+            if (options) {
+                var opts = $.extend({}, defaluts, options);
+            } else {
+                var opts = $.extend({}, defaluts);
+            }
+            return this.each(function () {
+                var $this = $(this);
+                var s = 0,
+                    time = null,
+                    getS=0;
+                var ulBox = '.ytl_picCarousel',
+                    ulLiBox = '.ytl_picCarousel li',
+                    olBox='.ytl_pointLists',
+                    olLiBox='.ytl_pointLists li';
+                imgOlBox='.ytl_smallImgList';
+                imgOlLiBox='.ytl_smallImgList li';
+                var Lenth = $this.find(ulLiBox).length;
+                $this.find(ulLiBox).each(function (index) {
+                    $(this).css({
+                        'z-index': Lenth - index,
+                    })
+                });
+                time = setInterval(function () {
+                    animation();
+                }, opts.timer);
+                /*创建点*/
+                /*isCreatePoint(opts.createPoint,$this);*/
+                isCreateImg(opts.createImg,$this);
+                clickHover();
+                moseHover(opts, $this, time, animation);
+
+                function animation() {
+                    var arr = [];
+                    arr = opts.deleteCarousel.split(",");
                     //随机取出数组中的元素
-                    var index = Math.floor((Math.random() * arr3.length));
-                    switch (arr3[index]) {
-                        /**/
+                    var index = Math.floor((Math.random() * arr.length));
+                    switch (parseInt(arr[index])) {
                         case 1:
-                            fadeCarousel();
+                            fade();
                             break;
                         case 2:
-                            all(1, 1);
+                            diagonalStrips(1,1);
                             break;
                         case 3:
-                            all(1, 2);
+                            diagonalStrips(1,2);
                             break;
                         case 4:
-                            all(2, 1);
+                            diagonalStrips(2,1);
                             break;
                         case 5:
-                            all(2, 2);
-                            break;
-                        case 6:
-                            diagonalStrips(1, 1);
-                            break;
-                        case 7:
-                            diagonalStrips(1, 2);
-                            break;
-                        case 8:
-                            diagonalStrips(2, 1);
-                            break;
-                        case 9:
                             diagonalStrips(2, 2);
                             break;
+                        case 6:
+                            cross();
+                            break;
+                        case 7:
+                            grid();
+                            break;
+                        case 8:
+                            allMove(1, 1);
+                            break;
+                        case 9:
+                            allMove(1, 2);
+                            break;
                         case 10:
-                            cross(1);
+                            allMove(2, 1);
                             break;
                         case 11:
-                            cross(2);
-                            break;/**/
-                        case 12:
-                            grid(1);
-                            break;
-                        case 13:
-                            grid(2);
+                            allMove(2, 2);
                             break;
                     }
                 }
-
-                if (opts.autoPlay) {
-                    timeAgain = setInterval(function () {
-                        move("next");
-                    }, opts.timer);
+                var lrTop=true;
+                /*淡入淡出*/
+                function fade() {
+                    var eqNum=s-1;
+                    (opts.nextPrev=='next')?s++:s--;
+                    if (s >= Lenth) {
+                        s = 0;
+                    }
+                    $this.find(ulLiBox).eq(s-1).animate({'opacity': '0'}, opts.timer * (2 / 3));
+                    clearDiv(eqNum);
+                    initialize();
                 }
-                pointClick($this);
-                /*prevNextClick($this);*/
-                moseHover(opts, $this, timeAgain, move);
-                $($BigImg).width($this.width() / opts.showNum - 2);
-                $($BigImgBox).width($($BigImg).length * $($BigImg).outerWidth(true));
-
-                function clearCss() {
-                    $this.find('.ytl_picCarousel>li,.ytl_picCarousel>li .ytl_imgActive').css({
-                        top: 0,
-                        left: 0,
-                        opacity: 1
-                    });
-                    $this.find('.ytl_picCarousel>li .ytl_imgActive').css({
-                        left: 0,
-                        top: 0
-                    });
-                }
-
-                function addPointClass() {
-                    $this.find(".ytl_pointLists>li").eq(s).addClass("ytl_pointActive").siblings().removeClass("ytl_pointActive");
-                    $this.find(".ytl_bigImg>li").eq(s).addClass($BigImgActive).siblings().removeClass($BigImgActive);
-                }
-
-                /*淡入淡出动画*/
-                function fadeCarousel() {
-                    /*carouselPublic();*/
-                    clearCss();
-                    $this.find($Li).eq(s - nums).stop(true, true).animate({opacity: 0}, opts.timer);
-                    addPointClass();
-                }
-
-                /*整块移动动画*/
-                function all(ids, id) {//ids 为1向左右，为2向上下；id为1向左和上，为2向右和下
-                    /*carouselPublic();*/
-                    clearCss();
+                /*层次移动*/
+                function diagonalStrips(ids,id) {
+                    var eqNum=s-1;
                     switch (ids) {
                         case 1:
-                            if (id == 1) {
-                                $this.find($Li).eq(s - nums).stop(true, true).animate({
-                                    left: -$this.width()
-                                }, opts.timer);
+                            createDiv(1,s);
+                            (opts.nextPrev=='next')?s++:s--;
+                            lrTop=!lrTop;
+                            if (s >= Lenth) {
+                                s = 0;
                             }
-                            else {
-                                $this.find($Li).eq(s - nums).stop(true, true).animate({
-                                    left: $this.width()
-                                }, opts.timer);
-                            }
-                            addPointClass();
-                            break;
-                        case 2:
-                            if (id == 1) {
-                                $this.find($Li).eq(s - nums).stop(true, true).animate({
-                                    top: -$this.height()
-                                }, opts.timer);
-                            }
-                            else {
-                                $this.find($Li).eq(s - nums).stop(true, true).animate({
-                                    top: $this.height()
-                                }, opts.timer);
-                            }
-                            addPointClass();
-                            break;
-                    }
-                }
-
-                /*先后移动动画*/
-                function diagonalStrips(ids, id) {//ids 为1向左右，为2向上下；id为1向左和上，为2向右和下
-                    /*carouselPublic();*/
-                    clearCss();
-                    switch (ids) {
-                        case 1:
-                            createDiv(1);
-                            for (var j = 0; j < $this.find($Li).eq(s - nums).find('.ytl_imgActive').length; j++) {
-                                if (id == 1) {
-                                    $this.find($Li).eq(s - nums).find('.ytl_imgActive').eq(j).stop(true, true).animate({
-                                        left: -($this.width() + ($this.find($Li).eq(s - nums).find('.ytl_imgActive').length - j - 1) * $this.find($Li).eq(s - nums).find('.ytl_imgActive').height())
-                                    }, opts.timer);
+                            for(var i=1;i<=opts.divLevelNum;i++){
+                                var left=0;
+                                if(lrTop){
+                                    left=$this.width() + i * $this.find(ulLiBox).outerHeight()/opts.divLevelNum;
                                 }
                                 else {
-                                    $this.find($Li).eq(s - nums).find('.ytl_imgActive').eq(j).stop(true, true).animate({
-                                        left: $this.width() + ($this.find($Li).eq(s - nums).find('.ytl_imgActive').length - j - 1) * $this.find($Li).eq(s - nums).find('.ytl_imgActive').height()
-                                    }, opts.timer);
+                                    left=$this.width() + (opts.divLevelNum - i) * $this.find(ulLiBox).outerHeight()/opts.divLevelNum;
                                 }
+                                (id==1)?left:left=-left;
+                                $this.find(ulLiBox).eq(s-1).find('.ytl_imgActive').eq(i-1).animate({'left':left},opts.timer);
                             }
-                            addPointClass();
                             break;
                         case 2:
-                            createDiv(2);
-                            for (var j = 0; j < $this.find($Li).eq(s - nums).find('.ytl_imgActive').length; j++) {
-                                if (id == 1) {
-                                    $this.find($Li).eq(s - nums).find('.ytl_imgActive').eq(j).stop(true, true).animate({
-                                        top: $this.height() + ($this.find($Li).eq(s - nums).find('.ytl_imgActive').length - j - 1) * $this.find($Li).eq(s - nums).find('.ytl_imgActive').width()
-                                    }, opts.timer);
+                            createDiv(2,s);
+                            (opts.nextPrev=='next')?s++:s--;
+                            lrTop=!lrTop;
+                            if (s >= Lenth) {
+                                s = 0;
+                            }
+                            for(var i=1;i<=opts.divVerticalNum;i++){
+                                var top=0;
+                                if(lrTop){
+                                    top=$this.height() + i * $this.find(ulLiBox).outerWidth()/opts.divVerticalNum;
                                 }
                                 else {
-                                    $this.find($Li).eq(s - nums).find('.ytl_imgActive').eq(j).stop(true, true).animate({
-                                        top: -($this.height() + ($this.find($Li).eq(s - nums).find('.ytl_imgActive').length - j - 1) * $this.find($Li).eq(s - nums).find('.ytl_imgActive').width())
-                                    }, opts.timer);
+                                    top=$this.height() + (opts.divVerticalNum - i) * $this.find(ulLiBox).outerWidth()/opts.divVerticalNum;
                                 }
+                                (id==1)?top:top=-top;
+                                $this.find(ulLiBox).eq(s-1).find('.ytl_imgActive').eq(i-1).animate({'top':top},opts.timer);
                             }
-                            addPointClass();
                             break;
                     }
-
+                    clearDiv(eqNum);
+                    initialize();
                 }
-
                 /*交叉动画*/
-                function cross(ids) {
-                    /*carouselPublic();*/
-                    clearCss();
-                    switch (ids) {
-                        case 1:
-                            createDiv(1);
-                            $this.find('.ytl_picCarousel>li .ytl_imgActive').css({
-                                width: '100%'
-                            });
-                            for (var divIndex = 0; divIndex < $this.find('.ytl_imgActive').length; divIndex++) {
-                                if (divIndex % 2 == 1) {
-                                    $this.find($Li).eq(s - nums).find('.ytl_imgActive').eq(divIndex).stop(true, true).animate({'width': '0'}, opts.timer);
-                                } else {
-                                    $this.find($Li).eq(s - nums).find('.ytl_imgActive').eq(divIndex).stop(true, true).animate({
-                                        'left': $this.find('.ytl_imgActive').width() + 'px'
-                                    }, opts.timer);
-                                }
-                            }
-                            addPointClass();
-                            break;
-                        case 2:
-                            createDiv(2);
-                            $this.find('.ytl_picCarousel>li .ytl_imgActive').css({
-                                height: '100%'
-                            });
-                            for (var divIndex = 0; divIndex < $this.find('.ytl_imgActive').length; divIndex++) {
-                                if (divIndex % 2 == 1) {
-                                    $this.find($Li).eq(s - nums).find('.ytl_imgActive').eq(divIndex).stop(true, true).animate({'height': '0'}, opts.timer);
-                                } else {
-                                    $this.find($Li).eq(s - nums).find('.ytl_imgActive').eq(divIndex).stop(true, true).animate({
-                                        'top': $this.find('.ytl_imgActive').height() + 'px'
-                                    }, opts.timer);
-                                }
-                            }
-                            addPointClass();
-                            break;
+                function cross() {
+                    var eqNum=s-1;
+                    lrTop=!lrTop;
+                    (lrTop)?createDiv(1,s):createDiv(2,s);
+                    (opts.nextPrev=='next')?s++:s--;
+                    if (s >= Lenth) {
+                        s = 0;
                     }
-                }
-
-                /**/
-
-                /*格子动画*/
-                function grid(ids) {
-                    /*carouselPublic();*/
-                    clearCss();
-                    createDiv(3);
-                    var imgActiveL = $this.find($Li).eq(s - nums).find('.ytl_imgActive').length;
-
-                    for (var divIndex = 0; divIndex < imgActiveL; divIndex++) {
-                        switch (ids) {
-                            case 1:
-                                $this.find($Li).eq(s - nums).find('.ytl_imgActive').eq(2 * divIndex).stop(true, true).animate({
-                                    'width': '0px'
-                                }, opts.timer / 3, function () {
-                                    $this.find($Li).eq(s - nums).find('.ytl_imgActive').stop(true, true).animate({
-                                        'width': '0px'
-                                    }, opts.timer / 3);
-                                });
-                                addPointClass();
-                                break;
-                            case 2:
-                                var marinL = parseInt($this.find($Li).eq(s - nums).find('.ytl_imgActive').eq(1).css('left')) - parseInt($this.find($Li).eq(s - nums).find('.ytl_imgActive').eq(0).css('left'));
-                                $this.find($Li).eq(s - nums).find('.ytl_imgActive').eq(2 * divIndex).stop(true, true).animate({
-                                    'width': '0px',
-                                    'margin-left': marinL + 'px'
-                                }, opts.timer / 3, function () {
-                                    $this.find($Li).eq(s - nums).find('.ytl_imgActive').stop(true, true).animate({
-                                        'width': '0px',
-                                        'margin-left': marinL + 'px'
-                                    }, opts.timer / 3);
-                                });
-                                addPointClass();
-                                break;
+                    for (var divIndex = 0; divIndex < $this.find('.ytl_imgActive').length; divIndex++) {
+                        if(lrTop){
+                            var change={};
+                            (divIndex % 2 == 0)?change={'width': '0'}:change={'left': $(ulLiBox).width() + 'px'};
+                            $this.find(ulLiBox).eq(s - 1).find('.ytl_imgActive').eq(divIndex).stop(true, true).animate(change, opts.timer);
+                        }
+                        else{
+                            var change={};
+                            (divIndex % 2 == 0)?change={'height': '0'}:change={'top': $(ulLiBox).width() + 'px'};
+                            $this.find(ulLiBox).eq(s - 1).find('.ytl_imgActive').eq(divIndex).stop(true, true).animate(change, opts.timer);
                         }
                     }
+                    clearDiv(eqNum);
+                    initialize();
                 }
-
+                /*格子动画*/
+                function grid() {
+                    var eqNum=s-1;
+                    createDiv(3,s);
+                    lrTop=!lrTop;
+                    (opts.nextPrev=='next')?s++:s--;
+                    if (s >= Lenth) {
+                        s = 0;
+                    }
+                    for (var divIndex = 0; divIndex < $this.find('.ytl_imgActive').length; divIndex++) {
+                        var change={};
+                        var marinL = parseInt($this.find(ulLiBox).eq(s - 1).find('.ytl_imgActive').eq(1).css('left')) - parseInt($this.find(ulLiBox).eq(s - 1).find('.ytl_imgActive').eq(0).css('left'));
+                        (lrTop)?change={'width': '0px'}:change={'width': '0px', 'margin-left': marinL + 'px'};
+                        $this.find(ulLiBox).eq(s - 1).find('.ytl_imgActive').eq(2 * divIndex).stop(true).animate(change, opts.timer / 3);
+                        setTimeout(function () {
+                            $this.find(ulLiBox).eq(s - 1).find('.ytl_imgActive').stop(true).animate(change, opts.timer / 3);
+                        },opts.timer / 3);
+                    }
+                    clearDiv(eqNum);
+                    initialize();
+                }
+                /*整块移动：allMove参数为1,1向左,1,2向右，为2,1向上,2,2向下；*/
+                function allMove(ids, id) {
+                    var eqNum=s-1;
+                    lrTop=!lrTop;
+                    switch (ids) {
+                        case 1:
+                            (opts.nextPrev=='next')?s++:s--;
+                            if (s >= Lenth) {
+                                s = 0;
+                            }
+                            var move = -$this.find(ulLiBox).outerWidth();
+                            (id == 1) ? move = move : move = -move;
+                            $this.find(ulLiBox).eq(s - 1).stop().animate({'left': move + 'px'}, opts.timer * (2 / 3));
+                            break;
+                        case 2:
+                            (opts.nextPrev=='next')?s++:s--;
+                            if (s >= Lenth) {
+                                s = 0;
+                            }
+                            var move = -$this.find(ulLiBox).outerHeight();
+                            (id == 1) ? move = move : move = -move;
+                            $this.find(ulLiBox).eq(s - 1).stop().animate({'top': move + 'px'}, opts.timer * (2 / 3));
+                            break;
+                    }
+                    clearDiv(eqNum);
+                    initialize();
+                }
+                /*初始化设置*/
+                function initialize() {
+                    $this.find(ulLiBox).css({'opacity': '1'});
+                    $this.find(ulLiBox).css({'top': 0,'left':0});
+                    $this.find(ulLiBox).each(function (index) {
+                        $(this).css({
+                            'z-index': Lenth - index,
+                        })
+                    });
+                    $this.find(olLiBox).eq(s).addClass('ytl_pointActive').siblings().removeClass('ytl_pointActive');
+                    $this.find(imgOlLiBox).eq(s).addClass('ytl_smallImgActive').siblings().removeClass('ytl_smallImgActive');
+                    $this.find(ulLiBox).eq(s-1).css({"z-index": 20});
+                    $this.find(ulLiBox).eq(s).css({"z-index": 19});
+                }
+                /*清除div节点*/
+                function clearDiv(eqNum) {
+                    var imgCon = $this.find(ulLiBox).eq(eqNum).find('img').attr('src');
+                    $this.find(ulLiBox).eq(eqNum).html('');
+                    $this.find(ulLiBox).eq(eqNum).append("<img src=" + imgCon + " alt=''>");
+                }
                 /*创建div节点*/
-                //查找放图片的li
-                var liHasImg = $this.find($Li);
-
-                function createDiv(ids) {
+                function createDiv(ids,eqNum) {
                     switch (ids) {
                         //创建水平div
                         case 1:
-                            var imgCon = liHasImg.eq(s - nums).find($LiImg).attr('src');
-                            liHasImg.eq(s - nums).html('');
+                            var imgCon = $this.find(ulLiBox).eq(eqNum).find('img').attr('src');
+                            $this.find(ulLiBox).eq(eqNum).html('');
                             for (var i = 0; i < opts.divLevelNum; i++) {
-                                liHasImg.eq(s - nums).append("<div class='ytl_imgActive'><img src=" + imgCon + " alt=''></div>");
-                                liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).css({
+                                $this.find(ulLiBox).eq(eqNum).append("<div class='ytl_imgActive'><img src=" + imgCon + " alt=''></div>");
+                                $this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).css({
                                     'position': 'absolute',
                                     'overflow': 'hidden'
                                 });
-                                liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).find($LiImg).css({
-                                    'width': $this.width(),
-                                    'height': $this.height(),
+                                $this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).find('img').css({
+                                    'width': $this.find(ulLiBox).width(),
+                                    'height': $this.find(ulLiBox).height(),
                                     'display': 'block'
                                 });
 
-                                liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).css({
+                                $this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).css({
                                     'width': '100%',
-                                    'height': $this.height() / opts.divLevelNum,
-                                    'top': ($this.height() / opts.divLevelNum) * i
+                                    'height': $this.find(ulLiBox).height() / opts.divLevelNum,
+                                    'top': ($this.find(ulLiBox).height() / opts.divLevelNum) * i
                                 });
-                                liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).find($LiImg).css({
-                                    'margin-top': -parseInt(liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).css('top'))
+                                $this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).find('img').css({
+                                    'margin-top': -parseInt($this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).css('top'))
                                 });
                             }
                             break;
                         //创建垂直div
                         case 2:
-                            var imgCon = liHasImg.eq(s - nums).find($LiImg).attr('src');
-                            liHasImg.eq(s - nums).html('');
-                            for (var i = 0; i < opts.divLevelNum; i++) {
-                                liHasImg.eq(s - nums).append("<div class='ytl_imgActive'><img src=" + imgCon + " alt=''></div>");
-                                liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).css({
+                            var imgCon = $this.find(ulLiBox).eq(eqNum).find('img').attr('src');
+                            $this.find(ulLiBox).eq(eqNum).html('');
+                            for (var i = 0; i < opts.divVerticalNum; i++) {
+                                $this.find(ulLiBox).eq(eqNum).append("<div class='ytl_imgActive'><img src=" + imgCon + " alt=''></div>");
+                                $this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).css({
                                     'position': 'absolute',
                                     'overflow': 'hidden'
                                 });
-                                liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).find($LiImg).css({
-                                    'width': $this.width(),
-                                    'height': $this.height(),
+                                $this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).find('img').css({
+                                    'width': $this.find(ulLiBox).width(),
+                                    'height': $this.find(ulLiBox).height(),
                                     'display': 'block'
                                 });
-                                liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).css({
-                                    'width': $this.width() / opts.divVerticalNum,
+                                $this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).css({
+                                    'width': $this.find(ulLiBox).width() / opts.divVerticalNum,
                                     'height': '100%',
-                                    'left': ($this.width() / opts.divVerticalNum) * i
+                                    'left': ($this.find(ulLiBox).width() / opts.divVerticalNum) * i
                                 });
-                                liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).find($LiImg).css({
-                                    'margin-left': -parseInt(liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).css('left'))
+                                $this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).find('img').css({
+                                    'margin-left': -parseInt($this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).css('left'))
                                 });
 
                             }
                             break;
                         //创建格子div
                         case 3:
-                            var divLevelNum3 = Math.ceil(opts.divLevelNum / 2);
-                            var divVerticalNum3 = Math.ceil(opts.divVerticalNum / 2);
-                            var imgCon = liHasImg.eq(s - nums).find($LiImg).attr('src');
-                            liHasImg.eq(s - nums).html('');
+                            var divLevelNum3 = Math.ceil(opts.divLevelNum/2);
+                            var divVerticalNum3 = Math.ceil(opts.divVerticalNum/2);
+                            console.log(divLevelNum3*divVerticalNum3);
+                            var imgCon = $this.find(ulLiBox).eq(eqNum).find('img').attr('src');
+                            $this.find(ulLiBox).eq(eqNum).html('');
                             for (var i = 0; i < divLevelNum3 * divVerticalNum3; i++) {
 
-                                liHasImg.eq(s - nums).append("<div class='ytl_imgActive'><img src=" + imgCon + " alt=''></div>");
-                                liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).css({
+                                $this.find(ulLiBox).eq(eqNum).append("<div class='ytl_imgActive'><img src=" + imgCon + " alt=''></div>");
+                                $this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).css({
                                     'position': 'absolute',
                                     'overflow': 'hidden'
                                 });
-                                liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).find($LiImg).css({
-                                    'width': $this.width(),
-                                    'height': $this.height(),
+                                $this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).find('img').css({
+                                    'width': $this.find(ulLiBox).width(),
+                                    'height': $this.find(ulLiBox).height(),
                                     'display': 'block'
                                 });
-                                liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).css({
-                                    'width': $this.width() / divVerticalNum3,
-                                    'height': $this.height() / divLevelNum3
+                                $this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).css({
+                                    'width': $this.find(ulLiBox).width() / divVerticalNum3,
+                                    'height': $this.find(ulLiBox).height() / divLevelNum3
                                 });
                                 for (var verticalNum = 0; verticalNum < divVerticalNum3; verticalNum++) {
                                     if ((i + 1) % divLevelNum3 == verticalNum) {
-                                        liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).css({
-                                            'left': (verticalNum - 1) * $this.width() / divVerticalNum3 + 'px'
+                                        $this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).css({
+                                            'left': (verticalNum - 1) * $this.find(ulLiBox).width() / divVerticalNum3 + 'px'
                                         });
                                     }
                                     if ((i + 1) % divLevelNum3 == 0) {
-                                        liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).css({
-                                            'left': (divVerticalNum3 - 1) * $this.width() / divVerticalNum3 + 'px'
+                                        $this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).css({
+                                            'left': (divVerticalNum3 - 1) * $this.find(ulLiBox).width() / divVerticalNum3 + 'px'
                                         });
                                     }
                                 }
                                 for (var levelNum = 0; levelNum < divLevelNum3; levelNum++) {
                                     if (parseInt(i / divLevelNum3) == levelNum) {
-                                        liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).css({
-                                            'top': (levelNum) * ($this.height() / divLevelNum3) + 'px'
+                                        $this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).css({
+                                            'top': (levelNum) * ($this.find(ulLiBox).height() / divLevelNum3) + 'px'
                                         });
                                     }
                                 }
-                                liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).find($LiImg).css({
-                                    'margin-left': -parseInt(liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).css('left')),
-                                    'margin-top': -parseInt(liHasImg.eq(s - nums).find('.ytl_imgActive').eq(i).css('top'))
+                                $this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).find('img').css({
+                                    'margin-left': -parseInt($this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).css('left')),
+                                    'margin-top': -parseInt($this.find(ulLiBox).eq(eqNum).find('.ytl_imgActive').eq(i).css('top'))
                                 });
                             }
                             break;
                     }
                 }
-
-                function pointClick($this) {
-                    $this.find(".ytl_pointLists>li,.ytl_bigImg>li").click(function () {
-                        nums = $(this).index() - s;
-                        s = $(this).index() - 1;
-                        move("next");
-                        nums = 1;
+                /*点点的点击或移入*/
+                function clickHover() {
+                    var clickBox="";
+                    /*var activeClass=".ytl_smallImgActive"*/
+                    var activeClass="";
+                    if(opts.createPoint) {
+                        clickBox=".ytl_pointLists>li";
+                        activeClass=".ytl_pointActive";
+                    }
+                    var arr = [],lrTop=true;
+                    var beforeIndex='',afterIndex='';
+                    $this.find(clickBox).on(opts.clickHover,function () {
+                        beforeIndex=$this.find(activeClass).index();
+                        $(this).addClass(activeClass).siblings().removeClass(activeClass);
+                        afterIndex=$this.find(activeClass).index();
+                        lrTop=!lrTop;
+                        if(beforeIndex==afterIndex){
+                            $this.find(ulLiBox).eq(beforeIndex).show();
+                        }
+                        else {
+                            $this.find(ulLiBox).css({'opacity': '1'});
+                            $this.find(ulLiBox).css({'top': 0,'left':0});
+                            $this.find(ulLiBox).each(function (index) {
+                                $(this).css({
+                                    'z-index': Lenth - index,
+                                })
+                            });
+                            $this.find(ulLiBox).eq(beforeIndex).css({"z-index": 20});
+                            $this.find(ulLiBox).eq(afterIndex).css({"z-index": 19});
+                            clearDiv(afterIndex);
+                            s=afterIndex;
+                            var arr = [];
+                            arr = opts.deleteCarousel.split(",");
+                            //随机取出数组中的元素
+                            var index = Math.floor((Math.random() * arr.length));
+                            switch (parseInt(arr[index])) {
+                                case 1:
+                                    clickFade(beforeIndex);
+                                    break;
+                                case 2:
+                                    clickDiagonalStrips(1,1,lrTop,afterIndex,beforeIndex);
+                                    break;
+                                case 3:
+                                    clickDiagonalStrips(1,2,lrTop,afterIndex,beforeIndex);
+                                    break;
+                                case 4:
+                                    clickDiagonalStrips(2,1,lrTop,afterIndex,beforeIndex);
+                                    break;
+                                case 5:
+                                    clickDiagonalStrips(2,2,lrTop,afterIndex,beforeIndex);
+                                    break;
+                                case 6:
+                                    clickCross(lrTop,afterIndex,beforeIndex);
+                                    break;
+                                case 7:
+                                    clickGrid(lrTop,afterIndex,beforeIndex);
+                                    break;
+                                case 8:
+                                    clickAllMove(1,1,lrTop,afterIndex,beforeIndex);
+                                    break;
+                                case 9:
+                                    clickAllMove(1,2,lrTop,afterIndex,beforeIndex);
+                                    break;
+                                case 10:
+                                    clickAllMove(2,1,lrTop,afterIndex,beforeIndex);
+                                    break;
+                                case 11:
+                                    clickAllMove(2,2,lrTop,afterIndex,beforeIndex);
+                                    break;
+                            }
+                        }
                     });
                 }
-
-                /*function prevNextClick($this) {
-                  $this.find(".ytl_next").click(function () {
-                    nums=1;
-                    move("next");
-                  });
-                  $this.find(".ytl_prev").click(function () {
-                    nums=-1;
-                    move("prev");
-                  });
-                }*/
-            });
+                function clickFade(beforeIndex) {
+                    $this.find(ulLiBox).eq(beforeIndex).animate({'opacity': '0'}, opts.timer * (2 / 3));
+                }
+                function clickDiagonalStrips(ids,id,lrTop,afterIndex,beforeIndex) {
+                    switch (ids){
+                        case 1:
+                            var eqNum=afterIndex;
+                            createDiv(1,beforeIndex);
+                            for(var i=1;i<=opts.divLevelNum;i++){
+                                var left=0;
+                                if(lrTop){
+                                    left=$this.width() + i * $this.find(ulLiBox).outerHeight()/opts.divLevelNum;
+                                }
+                                else {
+                                    left=$this.width() + (opts.divLevelNum - i) * $this.find(ulLiBox).outerHeight()/opts.divLevelNum;
+                                }
+                                (id==1)?left:left=-left;
+                                $this.find(ulLiBox).eq(beforeIndex).find('.ytl_imgActive').eq(i-1).stop(true,true).animate({'left':left},opts.timer);
+                            }
+                            break;
+                        case 2:
+                            var eqNum=afterIndex;
+                            createDiv(2,beforeIndex);
+                            for(var i=1;i<=opts.divVerticalNum;i++){
+                                var top=0;
+                                if(lrTop){
+                                    top=$this.height() + i * $this.find(ulLiBox).outerWidth()/opts.divVerticalNum;
+                                }
+                                else {
+                                    top=$this.height() + (opts.divVerticalNum - i) * $this.find(ulLiBox).outerWidth()/opts.divVerticalNum;
+                                }
+                                (id==1)?top:top=-top;
+                                $this.find(ulLiBox).eq(beforeIndex).find('.ytl_imgActive').eq(i-1).animate({'top':top},opts.timer);
+                            }
+                    }
+                }
+                function clickCross(lrTop,afterIndex,beforeIndex) {
+                    var eqNum=afterIndex;
+                    (lrTop)?createDiv(1,beforeIndex):createDiv(2,beforeIndex);
+                    for (var divIndex = 0; divIndex < $this.find('.ytl_imgActive').length; divIndex++) {
+                        if(lrTop){
+                            var change={};
+                            (divIndex % 2 == 0)?change={'width': '0'}:change={'left': $(ulLiBox).width() + 'px'};
+                            $this.find(ulLiBox).eq(beforeIndex).find('.ytl_imgActive').eq(divIndex).stop(true, true).animate(change, opts.timer);
+                        }
+                        else{
+                            var change={};
+                            (divIndex % 2 == 0)?change={'height': '0'}:change={'top': $(ulLiBox).width() + 'px'};
+                            $this.find(ulLiBox).eq(beforeIndex).find('.ytl_imgActive').eq(divIndex).stop(true, true).animate(change, opts.timer);
+                        }
+                    }
+                }
+                function clickGrid(lrTop,afterIndex,beforeIndex) {
+                    var eqNum=afterIndex;
+                    createDiv(3,beforeIndex);
+                    for (var divIndex = 0; divIndex < $this.find('.ytl_imgActive').length; divIndex++) {
+                        var change={};
+                        var marinL = parseInt($this.find(ulLiBox).eq(beforeIndex).find('.ytl_imgActive').eq(1).css('left')) - parseInt($this.find(ulLiBox).eq(beforeIndex).find('.ytl_imgActive').eq(0).css('left'));
+                        (lrTop)?change={'width': '0px'}:change={'width': '0px', 'margin-left': marinL + 'px'};
+                        $this.find(ulLiBox).eq(beforeIndex).find('.ytl_imgActive').eq(2 * divIndex).stop(true).animate(change, opts.timer / 3);
+                        setTimeout(function () {
+                            $this.find(ulLiBox).eq(beforeIndex).find('.ytl_imgActive').stop(true).animate(change, opts.timer / 3);
+                        },opts.timer / 3);
+                    }
+                }
+                function clickAllMove(ids,id,lrTop,afterIndex,beforeIndex) {
+                    var eqNum=afterIndex;
+                    var move = 0;
+                    switch (ids) {
+                        case 1:
+                            move = -$this.find(ulLiBox).outerWidth();
+                            (id == 1) ? move = move : move = -move;
+                            $this.find(ulLiBox).eq(beforeIndex).stop().animate({'left': move + 'px'}, opts.timer * (2 / 3));
+                            break;
+                        case 2:
+                            move = -$this.find(ulLiBox).outerHeight();
+                            (id == 1) ? move = move : move = -move;
+                            $this.find(ulLiBox).eq(beforeIndex).stop().animate({'top': move + 'px'}, opts.timer * (2 / 3));
+                            break;
+                    }
+                }
+            })
         }
     });
-    /*    function pointClick($this,s,fn){
-     $this.find(".pointLists>li").click(function(){
-     $(this).addClass("pointActive").siblings().removeClass("pointActive");
-     s=$(this).index();
-     fn();
-     })
-     }*/
 
-    /*/!*创建点点*!/
+    //默认参数
+    var defaluts = {
+        autoPlay: true,
+        timer: 20,
+        accordion: 'FtR',       //手风琴排列方向默认FtR左往右
+        clickHover: 'hover',    //判断事件为点击还是移入移出，默认为移入移出
+        moseHover: true,        // 鼠标移入是否停止动画，默认不停止为false
+        showNum: 4,                 //轮播滚动显示数量
+        direction: 'left',      //滚动方向，默认left向左
+        scroll: 'lrScroll',     //滚动方式（lrScroll，wfScroll），默认lrScroll左右滚动
+        deleteCarousel: "1,2,3,4,5,6,7,8,9,10,11",
+        divLevelNum:5,
+        divVerticalNum:5,
+        createPoint:true,
+        createImg:true,
+        nextPrev:'next',
+        pointAnimation:true,
+    };
+
+    //私有方法，检测参数是否合法
+    function isValid(options) {
+        return !options || (options && typeof options === "object") ? true : false;
+    }
+    /*是否移入停止*/
+    function moseHover(opts, $this, time, fn) {
+        //鼠标移入是否停止动画
+        if (opts.moseHover == true) {
+            $this.find('li').hover(function () {
+                var timerStop = clearInterval(time);
+            }, function () {
+                time = setInterval(function () {
+                    $this.find('ul li').each(function () {
+                        var imgCon = $(this).find('img').attr('src');
+                        $(this).html('');
+                        $(this).append("<img src=" + imgCon + " alt=''>");
+                    });
+                    fn();
+                }, opts.timer);
+            });
+        }
+    }
+    /*创建点点*/
     function isCreatePoint(createPoint, $this) {
-        var $PointListsBox = ".ytl_pointLists";//存放点点的ol
-        var $UlLiNum = 'ul>li'//找到存放大图的li
         if (createPoint) {
-            var pointLists = "<ol class='ytl_pointLists'></ol>";
-            $this.append(pointLists);
             var pointList = "";
-            for (var i = 0; i < 3; i++) {
+            for (var i = 0; i < $this.find('ul>li').length; i++) {
                 pointList += "<li class='ytl_pointList'></li>";
             }
-            $this.find($PointListsBox).append(pointList);
+            $this.find('.ytl_pointLists').append(pointList);
             $this.find(".ytl_pointLists>li").eq(0).addClass("ytl_pointActive");
         }
-    }
-
-    /!*创建左右箭头*!/
-    function createPrevNext(createPrevNext, $this) {
-        var $PrevNextBox = ".ytl_prevNext";//左右箭头的div
-        if (createPrevNext) {
-            /!*var prevNexts = "<div class='ytl_prevNext'></div>";
-             $this.append(prevNexts);*!/
-            var prevNext = "<div class='ytl_prev'></div><div class='ytl_next'></div>";
-            $this.parent().find($PrevNextBox).append(prevNext);
+        else {
+            $this.children('.ytl_pointLists').remove();
         }
     }
-
-    /!*创建缩略图*!/
-    function createImg(createImg, $this) {
-        var $Li = ".ytl_picCarousel>li";//获取轮播图大图展示的li
-        var $LiImg = 'img';//获取大图li展示的图片标签
-        var $BigImgBox = ".ytl_bigImg";//存放缩略图的ol
-        var $BigImg = ".ytl_bigImg li";//获取缩略图的li
-        var $BigImgActive = "ytl_bigImgActive";//当前缩略图添加的类名
-
-
+    function isCreateImg(createImg, $this) {
         if (createImg) {
-            var bigImgList = "";
-            for (var i = 0; i < $this.find($Li).length; i++) {
-                var imgCon = $this.find($Li).eq(i).find($LiImg).attr('src');
-                bigImgList += "<li><img src=" + imgCon + " alt=''></li>";
+            var smallImgList = "",smallImgListW="";
+            for (var i = 0; i < $this.find('ul>li').length; i++) {
+                var smallImgCon = $this.find('ul>li').eq(i).find('img').attr('src');
+                smallImgList += "<li class='ytl_smallImg' style='background-image: url("+smallImgCon+")'></li>";
             }
-            $this.find($BigImgBox).append(bigImgList);
-            $this.find($BigImg).eq(0).addClass($BigImgActive);
+            $this.find('.ytl_smallImgList').append(smallImgList);
+            $this.find(".ytl_smallImgList>li").eq(0).addClass("ytl_smallImgActive");
+            $this.find('.ytl_smallImgList').width();
         }
-    }*/
+        else {
+            $this.children('.ytl_smallImgList').remove($this.find('ul>li').length*$this.find('ul>li').outerWidth(true));
+        }
+    }
 })(window.jQuery);
