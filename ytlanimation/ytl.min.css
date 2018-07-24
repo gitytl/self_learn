@@ -146,7 +146,7 @@ img{width:auto;vertical-align:middle}
   text-align: center;
   height: 10px;
   left: 20px;
-  bottom: 10px;
+  bottom: -150px;
   z-index: 20;
 }
 .ytl_pointList{
@@ -164,9 +164,8 @@ img{width:auto;vertical-align:middle}
 }
 .ytl_prevNext{
   position: absolute;
-  width: 0;
-  top: 50%;
-  margin-top: -10px;
+  width: 100%;
+  bottom: -20px;
 }
 .ytl_prev,.ytl_next{
   position: absolute;
@@ -177,10 +176,10 @@ img{width:auto;vertical-align:middle}
   cursor: pointer;
 }
 .ytl_prev{
-  left: 0;
+  left: -30px;
 }
 .ytl_next{
-  right: 0;
+  right: -30px;
 }
 .ytl_smallImgLists{
   position: absolute;
@@ -193,7 +192,6 @@ img{width:auto;vertical-align:middle}
 .ytl_smallImgLists li{
   float: left;
   cursor: pointer;
-  width: 198px;
   height: 98px;
   border: 1px solid #ffffff;
   background-position: center;
