@@ -21,12 +21,20 @@
                 clickHover:'click',//存在click和hover两种触发方式
             });
             /*左右，滚动和无缝滚动*/
-            $('.ytl_conLrLB').scroll({
+            /*$('.ytl_conLrLB').scroll({
                 timer: 20,//无缝滚动默认20
                 showNum:4,//显示数量
                 scroll:"wfLrScroll",//存在lrScroll、tdScroll、wfLrScroll和wfTdScroll四种
                 clickHover:'click',//存在click和hover两种触发方式
                 direction:'right',//有left和right两个方向
+            });*/
+            /*左右，滚动和无缝滚动*/
+            $('.ytl_conLrLB').scroll({
+                timer: 2000,//无缝滚动默认20
+                showNum:2,//显示数量
+                scroll:"lrScroll",//存在lrScroll、tdScroll、wfLrScroll和wfTdScroll四种
+                clickHover:'click',//存在click和hover两种触发方式
+                direction:'left',//有left和right两个方向
             });
             /*上下，滚动和无缝滚动*/
             $('.ytl_conTdLB').scroll({
@@ -43,13 +51,14 @@
                 createPoint:true,
                 createImg:true,
                 showNum:4,
+                deleteCarousel: "1",
             });
         });
     </script>
 </head>
 <body>
 
-<!--新闻滚动
+<!--新闻滚动-->
 <div class="ytl_move">
     <ul class="ytl_moveCon">
         <li><a href="#">测试1</a></li>
@@ -57,7 +66,7 @@
         <li><a href="#">测试3</a></li>
     </ul>
 </div>
-&lt;!&ndash;手风琴&ndash;&gt;
+<!--手风琴-->
 <div>
     <ul class="ytl_sfq clearFix">
         <li class="ytl_sfqListLtR">
@@ -78,7 +87,7 @@
         </li>
     </ul>
 </div>
-&lt;!&ndash;左右，滚动和无缝滚动&ndash;&gt;
+<!--左右，滚动和无缝滚动-->
 <div class="ytl_conLrLB">
     <ul class="ytl_lrLbList clearFix">
         <li class="element"><img src="images/animal/201510221452093659724.jpg" alt=""></li>
@@ -87,7 +96,7 @@
         <li class="element"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
     </ul>
 </div>
-&lt;!&ndash;上下，滚动和无缝滚动&ndash;&gt;
+<!--上下，滚动和无缝滚动-->
 <div class="ytl_conTdLB">
     <ul class="ytl_tdLbList clearFix">
         <li class="element"><img src="images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt=""></li>
@@ -97,7 +106,7 @@
         <li class="element"><img src="images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt=""></li>
         <li class="element"><img src="images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt=""></li>
     </ul>
-</div>-->
+</div>
 <!--百合窗-->
     <div class="ytl_picAnimation">
         <ul class="ytl_picCarousel">
