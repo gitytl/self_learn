@@ -8,35 +8,25 @@
     <script type="text/javascript" src="ytl.min.js"></script>
     <script type="text/javascript">
         $(function () {
-            /*新闻滚动*/
+            /*新闻滚动——相关参数：timer，moseHover，autoPlay*/
             $('.ytl_move').newsMove({
                 timer: 2000,
-                autoPlay:true,
                 moseHover:true,
             });
-            /*手风琴*/
+            /*手风琴——相关参数：accordion，clickHover，timer*/
             $('.ytl_sfq').accordion({
                 timer:500,
                 accordion:"LtR",//存在LtR和TtD两种方向
                 clickHover:'click',//存在click和hover两种触发方式
             });
-            /*左右，滚动和无缝滚动*/
-            $('.ytl_conLrLB').scroll({
+            /*无缝滚动——相关参数：scroll，showNum，direction，timer，autoPlay*/
+            $('.ytl_marquee').marquee({
                 timer: 20,//无缝滚动默认20
                 showNum:4,//显示数量
-                scroll:"wfLrScroll",//存在lrScroll、tdScroll、wfLrScroll和wfTdScroll四种
-                clickHover:'click',//存在click和hover两种触发方式
-                direction:'right',//有left和right两个方向
+                scroll:"wfLrScroll",//存在wfLrScroll和wfTdScroll两种
+                direction:'right',//有wfLrScroll的left和right、有wfTdScroll的top和down两个方向
             });
-            /*上下，滚动和无缝滚动*/
-            $('.ytl_conTdLB').scroll({
-                timer: 10,//无缝滚动默认20
-                showNum:4,//显示数量
-                scroll:"wfTdScroll",//存在lrScroll、tdScroll、wfLrScroll和wfTdScroll四种
-                moseHover:true,
-                clickHover:'click',//存在click和hover两种触发方式
-                direction:'top',//有top和down两个方向
-            });
+            /*百合窗——相关参数：timer,saveCarousel,showNum,createPoint,createImg,divLevelNum,divVerticalNum,clickHover*/
             $('.ytl_picAnimation').lilyWindow({
                 timer: 1000,
                 clickHover: 'click',
@@ -44,12 +34,14 @@
                 createImg:true,
                 showNum:4,
             });
+            /*tab切换同时含有轮播图——相关参数：*/
+
         });
     </script>
 </head>
 <body>
 
-<!--新闻滚动
+<!--新闻滚动-->
 <div class="ytl_move">
     <ul class="ytl_moveCon">
         <li><a href="#">测试1</a></li>
@@ -57,7 +49,7 @@
         <li><a href="#">测试3</a></li>
     </ul>
 </div>
-&lt;!&ndash;手风琴&ndash;&gt;
+<!--手风琴-->
 <div>
     <ul class="ytl_sfq clearFix">
         <li class="ytl_sfqListLtR">
@@ -78,28 +70,19 @@
         </li>
     </ul>
 </div>
-&lt;!&ndash;左右，滚动和无缝滚动&ndash;&gt;
-<div class="ytl_conLrLB">
-    <ul class="ytl_lrLbList clearFix">
+<!--无缝滚动-->
+<div class="ytl_marquee">
+    <ul class="ytl_marqueeList clearFix">
         <li class="element"><img src="images/animal/201510221452093659724.jpg" alt=""></li>
         <li class="element"><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt=""></li>
         <li class="element"><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt=""></li>
         <li class="element"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
+        <li class="element"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
+        <li class="element"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
     </ul>
 </div>
-&lt;!&ndash;上下，滚动和无缝滚动&ndash;&gt;
-<div class="ytl_conTdLB">
-    <ul class="ytl_tdLbList clearFix">
-        <li class="element"><img src="images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt=""></li>
-        <li class="element"><img src="images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt=""></li>
-        <li class="element"><img src="images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt=""></li>
-        <li class="element"><img src="images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt=""></li>
-        <li class="element"><img src="images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt=""></li>
-        <li class="element"><img src="images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt=""></li>
-    </ul>
-</div>-->
 <!--百合窗-->
-    <div class="ytl_picAnimation">
+<div class="ytl_picAnimation">
         <ul class="ytl_picCarousel">
             <li><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt=""></li>
             <li><img src="images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt=""></li>
@@ -118,5 +101,7 @@
             <div class="ytl_next"></div>
         </div>
     </div>
+<!--tab切换同时含有轮播图-->
+
 </body>
 </html>
