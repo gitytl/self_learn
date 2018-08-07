@@ -196,28 +196,33 @@ img{width:auto;vertical-align:middle}
   border: 1px solid #007aff;
 }
 /*tab切换同时含有轮播图*/
-.part6 .title2 {
+.ytl_tabScroll {
+  width: 1130px;
+  background: #ffffff;
+  margin: 200px auto 0;
+  padding: 32px 35px 36px; }
+.ytl_tabScroll .title {
   height: 44px;
   border-bottom: 1px solid #e0e0e0; }
-.part6 .title2 .left {
+.ytl_tabScroll .title .left {
   top: -1px;
   left: -1px;
   height: 43px;
   float: left;
   position: relative; }
-.part6 .title2 li {
+.ytl_tabScroll .title li {
   float: left;
   font-size: 17px;
   color: #4c4c4c;
   cursor: pointer;
   margin-right: 44px;
   padding: 11px 0 12px; }
-.part6 .title2 .on {
+.ytl_tabScroll .title .on {
   color: #128b4b;
   font-weight: bold;
   margin-top: -1px;
   border-bottom: 3px solid #128b4b; }
-.part6 .title2 .right {
+.ytl_tabScroll .title .right {
   float: right;
   margin-top: 22px;
   font-size: 12px;
@@ -225,53 +230,40 @@ img{width:auto;vertical-align:middle}
   color: #999999;
   text-transform: uppercase; }
 
-.part6 .point {
+.ytl_tabScroll .point {
   position: absolute;
-  bottom: 12px;
-  right: 7px; }
-.part6 .point li {
+  bottom: auto;
+  top: 20px; }
+.ytl_tabScroll .point li {
   width: 8px;
   height: 8px;
   margin: 0 4px;
   float: left;
   cursor: pointer;
-  background: #ffffff; }
-.part6 .point .active {
-  background: #ff6c00; }
-
-.part6 {
-  width: 1130px;
-  background: #ffffff;
-  margin: 200px auto 0;
-  padding: 32px 35px 36px; }
-.part6 .point li {
+  background: #e0e0e0; }
+.ytl_tabScroll .point .active {
+  background: #ff6c00;}
+.ytl_tabScroll .point li {
   border-radius: 50%; }
-.part6 .listBox {
+.ytl_tabScroll .listBox {
   padding-top: 40px;
   display: none;
   overflow: hidden;
   position: relative; }
-.part6 .listBox.on {
+.ytl_tabScroll .listBox.on {
   display: block; }
-.part6 .listBox p {
+.ytl_tabScroll .listBox p {
   margin-top: 13px; }
-.part6 .listBox img {
+.ytl_tabScroll .listBox img {
   width: 100%;
   height: 100%; }
-.part6 .listBox .list li {
+.ytl_tabScroll .listBox .list li {
   float: left;
   text-align: center;
   margin-right: 43px; }
-.part6 .listBox .list a {
+.ytl_tabScroll .listBox .list a {
   width: 250px;
   height: 184px;
   overflow: hidden;
   background: #cccccc; }
-.part6 .point {
-  bottom: auto;
-  top: 20px; }
-.part6 .point li {
-  background: #e0e0e0; }
-.part6 .point .active {
-  background: #ff6c00; }
 
