@@ -34,16 +34,17 @@
                 createImg:true,
                 showNum:4,
             });
-            /*tab切换同时含有轮播图——相关参数：*/
+            /*tab切换同时含有轮播图——相关参数：timer,showNum,autoPlay,createPoint*/
             $('.ytl_tabScroll').multipleRolling({
-
+                timer:2000,
+                showNum:3,
+                createPoint:true,
             });
         });
     </script>
 </head>
 <body>
-<!--
-新闻滚动
+<!--新闻滚动
 <div class="ytl_move">
     <ul class="ytl_moveCon">
         <li><a href="#">测试1</a></li>
@@ -105,18 +106,16 @@
     </div>-->
 <!--tab切换同时含有轮播图-->
 <div class="ytl_tabScroll">
-    <div class="title clearFix">
-        <ul class="left">
-            <li class="on">风景</li>
-            <li>科技</li>
-            <li>动物</li>
-        </ul>
-        <a href="#" class="right">more+</a>
-        <a href="#" class="right">more+</a>
-        <a href="#" class="right">more+</a>
+    <div class="ytl_title clearFix">
+        <dl class="ytl_left">
+            <dd class="on">风景</dd>
+            <dd>动物</dd>
+        </dl>
+        <a href="#" class="ytl_right">more+</a>
+        <a href="#" class="ytl_right">more+</a>
     </div>
-    <div class="listBox on">
-        <ul class="list clearFix">
+    <div class="ytl_listBox on">
+        <ul class="ytl_list clearFix">
             <li><a href="#"><img src="images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
             <li><a href="#"><img src="images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
             <li><a href="#"><img src="images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
@@ -124,17 +123,10 @@
             <li><a href="#"><img src="images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
             <li><a href="#"><img src="images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
         </ul>
-        <ol class="point"></ol>
+        <ol class='ytl_pointLists'></ol>
     </div>
-    <div class="listBox">
-        <ul class="list clearFix">
-            <li><a href="#"><img src="images/science/u=794945328,1514551785&fm=27&gp=0.jpg" alt="图片"></a><p>科技</p></li>
-            <li><a href="#"><img src="images/science/u=2200395957,3640679743&fm=27&gp=0.jpg" alt="图片"></a><p>科技</p></li>
-        </ul>
-        <ol class="point"></ol>
-    </div>
-    <div class="listBox">
-        <ul class="list clearFix">
+    <div class="ytl_listBox">
+        <ul class="ytl_list clearFix">
             <li><a href="#"><img src="images/animal/201510221452093659724.jpg" alt="图片"></a><p>动物</p></li>
             <li><a href="#"><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt="图片"></a><p>动物</p></li>
             <li><a href="#"><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
@@ -145,7 +137,7 @@
             <li><a href="#"><img src="images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
             <li><a href="#"><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
         </ul>
-        <ol class="point"></ol>
+        <ol class='ytl_pointLists'></ol>
     </div>
 </div>
 </body>

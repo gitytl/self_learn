@@ -141,8 +141,8 @@ img{width:auto;vertical-align:middle}
   text-align: center;
   height: 10px;
   left: 20px;
-  bottom: -150px;
-  z-index: 20;
+  bottom: 20px;
+  z-index: 50;
 }
 .ytl_pointList{
   width: 10px;
@@ -200,68 +200,52 @@ img{width:auto;vertical-align:middle}
   width: 1130px;
   background: #ffffff;
   margin: 200px auto 0;
-  padding: 32px 35px 36px; }
-.ytl_tabScroll .title {
+  padding: 32px 35px 36px;
+  position: relative;}
+.ytl_tabScroll .ytl_title {
   height: 44px;
   border-bottom: 1px solid #e0e0e0; }
-.ytl_tabScroll .title .left {
+.ytl_tabScroll .ytl_title .ytl_left {
   top: -1px;
   left: -1px;
   height: 43px;
   float: left;
   position: relative; }
-.ytl_tabScroll .title li {
+.ytl_tabScroll .ytl_title dd {
   float: left;
   font-size: 17px;
   color: #4c4c4c;
   cursor: pointer;
   margin-right: 44px;
   padding: 11px 0 12px; }
-.ytl_tabScroll .title .on {
+.ytl_tabScroll .ytl_title .on {
   color: #128b4b;
   font-weight: bold;
   margin-top: -1px;
   border-bottom: 3px solid #128b4b; }
-.ytl_tabScroll .title .right {
+.ytl_tabScroll .ytl_title .ytl_right {
   float: right;
   margin-top: 22px;
   font-size: 12px;
   font-family: "Arial";
   color: #999999;
   text-transform: uppercase; }
-
-.ytl_tabScroll .point {
-  position: absolute;
-  bottom: auto;
-  top: 20px; }
-.ytl_tabScroll .point li {
-  width: 8px;
-  height: 8px;
-  margin: 0 4px;
-  float: left;
-  cursor: pointer;
-  background: #e0e0e0; }
-.ytl_tabScroll .point .active {
-  background: #ff6c00;}
-.ytl_tabScroll .point li {
-  border-radius: 50%; }
-.ytl_tabScroll .listBox {
+.ytl_tabScroll .ytl_listBox {
   padding-top: 40px;
   display: none;
-  overflow: hidden;
-  position: relative; }
-.ytl_tabScroll .listBox.on {
+  overflow: hidden;}
+.ytl_tabScroll .ytl_listBox.on {
   display: block; }
-.ytl_tabScroll .listBox p {
+.ytl_tabScroll .ytl_listBox p {
   margin-top: 13px; }
-.ytl_tabScroll .listBox img {
+.ytl_tabScroll .ytl_listBox img {
   width: 100%;
   height: 100%; }
-.ytl_tabScroll .listBox .list li {
+.ytl_tabScroll .ytl_listBox .ytl_list li {
   float: left;
   text-align: center;
   margin-right: 43px; }
-.ytl_tabScroll .listBox .list a {
+.ytl_tabScroll .ytl_listBox .ytl_list a {
   width: 250px;
   height: 184px;
   overflow: hidden;
