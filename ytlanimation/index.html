@@ -37,8 +37,10 @@
             /*tab切换同时含有轮播图——相关参数：timer,showNum,autoPlay,createPoint*/
             $('.ytl_tabScroll').multipleRolling({
                 timer:2000,
-                showNum:3,
-                createPoint:true,
+                showNum:4,
+                /*divLevelNum:4,*/
+                group:true,
+                createPoint:true,//前提是movNum>=showNum
             });
         });
     </script>
