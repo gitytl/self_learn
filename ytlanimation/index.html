@@ -37,10 +37,11 @@
             /*tab切换同时含有轮播图——相关参数：timer,showNum,autoPlay,createPoint*/
             $('.ytl_tabScroll').multipleRolling({
                 timer:2000,
-                showNum:4,
-                /*divLevelNum:4,*/
+                showNum:1,
                 group:true,
-                createPoint:true,//前提是movNum>=showNum
+                createPoint:true,//显示的前提是要分组并且组数大于1
+                moveNum:2,
+                divLevelNum:3,//分行排列一定要moveNum和showNum，并且group为true
             });
         });
     </script>
