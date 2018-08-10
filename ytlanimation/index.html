@@ -26,7 +26,7 @@
                 scroll:"wfLrScroll",//存在wfLrScroll和wfTdScroll两种
                 direction:'right',//有wfLrScroll的left和right、有wfTdScroll的top和down两个方向
             });
-            /*百合窗——相关参数：timer,saveCarousel,showNum,createPoint,createImg,divLevelNum,divVerticalNum,clickHover*/
+            /*百合窗——相关参数：timer,saveCarousel,prevNext,showNum,createPoint,createImg,divLevelNum,divVerticalNum,clickHover*/
             $('.ytl_picAnimation').lilyWindow({
                 timer: 1000,
                 clickHover: 'click',
@@ -34,6 +34,7 @@
                 createImg:true,
                 showNum:4,
                 moveNum:1,
+                prevNext:true,
             });
             /*tab切换同时含有轮播图——相关参数：timer,showNum,group,autoPlay,createPoint,divLevelNum*/
             $('.ytl_tabScroll1').multipleRolling({
@@ -45,28 +46,30 @@
                 divLevelNum:1,//分行排列一定要moveNum和showNum，并且group为true
             });
             $('.ytl_tabScroll2').multipleRolling({
-                //情况二：一行有点的分组移动
-                timer:2000,
-                showNum:4,
-                group:true,
-                createPoint:true,//显示的前提是要分组并且组数大于1
-                divLevelNum:1,//分行排列一定要moveNum和showNum，并且group为true
-            });
-            $('.ytl_tabScroll3').multipleRolling({
                 //情况二：多行分组有点的分组移动
                 timer:2000,
                 showNum:2,
                 group:true,
+                prevNext:true,
                 createPoint:true,//显示的前提是要分组并且组数大于1
                 divLevelNum:2,//分行排列一定要moveNum和showNum，并且group为true
             });
-            $('.ytl_tabScroll4').multipleRolling({
-                //情况二：多行分组有点的分组移动
+            $('.ytl_tabScroll3').multipleRolling({
+                //情况二：多行不分组没点的分组移动
                 timer:2000,
                 showNum:2,
                 group:false,
                 createPoint:true,//显示的前提是要分组并且组数大于1
                 divLevelNum:2,//分行排列一定要moveNum和showNum，并且group为true
+            });
+            $('.ytl_tabScroll4').multipleRolling({
+                //情况二：一行有点的分组移动
+                timer:2000,
+                showNum:4,
+                group:true,
+                prevNext:true,
+                createPoint:true,//显示的前提是要分组并且组数大于1
+                divLevelNum:1,//分行排列一定要moveNum和showNum，并且group为true
             });
         });
     </script>
@@ -203,6 +206,10 @@
         </ul>
         <ol class='ytl_pointLists'></ol>
     </div>
+    <div class="ytl_prevNext">
+        <div class="ytl_prev"></div>
+        <div class="ytl_next"></div>
+    </div>
 </div>
 <!--tab切换同时含有轮播图-->
 <div class="ytl_tabScroll ytl_tabScroll3">
@@ -274,6 +281,10 @@
             <li><a href="#"><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
         </ul>
         <ol class='ytl_pointLists'></ol>
+    </div>
+    <div class="ytl_prevNext">
+        <div class="ytl_prev"></div>
+        <div class="ytl_next"></div>
     </div>
 </div>
 </body>
