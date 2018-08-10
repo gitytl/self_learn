@@ -33,21 +33,46 @@
                 createPoint:true,
                 createImg:true,
                 showNum:4,
+                moveNum:1,
             });
-            /*tab切换同时含有轮播图——相关参数：timer,showNum,autoPlay,createPoint*/
-            $('.ytl_tabScroll').multipleRolling({
+            /*tab切换同时含有轮播图——相关参数：timer,showNum,group,autoPlay,createPoint,divLevelNum*/
+            $('.ytl_tabScroll1').multipleRolling({
+                //情况一：一行没点的一个一个移动
                 timer:2000,
-                showNum:1,
+                showNum:4,
+                group:false,
+                createPoint:true,//显示的前提是要分组并且组数大于1
+                divLevelNum:1,//分行排列一定要moveNum和showNum，并且group为true
+            });
+            $('.ytl_tabScroll2').multipleRolling({
+                //情况二：一行有点的分组移动
+                timer:2000,
+                showNum:4,
                 group:true,
                 createPoint:true,//显示的前提是要分组并且组数大于1
-                moveNum:2,
-                divLevelNum:3,//分行排列一定要moveNum和showNum，并且group为true
+                divLevelNum:1,//分行排列一定要moveNum和showNum，并且group为true
+            });
+            $('.ytl_tabScroll3').multipleRolling({
+                //情况二：多行分组有点的分组移动
+                timer:2000,
+                showNum:2,
+                group:true,
+                createPoint:true,//显示的前提是要分组并且组数大于1
+                divLevelNum:2,//分行排列一定要moveNum和showNum，并且group为true
+            });
+            $('.ytl_tabScroll4').multipleRolling({
+                //情况二：多行分组有点的分组移动
+                timer:2000,
+                showNum:2,
+                group:false,
+                createPoint:true,//显示的前提是要分组并且组数大于1
+                divLevelNum:2,//分行排列一定要moveNum和showNum，并且group为true
             });
         });
     </script>
 </head>
 <body>
-<!--新闻滚动
+<!--新闻滚动-->
 <div class="ytl_move">
     <ul class="ytl_moveCon">
         <li><a href="#">测试1</a></li>
@@ -55,7 +80,7 @@
         <li><a href="#">测试3</a></li>
     </ul>
 </div>
-&lt;!&ndash;手风琴&ndash;&gt;
+<!--手风琴-->
 <div>
     <ul class="ytl_sfq clearFix">
         <li class="ytl_sfqListLtR">
@@ -76,7 +101,7 @@
         </li>
     </ul>
 </div>
-&lt;!&ndash;无缝滚动&ndash;&gt;
+<!--无缝滚动-->
 <div class="ytl_marquee">
     <ul class="ytl_marqueeList clearFix">
         <li class="element"><img src="images/animal/201510221452093659724.jpg" alt=""></li>
@@ -87,7 +112,7 @@
         <li class="element"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
     </ul>
 </div>
-&lt;!&ndash;百合窗&ndash;&gt;
+<!--百合窗-->
 <div class="ytl_picAnimation">
         <ul class="ytl_picCarousel">
             <li><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt=""></li>
@@ -106,9 +131,117 @@
             <div class="ytl_prev"></div>
             <div class="ytl_next"></div>
         </div>
-    </div>-->
+    </div>
 <!--tab切换同时含有轮播图-->
-<div class="ytl_tabScroll">
+<div class="ytl_tabScroll ytl_tabScroll1">
+    <div class="ytl_title clearFix">
+        <dl class="ytl_left">
+            <dd class="on">风景</dd>
+            <dd>动物</dd>
+        </dl>
+        <a href="#" class="ytl_right">more+</a>
+        <a href="#" class="ytl_right">more+</a>
+    </div>
+    <div class="ytl_listBox on">
+        <ul class="ytl_list clearFix">
+            <li><a href="#"><img src="images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+            <li><a href="#"><img src="images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+            <li><a href="#"><img src="images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+            <li><a href="#"><img src="images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+            <li><a href="#"><img src="images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+            <li><a href="#"><img src="images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+        </ul>
+        <ol class='ytl_pointLists'></ol>
+    </div>
+    <div class="ytl_listBox">
+        <ul class="ytl_list clearFix">
+            <li><a href="#"><img src="images/animal/201510221452093659724.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=1871337630,1458141109&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=2163105592,2371140567&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+        </ul>
+        <ol class='ytl_pointLists'></ol>
+    </div>
+</div>
+<!--tab切换同时含有轮播图-->
+<div class="ytl_tabScroll ytl_tabScroll2">
+    <div class="ytl_title clearFix">
+        <dl class="ytl_left">
+            <dd class="on">风景</dd>
+            <dd>动物</dd>
+        </dl>
+        <a href="#" class="ytl_right">more+</a>
+        <a href="#" class="ytl_right">more+</a>
+    </div>
+    <div class="ytl_listBox on">
+        <ul class="ytl_list clearFix">
+            <li><a href="#"><img src="images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+            <li><a href="#"><img src="images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+            <li><a href="#"><img src="images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+            <li><a href="#"><img src="images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+            <li><a href="#"><img src="images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+            <li><a href="#"><img src="images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+        </ul>
+        <ol class='ytl_pointLists'></ol>
+    </div>
+    <div class="ytl_listBox">
+        <ul class="ytl_list clearFix">
+            <li><a href="#"><img src="images/animal/201510221452093659724.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=1871337630,1458141109&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=2163105592,2371140567&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+        </ul>
+        <ol class='ytl_pointLists'></ol>
+    </div>
+</div>
+<!--tab切换同时含有轮播图-->
+<div class="ytl_tabScroll ytl_tabScroll3">
+    <div class="ytl_title clearFix">
+        <dl class="ytl_left">
+            <dd class="on">风景</dd>
+            <dd>动物</dd>
+        </dl>
+        <a href="#" class="ytl_right">more+</a>
+        <a href="#" class="ytl_right">more+</a>
+    </div>
+    <div class="ytl_listBox on">
+        <ul class="ytl_list clearFix">
+            <li><a href="#"><img src="images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+            <li><a href="#"><img src="images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+            <li><a href="#"><img src="images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+            <li><a href="#"><img src="images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+            <li><a href="#"><img src="images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+            <li><a href="#"><img src="images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+        </ul>
+        <ol class='ytl_pointLists'></ol>
+    </div>
+    <div class="ytl_listBox">
+        <ul class="ytl_list clearFix">
+            <li><a href="#"><img src="images/animal/201510221452093659724.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=1871337630,1458141109&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=2163105592,2371140567&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            <li><a href="#"><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+        </ul>
+        <ol class='ytl_pointLists'></ol>
+    </div>
+</div>
+<!--tab切换同时含有轮播图-->
+<div class="ytl_tabScroll ytl_tabScroll4">
     <div class="ytl_title clearFix">
         <dl class="ytl_left">
             <dd class="on">风景</dd>
