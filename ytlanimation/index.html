@@ -20,11 +20,11 @@
                 clickHover:'click',//存在click和hover两种触发方式
             });
             /*无缝滚动——相关参数：scroll，showNum，direction，timer，autoPlay*/
-            $('.ytl_marquee').marquee({
+            $('.ytl_marquee .ytl_marqueeCon').marquee({
                 timer: 20,//无缝滚动默认20
-                showNum:4,//显示数量
-                scroll:"wfLrScroll",//存在wfLrScroll和wfTdScroll两种
-                direction:'right',//有wfLrScroll的left和right、有wfTdScroll的top和down两个方向
+                showNum:3,//显示数量
+                scroll:"wfTtD",//存在wfLtR和wfTtD两种
+                direction:'top',//有wfLrScroll的left和right、有wfTdScroll的top和down两个方向
             });
             /*百合窗——相关参数：timer,saveCarousel,prevNext,showNum,createPoint,createImg,divLevelNum,divVerticalNum,clickHover*/
             $('.ytl_picAnimation').lilyWindow({
@@ -35,8 +35,9 @@
                 showNum:4,
                 moveNum:1,
                 prevNext:true,
+                direction:'horizontal'//存在horizontal和vertical两种
             });
-            /*tab切换同时含有轮播图——相关参数：timer,showNum,group,autoPlay,createPoint,divLevelNum*/
+            /*tab切换同时含有轮播图(显示点时可以点击)——相关参数：timer,showNum,group,autoPlay,createPoint,divLevelNum*/
             $('.ytl_tabScroll1').multipleRolling({
                 //情况一：一行没点的一个一个移动
                 timer:2000,
@@ -84,8 +85,8 @@
     </ul>
 </div>
 <!--手风琴-->
-<div>
-    <ul class="ytl_sfq clearFix">
+<div class="ytl_sfq clearFix">
+    <ul>
         <li class="ytl_sfqListLtR">
             <div style="background: saddlebrown" class="ytl_sfqListLeft"></div>
             <div style="background: sandybrown" class="ytl_sfqListRight"></div>
@@ -106,17 +107,19 @@
 </div>
 <!--无缝滚动-->
 <div class="ytl_marquee">
-    <ul class="ytl_marqueeList clearFix">
-        <li class="element"><img src="images/animal/201510221452093659724.jpg" alt=""></li>
-        <li class="element"><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt=""></li>
-        <li class="element"><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt=""></li>
-        <li class="element"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
-        <li class="element"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
-        <li class="element"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
-    </ul>
+    <div class="ytl_marqueeCon">
+        <ul class="ytl_marqueeList">
+            <li><img src="images/animal/201510221452093659724.jpg" alt=""></li>
+            <li><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt=""></li>
+            <li><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt=""></li>
+            <li><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
+            <li><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
+            <li><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
+        </ul>
+    </div>
 </div>
 <!--百合窗-->
-<div class="ytl_picAnimation">
+<div class="ytl_picAnimation" style="margin-top: 60px">
         <ul class="ytl_picCarousel">
             <li><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt=""></li>
             <li><img src="images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt=""></li>
@@ -287,5 +290,7 @@
         <div class="ytl_next"></div>
     </div>
 </div>
+<!--不规则左右移动-->
+
 </body>
 </html>

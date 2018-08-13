@@ -68,9 +68,9 @@
                     $this.find(rightBox).addClass(rightClass).removeClass(downClass);
                     $(LtRBox).eq(0).css({'width': leftRightW});
                     var $thisLeftClick = $this.find(leftBox).width();
-                        $(LtRBox).on(opts.clickHover,function () {
-                            $(this).stop().animate({width: leftRightW}, opts.timer).siblings().stop().animate({width: $thisLeftClick}, opts.timer);
-                        });
+                    $(LtRBox).on(opts.clickHover,function () {
+                        $(this).stop().animate({width: leftRightW}, opts.timer).siblings().stop().animate({width: $thisLeftClick}, opts.timer);
+                    });
                 }
                 else {
                     $this.find(LtRBox).addClass(TtDClass).removeClass(LtRClass);
@@ -193,8 +193,8 @@
                     ulLiBox = '.ytl_picCarousel li',
                     olBox='.ytl_pointLists',
                     olLiBox='.ytl_pointLists li',
-                imgOlBox='.ytl_smallImgList',
-                imgOlLiBox='.ytl_smallImgList li';
+                    imgOlBox='.ytl_smallImgList',
+                    imgOlLiBox='.ytl_smallImgList li';
                 var Lenth = $this.find(ulLiBox).length;
                 $this.find(ulLiBox).each(function (index) {
                     $(this).css({
@@ -833,10 +833,10 @@
                 var $this=$(this);
                 var time=null,ulIndex=0;
                 var divBox='.ytl_listBox',
-                     ulBox='.ytl_listBox ul',
-                     ulLiBox='.ytl_listBox ul li',
-                     dlBox='.ytl_title .ytl_left',
-                     linkBox='.ytl_title .ytl_right',
+                    ulBox='.ytl_listBox ul',
+                    ulLiBox='.ytl_listBox ul li',
+                    dlBox='.ytl_title .ytl_left',
+                    linkBox='.ytl_title .ytl_right',
                     olBox='.ytl_pointLists',
                     olLiBox='.ytl_pointLists li';
                 initialize(0);
@@ -985,8 +985,8 @@
         if (opts.createPoint) {
             $this.find('ul').each(function (index) {
                 var pointList = "",
-                ulBox=$this.find('ul').eq(index),
-                len=ulBox.find('li').length;
+                    ulBox=$this.find('ul').eq(index),
+                    len=ulBox.find('li').length;
                 if(opts.group){
                     for(var i=0;i<len/opts.moveNum/opts.divLevelNum;i++){
                         pointList += "<li class='ytl_pointList'></li>";
