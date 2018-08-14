@@ -26,7 +26,7 @@
                 scroll:"wfTtD",//存在wfLtR和wfTtD两种
                 direction:'top',//有wfLrScroll的left和right、有wfTdScroll的top和down两个方向
             });
-            /*百合窗——相关参数：timer,saveCarousel,prevNext,showNum,createPoint,createImg,divLevelNum,divVerticalNum,clickHover*/
+            /*百合窗——相关参数：timer,saveCarousel,prevNext,showNum,moveNum,createPoint,createImg,direction,divLevelNum,divVerticalNum,clickHover*/
             $('.ytl_picAnimation').lilyWindow({
                 timer: 1000,
                 clickHover: 'click',
@@ -37,7 +37,7 @@
                 prevNext:true,
                 direction:'horizontal'//存在horizontal和vertical两种
             });
-            /*tab切换同时含有轮播图(显示点时可以点击)——相关参数：timer,showNum,group,autoPlay,createPoint,divLevelNum*/
+            /*tab切换同时含有轮播图(显示点时可以点击)——相关参数：timer,showNum,group,autoPlay,createPoint,divLevelNum,prevNext*/
             $('.ytl_tabScroll1').multipleRolling({
                 //情况一：一行没点的一个一个移动
                 timer:2000,
@@ -76,7 +76,7 @@
     </script>
 </head>
 <body>
-<!--新闻滚动-->
+<!--新闻滚动
 <div class="ytl_move">
     <ul class="ytl_moveCon">
         <li><a href="#">测试1</a></li>
@@ -84,7 +84,7 @@
         <li><a href="#">测试3</a></li>
     </ul>
 </div>
-<!--手风琴-->
+&lt;!&ndash;手风琴&ndash;&gt;
 <div class="ytl_sfq clearFix">
     <ul>
         <li class="ytl_sfqListLtR">
@@ -105,7 +105,7 @@
         </li>
     </ul>
 </div>
-<!--无缝滚动-->
+&lt;!&ndash;无缝滚动&ndash;&gt;
 <div class="ytl_marquee">
     <div class="ytl_marqueeCon">
         <ul class="ytl_marqueeList">
@@ -118,7 +118,7 @@
         </ul>
     </div>
 </div>
-<!--百合窗-->
+&lt;!&ndash;百合窗&ndash;&gt;
 <div class="ytl_picAnimation" style="margin-top: 60px">
         <ul class="ytl_picCarousel">
             <li><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt=""></li>
@@ -138,7 +138,7 @@
             <div class="ytl_next"></div>
         </div>
     </div>
-<!--tab切换同时含有轮播图-->
+&lt;!&ndash;tab切换同时含有轮播图&ndash;&gt;
 <div class="ytl_tabScroll ytl_tabScroll1">
     <div class="ytl_title clearFix">
         <dl class="ytl_left">
@@ -174,7 +174,7 @@
         <ol class='ytl_pointLists'></ol>
     </div>
 </div>
-<!--tab切换同时含有轮播图-->
+&lt;!&ndash;tab切换同时含有轮播图&ndash;&gt;
 <div class="ytl_tabScroll ytl_tabScroll2">
     <div class="ytl_title clearFix">
         <dl class="ytl_left">
@@ -214,7 +214,7 @@
         <div class="ytl_next"></div>
     </div>
 </div>
-<!--tab切换同时含有轮播图-->
+&lt;!&ndash;tab切换同时含有轮播图&ndash;&gt;
 <div class="ytl_tabScroll ytl_tabScroll3">
     <div class="ytl_title clearFix">
         <dl class="ytl_left">
@@ -250,7 +250,7 @@
         <ol class='ytl_pointLists'></ol>
     </div>
 </div>
-<!--tab切换同时含有轮播图-->
+&lt;!&ndash;tab切换同时含有轮播图&ndash;&gt;
 <div class="ytl_tabScroll ytl_tabScroll4">
     <div class="ytl_title clearFix">
         <dl class="ytl_left">
@@ -289,8 +289,10 @@
         <div class="ytl_prev"></div>
         <div class="ytl_next"></div>
     </div>
-</div>
-<!--不规则左右移动-->
+</div>-->
+<!--不固定宽度左右移动-->
+<div class="ytl_notFixedHigh">
 
+</div>
 </body>
 </html>

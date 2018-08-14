@@ -246,3 +246,7 @@ img{width:auto;vertical-align:middle}
   background: #cccccc; }
 .ytl_tabScroll .ytl_list p {
   margin-top: 13px; }
+/*不固定宽度左右移动*/
+.ytl_notFixedHigh{
+  overflow: hidden;
+}
