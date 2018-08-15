@@ -94,8 +94,8 @@ img{width:auto;vertical-align:middle}
   background: #0abbb9;
 }
 .ytl_tdLbList li{
-  width: 600px;
-  height: 400px;
+  width: 200px;
+  height: 120px;
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -240,124 +240,70 @@ img{width:auto;vertical-align:middle}
   margin-bottom: 20px;
 }
 .ytl_tabScroll .ytl_list a {
-  width: 250px;
-  height: 184px;
+  width: 150px;
+  height: 104px;
   overflow: hidden;
   background: #cccccc; }
 .ytl_tabScroll .ytl_list p {
   margin-top: 13px; }
-/*
-*纯css
-*选择按钮美化*/
-.ytl_choose{
+/*自定义下拉选择*/
+.ytl_dropDown{
   width: 600px;
+  height: 60px;
+  z-index: 30;
+  position: relative;
   margin: 50px auto;
 }
-.ytl_choose form{
-  float: left;
-  margin: 0 100px;
+.ytl_chooseResult{
+  height: 60px;
+  line-height: 60px;
+  background: #007aff;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 0 20px;
+  cursor: pointer;
+  position: relative;
 }
-.ytl_choose input{
-  width: 0;
+.ytl_dropDownBg1:after{
+  content: "";
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 22px 12px;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 16px solid #ffffff;
+  border-bottom:none;
 }
-  /*复选*/
-.ytl_check {
-  display:inline-block;
-  position:relative;
-}
-.ytl_check label {
-  width:16px;
-  height:16px;
-  position:absolute;
-  top:0;
-  left:0;
-  border:2px solid #cacaca;
-  border-radius:50%;
-  background:#fff;
-  cursor:pointer;
-}
-.ytl_check label:hover {
-  border:2px solid #f78642;
-}
-.ytl_check label:after {
-  content:'';
-  width:8px;
-  height:4px;
-  position:absolute;
-  top:4px;
-  left:3px;
-  border:2px solid #cacaca;
+.ytl_dropDownBg2:after{
+  content: "";
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 22px 12px;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-bottom: 16px solid #ffffff;
   border-top:none;
-  border-right:none;
-  opacity:0.4;
-  transform:rotate(-45deg);
-  -webkit-transform:rotate(-45deg);
 }
-.ytl_check label:hover:after {
-  border:2px solid #f78642;
-  border-top:none;
-  border-right:none;
+.ytl_chooseList{
+  line-height: 50px;
+  border: 1px solid #808080;
+  border-top: none;
+  display: none;
+  position: absolute;
+  background: #ffffff;
+  width: 598px;
+  top: 60px;
 }
-.ytl_check input:checked + label {
-  border:2px solid #f78642;
+.ytl_chooseList li{
+  padding: 0 20px;
+  cursor: pointer;
+  color: #4c4c4c;
 }
-.ytl_check input:checked + label:after {
-  opacity:1;
-  border:2px solid #f78642;
-  border-top:none;
-  border-right:none;
-}
-.ytl_check span{
-  padding-left: 30px;
-  width: 50px;
-  display: inline-block;
-}
-/*单选*/
-.ytl_radio {
-  display:inline-block;
-  position:relative;
-}
-.ytl_radio label {
-  width:15px;
-  height:15px;
-  position:absolute;
-  top:0;
-  left:0;
-  border:2px solid #cacaca;
-  border-radius:50%;
-  background:#fff;
-  cursor:pointer;
-}
-.ytl_radio label:hover{
-  border:2px solid #ef4949;
-}
-.ytl_radio label:hover:after{
-  content:'';
-  width:9px;
-  height:9px;
-  position:absolute;
-  top:3px;
-  left:3px;
-  opacity: 0.4;
-  background: #ef4949;
-  border-radius:50%;
-}
-.ytl_radio input:checked + label{
-  border:2px solid #ef4949;
-}
-.ytl_radio input:checked + label::after {
-  content:'';
-  width:9px;
-  height:9px;
-  position:absolute;
-  top:3px;
-  left:3px;
-  opacity: 0.4;
-  background:#ef4949;
-  border-radius:50%;
-}
-.ytl_radio span{
-  padding-left: 30px;
-  width: 50px;
-  display: inline-block;
+.ytl_chooseList li:hover,.ytl_chooseList .on{
+  background: #0abbb9;
+  color: #ffffff;
 }
