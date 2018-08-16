@@ -87,7 +87,7 @@
     </script>
 </head>
 <body>
-<ul style="background: #d68572;color: #ffffff;padding-bottom: 20px">
+<!--<ul style="background: #d68572;color: #ffffff;padding-bottom: 20px">
     <li><h2 style="font-size: 20px;text-align: center;padding: 50px 0">jquery动画</h2></li>
     <li class="clearFix" style="width: 90%;margin: 0 auto 50px">
         <div style="float:left;width: 40%">
@@ -591,6 +591,42 @@
             .ytl_radio input:checked + label{border:2px solid #ef4949;}
             .ytl_radio input:checked + label::after {content:'';width:9px;height:9px;position:absolute;top:3px;left:3px;opacity: 0.4;background:#ef4949;border-radius:50%;}
             .ytl_radio span{padding-left: 30px;width: 50px;display: inline-block;}
+        </style>
+        <div style="background-color:#0c1021;padding: 30px 20px 20px;border-top: 1px solid #ffffff">
+            <h3 style="font-size: 18px;line-height: 40px;">扩散的点</h3>
+            <div class="clearFix">
+                <dl class="clearFix" style="width:50%;float:left;padding: 20px 40px">
+                    <dt style="float:left;width: 30%">css</dt>
+                    <dd style="float:left;width: 80%;overflow: auto">
+                        <p></p>
+                        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">point </span>{<span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0.4</span><span style="color:#68e868;font-weight:bold;">rem</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0.4</span><span style="color:#68e868;font-weight:bold;">rem</span>;}<br>.<span style="color:#ff6400;">point div </span>{<span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">6</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">6</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">margin</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">3</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">3</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">-webkit-border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">-moz-border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#3e6ae8</span>;<span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">z-index</span>: <span style="color:#d8fa3c;">2</span>;}<br>.<span style="color:#ff6400;">point2 </span>{<span style="color:#8da6ce;">z-index</span>: <span style="color:#d8fa3c;">1</span>;<span style="color:#8da6ce;">opacity</span>: <span style="color:#d8fa3c;">0.6</span>;<span style="color:#8da6ce;">-webkit-animation</span>: <span style="color:#ff6400;">warn </span><span style="color:#d8fa3c;">2</span><span style="color:#68e868;font-weight:bold;">s ease-out</span>;<span style="color:#8da6ce;">-moz-animation</span>: <span style="color:#ff6400;">warn </span><span style="color:#d8fa3c;">2</span><span style="color:#68e868;font-weight:bold;">s ease-out</span>;<span style="color:#8da6ce;">animation</span>: <span style="color:#ff6400;">warn </span><span style="color:#d8fa3c;">2</span><span style="color:#68e868;font-weight:bold;">s ease-out</span>;<span style="color:#8da6ce;">-webkit-animation-iteration-count</span>: <span style="color:#68e868;font-weight:bold;">infinite</span>;<span style="color:#8da6ce;">-moz-animation-iteration-count</span>: <span style="color:#68e868;font-weight:bold;">infinite</span>;<span style="color:#8da6ce;">animation-iteration-count</span>: <span style="color:#68e868;font-weight:bold;">infinite</span>;}<br>.<span style="color:#ff6400;">point3 </span>{<span style="color:#8da6ce;">z-index</span>: <span style="color:#d8fa3c;">1</span>;<span style="color:#8da6ce;">opacity</span>: <span style="color:#d8fa3c;">1</span>;<span style="color:#8da6ce;">-webkit-animation</span>: <span style="color:#ff6400;">warn1 </span><span style="color:#d8fa3c;">2</span><span style="color:#68e868;font-weight:bold;">s ease-out </span><span style="color:#d8fa3c;">1</span><span style="color:#68e868;font-weight:bold;">s</span>;<span style="color:#8da6ce;">-moz-animation</span>: <span style="color:#ff6400;">warn1 </span><span style="color:#d8fa3c;">2</span><span style="color:#68e868;font-weight:bold;">s ease-out </span><span style="color:#d8fa3c;">1</span><span style="color:#68e868;font-weight:bold;">s</span>;<span style="color:#8da6ce;">animation</span>: <span style="color:#ff6400;">warn1 </span><span style="color:#d8fa3c;">2</span><span style="color:#68e868;font-weight:bold;">s ease-out </span><span style="color:#d8fa3c;">1</span><span style="color:#68e868;font-weight:bold;">s</span>;<span style="color:#8da6ce;">-webkit-animation-iteration-count</span>: <span style="color:#68e868;font-weight:bold;">infinite</span>;<span style="color:#8da6ce;">-moz-animation-iteration-count</span>: <span style="color:#68e868;font-weight:bold;">infinite</span>;<span style="color:#8da6ce;">animation-iteration-count</span>: <span style="color:#68e868;font-weight:bold;">infinite</span>;}<br><span style="color:#cc7832;">@keyframes </span><span style="color:#ff6400;">warn </span>{ <span style="color:#ff6400;">0% </span>{<span style="color:#8da6ce;">transform</span>: <span style="color:#8da6ce;">scale</span>(<span style="color:#d8fa3c;">1</span>);} <span style="color:#ff6400;">100% </span>{<span style="color:#8da6ce;">transform</span>: <span style="color:#8da6ce;">scale</span>(<span style="color:#d8fa3c;">5.5</span>);<span style="color:#8da6ce;">opacity</span>: <span style="color:#d8fa3c;">0</span>;} }<br><span style="color:#cc7832;">@keyframes </span><span style="color:#ff6400;">warn1 </span>{ <span style="color:#ff6400;">0% </span>{<span style="color:#8da6ce;">transform</span>: <span style="color:#8da6ce;">scale</span>(<span style="color:#d8fa3c;">1</span>);} <span style="color:#ff6400;">100% </span>{<span style="color:#8da6ce;">transform</span>: <span style="color:#8da6ce;">scale</span>(<span style="color:#d8fa3c;">5.5</span>);<span style="color:#8da6ce;">opacity</span>: <span style="color:#d8fa3c;">0</span>;} }</pre>
+                        <p></p>
+                    </dd>
+                </dl>
+                <dl class="clearFix" style="width:20%;float:left;border-left:1px solid #ffffff;border-right:1px solid #ffffff;padding: 20px 40px">
+                    <dt style="float:left;width: 30%">html</dt>
+                    <dd style="float:left;width: 80%;overflow: auto">
+                        <p></p>
+                        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"point"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"point1"</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"point2"</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"point3"</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;<br>&lt;/<span style="color:#7f90aa;">div</span>&gt;</pre>
+                        <p></p>
+                    </dd>
+                </dl>
+                <div style="float:left;">
+                    <div class="point">
+                        <div class="point1"></div>
+                        <div class="point2"></div>
+                        <div class="point3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .point {position: relative;width: 0.4rem;height: 0.4rem;}
+            .point div {position: absolute;width: 6px;height: 6px;left: 50%;top: 50%;margin: -3px 0 0 -3px;-webkit-border-radius: 50%;-moz-border-radius: 50%;background: #3e6ae8;border-radius: 50%;z-index: 2;}
+            .point2 {z-index: 1;opacity: 0.6;-webkit-animation: warn 2s ease-out;-moz-animation: warn 2s ease-out;animation: warn 2s ease-out;-webkit-animation-iteration-count: infinite;-moz-animation-iteration-count: infinite;animation-iteration-count: infinite;}
+            .point3 {z-index: 1;opacity: 1;-webkit-animation: warn1 2s ease-out 1s;-moz-animation: warn1 2s ease-out 1s;animation: warn1 2s ease-out 1s;-webkit-animation-iteration-count: infinite;-moz-animation-iteration-count: infinite;animation-iteration-count: infinite;}
+            @keyframes warn { 0% {transform: scale(1);} 100% {transform: scale(5.5);opacity: 0;} }
+            @keyframes warn1 { 0% {transform: scale(1);} 100% {transform: scale(5.5);opacity: 0;} }
         </style>
     </li>
     <li style="width: 90%;margin: 10px auto">
@@ -1313,6 +1349,162 @@
                     <div class="magnifying-glass" style="float:left;"></div>
                 </div>
             </div>
+            <div class="clearFix" style="margin-top: 40px;padding-top: 40px;border-top: 1px solid #ffffff">
+                <div style="width: 29%;padding:0 1% 0 7%;float:left;">
+                    <div style="float:left;width: 55%;margin-right: 3%;border-right: 1px solid #ffffff">
+                        <dl class="clearFix" style="padding: 10px 0">
+                            <dt style="float:left;width: 20%">css</dt>
+                            <dd style="float:left;width: 80%;overflow: auto">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">facebook-icon </span>{<span style="color:#8da6ce;">background</span>: <span style="color:#68e868;font-weight:bold;">red</span>;<span style="color:#8da6ce;">text-indent</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">999</span><span style="color:#68e868;font-weight:bold;">em</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">100</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">110</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">5</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">overflow</span>: <span style="color:#68e868;font-weight:bold;">hidden</span>;<span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">15</span><span style="color:#68e868;font-weight:bold;">px solid red</span>;<span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">0</span>;}<br>.<span style="color:#ff6400;">facebook-icon</span>::<span style="color:#ff6400;">before </span>{<span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">"/20"</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#68e868;font-weight:bold;">red</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">40</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">90</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">bottom</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">30</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">right</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">37</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">20</span><span style="color:#68e868;font-weight:bold;">px solid </span><span style="color:#6897bb;">#eee</span>;<span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">25</span><span style="color:#68e868;font-weight:bold;">px</span>;}<br>.<span style="color:#ff6400;">facebook-icon</span>::<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">"/20"</span>;<br> <span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">absolute</span>;<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">55</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">50</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">20</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">right</span>: <span style="color:#d8fa3c;">5</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#eee</span>;<br>}</pre>
+                                <p></p>
+                            </dd>
+                        </dl>
+                        <dl class="clearFix" style="border-top: 1px solid #ffffff;padding: 10px 0">
+                            <dt style="float:left;width: 20%">html</dt>
+                            <dd style="float:left;width: 80%;overflow: auto">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"facebook-icon"</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;</pre>
+                                <p></p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="facebook-icon" style="float:left;"></div>
+                </div>
+                <div style="width: 29%;padding:0 1% 0 1%;float:left;">
+                    <div style="float:left;width: 55%;margin-right: 3%;border-right: 1px solid #ffffff">
+                        <dl class="clearFix" style="padding: 10px 0">
+                            <dt style="float:left;width: 20%">css</dt>
+                            <dd style="float:left;width: 80%;overflow: auto">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">moon </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">80</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">80</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">box-shadow</span>: <span style="color:#d8fa3c;">15</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">15</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#68e868;font-weight:bold;">red</span>;<br>}</pre>
+                                <p></p>
+                            </dd>
+                        </dl>
+                        <dl class="clearFix" style="border-top: 1px solid #ffffff;padding: 10px 0">
+                            <dt style="float:left;width: 20%">html</dt>
+                            <dd style="float:left;width: 80%;overflow: auto">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"moon"</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;</pre>
+                                <p></p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="moon" style="float:left;"></div>
+                </div>
+                <div style="width: 29%;padding:0 1% 0 1%;float:left;">
+                    <div style="float:left;width: 55%;margin-right: 3%;border-right: 1px solid #ffffff">
+                        <dl class="clearFix" style="padding: 10px 0">
+                            <dt style="float:left;width: 20%">css</dt>
+                            <dd style="float:left;width: 80%;overflow: auto">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">flag </span>{<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">110</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">56</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">padding-top</span>: <span style="color:#d8fa3c;">15</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#68e868;font-weight:bold;">red</span>;<span style="color:#8da6ce;">color</span>: <span style="color:#68e868;font-weight:bold;">white</span>;<span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">11</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">letter-spacing</span>: <span style="color:#d8fa3c;">0.2</span><span style="color:#68e868;font-weight:bold;">em</span>;<span style="color:#8da6ce;">text-align</span>: <span style="color:#68e868;font-weight:bold;">center</span>;<span style="color:#8da6ce;">text-transform</span>: <span style="color:#68e868;font-weight:bold;">uppercase</span>;}<br>.<span style="color:#ff6400;">flag</span>:<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">bottom</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">13</span><span style="color:#68e868;font-weight:bold;">px solid </span><span style="color:#6897bb;">#0c1021</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">55</span><span style="color:#68e868;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">55</span><span style="color:#68e868;font-weight:bold;">px solid transparent</span>;<br>}</pre>
+                                <p></p>
+
+                            </dd>
+                        </dl>
+                        <dl class="clearFix" style="border-top: 1px solid #ffffff;padding: 10px 0">
+                            <dt style="float:left;width: 20%">html</dt>
+                            <dd style="float:left;width: 80%;overflow: auto">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"flag"</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;</pre>
+                                <p></p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="flag" style="float:left;"></div>
+                </div>
+            </div>
+            <div class="clearFix" style="margin-top: 40px;padding-top: 40px;border-top: 1px solid #ffffff">
+                <div style="width: 29%;padding:0 1% 0 7%;float:left;">
+                    <div style="float:left;width: 55%;margin-right: 3%;border-right: 1px solid #ffffff">
+                        <dl class="clearFix" style="padding: 10px 0">
+                            <dt style="float:left;width: 20%">css</dt>
+                            <dd style="float:left;width: 80%;overflow: auto">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">cone </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">70</span><span style="color:#68e868;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">70</span><span style="color:#68e868;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">100</span><span style="color:#68e868;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">-moz-border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">-webkit-border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">%</span>;<br>}</pre>
+                                <p></p>
+                            </dd>
+                        </dl>
+                        <dl class="clearFix" style="border-top: 1px solid #ffffff;padding: 10px 0">
+                            <dt style="float:left;width: 20%">html</dt>
+                            <dd style="float:left;width: 80%;overflow: auto">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"cone"</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;</pre>
+                                <p></p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="cone" style="float:left;"></div>
+                </div>
+                <div style="width: 29%;padding:0 1% 0 1%;float:left;">
+                    <div style="float:left;width: 55%;margin-right: 3%;border-right: 1px solid #ffffff">
+                        <dl class="clearFix" style="padding: 10px 0">
+                            <dt style="float:left;width: 20%">css</dt>
+                            <dd style="float:left;width: 80%;overflow: auto">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">cross </span>{<span style="color:#8da6ce;">background</span>: <span style="color:#68e868;font-weight:bold;">red</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">100</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">20</span><span style="color:#68e868;font-weight:bold;">px</span>;}<br>.<span style="color:#ff6400;">cross</span>:<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">background</span>: <span style="color:#68e868;font-weight:bold;">red</span>;<span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">20</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">100</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">left</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">40</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">40</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">absolute</span>;<br>}</pre>
+                                <p></p>
+                            </dd>
+                        </dl>
+                        <dl class="clearFix" style="border-top: 1px solid #ffffff;padding: 10px 0">
+                            <dt style="float:left;width: 20%">html</dt>
+                            <dd style="float:left;width: 80%;overflow: auto">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"cross"</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;</pre>
+                                <p></p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="cross" style="float:left;"></div>
+                </div>
+                <div style="width: 29%;padding:0 1% 0 1%;float:left;">
+                    <div style="float:left;width: 55%;margin-right: 3%;border-right: 1px solid #ffffff">
+                        <dl class="clearFix" style="padding: 10px 0">
+                            <dt style="float:left;width: 20%">css</dt>
+                            <dd style="float:left;width: 80%;overflow: auto">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">base </span>{<span style="color:#8da6ce;">background</span>: <span style="color:#68e868;font-weight:bold;">red</span>;<span style="color:#8da6ce;">display</span>: <span style="color:#68e868;font-weight:bold;">inline-block</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">55</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">margin-left</span>: <span style="color:#d8fa3c;">20</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">margin-top</span>: <span style="color:#d8fa3c;">55</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">100</span><span style="color:#68e868;font-weight:bold;">px</span>;}<br>.<span style="color:#ff6400;">base</span>:<span style="color:#ff6400;">before </span>{<br> <span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">35</span><span style="color:#68e868;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">50</span><span style="color:#68e868;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">50</span><span style="color:#68e868;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">35</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<br>}</pre>
+                                <p></p>
+
+                            </dd>
+                        </dl>
+                        <dl class="clearFix" style="border-top: 1px solid #ffffff;padding: 10px 0">
+                            <dt style="float:left;width: 20%">html</dt>
+                            <dd style="float:left;width: 80%;overflow: auto">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"base"</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;</pre>
+                                <p></p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="base" style="float:left;"></div>
+                </div>
+            </div>
+            <div class="clearFix" style="margin-top: 40px;padding-top: 40px;border-top: 1px solid #ffffff">
+                <div style="width: 29%;padding:0 1% 0 7%;float:left;">
+                    <div style="float:left;width: 55%;margin-right: 3%;border-right: 1px solid #ffffff">
+                        <dl class="clearFix" style="padding: 10px 0">
+                            <dt style="float:left;width: 20%">css</dt>
+                            <dd style="float:left;width: 80%;overflow: auto">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">pointer </span>{<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">200</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">40</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#68e868;font-weight:bold;">red</span>}<br>.<span style="color:#ff6400;">pointer</span>:<span style="color:#ff6400;">after </span>{<span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">bottom</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">20</span><span style="color:#68e868;font-weight:bold;">px solid </span><span style="color:#6897bb;">#0c1021</span>;<span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">20</span><span style="color:#68e868;font-weight:bold;">px solid transparent</span>;<span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">20</span><span style="color:#68e868;font-weight:bold;">px solid transparent</span>;}<br>.<span style="color:#ff6400;">pointer</span>:<span style="color:#ff6400;">before </span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<br> <span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">absolute</span>;<br> <span style="color:#8da6ce;">right</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">20</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">bottom</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">20</span><span style="color:#68e868;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">20</span><span style="color:#68e868;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">20</span><span style="color:#68e868;font-weight:bold;">px solid transparent</span>;<br>}</pre>
+</pre>
+                                <p></p>
+                            </dd>
+                        </dl>
+                        <dl class="clearFix" style="border-top: 1px solid #ffffff;padding: 10px 0">
+                            <dt style="float:left;width: 20%">html</dt>
+                            <dd style="float:left;width: 80%;overflow: auto">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"pointer"</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;</pre>
+                                <p></p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="pointer" style="float:left;"></div>
+                </div>
+            </div>
         </div>
         <style>
             .triangle-up {
@@ -1510,7 +1702,7 @@
                 -ms-transform: rotate(60deg);
                 -o-transform: rotate(60deg);
             }
-            .burst-8 {background: red;width: 80px;height: 80px;position: relative;text-align: center;-webkit-transform: rotate(20deg);-moz-transform: rotate(20deg);-ms-transform: rotate(20deg);-o-transform: rotate(20eg);}
+            .burst-8 {background: red;width: 80px;height: 80px;position: relative;text-align: center;-webkit-transform: rotate(20deg);-moz-transform: rotate(20deg);-ms-transform: rotate(20deg);-o-transform: rotate(20deg);}
             .burst-8:before {
                 content: "";position: absolute;top: 0;left: 0;height: 80px;width: 80px;background: red;
                 -webkit-transform: rotate(135deg);
@@ -1550,6 +1742,14 @@
                 background: inherit;
                 border-radius: 5% / 50%;
             }
+            .magnifying-glass {font-size: 10em; /* This controls the size. */display: inline-block;width: 0.4em;height: 0.4em;border: 0.1em solid red;position: relative;border-radius: 0.35em;}
+            .magnifying-glass::before {
+                content: "";display: inline-block;position: absolute;right: -0.25em;bottom: -0.1em;border-width: 0;background: red;width: 0.35em;height: 0.08em;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+            }
             .chevron {position: relative;text-align: center;padding: 12px;margin-bottom: 6px;height: 60px;width: 150px;}
             .chevron:before {content: '';position: absolute;top: 0;left: 0;height: 100%;width: 51%;background: red;-webkit-transform: skew(0deg, 6deg);-moz-transform: skew(0deg, 6deg);-ms-transform: skew(0deg, 6deg);-o-transform: skew(0deg, 6deg);transform: skew(0deg, 6deg);}
             .chevron:after {
@@ -1559,100 +1759,31 @@
                 -ms-transform: skew(0deg, -6deg);
                 -o-transform: skew(0deg, -6deg);
                 transform: skew(0deg, -6deg);
-            }​
-                         .magnifying-glass
-                         {
-                             font-size: 10em; /* This controls the size. */
-                             display: inline-block;
-                             width: 0.4em;
-                             height: 0.4em;
-                             border: 0.1em solid red;
-                             position: relative;
-                             border-radius: 0.35em;
-                         }
-            .magnifying-glass::before
-            {
-                content: "";
-                display: inline-block;
-                position: absolute;
-                right: -0.25em;
-                bottom: -0.1em;
-                border-width: 0;
-                background: red;
-                width: 0.35em;
-                height: 0.08em;
-                -webkit-transform: rotate(45deg);
-                -moz-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
-                -o-transform: rotate(45deg);
             }
-
-            #facebook-icon {
-                background: red;
-                text-indent: -999em;
-                width: 100px;
-                height: 110px;
-                border-radius: 5px;
-                position: relative;
-                overflow: hidden;
-                border: 15px solid red;
-                border-bottom: 0;
-            }
-            #facebook-icon::before {
+            .facebook-icon {background: red;text-indent: -999em;width: 100px;height: 110px;border-radius: 5px;position: relative;overflow: hidden;border: 15px solid red;border-bottom: 0;}
+            .facebook-icon::before {content: "/20";position: absolute;background: red;width: 40px;height: 90px;bottom: -30px;right: -37px;border: 20px solid #eee;border-radius: 25px;}
+            .facebook-icon::after {
                 content: "/20";
                 position: absolute;
-                background: red;
-                width: 40px;
-                height: 90px;
-                bottom: -30px;
-                right: -37px;
-                border: 20px solid #eee;
-                border-radius: 25px;
-            }
-            #facebook-icon::after {
-                content: "/20";
-                position: absolute;
-                width: 55px;
-                top: 50px;
-                height: 20px;
+                width: 55px;top: 50px;
+                height: 20px;right: 5px;
                 background: #eee;
-                right: 5px;
             }
-
-            #moon {
+            .moon {
                 width: 80px;
                 height: 80px;
                 border-radius: 50%;
                 box-shadow: 15px 15px 0 0 red;
             }
-
-            #flag {
-                width: 110px;
-                height: 56px;
-                padding-top: 15px;
-                position: relative;
-                background: red;
-                color: white;
-                font-size: 11px;
-                letter-spacing: 0.2em;
-                text-align: center;
-                text-transform: uppercase;
-            }
-            #flag:after {
-                content: "";
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 0;
-                height: 0;
-                border-bottom: 13px solid #eee;
+            .flag {width: 110px;height: 56px;padding-top: 15px;position: relative;background: red;color: white;font-size: 11px;letter-spacing: 0.2em;text-align: center;text-transform: uppercase;}
+            .flag:after {
+                content: "";position: absolute;left: 0;bottom: 0;width: 0;height: 0;
+                border-bottom: 13px solid #0c1021;
                 border-left: 55px solid transparent;
                 border-right: 55px solid transparent;
             }
-
-            #cone {
-                width: 0;
-                height: 0;
+            .cone {
+                width: 0;height: 0;
                 border-left: 70px solid transparent;
                 border-right: 70px solid transparent;
                 border-top: 100px solid red;
@@ -1660,74 +1791,70 @@
                 -webkit-border-radius: 50%;
                 border-radius: 50%;
             }
-
-            #cross {
-                background: red;
-                height: 100px;
-                position: relative;
-                width: 20px;
-            }
-            #cross:after {
-                background: red;
-                content: "";
-                height: 20px;
-                left: -40px;
+            .cross {background: red;height: 100px;position: relative;width: 20px;}
+            .cross:after {
+                background: red;content: "";
+                height: 20px;width: 100px;
+                left: -40px;top: 40px;
                 position: absolute;
-                top: 40px;
-                width: 100px;
             }
-
-            #base {
-                background: red;
-                display: inline-block;
-                height: 55px;
-                margin-left: 20px;
-                margin-top: 55px;
-                position: relative;
-                width: 100px;
-            }
-            #base:before {
+            .base {background: red;display: inline-block;height: 55px;margin-left: 20px;margin-top: 55px;position: relative;width: 100px;}
+            .base:before {
                 border-bottom: 35px solid red;
                 border-left: 50px solid transparent;
                 border-right: 50px solid transparent;
-                content: "";
-                height: 0;
-                left: 0;
-                position: absolute;
-                top: -35px;
-                width: 0;
+                content: "";height: 0;left: 0;
+                position: absolute;top: -35px;width: 0;
             }
-
-            #pointer {
-                width: 200px;
-                height: 40px;
-                position: relative;
-                background: red;
-            }
-            #pointer:after {
+            .pointer {width: 200px;height: 40px;position: relative;background: red}
+            .pointer:after {content: "";position: absolute;left: 0;bottom: 0;width: 0;height: 0;border-left: 20px solid #0c1021;border-top: 20px solid transparent;border-bottom: 20px solid transparent;}
+            .pointer:before {
                 content: "";
                 position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 0;
-                height: 0;
-                border-left: 20px solid white;
-                border-top: 20px solid transparent;
-                border-bottom: 20px solid transparent;
-            }
-            #pointer:before {
-                content: "";
-                position: absolute;
-                right: -20px;
-                bottom: 0;
-                width: 0;
-                height: 0;
+                right: -20px;bottom: 0;width: 0;height: 0;
                 border-left: 20px solid red;
                 border-top: 20px solid transparent;
                 border-bottom: 20px solid transparent;
             }
         </style>
     </li>
-</ul>
+</ul>-->
+<div>
+    <div class="ytl_tabScroll ytl_tabScroll5">
+        <div class="ytl_title clearFix">
+            <dl class="ytl_left">
+                <dd class="on">风景</dd>
+                <dd>动物</dd>
+            </dl>
+            <a href="#" class="ytl_right">more+</a>
+            <a href="#" class="ytl_right">more+</a>
+        </div>
+        <div class="ytl_listBox on">
+            <ul class="ytl_list clearFix">
+                <li><a href="#"><img src="images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                <li><a href="#"><img src="images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                <li><a href="#"><img src="images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                <li><a href="#"><img src="images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                <li><a href="#"><img src="images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                <li><a href="#"><img src="images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+            </ul>
+            <ol class='ytl_pointLists'></ol>
+        </div>
+        <div class="ytl_listBox">
+            <ul class="ytl_list clearFix">
+                <li><a href="#"><img src="images/animal/201510221452093659724.jpg" alt="图片"></a><p>动物</p></li>
+                <li><a href="#"><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt="图片"></a><p>动物</p></li>
+                <li><a href="#"><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                <li><a href="#"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                <li><a href="#"><img src="images/animal/u=1871337630,1458141109&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                <li><a href="#"><img src="images/animal/u=2163105592,2371140567&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                <li><a href="#"><img src="images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                <li><a href="#"><img src="images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                <li><a href="#"><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+            </ul>
+            <ol class='ytl_pointLists'></ol>
+        </div>
+    </div>
+</div>
 </body>
 </html>
