@@ -224,6 +224,11 @@ img{width:auto;vertical-align:middle}
   font-family: "Arial";
   color: #999999;
   text-transform: uppercase; }
+.ytl_tabScroll .ytl_listLeft{
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
 .ytl_tabScroll .ytl_listBox {
   padding-top: 40px;
   display: none;
@@ -246,6 +251,11 @@ img{width:auto;vertical-align:middle}
   background: #cccccc; }
 .ytl_tabScroll .ytl_list p {
   margin-top: 13px; }
+.ytl_tabScroll .ytl_listRight{
+  float: right;
+  width: 130px;
+  color: #4c4c4c;
+}
 /*自定义下拉选择*/
 .ytl_dropDown{
   width: 600px;
