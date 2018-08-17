@@ -37,7 +37,7 @@
                 prevNext:true,
                 direction:'horizontal'//存在horizontal和vertical两种
             });
-            /*tab切换同时含有轮播图(显示点时可以点击)——相关参数：timer,showNum,group,autoPlay,createPoint,divLevelNum,prevNext*/
+            /*tab切换同时含有轮播图(显示点时可以点击)——相关参数：timer,showNum,group,autoPlay,createPoint,divLevelNum,wordList,prevNext*/
             $('.ytl_tabScroll1').multipleRolling({
                 //一行没点的一个一个移动
                 timer:2000,
@@ -84,6 +84,10 @@
             });
             /*自定义下拉选择*/
             $('.ytl_dropDown').dropDown({});
+            /*中间大图显示*/
+            $('.ytl_animation1').highlight({
+                showNum:3,
+            });
         });
     </script>
 </head>
@@ -1895,8 +1899,18 @@
         </style>
     </li>
 </ul>-->
+<!--中间大图显示-->
 <div>
-    
+    <div class="ytl_animation ytl_animation1">
+        <ul class="ytl_list clearFix">
+            <li><img src="images/science/u=7062480,2757210393&fm=27&gp=0.jpg" alt=""></li>
+            <li><img src="images/science/u=336457624,4067156263&fm=200&gp=0.jpg" alt=""></li>
+            <li><img src="images/science/u=794945328,1514551785&fm=27&gp=0.jpg" alt=""></li>
+            <li><img src="images/science/u=875735926,3420285005&fm=200&gp=0.jpg" alt=""></li>
+            <li><img src="images/science/u=2200395957,3640679743&fm=27&gp=0.jpg" alt=""></li>
+            <li><img src="images/science/u=2720120862,3012596723&fm=200&gp=0.jpg" alt=""></li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>
