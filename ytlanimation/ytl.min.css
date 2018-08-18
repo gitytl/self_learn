@@ -326,7 +326,6 @@ img{width:auto;vertical-align:middle}
 }
 /*中间突出显示动画*/
 .ytl_animation{
-  width: 810px;
   overflow: hidden;
   margin: 0 auto;
 }
