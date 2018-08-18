@@ -41,7 +41,7 @@
               <file leaf-file-name="ytl.min.js" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/ytl.min.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="464">
+                    <state relative-caret-position="551">
                       <caret line="1030" column="114" selection-start-line="1030" selection-start-column="114" selection-end-line="1030" selection-end-column="114" />
                       <folding>
                         <element signature="e#92#1180#0" />
@@ -61,7 +61,6 @@
                         <element signature="e#2797#2990#0" />
                         <element signature="e#3032#3777#0" />
                         <element signature="e#3574#3757#0" />
-                        <element signature="e#3858#8485#0" />
                         <element signature="e#3933#4008#0" />
                         <element signature="e#4026#4092#0" />
                         <element signature="e#5315#5498#0" />
@@ -235,6 +234,7 @@
                         <element signature="e#50556#50735#0" />
                         <element signature="e#50740#50872#0" />
                         <element signature="e#50947#51353#0" />
+                        <element signature="e#51437#53086#0" />
                       </folding>
                     </state>
                   </provider>
@@ -495,12 +495,12 @@
       <workItem from="1534406005373" duration="41000" />
       <workItem from="1534409339025" duration="827000" />
       <workItem from="1534465901428" duration="7485000" />
-      <workItem from="1534555147051" duration="19673000" />
+      <workItem from="1534555147051" duration="20656000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="324940000" />
+    <option name="totallyTimeSpent" value="325923000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -775,7 +775,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ytl.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
+        <state relative-caret-position="551">
           <caret line="1030" column="114" selection-start-line="1030" selection-start-column="114" selection-end-line="1030" selection-end-column="114" />
           <folding>
             <element signature="e#92#1180#0" />
@@ -795,7 +795,6 @@
             <element signature="e#2797#2990#0" />
             <element signature="e#3032#3777#0" />
             <element signature="e#3574#3757#0" />
-            <element signature="e#3858#8485#0" />
             <element signature="e#3933#4008#0" />
             <element signature="e#4026#4092#0" />
             <element signature="e#5315#5498#0" />
@@ -969,6 +968,7 @@
             <element signature="e#50556#50735#0" />
             <element signature="e#50740#50872#0" />
             <element signature="e#50947#51353#0" />
+            <element signature="e#51437#53086#0" />
           </folding>
         </state>
       </provider>
