@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用布局结构</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style>
+        /*base*/
+        *{margin:0;padding:0;list-style-type:none}
+        body,div,ul,li,form,input,textarea,span,a,i,dl,dt,dd,h1,h2,h3,h4,h5,h6{margin:0;padding:0}
+        ul,ol,dl,dt,dd,ol,li{list-style:none;list-style-type:none}
+        h1,h2{font-weight:bold;font-size:100%}
+        body,html{font-size:100px;font-family:'Microsoft YaHei';background: #fafafa;color: #666666}
+        body{
+            font-size: 14px;
+        }
+        a{color:#333;text-decoration:none;display: block}
+        a,img{border:0}
+        table{
+            max-width: 100%;
+        }
+        input,button{outline:0;border:0;padding:0}
+        input[type=text],input[type=submit],input[type=button],textarea{padding:0;border-radius:0;border:0;outline:0;-webkit-appearance:none;appearance:none;font-family:'Microsoft YaHei';}
+        img{width:auto;vertical-align:middle}
+        .tstAll,.imgHover img{
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+        .imgHover img:hover{
+            -webkit-transform: scale(1.05);
+            -moz-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            -o-transform: scale(1.05);
+            transform: scale(1.05);
+        }
+        .oneLine{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .clearFix:after{content:" ";display:block;font-size:0;height:0;clear:both;visibility:hidden}
+        /*content*/
+        body{
+            background: #d68572;
+            min-width: 1800px;
+        }
+        h3{
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div style="width: 1800px;margin: 0 auto;">
+        <h3 style="font-size: 24px;line-height: 60px;padding-top: 30px">PC端</h3>
+        <h3 style="text-indent: 2em;font-size: 20px">内页列表</h3>
+        <div>
+            <h3 style="text-indent: 4em;line-height: 40px">一、图文列表</h3>
+            <div>
+                <div style="background: #0c1021;padding: 30px;margin: 0 0 30px" class="clearFix">
+                    <div style="float:left;width: 884px;height: 216px;overflow-y: auto">
+                        <ul>
+                            <li class="clearFix">
+                                <h4 style="float:left;text-align:center;padding:30px 0;width: 200px;margin-right: 20px">css</h4>
+                                <div style="width:580px;overflow:hidden;float: left;border-left: 1px solid #ffffff;padding:30px;">
+                                    <p></p>
+                                    <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">picWordDesc</span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">756</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#fafafa</span>;<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">0 30</span><span style="color:#68e868;font-weight:bold;">px</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc li</span>{<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">30</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc </span>.<span style="color:#ff6400;">img</span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">207</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">154</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">1</span><span style="color:#68e868;font-weight:bold;">px solid </span><span style="color:#6897bb;">#dbdbdb</span>;<br> <span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">left</span>;<br> <span style="color:#8da6ce;">overflow</span>: <span style="color:#68e868;font-weight:bold;">hidden</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc img</span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc </span>.<span style="color:#ff6400;">con</span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">510</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">right</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">30</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">relative</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc </span>.<span style="color:#ff6400;">title</span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#000000</span>;<br> <span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">16</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">5</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">font-weight</span>: <span style="color:#68e868;font-weight:bold;">bold</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc </span>.<span style="color:#ff6400;">desc</span>{<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">60</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">overflow</span>: <span style="color:#68e868;font-weight:bold;">hidden</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc </span>.<span style="color:#ff6400;">date</span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#808080</span>;<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">10</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 10</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">display</span>: <span style="color:#68e868;font-weight:bold;">block</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc </span>.<span style="color:#ff6400;">more </span>{<br> <span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">absolute</span>;<br> <span style="color:#8da6ce;">transition</span>: <span style="color:#68e868;font-weight:bold;">all </span><span style="color:#d8fa3c;">0.4</span><span style="color:#68e868;font-weight:bold;">s</span>;<br> <span style="color:#8da6ce;">bottom</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">6</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">right</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">display</span>: <span style="color:#68e868;font-weight:bold;">block</span>;<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">80</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">36</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">text-align</span>: <span style="color:#68e868;font-weight:bold;">center</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">36</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#ffffff</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#00a34b</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc li</span>:<span style="color:#ff6400;">hover </span>.<span style="color:#ff6400;">title</span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#ff9a00</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc li</span>:<span style="color:#ff6400;">hover </span>.<span style="color:#ff6400;">more</span>{<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#ff9a00</span>;<br>}</pre>
+                                    <p></p>
+                                </div>
+                            </li>
+                            <li class="clearFix" style="border-top: 1px solid #ffffff;">
+                                <h4 style="float:left;text-align:center;padding:30px 0;width: 200px;margin-right: 20px">html</h4>
+                                <div style="width:580px;overflow:hidden;float: left;border-left: 1px solid #ffffff;padding:30px;">
+                                    <p></p>
+                                    <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">ul </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"picWordDesc"</span>&gt;<br> &lt;<span style="color:#7f90aa;">li </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#" </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"img imgHover"</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3109714868,298594192&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>/&gt;&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"con"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#" </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"title tstAll"</span>&gt;<span style="font-weight:bold;">花卉病虫害冬季怎样防治 花卉病虫害冬季的防治措施</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">p </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"desc"</span>&gt;<span style="font-weight:bold;">花卉，具有观赏价值的草本植物，是用来欣赏的植物的统称，喜阳且耐寒，具有繁殖功能的短枝，有许多种类。典型的花</span>&lt;/<span style="color:#7f90aa;">p</span>&gt;<br> &lt;<span style="color:#7f90aa;">span </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"date"</span>&gt;<span style="font-weight:bold;">【2017-11-12】</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"more tstAll" </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">查看更多</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br>&lt;/<span style="color:#7f90aa;">ul</span>&gt;</pre>
+                                    <p></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="float:left;margin-left: 40px">
+                        <ul class="picWordDesc">
+                            <li class="clearFix">
+                                <a href="#" class="img imgHover"><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3109714868,298594192&fm=27&gp=0.jpg" alt=""/></a>
+                                <div class="con">
+                                    <a href="#" class="title tstAll">花卉病虫害冬季怎样防治 花卉病虫害冬季的防治措施</a>
+                                    <p class="desc">花卉，具有观赏价值的草本植物，是用来欣赏的植物的统称，喜阳且耐寒，具有繁殖功能的短枝，有许多种类。典型的花</p>
+                                    <span class="date">【2017-11-12】</span>
+                                    <a class="more tstAll" href="#">查看更多</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <style>
+                            .picWordDesc{
+                                width: 756px;
+                                background: #fafafa;
+                                padding: 0 30px;
+                            }
+                            .picWordDesc li{
+                                padding: 30px 0;
+                            }
+                            .picWordDesc .img{
+                                width: 207px;
+                                height: 154px;
+                                border: 1px solid #dbdbdb;
+                                float: left;
+                                overflow: hidden;
+                            }
+                            .picWordDesc img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .picWordDesc .con{
+                                width: 510px;
+                                float: right;
+                                line-height: 30px;
+                                position: relative;
+                            }
+                            .picWordDesc .title{
+                                color: #000000;
+                                font-size: 16px;
+                                padding: 5px 0;
+                                font-weight: bold;
+                            }
+                            .picWordDesc .desc{
+                                height: 60px;
+                                overflow: hidden;
+                            }
+                            .picWordDesc .date{
+                                color: #808080;
+                                padding: 10px 0 10px;
+                                display: block;
+                            }
+                            .picWordDesc .more {
+                                position: absolute;
+                                transition: all 0.4s;
+                                bottom: -6px;
+                                right: 0;
+                                display: block;
+                                width: 80px;
+                                height: 36px;
+                                text-align: center;
+                                line-height: 36px;
+                                color: #ffffff;
+                                background: #00a34b;
+                            }
+                            .picWordDesc li:hover .title{
+                                color: #ff9a00;
+                            }
+                            .picWordDesc li:hover .more{
+                                background: #ff9a00;
+                            }
+                        </style>
+                    </div>
+                </div>
+                <div style="background: #0c1021;padding: 30px;margin: 0 0 30px" class="clearFix">
+                    <div style="float:left;width: 884px;height: 216px;overflow-y: auto">
+                        <ul>
+                            <li class="clearFix">
+                                <h4 style="float:left;text-align:center;padding:30px 0;width: 200px;margin-right: 20px">css</h4>
+                                <div style="width:580px;overflow:hidden;float: left;border-left: 1px solid #ffffff;padding:30px;">
+                                    <p></p>
+                                    <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">picWordDesc2</span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">756</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#fafafa</span>;<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">0 30</span><span style="color:#68e868;font-weight:bold;">px</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc2 li</span>{<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">30</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc2 </span>.<span style="color:#ff6400;">img</span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">220</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">153</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">left</span>;<br> <span style="color:#8da6ce;">overflow</span>: <span style="color:#68e868;font-weight:bold;">hidden</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#cccccc</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc2 img</span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc2 </span>.<span style="color:#ff6400;">con</span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">510</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">right</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">30</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">relative</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc2 </span>.<span style="color:#ff6400;">title</span>{<br> <span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">16</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">16</span><span style="color:#68e868;font-weight:bold;">px</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc2 </span>.<span style="color:#ff6400;">date</span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#999999</span>;<br> <span style="color:#8da6ce;">padding-top</span>: <span style="color:#d8fa3c;">19</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">display</span>: <span style="color:#68e868;font-weight:bold;">block</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc2 </span>.<span style="color:#ff6400;">desc</span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#666666</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">24</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">padding-top</span>: <span style="color:#d8fa3c;">16</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">72</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">overflow</span>: <span style="color:#68e868;font-weight:bold;">hidden</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc2 li </span>.<span style="color:#ff6400;">title</span>:<span style="color:#ff6400;">hover</span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#ff9a00</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc2 li</span>:<span style="color:#ff6400;">hover </span>.<span style="color:#ff6400;">more</span>{<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#ff9a00</span>;<br>}</pre>
+                                    <p></p>
+                                </div>
+                            </li>
+                            <li class="clearFix" style="border-top: 1px solid #ffffff;">
+                                <h4 style="float:left;text-align:center;padding:30px 0;width: 200px;margin-right: 20px">html</h4>
+                                <div style="width:580px;overflow:hidden;float: left;border-left: 1px solid #ffffff;padding:30px;">
+                                    <p></p>
+                                    <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">ul </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"picWordDesc2"</span>&gt;<br> &lt;<span style="color:#7f90aa;">li </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#" </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"img imgHover"</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3109714868,298594192&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>/&gt;&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"con"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#" </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"title tstAll oneLine"</span>&gt;<span style="font-weight:bold;">不忘初心，搞好科研，服务疾控 保障人民健康——高福院士出席病毒病所中心组学习习近...平总书记“七一”重要讲话精神.</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">span </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"date"</span>&gt;<span style="font-weight:bold;">2018-07-05</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<br> &lt;<span style="color:#7f90aa;">p </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"desc"</span>&gt;<span style="font-weight:bold;">2016年7月12日下午，病毒病所党委组织理论学习中心组成员在新址二楼会议室，集体学习习近平总书记在庆祝中国共产党成立95周年大会上的重要讲话，所党政领导班子成员科室正、副主任，支部书记30余人参加了学习，高福院士在百忙之中抽出时间参加学习。会议由党委书记武桂珍主持。纪委书记白雪平出</span>&lt;/<span style="color:#7f90aa;">p</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br>&lt;/<span style="color:#7f90aa;">ul</span>&gt;</pre>
+                                    <p></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="float:left;margin-left: 40px">
+                        <ul class="picWordDesc2">
+                            <li class="clearFix">
+                                <a href="#" class="img imgHover"><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3109714868,298594192&fm=27&gp=0.jpg" alt=""/></a>
+                                <div class="con">
+                                    <a href="#" class="title tstAll oneLine">不忘初心，搞好科研，服务疾控 保障人民健康——高福院士出席病毒病所中心组学习习近...平总书记“七一”重要讲话精神.</a>
+                                    <span class="date">2018-07-05</span>
+                                    <p class="desc">2016年7月12日下午，病毒病所党委组织理论学习中心组成员在新址二楼会议室，集体学习习近平总书记在庆祝中国共产党成立95周年大会上的重要讲话，所党政领导班子成员科室正、副主任，支部书记30余人参加了学习，高福院士在百忙之中抽出时间参加学习。会议由党委书记武桂珍主持。纪委书记白雪平出</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <style>
+                            .picWordDesc2{
+                                width: 756px;
+                                background: #fafafa;
+                                padding: 0 30px;
+                            }
+                            .picWordDesc2 li{
+                                padding: 30px 0;
+                            }
+                            .picWordDesc2 .img{
+                                width: 220px;
+                                height: 153px;
+                                float: left;
+                                overflow: hidden;
+                                background: #cccccc;
+                            }
+                            .picWordDesc2 img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .picWordDesc2 .con{
+                                width: 510px;
+                                float: right;
+                                line-height: 30px;
+                                position: relative;
+                            }
+                            .picWordDesc2 .title{
+                                font-size: 16px;
+                                line-height: 16px;
+                            }
+                            .picWordDesc2 .date{
+                                color: #999999;
+                                padding-top: 19px;
+                                display: block;
+                            }
+                            .picWordDesc2 .desc{
+                                color: #666666;
+                                line-height: 24px;
+                                padding-top: 16px;
+                                height: 72px;
+                                overflow: hidden;
+                            }
+                            .picWordDesc2 li .title:hover{
+                                color: #ff9a00;
+                            }
+                            .picWordDesc2 li:hover .more{
+                                background: #ff9a00;
+                            }
+                        </style>
+                    </div>
+                </div>
+            </div>
+            <h3 style="text-indent: 4em;line-height: 40px">二、人文列表</h3>
+            <div style="background: #0c1021;padding: 30px;margin: 0 0 30px" class="clearFix">
+                <div style="float:left;width: 884px;height: 374px;overflow-y: auto">
+                    <ul>
+                        <li class="clearFix">
+                            <h4 style="float:left;text-align:center;padding:30px 0;width: 200px;margin-right: 20px">js</h4>
+                            <div style="width:580px;overflow:hidden;float: left;border-left: 1px solid #ffffff;padding:30px;">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><span style="color:#ff6400;">$</span>(<span style="color:#fbde2d;">function </span>() {<br> <span style="color:#ff6400;">$</span>(<span style="color:#61ce3c;">'.</span><span style="color:#ff6400;">personNameDetail</span><span style="color:#61ce3c;"> .</span><span style="color:#ff6400;">downBtn</span><span style="color:#61ce3c;">'</span>).<span style="color:#ff6400;">on</span>(<span style="color:#61ce3c;">"click"</span>,<span style="color:#fbde2d;">function </span>() {<br> <span style="color:#fbde2d;">if</span>(<span style="color:#ff6400;">$</span>(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">hasClass</span>(<span style="color:#61ce3c;">"downBtn"</span>)){<br> <span style="color:#ff6400;">$</span>(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">text</span>(<span style="color:#61ce3c;">"关闭"</span>);<br> <span style="color:#ff6400;">$</span>(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">addClass</span>(<span style="color:#61ce3c;">"upBtn"</span>).<span style="color:#ff6400;">removeClass</span>(<span style="color:#61ce3c;">"downBtn"</span>);<br> <span style="color:#fbde2d;">var </span><span style="color:#ff6400;">detailH</span><span style="color:#fbde2d;">=</span><span style="color:#ff6400;">$</span>(<span style="color:#61ce3c;">'.</span><span style="color:#ff6400;">personNameDetail</span><span style="color:#61ce3c;"> .</span><span style="color:#ff6400;">detail</span><span style="color:#61ce3c;">'</span>).<span style="color:#ff6400;">css</span>(<span style="color:#61ce3c;">'height'</span>, <span style="color:#61ce3c;">'auto'</span>).<span style="color:#ff6400;">height</span>();<br> <span style="color:#ff6400;">$</span>(<span style="color:#61ce3c;">'.</span><span style="color:#ff6400;">personNameDetail</span><span style="color:#61ce3c;"> .</span><span style="color:#ff6400;">detail</span><span style="color:#61ce3c;">'</span>).<span style="color:#ff6400;">css</span>(<span style="color:#61ce3c;">'height'</span>, <span style="color:#61ce3c;">'72px'</span>);<br> <span style="color:#ff6400;">$</span>(<span style="color:#61ce3c;">'.</span><span style="color:#ff6400;">personNameDetail</span><span style="color:#61ce3c;"> .</span><span style="color:#ff6400;">detail</span><span style="color:#61ce3c;">'</span>).<span style="color:#ff6400;">animate</span>({<br> <span style="color:#ff6400;">height</span><span style="color:#fbde2d;">: </span><span style="color:#ff6400;">detailH<br></span><span style="color:#ff6400;"> </span>},<span style="color:#d8fa3c;">500</span>);<br> }<br> <span style="color:#fbde2d;">else </span>{<br> <span style="color:#ff6400;">$</span>(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">text</span>(<span style="color:#61ce3c;">"展开"</span>);<br> <span style="color:#ff6400;">$</span>(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">addClass</span>(<span style="color:#61ce3c;">"downBtn"</span>).<span style="color:#ff6400;">removeClass</span>(<span style="color:#61ce3c;">"upBtn"</span>);<br> <span style="color:#ff6400;">$</span>(<span style="color:#61ce3c;">'.</span><span style="color:#ff6400;">personNameDetail</span><span style="color:#61ce3c;"> .</span><span style="color:#ff6400;">detail</span><span style="color:#61ce3c;">'</span>).<span style="color:#ff6400;">animate</span>({<span style="color:#61ce3c;">"height"</span><span style="color:#fbde2d;">:</span><span style="color:#61ce3c;">'72px'</span>},<span style="color:#d8fa3c;">500</span>);<br> }<br> });<br>});</pre>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li class="clearFix" style="border-top: 1px solid #ffffff;">
+                            <h4 style="float:left;text-align:center;padding:30px 0;width: 200px;margin-right: 20px">css</h4>
+                            <div style="width:580px;overflow:hidden;float: left;border-left: 1px solid #ffffff;padding:30px;">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">personNameDetail</span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">756</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#fafafa</span>;<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">0 30</span><span style="color:#68e868;font-weight:bold;">px</span>;<br>}<br>.<span style="color:#ff6400;">personNameDetail li</span>{<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">30</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0</span>;<br>}<br>.<span style="color:#ff6400;">personNameDetail </span>.<span style="color:#ff6400;">img</span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">221</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">295</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">1</span><span style="color:#68e868;font-weight:bold;">px solid </span><span style="color:#6897bb;">#dbdbdb</span>;<br> <span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">left</span>;<br> <span style="color:#8da6ce;">overflow</span>: <span style="color:#68e868;font-weight:bold;">hidden</span>;<br>}<br>.<span style="color:#ff6400;">personNameDetail </span>.<span style="color:#ff6400;">img img</span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<br>}<br>.<span style="color:#ff6400;">personNameDetail </span>.<span style="color:#ff6400;">con</span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">510</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">right</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">30</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">relative</span>;<br>}<br>.<span style="color:#ff6400;">personNameDetail </span>.<span style="color:#ff6400;">name</span>{<br> <span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">24</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">padding-bottom</span>: <span style="color:#d8fa3c;">15</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">margin</span>: <span style="color:#d8fa3c;">32</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 0 0</span>;<br>}<br>.<span style="color:#ff6400;">personNameDetail </span>.<span style="color:#ff6400;">jobDesc</span>{<br> <span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">16</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#999999</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">36</span><span style="color:#68e868;font-weight:bold;">px</span>;<br>}<br>.<span style="color:#ff6400;">personNameDetail </span>.<span style="color:#ff6400;">jobDesc span</span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#666666</span>;<br>}<br>.<span style="color:#ff6400;">personNameDetail </span>.<span style="color:#ff6400;">detail </span>{<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">24</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#999999</span>;<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">8</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 0</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">72</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">overflow</span>: <span style="color:#68e868;font-weight:bold;">hidden</span>;<br>}<br>.<span style="color:#ff6400;">personNameDetail </span>.<span style="color:#ff6400;">downUp</span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#fdbf00</span>;<br> <span style="color:#8da6ce;">cursor</span>: <span style="color:#68e868;font-weight:bold;">pointer</span>;<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">0 12</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 22</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">margin</span>: <span style="color:#d8fa3c;">22</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 0</span>;<br> <span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">right</span>;<br> <span style="color:#8da6ce;">overflow</span>: <span style="color:#68e868;font-weight:bold;">hidden</span>;<br> <span style="color:#8da6ce;">background-size</span>:<span style="color:#d8fa3c;">16</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">background-position</span>: <span style="color:#68e868;font-weight:bold;">left center</span>;<br> <span style="color:#8da6ce;">background-repeat</span>: <span style="color:#68e868;font-weight:bold;">no-repeat</span>;<br>}<br>.<span style="color:#ff6400;">personNameDetail </span>.<span style="color:#ff6400;">downBtn</span>{<br> <span style="color:#8da6ce;">background-image</span>: <span style="color:#8da6ce;">url</span>(<span style="color:#61ce3c;">"images/down.png"</span>);<br>}<br>.<span style="color:#ff6400;">personNameDetail </span>.<span style="color:#ff6400;">upBtn</span>{<br> <span style="color:#8da6ce;">background-image</span>: <span style="color:#8da6ce;">url</span>(<span style="color:#61ce3c;">"images/up.png"</span>);<br>}</pre>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li class="clearFix" style="border-top: 1px solid #ffffff;">
+                            <h4 style="float:left;text-align:center;padding:30px 0;width: 200px;margin-right: 20px">html</h4>
+                            <div style="width:580px;overflow:hidden;float: left;border-left: 1px solid #ffffff;padding:30px;">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">ul </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"personNameDetail"</span>&gt;<br> &lt;<span style="color:#7f90aa;">li </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#" </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"img imgHover"</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1004789565,1115273417&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>/&gt;&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"con"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#" </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"name tstAll"</span>&gt;<span style="font-weight:bold;">杨秉辉</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">p </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"jobDesc"</span>&gt;&lt;<span style="color:#7f90aa;">span</span>&gt;<span style="font-weight:bold;">职务：</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<span style="font-weight:bold;">医院男性科主任</span>&lt;/<span style="color:#7f90aa;">p</span>&gt;<br> &lt;<span style="color:#7f90aa;">p </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"jobDesc"</span>&gt;&lt;<span style="color:#7f90aa;">span</span>&gt;<span style="font-weight:bold;">擅长：</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<span style="font-weight:bold;">男性生殖系统感染，阳痿、早泄、不射精等各类性功能障碍疾病的诊断及治疗。</span>&lt;/<span style="color:#7f90aa;">p</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"detail"</span>&gt;<span style="font-weight:bold;">从事男性科临床工作三十余年，临床经验丰富。曾在武汉市同济医院进行专项课题研究，在国家级学术期刊上发表论文三十余篇。对男性生殖系统疾病、男性性功能障碍、男性不育症疾病的诊断及治疗均有扎实的专业理论基础和丰富的特色临床经验。特别擅长男性阳痿、早泄等性功能障碍疾病以及龟头炎、尿道炎、精囊炎、睾丸炎等男性生殖感染疾病的治疗。从事男性科临床工作三十余年，临床经验丰富。曾在武汉市同济医院进行专项课题研究，在国家级学术期刊上发表论文三十余篇。对男性生殖系统疾病、男性性功能障碍、男性不育症疾病的诊断及治疗均有扎实的专业理论基础和丰富的特色临床经验。特别擅长男性阳痿、早泄等性功能障碍疾病以及龟头炎、尿道炎、精囊炎、睾丸炎等男性生殖感染疾病的治疗。从事男性科临床工作三十余年，临床经验丰富。曾在武汉市同济医院进行专项课题研究，在国家级学术期刊上发表论文三十余篇。对男性生殖系统疾病、男性性功能障碍、男性不育症疾病的诊断及治疗均有扎实的专业理论基础和丰富的特色临床经验。特别擅长男性阳痿、早泄等性功能障碍疾病以及龟头炎、尿道炎、精囊炎、睾丸炎等男性生殖感染疾病的治疗。从事男性科临床工作三十余年，临床经验丰富。曾在武汉市同济医院进行专项课题研究，在国家级学术期刊上发表论文三十余篇。对男性生殖系统疾病、男性性功能障碍、男性不育症疾病的诊断及治疗均有扎实的专业理论基础和丰富的特色临床经验。特别擅长男性阳痿、早泄等性功能障碍疾病以及龟头炎、尿道炎、精囊炎、睾丸炎等男性生殖感染疾病的治疗。从事男性科临床工作三十余年，临床经验丰富。曾在武汉市同济医院进行专项课题研究，在国家级学术期刊上发表论文三十余篇。对男性生殖系统疾病、男性性功能障碍、男性不育症疾病的诊断及治疗均有扎实的专业理论基础和丰富的特色临床经验。特别擅长男性阳痿、早泄等性功能障碍疾病以及龟头炎、尿道炎、精囊炎、睾丸炎等男性生殖感染疾病的治疗。从事男性科临床工作三十余年，临床经验丰富。曾在武汉市同济医院进行专项课题研究，在国家级学术期刊上发表论文三十余篇。对男性生殖系统疾病、男性性功能障碍、男性不育症疾病的诊断及治疗均有扎实的专业理论基础和丰富的特色临床经验。特别擅长男性阳痿、早泄等性功能障碍疾病以及龟头炎、尿道炎、精囊炎、睾丸炎等男性生殖感染疾病的治疗。从事男性科临床工作三十余年，临床经验丰富。曾在武汉市同济医院进行专项课题研究，在国家级学术期刊上发表论文三十余篇。对男性生殖系统疾病、男性性功能障碍、男性不育症疾病的诊断及治疗均有扎实的专业理论基础和丰富的特色临床经验。特别擅长男性阳痿、早泄等性功能障碍疾病以及龟头炎、尿道炎、精囊炎、睾丸炎等男性生殖感染疾病的治疗。从事男性科临床工作三十余年，临床经验丰富。曾在武汉市同济医院进行专项课题研究，在国家级学术期刊上发表论文三十余篇。对男性生殖系统疾病、男性性功能障碍、男性不育症疾病的诊断及治疗均有扎实的专业理论基础和丰富的特色临床经验。特别擅长男性阳痿、早泄等性功能障碍疾病以及龟头炎、尿道炎、精囊炎、睾丸炎等男性生殖感染疾病的治疗。</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"downUp downBtn" </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"javascript:;"</span>&gt;<span style="font-weight:bold;">展开</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br>&lt;/<span style="color:#7f90aa;">ul</span>&gt;</pre>
+                                <p></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div style="float:left;margin-left: 40px">
+                    <ul class="personNameDetail">
+                        <li class="clearFix">
+                            <a href="#" class="img imgHover"><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1004789565,1115273417&fm=27&gp=0.jpg" alt=""/></a>
+                            <div class="con">
+                                <a href="#" class="name tstAll">杨秉辉</a>
+                                <p class="jobDesc"><span>职务：</span>医院男性科主任</p>
+                                <p class="jobDesc"><span>擅长：</span>男性生殖系统感染，阳痿、早泄、不射精等各类性功能障碍疾病的诊断及治疗。</p>
+                                <div class="detail">从事男性科临床工作三十余年，临床经验丰富。曾在武汉市同济医院进行专项课题研究，在国家级学术期刊上发表论文三十余篇。对男性生殖系统疾病、男性性功能障碍、男性不育症疾病的诊断及治疗均有扎实的专业理论基础和丰富的特色临床经验。特别擅长男性阳痿、早泄等性功能障碍疾病以及龟头炎、尿道炎、精囊炎、睾丸炎等男性生殖感染疾病的治疗。从事男性科临床工作三十余年，临床经验丰富。曾在武汉市同济医院进行专项课题研究，在国家级学术期刊上发表论文三十余篇。对男性生殖系统疾病、男性性功能障碍、男性不育症疾病的诊断及治疗均有扎实的专业理论基础和丰富的特色临床经验。特别擅长男性阳痿、早泄等性功能障碍疾病以及龟头炎、尿道炎、精囊炎、睾丸炎等男性生殖感染疾病的治疗。从事男性科临床工作三十余年，临床经验丰富。曾在武汉市同济医院进行专项课题研究，在国家级学术期刊上发表论文三十余篇。对男性生殖系统疾病、男性性功能障碍、男性不育症疾病的诊断及治疗均有扎实的专业理论基础和丰富的特色临床经验。特别擅长男性阳痿、早泄等性功能障碍疾病以及龟头炎、尿道炎、精囊炎、睾丸炎等男性生殖感染疾病的治疗。从事男性科临床工作三十余年，临床经验丰富。曾在武汉市同济医院进行专项课题研究，在国家级学术期刊上发表论文三十余篇。对男性生殖系统疾病、男性性功能障碍、男性不育症疾病的诊断及治疗均有扎实的专业理论基础和丰富的特色临床经验。特别擅长男性阳痿、早泄等性功能障碍疾病以及龟头炎、尿道炎、精囊炎、睾丸炎等男性生殖感染疾病的治疗。从事男性科临床工作三十余年，临床经验丰富。曾在武汉市同济医院进行专项课题研究，在国家级学术期刊上发表论文三十余篇。对男性生殖系统疾病、男性性功能障碍、男性不育症疾病的诊断及治疗均有扎实的专业理论基础和丰富的特色临床经验。特别擅长男性阳痿、早泄等性功能障碍疾病以及龟头炎、尿道炎、精囊炎、睾丸炎等男性生殖感染疾病的治疗。从事男性科临床工作三十余年，临床经验丰富。曾在武汉市同济医院进行专项课题研究，在国家级学术期刊上发表论文三十余篇。对男性生殖系统疾病、男性性功能障碍、男性不育症疾病的诊断及治疗均有扎实的专业理论基础和丰富的特色临床经验。特别擅长男性阳痿、早泄等性功能障碍疾病以及龟头炎、尿道炎、精囊炎、睾丸炎等男性生殖感染疾病的治疗。从事男性科临床工作三十余年，临床经验丰富。曾在武汉市同济医院进行专项课题研究，在国家级学术期刊上发表论文三十余篇。对男性生殖系统疾病、男性性功能障碍、男性不育症疾病的诊断及治疗均有扎实的专业理论基础和丰富的特色临床经验。特别擅长男性阳痿、早泄等性功能障碍疾病以及龟头炎、尿道炎、精囊炎、睾丸炎等男性生殖感染疾病的治疗。从事男性科临床工作三十余年，临床经验丰富。曾在武汉市同济医院进行专项课题研究，在国家级学术期刊上发表论文三十余篇。对男性生殖系统疾病、男性性功能障碍、男性不育症疾病的诊断及治疗均有扎实的专业理论基础和丰富的特色临床经验。特别擅长男性阳痿、早泄等性功能障碍疾病以及龟头炎、尿道炎、精囊炎、睾丸炎等男性生殖感染疾病的治疗。</div>
+                                <a class="downUp downBtn" href="javascript:;">展开</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <style>
+                        .personNameDetail{
+                            width: 756px;
+                            background: #fafafa;
+                            padding: 0 30px;
+                        }
+                        .personNameDetail li{
+                            padding: 30px 0;
+                        }
+                        .personNameDetail .img{
+                            width: 221px;
+                            height: 295px;
+                            border: 1px solid #dbdbdb;
+                            float: left;
+                            overflow: hidden;
+                        }
+                        .personNameDetail .img img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .personNameDetail .con{
+                            width: 510px;
+                            float: right;
+                            line-height: 30px;
+                            position: relative;
+                        }
+                        .personNameDetail .name{
+                            font-size: 24px;
+                            padding-bottom: 15px;
+                            margin: 32px 0 0 0;
+                        }
+                        .personNameDetail .jobDesc{
+                            font-size: 16px;
+                            color: #999999;
+                            line-height: 36px;
+                        }
+                        .personNameDetail .jobDesc span{
+                            color: #666666;
+                        }
+                        .personNameDetail .detail {
+                            line-height: 24px;
+                            color: #999999;
+                            padding: 8px 0 0;
+                            height: 72px;
+                            overflow: hidden;
+                        }
+                        .personNameDetail .downUp{
+                            color: #fdbf00;
+                            cursor: pointer;
+                            padding: 0 12px 0 22px;
+                            margin: 22px 0 0;
+                            float: right;
+                            overflow: hidden;
+                            background-size:16px;
+                            background-position: left center;
+                            background-repeat: no-repeat;
+                        }
+                        .personNameDetail .downBtn{
+                            background-image: url("images/down.png");
+                        }
+                        .personNameDetail .upBtn{
+                            background-image: url("images/up.png");
+                        }
+                    </style>
+                    <script>
+                        $(function () {
+                            $('.personNameDetail .downBtn').on("click",function () {
+                                if($(this).hasClass("downBtn")){
+                                    $(this).text("关闭");
+                                    $(this).addClass("upBtn").removeClass("downBtn");
+                                    var detailH=$('.personNameDetail .detail').css('height', 'auto').height();
+                                    $('.personNameDetail .detail').css('height', '72px');
+                                    $('.personNameDetail .detail').animate({
+                                        height: detailH
+                                    },500);
+                                }
+                                else {
+                                    $(this).text("展开");
+                                    $(this).addClass("downBtn").removeClass("upBtn");
+                                    $('.personNameDetail .detail').animate({"height":'72px'},500);
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <h3 style="text-indent: 2em;font-size: 20px">分页列表</h3>
+        <div class="clearFix">
+            <div style="float:left;">
+                <h3 style="text-indent: 4em;line-height: 40px">一、样式一</h3>
+                <div style="background: #0c1021;padding: 30px;margin: 0 0 30px">
+                    <div class="clearFix" style="height: 400px;overflow-y: auto">
+                        <div style="float:left;width: 45%;overflow:hidden;margin-bottom: 40px">
+                            <h4 style="text-align:center;padding:30px 0;width: 200px;margin-right: 20px">css</h4>
+                            <p></p>
+                            <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">changePage </span>{<br> <span style="color:#8da6ce;">text-align</span>: <span style="color:#68e868;font-weight:bold;">center</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">38</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">margin</span>: <span style="color:#d8fa3c;">30</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 35</span><span style="color:#68e868;font-weight:bold;">px</span>; }<br>.<span style="color:#ff6400;">changePageCon </span>{<br> <span style="color:#8da6ce;">display</span>: <span style="color:#68e868;font-weight:bold;">inline-block</span>; }<br>.<span style="color:#ff6400;">changePageCon a </span>{<br> <span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">left</span>;<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">32</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">32</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">32</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">text-align</span>: <span style="color:#68e868;font-weight:bold;">center</span>;<br> <span style="color:#8da6ce;">margin</span>: <span style="color:#d8fa3c;">1</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">1</span><span style="color:#68e868;font-weight:bold;">px solid </span><span style="color:#6897bb;">#ebebeb</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#68e868;font-weight:bold;">none</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#ffffff</span>;<br> <span style="color:#8da6ce;">font-family</span>: <span style="color:#61ce3c;">"Arial"</span>;<br> <span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">12</span><span style="color:#68e868;font-weight:bold;">px</span>; }<br>.<span style="color:#ff6400;">changePageCon a</span>:<span style="color:#ff6400;">hover </span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#fdbf00</span>;<br> <span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">1</span><span style="color:#68e868;font-weight:bold;">px solid </span><span style="color:#6897bb;">#fdbf00</span>;<br> <span style="color:#8da6ce;">margin-left</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">1</span><span style="color:#68e868;font-weight:bold;">px</span>; }<br>.<span style="color:#ff6400;">changePageCon </span>.<span style="color:#ff6400;">on</span>, .<span style="color:#ff6400;">changePageCon </span>.<span style="color:#ff6400;">on</span>:<span style="color:#ff6400;">hover </span>{<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">34</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">34</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">34</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">18</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#fdbf00</span>;<br> <span style="color:#8da6ce;">margin</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">1</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">1</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">2</span><span style="color:#68e868;font-weight:bold;">px solid </span><span style="color:#6897bb;">#fdbf00</span>; }<br>.<span style="color:#ff6400;">changePageCon </span>.<span style="color:#ff6400;">next</span>, .<span style="color:#ff6400;">changePageCon </span>.<span style="color:#ff6400;">pre </span>{<br> <span style="color:#aeaeae;">/*border: 1px solid #ebebeb;*/<br></span><span style="color:#aeaeae;"> </span><span style="color:#8da6ce;">font-family</span>: <span style="color:#61ce3c;">"宋体"</span>;<br> <span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">16</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">font-weight</span>: <span style="color:#d8fa3c;">700</span>;<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#adadad</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#fcfcfc</span>; }<br>.<span style="color:#ff6400;">changePageCon </span>.<span style="color:#ff6400;">pre </span>{<br> <span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">1</span><span style="color:#68e868;font-weight:bold;">px solid </span><span style="color:#6897bb;">#ebebeb</span>;<br> <span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">4</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 0 4</span><span style="color:#68e868;font-weight:bold;">px</span>; }<br>.<span style="color:#ff6400;">changePageCon </span>.<span style="color:#ff6400;">pre</span>:<span style="color:#ff6400;">hover </span>{<br> <span style="color:#8da6ce;">margin</span>: <span style="color:#d8fa3c;">1</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 0 0</span>; }<br>.<span style="color:#ff6400;">changePageCon </span>.<span style="color:#ff6400;">next </span>{<br> <span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">0 4</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">4</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0</span>;<br>}</pre>
+                            <p></p>
+                        </div>
+                        <div style="float:right;width: 45%;overflow:hidden;">
+                            <h4 style="text-align:center;padding:30px 0;width: 200px;margin-right: 20px">html</h4>
+                            <p></p>
+                            <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"changePage"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"changePageCon clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#" </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"pre"</span>&gt;<span style="font-weight:bold;">&amp;lt</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">1</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#" </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"on"</span>&gt;<span style="font-weight:bold;">2</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">3</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">4</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">5</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">6</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">7</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">8</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">9</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">10</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">11</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">12</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">13</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">14</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#" </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"next"</span>&gt;<span style="font-weight:bold;">&amp;gt</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br>&lt;/<span style="color:#7f90aa;">div</span>&gt;</pre>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div style="border-top: 1px solid #ffffff">
+                        <div class="changePage">
+                            <div class="changePageCon clearFix">
+                                <a href="#" class="pre">&lt</a>
+                                <a href="#">1</a>
+                                <a href="#" class="on">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#">7</a>
+                                <a href="#">8</a>
+                                <a href="#">9</a>
+                                <a href="#">10</a>
+                                <a href="#">11</a>
+                                <a href="#">12</a>
+                                <a href="#">13</a>
+                                <a href="#">14</a>
+                                <a href="#" class="next">&gt</a>
+                            </div>
+                        </div>
+                        <style>
+                            .changePage {
+                                text-align: center;
+                                height: 38px;
+                                margin: 30px 0 35px; }
+                            .changePageCon {
+                                display: inline-block; }
+                            .changePageCon a {
+                                float: left;
+                                width: 32px;
+                                height: 32px;
+                                line-height: 32px;
+                                text-align: center;
+                                margin: 1px 0;
+                                border: 1px solid #ebebeb;
+                                border-left: none;
+                                background: #ffffff;
+                                font-family: "Arial";
+                                font-size: 12px; }
+                            .changePageCon a:hover {
+                                color: #fdbf00;
+                                border: 1px solid #fdbf00;
+                                margin-left: -1px; }
+                            .changePageCon .on, .changePageCon .on:hover {
+                                height: 34px;
+                                width: 34px;
+                                line-height: 34px;
+                                font-size: 18px;
+                                color: #fdbf00;
+                                margin: -1px 0 0 -1px;
+                                border: 2px solid #fdbf00; }
+                            .changePageCon .next, .changePageCon .pre {
+                                /*border: 1px solid #ebebeb;*/
+                                font-family: "宋体";
+                                font-size: 16px;
+                                font-weight: 700;
+                                color: #adadad;
+                                background: #fcfcfc; }
+                            .changePageCon .pre {
+                                border: 1px solid #ebebeb;
+                                border-radius: 4px 0 0 4px; }
+                            .changePageCon .pre:hover {
+                                margin: 1px 0 0 0; }
+                            .changePageCon .next {
+                                border-radius: 0 4px 4px 0;
+                            }
+                        </style>
+                    </div>
+                </div>
+            </div>
+            <div style="float:left;">
+                <h3 style="text-indent: 4em;line-height: 40px">一、样式二</h3>
+            </div>
+        </div>
+    </div>
+    <div style="width: 1800px;margin: 0 auto;">
+        <h3 style="color: #ffffff;font-size: 24px;line-height: 60px;padding-top: 30px">WEB端</h3>
+        <div style="background: #0c1021" class="clearFix">
+            <div style="float:left;">
+
+            </div>
+            <div style="float:left;"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
