@@ -328,6 +328,7 @@ img{width:auto;vertical-align:middle}
 .ytl_animation{
   overflow: hidden;
   margin: 0 auto;
+  position: relative;
 }
 .ytl_animation .ytl_active{
   width: 250px;

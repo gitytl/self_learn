@@ -84,16 +84,16 @@
             });
             /*自定义下拉选择*/
             $('.ytl_dropDown').dropDown({});
-            /*中间大图显示*/
+            /*中间大图显示——相关参数：timer,showNum,autoPlay,moseHover*/
             $('.ytl_animation1').highlight({
-                showNum:3,
-                timer:1000,
+                showNum:5,
+                timer:1500,
             });
         });
     </script>
 </head>
 <body>
-<!--<ul style="background: #d68572;color: #ffffff;padding-bottom: 20px">
+<ul style="background: #d68572;color: #ffffff;padding-bottom: 20px">
     <li><h2 style="font-size: 20px;text-align: center;padding: 50px 0">jquery动画</h2></li>
     <li class="clearFix" style="width: 90%;margin: 0 auto 50px">
         <div style="float:left;width: 40%">
@@ -568,7 +568,7 @@
             </div>
         </div>
     </li>
-    <li class="clearFix" style="width: 90%;margin: 0 auto">
+    <li class="clearFix" style="width: 90%;margin: 0 auto 50px">
         <div style="float:left;width: 40%">
             <h3 style="font-size: 18px;line-height: 40px;">自定义下拉选择</h3>
             <dl class="clearFix" style="background-color:#0c1021;padding: 20px 40px">
@@ -596,6 +596,42 @@
                     <li>选择列表内容2</li>
                     <li>选择列表内容3</li>
                 </ul>
+            </div>
+        </div>
+    </li>
+    <li style="width: 90%;margin: 0 auto">
+        <div style="background-color:#0c1021;padding: 30px 20px 20px">
+            <h3 style="font-size: 18px;line-height: 40px;">中间大图轮播</h3>
+            <div class="clearFix">
+                <dl class="clearFix" style="width:40%;float:left;padding: 20px 40px">
+                    <dt style="float:left;width: 30%">js</dt>
+                    <dd style="float: left;max-height:324px;overflow: auto;width: 70%;">
+                        <p></p>
+                        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><span style="color:#aeaeae;">/*中间大图显示——相关参数：timer,showNum,autoPlay,moseHover*/<br></span><span style="color:#ff6400;">$</span>(<span style="color:#61ce3c;">'.</span><span style="color:#ff6400;">ytl_animation1</span><span style="color:#61ce3c;">'</span>).<span style="color:#ff6400;">highlight</span>({<br> <span style="color:#ff6400;">showNum</span><span style="color:#fbde2d;">:</span><span style="color:#d8fa3c;">5</span>,<br> <span style="color:#ff6400;">timer</span><span style="color:#fbde2d;">:</span><span style="color:#d8fa3c;">1500</span>,<br>});</pre>
+</pre>
+                        <p></p>
+                    </dd>
+                </dl>
+                <dl class="clearFix" style="width:40%;float:left;border-left:1px solid #ffffff;padding: 20px 40px">
+                    <dt style="float:left;width: 30%">html</dt>
+                    <dd style="float: left;max-height:324px;overflow: auto;width: 70%;">
+                        <p></p>
+                        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_animation ytl_animation1"</span>&gt;<br> &lt;<span style="color:#7f90aa;">ul </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_list clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/science/u=7062480,2757210393&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/science/u=336457624,4067156263&amp;fm=200&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_active"</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/science/u=794945328,1514551785&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/science/u=875735926,3420285005&amp;fm=200&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/science/u=2200395957,3640679743&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/science/u=2720120862,3012596723&amp;fm=200&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;/<span style="color:#7f90aa;">ul</span>&gt;<br>&lt;/<span style="color:#7f90aa;">div</span>&gt;</pre>
+                        <p></p>
+                    </dd>
+                </dl>
+            </div>
+            <div style="border-top:1px solid #ffffff;">
+                <div class="ytl_animation ytl_animation1">
+                    <ul class="ytl_list clearFix">
+                        <li><img src="images/science/u=7062480,2757210393&fm=27&gp=0.jpg" alt=""></li>
+                        <li><img src="images/science/u=336457624,4067156263&fm=200&gp=0.jpg" alt=""></li>
+                        <li class="ytl_active"><img src="images/science/u=794945328,1514551785&fm=27&gp=0.jpg" alt=""></li>
+                        <li><img src="images/science/u=875735926,3420285005&fm=200&gp=0.jpg" alt=""></li>
+                        <li><img src="images/science/u=2200395957,3640679743&fm=27&gp=0.jpg" alt=""></li>
+                        <li><img src="images/science/u=2720120862,3012596723&fm=200&gp=0.jpg" alt=""></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </li>
@@ -1899,19 +1935,6 @@
             }
         </style>
     </li>
-</ul>-->
-<!--中间大图显示-->
-<div>
-    <div class="ytl_animation ytl_animation1">
-        <ul class="ytl_list clearFix">
-            <li><img src="images/science/u=7062480,2757210393&fm=27&gp=0.jpg" alt=""></li>
-            <li class="ytl_active"><img src="images/science/u=336457624,4067156263&fm=200&gp=0.jpg" alt=""></li>
-            <li><img src="images/science/u=794945328,1514551785&fm=27&gp=0.jpg" alt=""></li>
-            <li><img src="images/science/u=875735926,3420285005&fm=200&gp=0.jpg" alt=""></li>
-            <li><img src="images/science/u=2200395957,3640679743&fm=27&gp=0.jpg" alt=""></li>
-            <li><img src="images/science/u=2720120862,3012596723&fm=200&gp=0.jpg" alt=""></li>
-        </ul>
-    </div>
-</div>
+</ul>
 </body>
 </html>
