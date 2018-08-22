@@ -11,36 +11,18 @@
         ul,ol,dl,dt,dd,ol,li{list-style:none;list-style-type:none}
         h1,h2{font-weight:bold;font-size:100%}
         body,html{font-size:100px;font-family:'Microsoft YaHei';background: #fafafa;color: #666666}
-        body{
-            font-size: 14px;
-        }
+        body{font-size: 14px;}
         a{color:#333;text-decoration:none;display: block}
         a,img{border:0}
-        table{
-            max-width: 100%;
-        }
+        table{max-width: 100%;}
         input,button{outline:0;border:0;padding:0}
         input[type=text],input[type=submit],input[type=button],textarea{padding:0;border-radius:0;border:0;outline:0;-webkit-appearance:none;appearance:none;font-family:'Microsoft YaHei';}
         img{width:auto;vertical-align:middle;display: block}
-        .tstAll,.imgHover img{
-            -webkit-transition: all 0.5s;
-            -moz-transition: all 0.5s;
-            -ms-transition: all 0.5s;
-            -o-transition: all 0.5s;
-            transition: all 0.5s;
-        }
-        .imgHover img:hover{
-            -webkit-transform: scale(1.05);
-            -moz-transform: scale(1.05);
-            -ms-transform: scale(1.05);
-            -o-transform: scale(1.05);
-            transform: scale(1.05);
-        }
-        .oneLine{
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
+        .selectBg {appearance: none;-moz-appearance: none;-webkit-appearance: none;padding-right: 14px;padding-left: 10px;}/*很关键：将默认的select选择框样式清除,并添加padding为下拉小箭头留出一点位置，避免被文字覆盖*/
+        .selectBg::-ms-expand {display: none;}
+        .tstAll,.imgHover img{-webkit-transition: all 0.5s;-moz-transition: all 0.5s;-ms-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;}
+        .imgHover img:hover{-webkit-transform: scale(1.05);-moz-transform: scale(1.05);-ms-transform: scale(1.05);-o-transform: scale(1.05);transform: scale(1.05);}
+        .oneLine{text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
         .clearFix:after{content:" ";display:block;font-size:0;height:0;clear:both;visibility:hidden}
         /*content*/
         body{
@@ -50,16 +32,475 @@
         h3{
             color: #ffffff;
         }
-        img{
-            display: block;
-        }
     </style>
 </head>
 <body>
 <div>
     <div style="width: 1800px;margin: 0 auto;">
         <h3 style="font-size: 24px;line-height: 60px;padding-top: 30px">PC端</h3>
-        <h3 style="text-indent: 2em;font-size: 20px">内页列表</h3>
+        <div class="baseCss">
+            <input type="button" value="点击查看基础样式" style="width: 180px;height: 50px;background: #2ca766;color: #ffffff;font-size: 18px">
+            <div style="padding: 20px 40px;background-color:#0c1021;margin: 30px 0;display: none">
+                <p></p>
+                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><span style="color:#aeaeae;">/*base*/<br></span><span style="color:#ff6400;">*</span>{<span style="color:#8da6ce;">margin</span>:<span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">padding</span>:<span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">list-style-type</span>:<span style="color:#68e868;font-weight:bold;">none</span>}<br><span style="color:#ff6400;">body</span>,<span style="color:#ff6400;">div</span>,<span style="color:#ff6400;">ul</span>,<span style="color:#ff6400;">li</span>,<span style="color:#ff6400;">form</span>,<span style="color:#ff6400;">input</span>,<span style="color:#ff6400;">textarea</span>,<span style="color:#ff6400;">span</span>,<span style="color:#ff6400;">a</span>,<span style="color:#ff6400;">i</span>,<span style="color:#ff6400;">dl</span>,<span style="color:#ff6400;">dt</span>,<span style="color:#ff6400;">dd</span>,<span style="color:#ff6400;">h1</span>,<span style="color:#ff6400;">h2</span>,<span style="color:#ff6400;">h3</span>,<span style="color:#ff6400;">h4</span>,<span style="color:#ff6400;">h5</span>,<span style="color:#ff6400;">h6</span>{<span style="color:#8da6ce;">margin</span>:<span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">padding</span>:<span style="color:#d8fa3c;">0</span>}<br><span style="color:#ff6400;">ul</span>,<span style="color:#ff6400;">ol</span>,<span style="color:#ff6400;">dl</span>,<span style="color:#ff6400;">dt</span>,<span style="color:#ff6400;">dd</span>,<span style="color:#ff6400;">ol</span>,<span style="color:#ff6400;">li</span>{<span style="color:#8da6ce;">list-style</span>:<span style="color:#68e868;font-weight:bold;">none</span>;<span style="color:#8da6ce;">list-style-type</span>:<span style="color:#68e868;font-weight:bold;">none</span>}<br><span style="color:#ff6400;">h1</span>,<span style="color:#ff6400;">h2</span>{<span style="color:#8da6ce;">font-weight</span>:<span style="color:#68e868;font-weight:bold;">bold</span>;<span style="color:#8da6ce;">font-size</span>:<span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>}<br><span style="color:#ff6400;">body</span>,<span style="color:#ff6400;">html</span>{<span style="color:#8da6ce;">font-size</span>:<span style="color:#d8fa3c;">100</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">font-family</span>:<span style="color:#61ce3c;">'Microsoft YaHei'</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#fafafa</span>;<span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#666666</span>}<br><span style="color:#ff6400;">body</span>{<span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">14</span><span style="color:#68e868;font-weight:bold;">px</span>;}<br><span style="color:#ff6400;">a</span>{<span style="color:#8da6ce;">color</span>:<span style="color:#6897bb;">#333</span>;<span style="color:#8da6ce;">text-decoration</span>:<span style="color:#68e868;font-weight:bold;">none</span>;<span style="color:#8da6ce;">display</span>: <span style="color:#68e868;font-weight:bold;">block</span>}<br><span style="color:#ff6400;">a</span>,<span style="color:#ff6400;">img</span>{<span style="color:#8da6ce;">border</span>:<span style="color:#d8fa3c;">0</span>}<br><span style="color:#ff6400;">table</span>{<span style="color:#8da6ce;">max-width</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;}<br><span style="color:#ff6400;">input</span>,<span style="color:#ff6400;">button</span>{<span style="color:#8da6ce;">outline</span>:<span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">border</span>:<span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">padding</span>:<span style="color:#d8fa3c;">0</span>}<br><span style="color:#ff6400;">input</span>[<span style="color:#ff6400;">type</span><span style="color:#fbde2d;">=</span><span style="color:#ff6400;">text</span>],<span style="color:#ff6400;">input</span>[<span style="color:#ff6400;">type</span><span style="color:#fbde2d;">=</span><span style="color:#ff6400;">submit</span>],<span style="color:#ff6400;">input</span>[<span style="color:#ff6400;">type</span><span style="color:#fbde2d;">=</span><span style="color:#ff6400;">button</span>],<span style="color:#ff6400;">textarea</span>{<span style="color:#8da6ce;">padding</span>:<span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">border-radius</span>:<span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">border</span>:<span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">outline</span>:<span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">-webkit-appearance</span>:<span style="color:#68e868;font-weight:bold;">none</span>;<span style="color:#8da6ce;">appearance</span>:<span style="color:#68e868;font-weight:bold;">none</span>;<span style="color:#8da6ce;">font-family</span>:<span style="color:#61ce3c;">'Microsoft YaHei'</span>;}<br><span style="color:#ff6400;">img</span>{<span style="color:#8da6ce;">width</span>:<span style="color:#68e868;font-weight:bold;">auto</span>;<span style="color:#8da6ce;">vertical-align</span>:<span style="color:#68e868;font-weight:bold;">middle</span>;<span style="color:#8da6ce;">display</span>: <span style="color:#68e868;font-weight:bold;">block</span>}<br>.<span style="color:#ff6400;">selectBg </span>{<span style="color:#8da6ce;">appearance</span>: <span style="color:#68e868;font-weight:bold;">none</span>;<span style="color:#8da6ce;">-moz-appearance</span>: <span style="color:#68e868;font-weight:bold;">none</span>;<span style="color:#8da6ce;">-webkit-appearance</span>: <span style="color:#68e868;font-weight:bold;">none</span>;<span style="color:#8da6ce;">padding-right</span>: <span style="color:#d8fa3c;">14</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">padding-left</span>: <span style="color:#d8fa3c;">10</span><span style="color:#68e868;font-weight:bold;">px</span>;}<span style="color:#aeaeae;">/*很关键：将默认的select选择框样式清除,并添加padding为下拉小箭头留出一点位置，避免被文字覆盖*/<br></span>.<span style="color:#ff6400;">selectBg</span>::<span style="color:#ff6400;">-ms-expand </span>{<span style="color:#8da6ce;">display</span>: <span style="color:#68e868;font-weight:bold;">none</span>;}<br>.<span style="color:#ff6400;">tstAll</span>,.<span style="color:#ff6400;">imgHover img</span>{<span style="color:#8da6ce;">-webkit-transition</span>: <span style="color:#68e868;font-weight:bold;">all </span><span style="color:#d8fa3c;">0.5</span><span style="color:#68e868;font-weight:bold;">s</span>;<span style="color:#8da6ce;">-moz-transition</span>: <span style="color:#68e868;font-weight:bold;">all </span><span style="color:#d8fa3c;">0.5</span><span style="color:#68e868;font-weight:bold;">s</span>;<span style="color:#8da6ce;">-ms-transition</span>: <span style="color:#68e868;font-weight:bold;">all </span><span style="color:#d8fa3c;">0.5</span><span style="color:#68e868;font-weight:bold;">s</span>;<span style="color:#8da6ce;">-o-transition</span>: <span style="color:#68e868;font-weight:bold;">all </span><span style="color:#d8fa3c;">0.5</span><span style="color:#68e868;font-weight:bold;">s</span>;<span style="color:#8da6ce;">transition</span>: <span style="color:#68e868;font-weight:bold;">all </span><span style="color:#d8fa3c;">0.5</span><span style="color:#68e868;font-weight:bold;">s</span>;}<br>.<span style="color:#ff6400;">imgHover img</span>:<span style="color:#ff6400;">hover</span>{<span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">scale</span>(<span style="color:#d8fa3c;">1.05</span>);<span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">scale</span>(<span style="color:#d8fa3c;">1.05</span>);<span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">scale</span>(<span style="color:#d8fa3c;">1.05</span>);<span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">scale</span>(<span style="color:#d8fa3c;">1.05</span>);<span style="color:#8da6ce;">transform</span>: <span style="color:#8da6ce;">scale</span>(<span style="color:#d8fa3c;">1.05</span>);}<br>.<span style="color:#ff6400;">oneLine</span>{<span style="color:#8da6ce;">text-overflow</span>: <span style="color:#68e868;font-weight:bold;">ellipsis</span>;<span style="color:#8da6ce;">white-space</span>: <span style="color:#68e868;font-weight:bold;">nowrap</span>;<span style="color:#8da6ce;">overflow</span>: <span style="color:#68e868;font-weight:bold;">hidden</span>;}<br>.<span style="color:#ff6400;">clearFix</span>:<span style="color:#ff6400;">after</span>{<span style="color:#8da6ce;">content</span>:<span style="color:#61ce3c;">" "</span>;<span style="color:#8da6ce;">display</span>:<span style="color:#68e868;font-weight:bold;">block</span>;<span style="color:#8da6ce;">font-size</span>:<span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>:<span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">clear</span>:<span style="color:#68e868;font-weight:bold;">both</span>;<span style="color:#8da6ce;">visibility</span>:<span style="color:#68e868;font-weight:bold;">hidden</span>}<br><span style="color:#aeaeae;">/*content*/<br></span><span style="color:#ff6400;">body</span>{<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#d68572</span>;<br> <span style="color:#8da6ce;">min-width</span>: <span style="color:#d8fa3c;">1800</span><span style="color:#68e868;font-weight:bold;">px</span>;<br>}<br><span style="color:#ff6400;">h3</span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#ffffff</span>;<br>}</pre>
+                <p></p>
+            </div>
+        </div>
+        <script>
+            $(function () {
+                $(".baseCss input").click(function () {
+                    $(this).siblings().slideToggle();
+                });
+            })
+        </script>
+        <h3 style="text-indent: 2em;font-size: 20px;margin-top: 30px">首页导航</h3>
+        <div>
+            <h3 style="text-indent: 4em;line-height: 40px">一、类型一</h3>
+            <div style="background: #0c1021;padding: 30px;margin: 0 0 30px">
+                <div class="clearFix" style="height: 190px;overflow-y: auto">
+                    <div style="float:left;width: 30%;overflow:hidden;margin-bottom: 40px">
+                        <h4 style="text-align:center;padding:30px 0;width: 200px;margin-right: 20px">css</h4>
+                        <p></p>
+                        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">mainNav </span>{<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">60</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#1fb4b1</span>;<br> <span style="color:#8da6ce;">text-align</span>: <span style="color:#68e868;font-weight:bold;">center</span>;<br>}<br>.<span style="color:#ff6400;">mainNav </span>.<span style="color:#ff6400;">mainNavCon </span>{<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">60</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">padding-left</span>: <span style="color:#d8fa3c;">70</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">display</span>: <span style="color:#68e868;font-weight:bold;">inline-block</span>;<br>}<br>.<span style="color:#ff6400;">mainNav </span>.<span style="color:#ff6400;">mainNavCon li </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">69</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">left</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">60</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">cursor</span>: <span style="color:#68e868;font-weight:bold;">pointer</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">60</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#ffffff</span>;<br> <span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">16</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">0 20</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">relative</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;">url</span>(<span style="color:#61ce3c;">"images/index_navline.png"</span>) <span style="color:#68e868;font-weight:bold;">no-repeat left center</span>;<br> <span style="color:#8da6ce;">-webkit-transition</span>: <span style="color:#68e868;font-weight:bold;">color </span><span style="color:#d8fa3c;">0.3</span><span style="color:#68e868;font-weight:bold;">s</span>;<br> <span style="color:#8da6ce;">-moz-transition</span>: <span style="color:#68e868;font-weight:bold;">color </span><span style="color:#d8fa3c;">0.3</span><span style="color:#68e868;font-weight:bold;">s</span>;<br> <span style="color:#8da6ce;">-ms-transition</span>: <span style="color:#68e868;font-weight:bold;">color </span><span style="color:#d8fa3c;">0.3</span><span style="color:#68e868;font-weight:bold;">s</span>;<br> <span style="color:#8da6ce;">-o-transition</span>: <span style="color:#68e868;font-weight:bold;">color </span><span style="color:#d8fa3c;">0.3</span><span style="color:#68e868;font-weight:bold;">s</span>;<br> <span style="color:#8da6ce;">transition</span>: <span style="color:#68e868;font-weight:bold;">color </span><span style="color:#d8fa3c;">0.3</span><span style="color:#68e868;font-weight:bold;">s</span>;<br>}<br>.<span style="color:#ff6400;">mainNav </span>.<span style="color:#ff6400;">mainNavCon </span>.<span style="color:#ff6400;">on</span>, .<span style="color:#ff6400;">mainNav </span>.<span style="color:#ff6400;">mainNavCon li</span>:<span style="color:#ff6400;">hover </span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#fec53e</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">57</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">3</span><span style="color:#68e868;font-weight:bold;">px solid </span><span style="color:#6897bb;">#fec53e</span>;<br>}<br>.<span style="color:#ff6400;">mainNav </span>.<span style="color:#ff6400;">mainNavCon </span>.<span style="color:#ff6400;">one </span>{<br> <span style="color:#8da6ce;">background</span>: <span style="color:#68e868;font-weight:bold;">none</span>;<br>}<br>.<span style="color:#ff6400;">mainNav </span>.<span style="color:#ff6400;">subNav </span>{<br> <span style="color:#8da6ce;">min-width</span>: <span style="color:#d8fa3c;">107</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#ffffff</span>;<br> <span style="color:#8da6ce;">display</span>: <span style="color:#68e868;font-weight:bold;">none</span>;<br> <span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">absolute</span>;<br> <span style="color:#8da6ce;">z-index</span>: <span style="color:#d8fa3c;">10</span>;<br> <span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">1</span><span style="color:#68e868;font-weight:bold;">px solid </span><span style="color:#6897bb;">#1fb4b1</span>;<br>}<br>.<span style="color:#ff6400;">mainNav </span>.<span style="color:#ff6400;">subNav a</span>:<span style="color:#ff6400;">hover </span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#fec53e</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#1fb4b1</span>;<br>}</pre>
+                        <p></p>
+                    </div>
+                    <div style="float:left;width: 30%;overflow:hidden;margin-bottom: 40px">
+                        <h4 style="text-align:center;padding:30px 0;width: 200px;margin-right: 20px">js</h4>
+                        <p></p>
+                        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">(<span style="color:#fbde2d;">function </span>() {<br> <span style="color:#ff6400;">$</span>(<span style="color:#61ce3c;">'.</span><span style="color:#ff6400;">mainNavCon li</span><span style="color:#61ce3c;">'</span>).<span style="color:#ff6400;">hover</span>(<span style="color:#fbde2d;">function </span>() {<br> <span style="color:#ff6400;">$</span>(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">find</span>(<span style="color:#61ce3c;">'.</span><span style="color:#ff6400;">subNav</span><span style="color:#61ce3c;">'</span>).<span style="color:#ff6400;">stop</span>(<span style="color:#fbde2d;">true</span>,<span style="color:#fbde2d;">true</span>).<span style="color:#ff6400;">hide</span>(<span style="color:#d8fa3c;">500</span>);<br> <span style="color:#ff6400;">$</span>(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">find</span>(<span style="color:#61ce3c;">'.</span><span style="color:#ff6400;">subNav</span><span style="color:#61ce3c;">'</span>).<span style="color:#ff6400;">stop</span>(<span style="color:#fbde2d;">true</span>,<span style="color:#fbde2d;">true</span>).<span style="color:#ff6400;">show</span>(<span style="color:#d8fa3c;">500</span>);<br> },<span style="color:#fbde2d;">function</span>(){<br> <span style="color:#ff6400;">$</span>(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">find</span>(<span style="color:#61ce3c;">'.</span><span style="color:#ff6400;">subNav</span><span style="color:#61ce3c;">'</span>).<span style="color:#ff6400;">stop</span>(<span style="color:#fbde2d;">true</span>,<span style="color:#fbde2d;">true</span>).<span style="color:#ff6400;">hide</span>(<span style="color:#d8fa3c;">500</span>);<br> });<br>})();</pre>
+                        <p></p>
+                    </div>
+                    <div style="float:right;width: 30%;overflow:hidden;">
+                        <h4 style="text-align:center;padding:30px 0;width: 200px;margin-right: 20px">html</h4>
+                        <p></p>
+                        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"mainNav"</span>&gt;<br> &lt;<span style="color:#7f90aa;">ul </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"mainNavCon clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">li </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"one on"</span>&gt;<br> &lt;<span style="color:#7f90aa;">span</span>&gt;<span style="font-weight:bold;">网站首页</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">span</span>&gt;<span style="font-weight:bold;">医院概况</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">医院概况1</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">医院概况2</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">医院概况3</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">医院概况4</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">span</span>&gt;<span style="font-weight:bold;">新闻动态</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">新闻动态1</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">新闻动态2</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">新闻动态3</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">新闻动态4</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">span</span>&gt;<span style="font-weight:bold;">科室介绍</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">科室介绍1</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">科室介绍2</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">科室介绍3</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">科室介绍4</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">span</span>&gt;<span style="font-weight:bold;">专家推荐</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">专家推荐1</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">专家推荐2</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">专家推荐3</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">专家推荐4</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">span</span>&gt;<span style="font-weight:bold;">党群工作</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">党群工作1</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">党群工作2</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">党群工作3</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">党群工作4</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">span</span>&gt;<span style="font-weight:bold;">健康园地</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">健康园地1</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">健康园地2</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">健康园地3</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">健康园地4</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">span</span>&gt;<span style="font-weight:bold;">信息公开</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">信息公开1</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">信息公开2</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">信息公开3</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">信息公开4</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">span</span>&gt;<span style="font-weight:bold;">医保政策</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">医保政策1</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">医保政策2</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">医保政策3</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">医保政策4</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">span</span>&gt;<span style="font-weight:bold;">预约挂号</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">预约挂号1</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">预约挂号2</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">预约挂号3</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">预约挂号4</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">span</span>&gt;<span style="font-weight:bold;">联系我们</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">联系我们1</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">联系我们2</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">联系我们3</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">联系我们4</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;/<span style="color:#7f90aa;">ul</span>&gt;<br>&lt;/<span style="color:#7f90aa;">div</span>&gt;</pre>
+                        <p></p>
+                    </div>
+                </div>
+                <div style="border-top: 1px solid #ffffff;padding-top: 30px;margin-top: 30px">
+                    <div class="mainNav">
+                        <ul class="mainNavCon clearFix">
+                            <li class="one on">
+                                <span>网站首页</span>
+                            </li>
+                            <li>
+                                <span>医院概况</span>
+                                <div class="subNav">
+                                    <a href="#">医院概况1</a>
+                                    <a href="#">医院概况2</a>
+                                    <a href="#">医院概况3</a>
+                                    <a href="#">医院概况4</a>
+                                </div></li>
+                            <li>
+                                <span>新闻动态</span>
+                                <div class="subNav">
+                                    <a href="#">新闻动态1</a>
+                                    <a href="#">新闻动态2</a>
+                                    <a href="#">新闻动态3</a>
+                                    <a href="#">新闻动态4</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span>科室介绍</span>
+                                <div class="subNav">
+                                    <a href="#">科室介绍1</a>
+                                    <a href="#">科室介绍2</a>
+                                    <a href="#">科室介绍3</a>
+                                    <a href="#">科室介绍4</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span>专家推荐</span>
+                                <div class="subNav">
+                                    <a href="#">专家推荐1</a>
+                                    <a href="#">专家推荐2</a>
+                                    <a href="#">专家推荐3</a>
+                                    <a href="#">专家推荐4</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span>党群工作</span>
+                                <div class="subNav">
+                                    <a href="#">党群工作1</a>
+                                    <a href="#">党群工作2</a>
+                                    <a href="#">党群工作3</a>
+                                    <a href="#">党群工作4</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span>健康园地</span>
+                                <div class="subNav">
+                                    <a href="#">健康园地1</a>
+                                    <a href="#">健康园地2</a>
+                                    <a href="#">健康园地3</a>
+                                    <a href="#">健康园地4</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span>信息公开</span>
+                                <div class="subNav">
+                                    <a href="#">信息公开1</a>
+                                    <a href="#">信息公开2</a>
+                                    <a href="#">信息公开3</a>
+                                    <a href="#">信息公开4</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span>医保政策</span>
+                                <div class="subNav">
+                                    <a href="#">医保政策1</a>
+                                    <a href="#">医保政策2</a>
+                                    <a href="#">医保政策3</a>
+                                    <a href="#">医保政策4</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span>预约挂号</span>
+                                <div class="subNav">
+                                    <a href="#">预约挂号1</a>
+                                    <a href="#">预约挂号2</a>
+                                    <a href="#">预约挂号3</a>
+                                    <a href="#">预约挂号4</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span>联系我们</span>
+                                <div class="subNav">
+                                    <a href="#">联系我们1</a>
+                                    <a href="#">联系我们2</a>
+                                    <a href="#">联系我们3</a>
+                                    <a href="#">联系我们4</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <style>
+                        .mainNav {
+                            height: 60px;
+                            background: #1fb4b1;
+                            text-align: center;
+                        }
+                        .mainNav .mainNavCon {
+                            height: 60px;
+                            padding-left: 70px;
+                            display: inline-block;
+                        }
+                        .mainNav .mainNavCon li {
+                            width: 69px;
+                            float: left;
+                            height: 60px;
+                            cursor: pointer;
+                            line-height: 60px;
+                            color: #ffffff;
+                            font-size: 16px;
+                            padding: 0 20px;
+                            position: relative;
+                            background: url("images/index_navline.png") no-repeat left center;
+                            -webkit-transition: color 0.3s;
+                            -moz-transition: color 0.3s;
+                            -ms-transition: color 0.3s;
+                            -o-transition: color 0.3s;
+                            transition: color 0.3s;
+                        }
+                        .mainNav .mainNavCon .on, .mainNav .mainNavCon li:hover {
+                            color: #fec53e;
+                            height: 57px;
+                            border-bottom: 3px solid #fec53e;
+                        }
+                        .mainNav .mainNavCon .one {
+                            background: none;
+                        }
+                        .mainNav .subNav {
+                            min-width: 107px;
+                            background: #ffffff;
+                            display: none;
+                            left: 0;
+                            position: absolute;
+                            z-index: 10;
+                            border: 1px solid #1fb4b1;
+                        }
+                        .mainNav .subNav a:hover {
+                            color: #fec53e;
+                            background: #1fb4b1;
+                        }
+                    </style>
+                    <script>
+                        $(function () {
+                            (function () {
+                                $('.mainNav .mainNavCon li').hover(function () {
+                                    $(this).find('.subNav').stop(true,true).hide(500);
+                                    $(this).find('.subNav').stop(true,true).show(500);
+                                },function(){
+                                    $(this).find('.subNav').stop(true,true).hide(500);
+                                });
+                            })();
+                        })
+                    </script>
+                </div>
+            </div>
+            <h3 style="text-indent: 4em;line-height: 40px">二、类型二</h3>
+            <div style="background: #0c1021;padding: 30px;margin: 0 0 30px">
+                <div class="clearFix" style="height: 400px;overflow-y: auto">
+                    <div style="float:left;width: 30%;overflow:hidden;margin-bottom: 40px">
+                        <h4 style="text-align:center;padding:30px 0;width: 200px;margin-right: 20px">css</h4>
+                        <p></p>
+                        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">mainNav1 </span>{<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">52</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#266f58</span>;<br>}<br>.<span style="color:#ff6400;">mainNav1 </span>.<span style="color:#ff6400;">mainNavCon </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">1264</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">margin</span>: <span style="color:#d8fa3c;">0 </span><span style="color:#68e868;font-weight:bold;">auto</span>;<br> <span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">relative</span>;<br> <span style="color:#8da6ce;">left</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">32</span><span style="color:#68e868;font-weight:bold;">px</span>;<br>}<br>.<span style="color:#ff6400;">mainNav1 </span>.<span style="color:#ff6400;">mainNavCon li </span>{<br> <span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">left</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">52</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">0 32</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">relative</span>;<br>}<br>.<span style="color:#ff6400;">mainNav1 </span>.<span style="color:#ff6400;">mainNavCon li</span>.<span style="color:#ff6400;">on </span>{<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#215341 </span><span style="color:#cc7832;font-weight:bold;">!important</span>;<br>}<br>.<span style="color:#ff6400;">mainNav1 a </span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#ffffff</span>;<br> <span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">16</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">text-transform</span>: <span style="color:#68e868;font-weight:bold;">uppercase</span>;<br>}<br>.<span style="color:#ff6400;">mainNav1 </span>.<span style="color:#ff6400;">subNavBox </span>{<br> <span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">absolute</span>;<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">560</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">display</span>: <span style="color:#68e868;font-weight:bold;">none</span>;<br> <span style="color:#8da6ce;">z-index</span>: <span style="color:#d8fa3c;">30</span>;<br> <span style="color:#8da6ce;">overflow</span>: <span style="color:#68e868;font-weight:bold;">hidden</span>;<br>}<br>.<span style="color:#ff6400;">mainNav1 </span>.<span style="color:#ff6400;">subNav </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">504</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">min-height</span>: <span style="color:#d8fa3c;">196</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">34</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">25</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">3</span><span style="color:#68e868;font-weight:bold;">px solid </span><span style="color:#6897bb;">#266f58</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#ffffff</span>;<br> <span style="color:#8da6ce;">background-position</span>: <span style="color:#68e868;font-weight:bold;">right bottom</span>;<br> <span style="color:#8da6ce;">background-repeat</span>: <span style="color:#68e868;font-weight:bold;">no-repeat</span>;<br>}<br>.<span style="color:#ff6400;">mainNav1 </span>.<span style="color:#ff6400;">subNav a</span>:<span style="color:#ff6400;">hover </span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#266f58</span>;<br>}<br>.<span style="color:#ff6400;">mainNav1 </span>.<span style="color:#ff6400;">subNav </span>.<span style="color:#ff6400;">title </span>{<br> <span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">16</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#128b4b</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">26</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">font-weight</span>: <span style="color:#68e868;font-weight:bold;">bold</span>;<br>}<br>.<span style="color:#ff6400;">mainNav1 </span>.<span style="color:#ff6400;">subNavCon dd</span>:<span style="color:#ff6400;">before </span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">4</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">4</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#2ca766</span>;<br> <span style="color:#8da6ce;">display</span>: <span style="color:#68e868;font-weight:bold;">block</span>;<br> <span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">left</span>;<br> <span style="color:#8da6ce;">margin</span>: <span style="color:#d8fa3c;">24</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">10</span><span style="color:#68e868;font-weight:bold;">px</span>;<br>}<br>.<span style="color:#ff6400;">mainNav1 </span>.<span style="color:#ff6400;">subNavCon dd </span>{<br> <span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">left</span>;<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">126</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">margin-right</span>: <span style="color:#d8fa3c;">6</span><span style="color:#68e868;font-weight:bold;">px</span>;<br>}<br>.<span style="color:#ff6400;">mainNav1 </span>.<span style="color:#ff6400;">subNavCon a </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">96</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#4c4c4c</span>;<br> <span style="color:#8da6ce;">display</span>: <span style="color:#68e868;font-weight:bold;">inline-block</span>;<br>}</pre>
+                        <p></p>
+                    </div>
+                    <div style="float:left;width: 30%;overflow:hidden;margin-bottom: 40px">
+                        <h4 style="text-align:center;padding:30px 0;width: 200px;margin-right: 20px">js</h4>
+                        <p></p>
+                        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><span style="color:#ff6400;">$</span>(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">mainNav1</span><span style="color:#61ce3c;"> .</span><span style="color:#ff6400;">mainNavCon li</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">each</span>(<span style="color:#fbde2d;">function </span>(index) {<br> <span style="color:#fbde2d;">if</span>(index<span style="color:#fbde2d;">&lt;</span><span style="color:#d8fa3c;">5</span>){<br> <span style="color:#ff6400;">$</span>(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">find</span>(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">subNavBox</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">css</span>({<span style="color:#61ce3c;">"left"</span><span style="color:#fbde2d;">:</span><span style="color:#d8fa3c;">0</span>,<span style="color:#61ce3c;">"right"</span><span style="color:#fbde2d;">:</span><span style="color:#61ce3c;">"auto"</span>});<br> }<br> <span style="color:#fbde2d;">else </span>{<br> <span style="color:#ff6400;">$</span>(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">find</span>(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">subNavBox</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">css</span>({<span style="color:#61ce3c;">"right"</span><span style="color:#fbde2d;">:</span><span style="color:#d8fa3c;">0</span>,<span style="color:#61ce3c;">"left"</span><span style="color:#fbde2d;">:</span><span style="color:#61ce3c;">"auto"</span>});<br> }<br>});<br><span style="color:#ff6400;">$</span>(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">mainNav1</span><span style="color:#61ce3c;"> .</span><span style="color:#ff6400;">mainNavCon li</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">hover</span>(<span style="color:#fbde2d;">function </span>() {<br> <span style="color:#ff6400;">$</span>(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">siblings</span>().<span style="color:#ff6400;">css</span>({<span style="color:#61ce3c;">'background'</span><span style="color:#fbde2d;">:</span><span style="color:#61ce3c;">'none'</span>});<br> <span style="color:#ff6400;">$</span>(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">find</span>(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">subNavBox</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">stop</span>().<span style="color:#ff6400;">slideDown</span>();<br> <span style="color:#ff6400;">$</span>(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">css</span>({<span style="color:#61ce3c;">'background'</span><span style="color:#fbde2d;">:</span><span style="color:#61ce3c;">'#215341'</span>});<br>},<span style="color:#fbde2d;">function </span>() {<br> <span style="color:#ff6400;">$</span>(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">find</span>(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">subNavBox</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">stop</span>().<span style="color:#ff6400;">slideUp</span>();<br> <span style="color:#fbde2d;">if</span>(<span style="color:#ff6400;">$</span>(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">hasClass</span>(<span style="color:#61ce3c;">'on'</span>)){<br> <span style="color:#ff6400;">$</span>(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">css</span>({<span style="color:#61ce3c;">'background'</span><span style="color:#fbde2d;">:</span><span style="color:#61ce3c;">'#215341'</span>});<br> }<br> <span style="color:#fbde2d;">else </span>{<br> <span style="color:#ff6400;">$</span>(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">css</span>({<span style="color:#61ce3c;">'background'</span><span style="color:#fbde2d;">:</span><span style="color:#61ce3c;">'none'</span>});<br> }<br>});</pre>
+                        <p></p>
+                    </div>
+                    <div style="float:right;width: 30%;overflow:hidden;">
+                        <h4 style="text-align:center;padding:30px 0;width: 200px;margin-right: 20px">html</h4>
+                        <p></p>
+                        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"mainNav1"</span>&gt;<br> &lt;<span style="color:#7f90aa;">ul </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"mainNavCon clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"javascript:;"</span>&gt;<span style="font-weight:bold;">首</span><span style="color:#d8fa3c;font-weight:bold;">&amp;nbsp;&amp;nbsp;&amp;nbsp;</span><span style="font-weight:bold;">页</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"on"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"javascript:;"</span>&gt;<span style="font-weight:bold;">医院概况</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNavBox"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav" </span><span style="color:#ff6400;">style=</span><span style="color:#61ce3c;font-weight:bold;">"</span><span style="color:#8da6ce;">background-image</span>: <span style="color:#8da6ce;">url</span>(<span style="color:#61ce3c;">'images/img3.png'</span>)<span style="color:#61ce3c;font-weight:bold;">"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"title"</span>&gt;&lt;<span style="color:#7f90aa;">span</span>&gt;<span style="font-weight:bold;">医院概况</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">dl </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNavCon clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">医院简介</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">领导班子</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">组织架构</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">医院荣誉</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">医院环境</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">先进设备</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">宣传视频</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">文化园地</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;/<span style="color:#7f90aa;">dl</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"javascript:;"</span>&gt;<span style="font-weight:bold;">新闻动态</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNavBox"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav" </span><span style="color:#ff6400;">style=</span><span style="color:#61ce3c;font-weight:bold;">"</span><span style="color:#8da6ce;">background-image</span>: <span style="color:#8da6ce;">url</span>(<span style="color:#61ce3c;">'images/img3.png'</span>)<span style="color:#61ce3c;font-weight:bold;">"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"title"</span>&gt;<span style="font-weight:bold;">新闻动态</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">dl </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNavCon clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">医院新闻</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">行业资讯</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">公益活动</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;/<span style="color:#7f90aa;">dl</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"javascript:;"</span>&gt;<span style="font-weight:bold;">信息公开</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNavBox"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav" </span><span style="color:#ff6400;">style=</span><span style="color:#61ce3c;font-weight:bold;">"</span><span style="color:#8da6ce;">background-image</span>: <span style="color:#8da6ce;">url</span>(<span style="color:#61ce3c;">'images/img3.png'</span>)<span style="color:#61ce3c;font-weight:bold;">"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"title"</span>&gt;<span style="font-weight:bold;">信息公开</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">dl </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNavCon clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">通知公告</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">院务公开</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">医保政策</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">招标采购</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">人才招聘</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;/<span style="color:#7f90aa;">dl</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"javascript:;"</span>&gt;<span style="font-weight:bold;">科室介绍</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNavBox"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav" </span><span style="color:#ff6400;">style=</span><span style="color:#61ce3c;font-weight:bold;">"</span><span style="color:#8da6ce;">background-image</span>: <span style="color:#8da6ce;">url</span>(<span style="color:#61ce3c;">'images/img3.png'</span>)<span style="color:#61ce3c;font-weight:bold;">"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"title"</span>&gt;<span style="font-weight:bold;">科室介绍</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">dl </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNavCon clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">临床科室</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">医技科室</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">辅助科室</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">职能部门</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;/<span style="color:#7f90aa;">dl</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"javascript:;"</span>&gt;<span style="font-weight:bold;">专家团队</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNavBox"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav" </span><span style="color:#ff6400;">style=</span><span style="color:#61ce3c;font-weight:bold;">"</span><span style="color:#8da6ce;">background-image</span>: <span style="color:#8da6ce;">url</span>(<span style="color:#61ce3c;">'images/img3.png'</span>)<span style="color:#61ce3c;font-weight:bold;">"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"title"</span>&gt;<span style="font-weight:bold;">专家团队</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">dl </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNavCon clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">临床科室</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">医技科室</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">辅助科室</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">职能部门</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;/<span style="color:#7f90aa;">dl</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"javascript:;"</span>&gt;<span style="font-weight:bold;">党群工作</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNavBox"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav" </span><span style="color:#ff6400;">style=</span><span style="color:#61ce3c;font-weight:bold;">"</span><span style="color:#8da6ce;">background-image</span>: <span style="color:#8da6ce;">url</span>(<span style="color:#61ce3c;">'images/img3.png'</span>)<span style="color:#61ce3c;font-weight:bold;">"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"title"</span>&gt;<span style="font-weight:bold;">党群工作</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">dl </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNavCon clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">廉政建设</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">党建动态</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">职工之家</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">党务管理</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;/<span style="color:#7f90aa;">dl</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"javascript:;"</span>&gt;<span style="font-weight:bold;">网上服务</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNavBox"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav" </span><span style="color:#ff6400;">style=</span><span style="color:#61ce3c;font-weight:bold;">"</span><span style="color:#8da6ce;">background-image</span>: <span style="color:#8da6ce;">url</span>(<span style="color:#61ce3c;">'images/img3.png'</span>)<span style="color:#61ce3c;font-weight:bold;">"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"title"</span>&gt;<span style="font-weight:bold;">网上服务</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">dl </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNavCon clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">预约挂号</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">报告查询</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">检查结果查询</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">体检报告</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">就诊须知</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">楼层分布</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">满意度调查</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">专家排版表</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;/<span style="color:#7f90aa;">dl</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"javascript:;"</span>&gt;<span style="font-weight:bold;">健康园苑</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNavBox"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav" </span><span style="color:#ff6400;">style=</span><span style="color:#61ce3c;font-weight:bold;">"</span><span style="color:#8da6ce;">background-image</span>: <span style="color:#8da6ce;">url</span>(<span style="color:#61ce3c;">'images/img3.png'</span>)<span style="color:#61ce3c;font-weight:bold;">"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"title"</span>&gt;<span style="font-weight:bold;">健康园苑</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">dl </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNavCon clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">健康知识</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">科普园地</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">健康问答</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">药材百科</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">科研教学</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;/<span style="color:#7f90aa;">dl</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"javascript:;"</span>&gt;<span style="font-weight:bold;">联系我们</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNavBox"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNav" </span><span style="color:#ff6400;">style=</span><span style="color:#61ce3c;font-weight:bold;">"</span><span style="color:#8da6ce;">background-image</span>: <span style="color:#8da6ce;">url</span>(<span style="color:#61ce3c;">'images/img3.png'</span>)<span style="color:#61ce3c;font-weight:bold;">"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"title"</span>&gt;<span style="font-weight:bold;">联系我们</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">dl </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"subNavCon clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">来院路线</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">在线留言</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">科室电话</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;<span style="color:#7f90aa;">dd</span>&gt;&lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#"</span>&gt;<span style="font-weight:bold;">互动信箱</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;/<span style="color:#7f90aa;">dd</span>&gt;<br> &lt;/<span style="color:#7f90aa;">dl</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;/<span style="color:#7f90aa;">ul</span>&gt;<br>&lt;/<span style="color:#7f90aa;">div</span>&gt;</pre>
+                        <p></p>
+                    </div>
+                </div>
+                <div style="border-top: 1px solid #ffffff;padding-top: 30px;margin-top: 30px">
+                    <div class="mainNav1">
+                        <ul class="mainNavCon clearFix">
+                            <li><a href="javascript:;">首&nbsp;&nbsp;&nbsp;页</a></li>
+                            <li class="on">
+                                <a href="javascript:;">医院概况</a>
+                                <div class="subNavBox">
+                                    <div class="subNav" style="background-image: url('images/img3.png')">
+                                        <div class="title"><span>医院概况</span></div>
+                                        <dl class="subNavCon clearFix">
+                                            <dd><a href="#">医院简介</a></dd>
+                                            <dd><a href="#">领导班子</a></dd>
+                                            <dd><a href="#">组织架构</a></dd>
+                                            <dd><a href="#">医院荣誉</a></dd>
+                                            <dd><a href="#">医院环境</a></dd>
+                                            <dd><a href="#">先进设备</a></dd>
+                                            <dd><a href="#">宣传视频</a></dd>
+                                            <dd><a href="#">文化园地</a></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;">新闻动态</a>
+                                <div class="subNavBox">
+                                    <div class="subNav" style="background-image: url('images/img3.png')">
+                                        <div class="title">新闻动态</div>
+                                        <dl class="subNavCon clearFix">
+                                            <dd><a href="#">医院新闻</a></dd>
+                                            <dd><a href="#">行业资讯</a></dd>
+                                            <dd><a href="#">公益活动</a></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;">信息公开</a>
+                                <div class="subNavBox">
+                                    <div class="subNav" style="background-image: url('images/img3.png')">
+                                        <div class="title">信息公开</div>
+                                        <dl class="subNavCon clearFix">
+                                            <dd><a href="#">通知公告</a></dd>
+                                            <dd><a href="#">院务公开</a></dd>
+                                            <dd><a href="#">医保政策</a></dd>
+                                            <dd><a href="#">招标采购</a></dd>
+                                            <dd><a href="#">人才招聘</a></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;">科室介绍</a>
+                                <div class="subNavBox">
+                                    <div class="subNav" style="background-image: url('images/img3.png')">
+                                        <div class="title">科室介绍</div>
+                                        <dl class="subNavCon clearFix">
+                                            <dd><a href="#">临床科室</a></dd>
+                                            <dd><a href="#">医技科室</a></dd>
+                                            <dd><a href="#">辅助科室</a></dd>
+                                            <dd><a href="#">职能部门</a></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;">专家团队</a>
+                                <div class="subNavBox">
+                                    <div class="subNav" style="background-image: url('images/img3.png')">
+                                        <div class="title">专家团队</div>
+                                        <dl class="subNavCon clearFix">
+                                            <dd><a href="#">临床科室</a></dd>
+                                            <dd><a href="#">医技科室</a></dd>
+                                            <dd><a href="#">辅助科室</a></dd>
+                                            <dd><a href="#">职能部门</a></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;">党群工作</a>
+                                <div class="subNavBox">
+                                    <div class="subNav" style="background-image: url('images/img3.png')">
+                                        <div class="title">党群工作</div>
+                                        <dl class="subNavCon clearFix">
+                                            <dd><a href="#">廉政建设</a></dd>
+                                            <dd><a href="#">党建动态</a></dd>
+                                            <dd><a href="#">职工之家</a></dd>
+                                            <dd><a href="#">党务管理</a></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;">网上服务</a>
+                                <div class="subNavBox">
+                                    <div class="subNav" style="background-image: url('images/img3.png')">
+                                        <div class="title">网上服务</div>
+                                        <dl class="subNavCon clearFix">
+                                            <dd><a href="#">预约挂号</a></dd>
+                                            <dd><a href="#">报告查询</a></dd>
+                                            <dd><a href="#">检查结果查询</a></dd>
+                                            <dd><a href="#">体检报告</a></dd>
+                                            <dd><a href="#">就诊须知</a></dd>
+                                            <dd><a href="#">楼层分布</a></dd>
+                                            <dd><a href="#">满意度调查</a></dd>
+                                            <dd><a href="#">专家排版表</a></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;">健康园苑</a>
+                                <div class="subNavBox">
+                                    <div class="subNav" style="background-image: url('images/img3.png')">
+                                        <div class="title">健康园苑</div>
+                                        <dl class="subNavCon clearFix">
+                                            <dd><a href="#">健康知识</a></dd>
+                                            <dd><a href="#">科普园地</a></dd>
+                                            <dd><a href="#">健康问答</a></dd>
+                                            <dd><a href="#">药材百科</a></dd>
+                                            <dd><a href="#">科研教学</a></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;">联系我们</a>
+                                <div class="subNavBox">
+                                    <div class="subNav" style="background-image: url('images/img3.png')">
+                                        <div class="title">联系我们</div>
+                                        <dl class="subNavCon clearFix">
+                                            <dd><a href="#">来院路线</a></dd>
+                                            <dd><a href="#">在线留言</a></dd>
+                                            <dd><a href="#">科室电话</a></dd>
+                                            <dd><a href="#">互动信箱</a></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <style>
+                        .mainNav1 {
+                            height: 52px;
+                            background: #266f58;
+                        }
+                        .mainNav1 .mainNavCon {
+                            width: 1264px;
+                            margin: 0 auto;
+                            position: relative;
+                            left: -32px;
+                        }
+                        .mainNav1 .mainNavCon li {
+                            float: left;
+                            line-height: 52px;
+                            padding: 0 32px;
+                            position: relative;
+                        }
+                        .mainNav1 .mainNavCon li.on {
+                            background: #215341 !important;
+                        }
+                        .mainNav1 a {
+                            color: #ffffff;
+                            font-size: 16px;
+                            text-transform: uppercase;
+                        }
+                        .mainNav1 .subNavBox {
+                            position: absolute;
+                            width: 560px;
+                            display: none;
+                            z-index: 30;
+                            overflow: hidden;
+                        }
+                        .mainNav1 .subNav {
+                            width: 504px;
+                            min-height: 196px;
+                            padding: 34px 25px;
+                            border: 3px solid #266f58;
+                            background: #ffffff;
+                            background-position: right bottom;
+                            background-repeat: no-repeat;
+                        }
+                        .mainNav1 .subNav a:hover {
+                            color: #266f58;
+                        }
+                        .mainNav1 .subNav .title {
+                            font-size: 16px;
+                            color: #128b4b;
+                            line-height: 26px;
+                            font-weight: bold;
+                        }
+                        .mainNav1 .subNavCon dd:before {
+                            content: "";
+                            width: 4px;
+                            height: 4px;
+                            border-radius: 50%;
+                            background: #2ca766;
+                            display: block;
+                            float: left;
+                            margin: 24px 10px;
+                        }
+                        .mainNav1 .subNavCon dd {
+                            float: left;
+                            width: 126px;
+                            margin-right: 6px;
+                        }
+                        .mainNav1 .subNavCon a {
+                            width: 96px;
+                            color: #4c4c4c;
+                            display: inline-block;
+                        }
+                    </style>
+                    <script>
+                        $(function () {
+                            $(".mainNav1 .mainNavCon li").each(function (index) {
+                                if(index<5){
+                                    $(this).find(".subNavBox").css({"left":0,"right":"auto"});
+                                }
+                                else {
+                                    $(this).find(".subNavBox").css({"right":0,"left":"auto"});
+                                }
+                            });
+                            $(".mainNav1 .mainNavCon li").hover(function () {
+                                $(this).siblings().css({'background':'none'});
+                                $(this).find(".subNavBox").stop().slideDown();
+                                $(this).css({'background':'#215341'});
+                            },function () {
+                                $(this).find(".subNavBox").stop().slideUp();
+                                if($(this).hasClass('on')){
+                                    $(this).css({'background':'#215341'});
+                                }
+                                else {
+                                    $(this).css({'background':'none'});
+                                }
+                            });
+                        })
+                    </script>
+                </div>
+            </div>
+        </div>
+        <h3 style="text-indent: 2em;font-size: 20px;margin-top: 30px">内页列表</h3>
         <div>
             <h3 style="text-indent: 4em;line-height: 40px">一、图文列表</h3>
             <div>
@@ -154,89 +595,6 @@
                                 color: #ff9a00;
                             }
                             .picWordDesc li:hover .more{
-                                background: #ff9a00;
-                            }
-                        </style>
-                    </div>
-                </div>
-                <div style="background: #0c1021;padding: 30px;margin: 0 0 30px" class="clearFix">
-                    <div style="float:left;width: 884px;height: 216px;overflow-y: auto">
-                        <ul>
-                            <li class="clearFix">
-                                <h4 style="float:left;text-align:center;padding:30px 0;width: 200px;margin-right: 20px">css</h4>
-                                <div style="width:580px;overflow:hidden;float: left;border-left: 1px solid #ffffff;padding:30px;">
-                                    <p></p>
-                                    <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">picWordDesc2</span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">756</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#fafafa</span>;<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">0 30</span><span style="color:#68e868;font-weight:bold;">px</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc2 li</span>{<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">30</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc2 </span>.<span style="color:#ff6400;">img</span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">220</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">153</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">left</span>;<br> <span style="color:#8da6ce;">overflow</span>: <span style="color:#68e868;font-weight:bold;">hidden</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#cccccc</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc2 img</span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc2 </span>.<span style="color:#ff6400;">con</span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">510</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">right</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">30</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">position</span>: <span style="color:#68e868;font-weight:bold;">relative</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc2 </span>.<span style="color:#ff6400;">title</span>{<br> <span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">16</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">16</span><span style="color:#68e868;font-weight:bold;">px</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc2 </span>.<span style="color:#ff6400;">date</span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#999999</span>;<br> <span style="color:#8da6ce;">padding-top</span>: <span style="color:#d8fa3c;">19</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">display</span>: <span style="color:#68e868;font-weight:bold;">block</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc2 </span>.<span style="color:#ff6400;">desc</span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#666666</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">24</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">padding-top</span>: <span style="color:#d8fa3c;">16</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">72</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">overflow</span>: <span style="color:#68e868;font-weight:bold;">hidden</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc2 li </span>.<span style="color:#ff6400;">title</span>:<span style="color:#ff6400;">hover</span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#ff9a00</span>;<br>}<br>.<span style="color:#ff6400;">picWordDesc2 li</span>:<span style="color:#ff6400;">hover </span>.<span style="color:#ff6400;">more</span>{<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#ff9a00</span>;<br>}</pre>
-                                    <p></p>
-                                </div>
-                            </li>
-                            <li class="clearFix" style="border-top: 1px solid #ffffff;">
-                                <h4 style="float:left;text-align:center;padding:30px 0;width: 200px;margin-right: 20px">html</h4>
-                                <div style="width:580px;overflow:hidden;float: left;border-left: 1px solid #ffffff;padding:30px;">
-                                    <p></p>
-                                    <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">ul </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"picWordDesc2"</span>&gt;<br> &lt;<span style="color:#7f90aa;">li </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#" </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"img imgHover"</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3109714868,298594192&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>/&gt;&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"con"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#" </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"title tstAll oneLine"</span>&gt;<span style="font-weight:bold;">不忘初心，搞好科研，服务疾控 保障人民健康——高福院士出席病毒病所中心组学习习近...平总书记“七一”重要讲话精神.</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">span </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"date"</span>&gt;<span style="font-weight:bold;">2018-07-05</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<br> &lt;<span style="color:#7f90aa;">p </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"desc"</span>&gt;<span style="font-weight:bold;">2016年7月12日下午，病毒病所党委组织理论学习中心组成员在新址二楼会议室，集体学习习近平总书记在庆祝中国共产党成立95周年大会上的重要讲话，所党政领导班子成员科室正、副主任，支部书记30余人参加了学习，高福院士在百忙之中抽出时间参加学习。会议由党委书记武桂珍主持。纪委书记白雪平出</span>&lt;/<span style="color:#7f90aa;">p</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br>&lt;/<span style="color:#7f90aa;">ul</span>&gt;</pre>
-                                    <p></p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div style="float:left;margin-left: 40px">
-                        <ul class="picWordDesc2">
-                            <li class="clearFix">
-                                <a href="#" class="img imgHover"><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3109714868,298594192&fm=27&gp=0.jpg" alt=""/></a>
-                                <div class="con">
-                                    <a href="#" class="title tstAll oneLine">不忘初心，搞好科研，服务疾控 保障人民健康——高福院士出席病毒病所中心组学习习近...平总书记“七一”重要讲话精神.</a>
-                                    <span class="date">2018-07-05</span>
-                                    <p class="desc">2016年7月12日下午，病毒病所党委组织理论学习中心组成员在新址二楼会议室，集体学习习近平总书记在庆祝中国共产党成立95周年大会上的重要讲话，所党政领导班子成员科室正、副主任，支部书记30余人参加了学习，高福院士在百忙之中抽出时间参加学习。会议由党委书记武桂珍主持。纪委书记白雪平出</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <style>
-                            .picWordDesc2{
-                                width: 756px;
-                                background: #fafafa;
-                                padding: 0 30px;
-                            }
-                            .picWordDesc2 li{
-                                padding: 30px 0;
-                            }
-                            .picWordDesc2 .img{
-                                width: 220px;
-                                height: 153px;
-                                float: left;
-                                overflow: hidden;
-                                background: #cccccc;
-                            }
-                            .picWordDesc2 img{
-                                width: 100%;
-                                height: 100%;
-                            }
-                            .picWordDesc2 .con{
-                                width: 510px;
-                                float: right;
-                                line-height: 30px;
-                                position: relative;
-                            }
-                            .picWordDesc2 .title{
-                                font-size: 16px;
-                                line-height: 16px;
-                            }
-                            .picWordDesc2 .date{
-                                color: #999999;
-                                padding-top: 19px;
-                                display: block;
-                            }
-                            .picWordDesc2 .desc{
-                                color: #666666;
-                                line-height: 24px;
-                                padding-top: 16px;
-                                height: 72px;
-                                overflow: hidden;
-                            }
-                            .picWordDesc2 li .title:hover{
-                                color: #ff9a00;
-                            }
-                            .picWordDesc2 li:hover .more{
                                 background: #ff9a00;
                             }
                         </style>
@@ -511,7 +869,7 @@
             <h3 style="text-indent: 4em;line-height: 40px">二、全文列表</h3>
             <div>
                 <div style="background: #0c1021;padding: 30px;margin: 0 0 30px" class="clearFix">
-                    <div style="float:left;width: 884px;height: 216px;overflow-y: auto">
+                    <div style="float:left;width: 884px;height: 170px;overflow-y: auto">
                         <ul>
                             <li class="clearFix">
                                 <h4 style="float:left;text-align:center;padding:30px 0;width: 200px;margin-right: 20px">css</h4>
@@ -606,7 +964,7 @@
                     </div>
                 </div>
                 <div style="background: #0c1021;padding: 30px;margin: 0 0 30px" class="clearFix">
-                    <div style="float:left;width: 884px;height: 216px;overflow-y: auto">
+                    <div style="float:left;width: 884px;height: 156px;overflow-y: auto">
                         <ul>
                             <li class="clearFix">
                                 <h4 style="float:left;text-align:center;padding:30px 0;width: 200px;margin-right: 20px">css</h4>
@@ -677,7 +1035,7 @@
                     </div>
                 </div>
                 <div style="background: #0c1021;padding: 30px;margin: 0 0 30px" class="clearFix">
-                    <div style="float:left;width: 884px;height: 216px;overflow-y: auto">
+                    <div style="float:left;width: 884px;height: 152px;overflow-y: auto">
                         <ul>
                             <li class="clearFix">
                                 <h4 style="float:left;text-align:center;padding:30px 0;width: 200px;margin-right: 20px">css</h4>
@@ -770,7 +1128,7 @@
                     </div>
                 </div>
                 <div style="background: #0c1021;padding: 30px;margin: 0 0 30px" class="clearFix">
-                    <div style="float:left;width: 884px;height: 216px;overflow-y: auto">
+                    <div style="float:left;width: 884px;height: 148px;overflow-y: auto">
                         <ul>
                             <li class="clearFix">
                                 <h4 style="float:left;text-align:center;padding:30px 0;width: 200px;margin-right: 20px">css</h4>
@@ -847,6 +1205,42 @@
                                 .wordList4 li:hover .con a {
                                     color: #2ca766;
                                 }
+                            </style>
+                    </div>
+                </div>
+                <div style="background: #0c1021;padding: 30px;margin: 0 0 30px" class="clearFix">
+                    <div style="float:left;width: 884px;height: 72px;overflow-y: auto">
+                        <ul>
+                            <li class="clearFix">
+                                <h4 style="float:left;text-align:center;padding:30px 0;width: 200px;margin-right: 20px">css</h4>
+                                <div style="width:580px;overflow:hidden;float: left;border-left: 1px solid #ffffff;padding:30px;">
+                                    <p></p>
+                                    <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">wordList5</span>{<span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#ffffff</span>;<span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">0 20</span><span style="color:#68e868;font-weight:bold;">px</span>;}<br>.<span style="color:#ff6400;">wordList5 li</span>{<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">736</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">72</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">padding-left</span>: <span style="color:#d8fa3c;">13</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">background-image</span>: <span style="color:#8da6ce;">url</span>(<span style="color:#61ce3c;">"images/other_listbg.png"</span>);<span style="color:#8da6ce;">background-position</span>: <span style="color:#68e868;font-weight:bold;">left center</span>;<span style="color:#8da6ce;">background-repeat</span>: <span style="color:#68e868;font-weight:bold;">no-repeat</span>;}<br>.<span style="color:#ff6400;">wordList5 li</span>:<span style="color:#ff6400;">hover </span>.<span style="color:#ff6400;">title</span>,.<span style="color:#ff6400;">wordList5 li</span>:<span style="color:#ff6400;">hover </span>.<span style="color:#ff6400;">date</span>{<span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#0abbb9</span>;}<br>.<span style="color:#ff6400;">wordList5 </span>.<span style="color:#ff6400;">title</span>{<span style="color:#8da6ce;">max-width</span>: <span style="color:#d8fa3c;">600</span><span style="color:#68e868;font-weight:bold;">px</span>;<span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#666666</span>;<span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">left</span>;}<br>.<span style="color:#ff6400;">wordList5 </span>.<span style="color:#ff6400;">date</span>{<span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#999999</span>;<span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">right</span>;}</pre>
+                                    <p></p>
+                                </div>
+                            </li>
+                            <li class="clearFix" style="border-top: 1px solid #ffffff;">
+                                <h4 style="float:left;text-align:center;padding:30px 0;width: 200px;margin-right: 20px">html</h4>
+                                <div style="width:580px;overflow:hidden;float: left;border-left: 1px solid #ffffff;padding:30px;">
+                                    <p></p>
+                                    <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">ul </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"wordList5"</span>&gt;<br> &lt;<span style="color:#7f90aa;">li </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#" </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"title oneLine tstAll"</span>&gt;<span style="font-weight:bold;">医保政策十一</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;&lt;<span style="color:#7f90aa;">span </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"date tstAll"</span>&gt;<span style="font-weight:bold;">2017-08-08</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br>&lt;/<span style="color:#7f90aa;">ul</span>&gt;</pre>
+                                    <p></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="float:left;margin-left: 40px">
+                        <ul class="wordList5">
+                            <li class="clearFix">
+                                <a href="#" class="title oneLine tstAll">医保政策十一</a><span class="date tstAll">2017-08-08</span>
+                            </li>
+                        </ul>
+                            <style>
+                                .wordList5{background: #ffffff;padding: 0 20px;}
+                                .wordList5 li{width: 736px;line-height: 72px;padding-left: 13px;background-image: url("images/other_listbg.png");background-position: left center;background-repeat: no-repeat;}
+                                .wordList5 li:hover .title,.wordList5 li:hover .date{color: #0abbb9;}
+                                .wordList5 .title{max-width: 600px;color: #666666;float: left;}
+                                .wordList5 .date{color: #999999;float: right;}
                             </style>
                     </div>
                 </div>
@@ -1139,6 +1533,80 @@
                                 overflow: hidden;
                                 padding: 20px 0 0;
                                 -webkit-line-clamp: 5;
+                            }
+                        </style>
+                    </div>
+                </div>
+                <div style="background: #0c1021;padding: 30px;margin: 0 0 30px" class="clearFix">
+                    <div style="float:left;width: 840px;height: 270px;overflow-y: auto">
+                        <ul>
+                            <li class="clearFix">
+                                <h4 style="float:left;text-align:center;padding:30px 0;width: 100px;margin-right: 20px">css</h4>
+                                <div style="width:580px;overflow:hidden;float: left;border-left: 1px solid #ffffff;padding:30px;">
+                                    <p></p>
+                                    <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">personNameDesc2 li </span>{<br> <span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">18</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">30</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">30</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">20</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#ffffff</span>;<br>}<br>.<span style="color:#ff6400;">personNameDesc2 </span>.<span style="color:#ff6400;">img </span>{<br> <span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">left</span>;<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">223</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">297</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">overflow</span>: <span style="color:#68e868;font-weight:bold;">hidden</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#0abbb9</span>;<br>}<br>.<span style="color:#ff6400;">personNameDesc2 </span>.<span style="color:#ff6400;">img img </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<br>}<br>.<span style="color:#ff6400;">personNameDesc2 </span>.<span style="color:#ff6400;">con </span>{<br> <span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">right</span>;<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">560</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">padding-left</span>: <span style="color:#d8fa3c;">20</span><span style="color:#68e868;font-weight:bold;">px</span>;<br>}<br>.<span style="color:#ff6400;">personNameDesc2 </span>.<span style="color:#ff6400;">con </span>.<span style="color:#ff6400;">nameMore </span>{<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">24</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 0</span>;<br>}<br>.<span style="color:#ff6400;">personNameDesc2 </span>.<span style="color:#ff6400;">con </span>.<span style="color:#ff6400;">name </span>{<br> <span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">left</span>;<br> <span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">20</span><span style="color:#68e868;font-weight:bold;">px</span>;<br>}<br>.<span style="color:#ff6400;">personNameDesc2 </span>.<span style="color:#ff6400;">con </span>.<span style="color:#ff6400;">name</span>:<span style="color:#ff6400;">hover </span>,.<span style="color:#ff6400;">personNameDesc2 </span>.<span style="color:#ff6400;">con </span>.<span style="color:#ff6400;">more</span>:<span style="color:#ff6400;">hover</span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#0abbb9</span>;<br>}<br>.<span style="color:#ff6400;">personNameDesc2 </span>.<span style="color:#ff6400;">con </span>.<span style="color:#ff6400;">more </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">60</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">12</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">float</span>: <span style="color:#68e868;font-weight:bold;">right</span>;<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">9</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">font-family</span>: <span style="color:#61ce3c;">"Arial"</span>;<br> <span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">14</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">text-transform</span>: <span style="color:#68e868;font-weight:bold;">uppercase</span>;<br>}<br>.<span style="color:#ff6400;">personNameDesc2 </span>.<span style="color:#ff6400;">con </span>.<span style="color:#ff6400;">job </span>{<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">20</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 0</span>;<br>}<br>.<span style="color:#ff6400;">personNameDesc2 </span>.<span style="color:#ff6400;">con </span>.<span style="color:#ff6400;">tip </span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#333333</span>;<br>}<br>.<span style="color:#ff6400;">personNameDesc2 </span>.<span style="color:#ff6400;">con </span>.<span style="color:#ff6400;">desc </span>{<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">152</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">overflow</span>: <span style="color:#68e868;font-weight:bold;">hidden</span>;<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">20</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 0</span>;<br> <span style="color:#8da6ce;">-webkit-line-clamp</span>: <span style="color:#d8fa3c;">5</span>;<br>}</pre>
+                                    <p></p>
+                                </div>
+                            </li>
+                            <li class="clearFix" style="border-top: 1px solid #ffffff;">
+                                <h4 style="float:left;text-align:center;padding:30px 0;width: 100px;margin-right: 20px">html</h4>
+                                <div style="width:580px;overflow:hidden;float: left;border-left: 1px solid #ffffff;padding:30px;">
+                                    <p></p>
+                                    <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">ul </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"personNameDesc2"</span>&gt;<br> &lt;<span style="color:#7f90aa;">li </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#" </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"img imgHover"</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/u=3788973368,4257907213&amp;fm=26&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"con"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"nameMore clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#" </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"name tstAll"</span>&gt;<span style="font-weight:bold;">杨绍银</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;<span style="color:#7f90aa;">a </span><span style="color:#ff6400;">href=</span><span style="color:#61ce3c;font-weight:bold;">"#" </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"more tstAll"</span>&gt;<span style="font-weight:bold;">more+</span>&lt;/<span style="color:#7f90aa;">a</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">p </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"job oneLine"</span>&gt;&lt;<span style="color:#7f90aa;">span </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"tip"</span>&gt;<span style="font-weight:bold;">职务：</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<span style="font-weight:bold;">主任医师、外科主任</span>&lt;/<span style="color:#7f90aa;">p</span>&gt;<br> &lt;<span style="color:#7f90aa;">p </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"desc"</span>&gt;&lt;<span style="color:#7f90aa;">span </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"tip"</span>&gt;<span style="font-weight:bold;">简介：</span>&lt;/<span style="color:#7f90aa;">span</span>&gt;<span style="font-weight:bold;">大外科主任，主任医师，教授，大学本科学历。毕业于四川大学（原华西医科大学）临床医学专业，毕业后从事大外科临床工作40余年，从事骨科专业20余年......</span>&lt;/<span style="color:#7f90aa;">p</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br>&lt;/<span style="color:#7f90aa;">ul</span>&gt;</pre>
+                                    <p></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="float:left;margin-left: 40px">
+                        <ul class="personNameDesc3">
+                            <li class="clearFix">
+                                <a href="#" class="img imgHover tstAll"><img src="images/u=3788973368,4257907213&fm=26&gp=0.jpg" alt=""></a>
+                                <div class="con">
+                                    <a href="#" class="name"><span>康有福</span>&nbsp;&nbsp;&nbsp;69岁&nbsp;&nbsp;彝族</a>
+                                    <p class="desc">2017年11月24日因高血压引起脑溢血产生半身不遂，在XX州人民医院做微创手术，手术后16天出院，转到XX州中医院，在那里治疗4个多月未果，出院在家休养20多天2017年11月24日因高血压引起脑溢血产生半身不遂，在XX州人民医院做微创手术，手术后16天出院，转到XX州中医院，在那里治疗4个多月未果，出院在家休养20多天2017年11月24日因高血压引起脑溢血产生半身不遂，在XX州人民医院做微创手术，手术后16天出院，转到XX州中医院，在那里治疗4个多月未果，出院在家休养20多天</p>
+                                </div>
+                            </li>
+                        </ul>
+                            <style>
+                            .personNameDesc3 li {
+                                font-size: 18px;
+                                line-height: 30px;
+                                padding: 47px 20px 23px;
+                                background: #ffffff;
+                            }
+                            .personNameDesc3 .img {
+                                float: left;
+                                width: 268px;
+                                height: 200px;
+                                background: #38adff;
+                                overflow: hidden;
+                            }
+                            .personNameDesc3 .img img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .personNameDesc3 .con {
+                                float: left;
+                                width: 520px;
+                                padding-left: 26px;
+                                color: #999999;
+                            }
+                            .personNameDesc3 .name {
+                                font-size: 16px;
+                                padding: 28px 0 0;
+                            }
+                            .personNameDesc3 .name span {
+                                font-size: 24px;
+                            }
+                            .personNameDesc3 .name span:hover {
+                                color: #a4494b;
+                            }
+                            .personNameDesc3 .con .desc {
+                                padding: 16px 0 0;
+                                line-height: 24px;
+                                max-height: 120px;
+                                overflow: hidden;
                             }
                         </style>
                     </div>
@@ -1636,128 +2104,6 @@
                 </div>
             </div>
             <h3 style="text-indent: 4em;line-height: 40px">二、问卷调查</h3>
-            <div style="background: #0c1021;padding: 30px;margin: 0 0 30px" class="clearFix">
-                <div style="float:left;width: 800px;height: 1162px;overflow-y: auto">
-                    <ul>
-                        <li class="clearFix">
-                            <h4 style="float:left;text-align:center;padding:30px 0;width: 100px;margin-right: 20px">css</h4>
-                            <div style="width:600px;overflow:hidden;float: left;border-left: 1px solid #ffffff;padding:30px;">
-                                <p></p>
-                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">formSubmit2 </span>{<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">0 20</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">34</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#ffffff</span>;<br>}<br>.<span style="color:#ff6400;">formSubmit2 </span>.<span style="color:#ff6400;">topTip </span>{<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">93</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#5be1e2</span>;<br>}<br>.<span style="color:#ff6400;">formSubmit2 </span>.<span style="color:#ff6400;">title </span>{<br> <span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">16</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">48</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#484848</span>;<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">0 16</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">48</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">1</span><span style="color:#68e868;font-weight:bold;">px dashed </span><span style="color:#6897bb;">#fa8897</span>;<br>}<br>.<span style="color:#ff6400;">formSubmit2 ul</span>,.<span style="color:#ff6400;">formSubmit2 textarea </span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#484848</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">30</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">17</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">50</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">23</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">font-family</span>: <span style="color:#61ce3c;">"微软雅黑"</span>;<br>}<br>.<span style="color:#ff6400;">formSubmit2 input</span>[<span style="color:#ff6400;">type</span><span style="color:#fbde2d;">=</span><span style="color:#ff6400;">radio</span>],.<span style="color:#ff6400;">formSubmit2 label </span>{<br> <span style="color:#8da6ce;">cursor</span>: <span style="color:#68e868;font-weight:bold;">pointer</span>;<br>}<br>.<span style="color:#ff6400;">formSubmit2 input</span>[<span style="color:#ff6400;">type</span><span style="color:#fbde2d;">=</span><span style="color:#ff6400;">radio</span>] {<br> <span style="color:#8da6ce;">margin-right</span>: <span style="color:#d8fa3c;">16</span><span style="color:#68e868;font-weight:bold;">px</span>;<br>}<br>.<span style="color:#ff6400;">formSubmit2 </span>.<span style="color:#ff6400;">part3 </span>{<br> <span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">26</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">1</span><span style="color:#68e868;font-weight:bold;">px dashed </span><span style="color:#6897bb;">#fa8897</span>;<br>}<br>.<span style="color:#ff6400;">formSubmit2 </span>.<span style="color:#ff6400;">part3 </span>.<span style="color:#ff6400;">title </span>{<br> <span style="color:#8da6ce;">border</span>: <span style="color:#68e868;font-weight:bold;">none</span>;<br>}<br>.<span style="color:#ff6400;">formSubmit2 </span>.<span style="color:#ff6400;">part3 textarea </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">713</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">min-height</span>: <span style="color:#d8fa3c;">132</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#68e868;font-weight:bold;">none</span>;<br> <span style="color:#8da6ce;">margin-bottom</span>: <span style="color:#d8fa3c;">26</span><span style="color:#68e868;font-weight:bold;">px</span>;<br>}<br>.<span style="color:#ff6400;">formSubmit2 </span>.<span style="color:#ff6400;">submit </span>{<br> <span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">37</span><span style="color:#68e868;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 18</span><span style="color:#68e868;font-weight:bold;">px</span>;<br>}<br>.<span style="color:#ff6400;">formSubmit2 </span>.<span style="color:#ff6400;">submit input </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">120</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">38</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#f7cf54</span>;<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#ffffff</span>;<br> <span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">16</span><span style="color:#68e868;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">38</span><span style="color:#68e868;font-weight:bold;">px</span>;<br>}<br>.<span style="color:#ff6400;">formSubmit2 </span>.<span style="color:#ff6400;">downTip </span>{<br> <span style="color:#8da6ce;">color</span>: <span style="color:#6897bb;">#484848</span>;<br> <span style="color:#8da6ce;">line-height</span>: <span style="color:#d8fa3c;">30</span><span style="color:#68e868;font-weight:bold;">px</span>;<br>}</pre>
-                                <p></p>
-                            </div>
-                        </li>
-                        <li class="clearFix" style="border-top: 1px solid #ffffff;">
-                            <h4 style="float:left;text-align:center;padding:30px 0;width: 100px;margin-right: 20px">html</h4>
-                            <div style="width:600px;overflow:hidden;float: left;border-left: 1px solid #ffffff;padding:30px;">
-                                <p></p>
-                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"formSubmit2"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"topTip"</span>&gt;<span style="font-weight:bold;">您所给出的任何评价，都是我们日后在工作过程中最宝贵的意见，感谢您的支持！</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"part0"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"title"</span>&gt;<span style="font-weight:bold;">一、您对我们医院的医疗条件有怎样的评价？</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">ul</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">input </span><span style="color:#ff6400;">id=</span><span style="color:#61ce3c;font-weight:bold;">"part00" </span><span style="color:#ff6400;">name=</span><span style="color:#61ce3c;font-weight:bold;">"part0" </span><span style="color:#ff6400;">type=</span><span style="color:#61ce3c;font-weight:bold;">"radio"</span>/&gt;&lt;<span style="color:#7f90aa;">label </span><span style="color:#ff6400;">for=</span><span style="color:#61ce3c;font-weight:bold;">"part00"</span>&gt;<span style="font-weight:bold;">非常好</span>&lt;/<span style="color:#7f90aa;">label</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">input </span><span style="color:#ff6400;">id=</span><span style="color:#61ce3c;font-weight:bold;">"part01" </span><span style="color:#ff6400;">name=</span><span style="color:#61ce3c;font-weight:bold;">"part0" </span><span style="color:#ff6400;">type=</span><span style="color:#61ce3c;font-weight:bold;">"radio"</span>/&gt;&lt;<span style="color:#7f90aa;">label </span><span style="color:#ff6400;">for=</span><span style="color:#61ce3c;font-weight:bold;">"part01"</span>&gt;<span style="font-weight:bold;">很好</span>&lt;/<span style="color:#7f90aa;">label</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">input </span><span style="color:#ff6400;">id=</span><span style="color:#61ce3c;font-weight:bold;">"part02" </span><span style="color:#ff6400;">name=</span><span style="color:#61ce3c;font-weight:bold;">"part0" </span><span style="color:#ff6400;">type=</span><span style="color:#61ce3c;font-weight:bold;">"radio"</span>/&gt;&lt;<span style="color:#7f90aa;">label </span><span style="color:#ff6400;">for=</span><span style="color:#61ce3c;font-weight:bold;">"part02"</span>&gt;<span style="font-weight:bold;">一般</span>&lt;/<span style="color:#7f90aa;">label</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">input </span><span style="color:#ff6400;">id=</span><span style="color:#61ce3c;font-weight:bold;">"part03" </span><span style="color:#ff6400;">name=</span><span style="color:#61ce3c;font-weight:bold;">"part0" </span><span style="color:#ff6400;">type=</span><span style="color:#61ce3c;font-weight:bold;">"radio"</span>/&gt;&lt;<span style="color:#7f90aa;">label </span><span style="color:#ff6400;">for=</span><span style="color:#61ce3c;font-weight:bold;">"part03"</span>&gt;<span style="font-weight:bold;">不好</span>&lt;/<span style="color:#7f90aa;">label</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;/<span style="color:#7f90aa;">ul</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"part1"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"title"</span>&gt;<span style="font-weight:bold;">二、您对我们医院的医疗环境有怎样的评价？</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">ul</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">input </span><span style="color:#ff6400;">id=</span><span style="color:#61ce3c;font-weight:bold;">"part10" </span><span style="color:#ff6400;">name=</span><span style="color:#61ce3c;font-weight:bold;">"part1" </span><span style="color:#ff6400;">type=</span><span style="color:#61ce3c;font-weight:bold;">"radio"</span>/&gt;&lt;<span style="color:#7f90aa;">label </span><span style="color:#ff6400;">for=</span><span style="color:#61ce3c;font-weight:bold;">"part10"</span>&gt;<span style="font-weight:bold;">非常好</span>&lt;/<span style="color:#7f90aa;">label</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">input </span><span style="color:#ff6400;">id=</span><span style="color:#61ce3c;font-weight:bold;">"part11" </span><span style="color:#ff6400;">name=</span><span style="color:#61ce3c;font-weight:bold;">"part1" </span><span style="color:#ff6400;">type=</span><span style="color:#61ce3c;font-weight:bold;">"radio"</span>/&gt;&lt;<span style="color:#7f90aa;">label </span><span style="color:#ff6400;">for=</span><span style="color:#61ce3c;font-weight:bold;">"part11"</span>&gt;<span style="font-weight:bold;">很好</span>&lt;/<span style="color:#7f90aa;">label</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">input </span><span style="color:#ff6400;">id=</span><span style="color:#61ce3c;font-weight:bold;">"part12" </span><span style="color:#ff6400;">name=</span><span style="color:#61ce3c;font-weight:bold;">"part1" </span><span style="color:#ff6400;">type=</span><span style="color:#61ce3c;font-weight:bold;">"radio"</span>/&gt;&lt;<span style="color:#7f90aa;">label </span><span style="color:#ff6400;">for=</span><span style="color:#61ce3c;font-weight:bold;">"part12"</span>&gt;<span style="font-weight:bold;">一般</span>&lt;/<span style="color:#7f90aa;">label</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">input </span><span style="color:#ff6400;">id=</span><span style="color:#61ce3c;font-weight:bold;">"part13" </span><span style="color:#ff6400;">name=</span><span style="color:#61ce3c;font-weight:bold;">"part1" </span><span style="color:#ff6400;">type=</span><span style="color:#61ce3c;font-weight:bold;">"radio"</span>/&gt;&lt;<span style="color:#7f90aa;">label </span><span style="color:#ff6400;">for=</span><span style="color:#61ce3c;font-weight:bold;">"part13"</span>&gt;<span style="font-weight:bold;">不好</span>&lt;/<span style="color:#7f90aa;">label</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;/<span style="color:#7f90aa;">ul</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"part2"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"title"</span>&gt;<span style="font-weight:bold;">三、您对我们医院的专家医生有怎样的评价？</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">ul</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">input </span><span style="color:#ff6400;">id=</span><span style="color:#61ce3c;font-weight:bold;">"part20" </span><span style="color:#ff6400;">name=</span><span style="color:#61ce3c;font-weight:bold;">"part2" </span><span style="color:#ff6400;">type=</span><span style="color:#61ce3c;font-weight:bold;">"radio"</span>/&gt;&lt;<span style="color:#7f90aa;">label </span><span style="color:#ff6400;">for=</span><span style="color:#61ce3c;font-weight:bold;">"part20"</span>&gt;<span style="font-weight:bold;">非常好</span>&lt;/<span style="color:#7f90aa;">label</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">input </span><span style="color:#ff6400;">id=</span><span style="color:#61ce3c;font-weight:bold;">"part21" </span><span style="color:#ff6400;">name=</span><span style="color:#61ce3c;font-weight:bold;">"part2" </span><span style="color:#ff6400;">type=</span><span style="color:#61ce3c;font-weight:bold;">"radio"</span>/&gt;&lt;<span style="color:#7f90aa;">label </span><span style="color:#ff6400;">for=</span><span style="color:#61ce3c;font-weight:bold;">"part21"</span>&gt;<span style="font-weight:bold;">很好</span>&lt;/<span style="color:#7f90aa;">label</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">input </span><span style="color:#ff6400;">id=</span><span style="color:#61ce3c;font-weight:bold;">"part22" </span><span style="color:#ff6400;">name=</span><span style="color:#61ce3c;font-weight:bold;">"part2" </span><span style="color:#ff6400;">type=</span><span style="color:#61ce3c;font-weight:bold;">"radio"</span>/&gt;&lt;<span style="color:#7f90aa;">label </span><span style="color:#ff6400;">for=</span><span style="color:#61ce3c;font-weight:bold;">"part22"</span>&gt;<span style="font-weight:bold;">一般</span>&lt;/<span style="color:#7f90aa;">label</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">input </span><span style="color:#ff6400;">id=</span><span style="color:#61ce3c;font-weight:bold;">"part23" </span><span style="color:#ff6400;">name=</span><span style="color:#61ce3c;font-weight:bold;">"part2" </span><span style="color:#ff6400;">type=</span><span style="color:#61ce3c;font-weight:bold;">"radio"</span>/&gt;&lt;<span style="color:#7f90aa;">label </span><span style="color:#ff6400;">for=</span><span style="color:#61ce3c;font-weight:bold;">"part23"</span>&gt;<span style="font-weight:bold;">不好</span>&lt;/<span style="color:#7f90aa;">label</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;/<span style="color:#7f90aa;">ul</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"part3"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"title"</span>&gt;<span style="font-weight:bold;">四、其它的建议，欢迎您反馈给我们。</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">textarea</span>&gt;&lt;/<span style="color:#7f90aa;">textarea</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"submit"</span>&gt;&lt;<span style="color:#7f90aa;">input </span><span style="color:#ff6400;">type=</span><span style="color:#61ce3c;font-weight:bold;">"submit" </span><span style="color:#ff6400;">value=</span><span style="color:#61ce3c;font-weight:bold;">"提</span><span style="color:#d8fa3c;font-weight:bold;">&amp;emsp;</span><span style="color:#61ce3c;font-weight:bold;">交"</span>/&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"downTip"</span>&gt;<br> &lt;<span style="color:#7f90aa;">p</span>&gt;<span style="font-weight:bold;">以上资料均为匿名填写，绝不泄漏任何人的个人信息！请认真填写，非常感谢您的配合！</span>&lt;/<span style="color:#7f90aa;">p</span>&gt;<br> &lt;<span style="color:#7f90aa;">p</span>&gt;<span style="font-weight:bold;">若有任何疑问，欢迎拨打服务电话：0872-8525937</span><span style="color:#d8fa3c;font-weight:bold;">&amp;emsp;</span><span style="font-weight:bold;">0872-8521211</span>&lt;/<span style="color:#7f90aa;">p</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br>&lt;/<span style="color:#7f90aa;">div</span>&gt;</pre>
-                                <p></p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div style="float:right;width: 884px;">
-                    <div class="formSubmit2">
-                        <div class="topTip">您所给出的任何评价，都是我们日后在工作过程中最宝贵的意见，感谢您的支持！</div>
-                        <div class="part0">
-                            <div class="title">一、您对我们医院的医疗条件有怎样的评价？</div>
-                            <ul>
-                                <li><input id="part00" name="part0" type="radio"/><label for="part00">非常好</label></li>
-                                <li><input id="part01" name="part0" type="radio"/><label for="part01">很好</label></li>
-                                <li><input id="part02" name="part0" type="radio"/><label for="part02">一般</label></li>
-                                <li><input id="part03" name="part0" type="radio"/><label for="part03">不好</label></li>
-                            </ul>
-                        </div>
-                        <div class="part1">
-                            <div class="title">二、您对我们医院的医疗环境有怎样的评价？</div>
-                            <ul>
-                                <li><input id="part10" name="part1" type="radio"/><label for="part10">非常好</label></li>
-                                <li><input id="part11" name="part1" type="radio"/><label for="part11">很好</label></li>
-                                <li><input id="part12" name="part1" type="radio"/><label for="part12">一般</label></li>
-                                <li><input id="part13" name="part1" type="radio"/><label for="part13">不好</label></li>
-                            </ul>
-                        </div>
-                        <div class="part2">
-                            <div class="title">三、您对我们医院的专家医生有怎样的评价？</div>
-                            <ul>
-                                <li><input id="part20" name="part2" type="radio"/><label for="part20">非常好</label></li>
-                                <li><input id="part21" name="part2" type="radio"/><label for="part21">很好</label></li>
-                                <li><input id="part22" name="part2" type="radio"/><label for="part22">一般</label></li>
-                                <li><input id="part23" name="part2" type="radio"/><label for="part23">不好</label></li>
-                            </ul>
-                        </div>
-                        <div class="part3">
-                            <div class="title">四、其它的建议，欢迎您反馈给我们。</div>
-                            <textarea></textarea>
-                        </div>
-                        <div class="submit"><input type="submit" value="提&emsp;交"/></div>
-                        <div class="downTip">
-                            <p>以上资料均为匿名填写，绝不泄漏任何人的个人信息！请认真填写，非常感谢您的配合！</p>
-                            <p>若有任何疑问，欢迎拨打服务电话：0872-8525937&emsp;0872-8521211</p>
-                        </div>
-                    </div>
-
-                    <style>
-                        .formSubmit2 {
-                            padding: 0 20px 34px;
-                            background: #ffffff;
-                        }
-                        .formSubmit2 .topTip {
-                            line-height: 93px;
-                            color: #5be1e2;
-                        }
-                        .formSubmit2 .title {
-                            font-size: 16px;
-                            line-height: 48px;
-                            color: #484848;
-                            padding: 0 16px;
-                            border-radius: 48px;
-                            border: 1px dashed #fa8897;
-                        }
-                        .formSubmit2 ul,.formSubmit2 textarea {
-                            color: #484848;
-                            line-height: 30px;
-                            padding: 17px 50px 23px;
-                            font-family: "微软雅黑";
-                        }
-                        .formSubmit2 input[type=radio],.formSubmit2 label {
-                            cursor: pointer;
-                        }
-                        .formSubmit2 input[type=radio] {
-                            margin-right: 16px;
-                        }
-                        .formSubmit2 .part3 {
-                            border-radius: 26px;
-                            border: 1px dashed #fa8897;
-                        }
-                        .formSubmit2 .part3 .title {
-                            border: none;
-                        }
-                        .formSubmit2 .part3 textarea {
-                            width: 713px;
-                            min-height: 132px;
-                            background: none;
-                            margin-bottom: 26px;
-                        }
-                        .formSubmit2 .submit {
-                            padding: 37px 0 18px;
-                        }
-                        .formSubmit2 .submit input {
-                            width: 120px;
-                            height: 38px;
-                            background: #f7cf54;
-                            color: #ffffff;
-                            font-size: 16px;
-                            border-radius: 38px;
-                        }
-                        .formSubmit2 .downTip {
-                            color: #484848;
-                            line-height: 30px;
-                        }
-                    </style>
-                </div>
-            </div>
             <div style="background: #0c1021;padding: 30px;margin: 0 0 30px" class="clearFix">
                 <div style="float:left;width: 800px;height: 913px;overflow-y: auto">
                     <ul>
