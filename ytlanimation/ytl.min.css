@@ -34,6 +34,7 @@ img{width:auto;vertical-align:middle}
   overflow: hidden;
   margin: 40px auto;
   text-align: center;
+  position: relative;
   border: 2px solid #1595a4;
 }
 .ytl_moveCon a{
