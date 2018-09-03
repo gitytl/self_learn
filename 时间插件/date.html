@@ -5,51 +5,23 @@
     <title>Title</title>
     <script language="javascript" type="text/javascript" src="jquery-3.3.1.min.js"></script>
     <script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
-    <script>
-        $(function () {
-            $("#d422").change(function () {
-                console.log($("#d422").val());
-            });
-        })
-    </script>
 </head>
 <body style="background: #38B1B9">
-<div><span>限制可选天数并禁选周末</span><input id="d422" class="Wdate" type="text" onclick="WdatePicker({minDate:'%y-%M-{%d+1}',el:this,maxDate:'%y-%M-{%d+5}',disabledDays:[0,6]})"/></div>
 <a href="http://www.my97.net/demo/index.htm">使用说明地址</a>
-
-
 <div>
-    <input type="text" class="Wdate" onclick="WdatePicker({dchanging:cDayFunc, Mchanging:cMonthFunc, ychanging:cYearFunc, dchanged:cDayFunc, Mchanged:cMonthFunc, ychanged:cYearFunc})"/>
+    <div>限制可选天数并禁选周末并打印选中时间</div>
+    <input type="text" class="Wdate"/>
     <script>
-        function cDayFunc(){
-            cFunc('d');
-        }
-        function cMonthFunc(){
-            cFunc('M');
-        }
-        function cYearFunc(){
-            cFunc('y');
-        }
-        function cFunc(who){
-            var str,p,c = $dp.cal;
-            if(who=='y'){
-                str='年份';
-                p='y';
-            }
-            if(who=='M'){
-                str='月份';
-                p='M';
-            }
-            if(who=='d'){
-                str='日期';
-                p='d';
-            }
-
-            if(c.date[p]!==c.newdate[p]){
-                //alert(str+'发生改变了!\n$dp.cal.date.'+p+'='+c.date[p]+'\n$dp.cal.newdate.'+p+'='+c.newdate[p]);
-                console.log(str+'发生改变了!\n$dp.cal.newdate.'+p+'='+c.newdate[p]);
-            }
-        }
+        $(function () {
+            $(".Wdate").click(function () {
+                WdatePicker({dchanged:cFunc, Mchanged:cFunc, ychanged:cFunc,minDate:'%y-%M-{%d+1}',el:this,maxDate:'%y-%M-{%d+4}',disabledDays:[0,6]});
+                function cFunc(){
+                    var Y='y',M='M',D='d',c = $dp.cal;
+                    $(".Wdate").val(c.date[Y]+'-'+c.date[M]+"-"+c.date[D]);
+                    console.log($(".Wdate").val());
+                }
+            });
+        });
     </script>
 </div>
 </body>
