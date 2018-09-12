@@ -1,0 +1,137 @@
+.scroll::-webkit-scrollbar {
+    width:0;
+}
+.scroll::-webkit-scrollbar-button    {
+    background-color:#FF7677;
+}
+.scroll::-webkit-scrollbar-track     {
+    background:#FF66D5;
+}
+.scroll::-webkit-scrollbar-track-piece {
+    background:url(http://www.lyblog.net/wp/wp-content/themes/mine/img/stripes_tiny_08.png);
+}
+.scroll::-webkit-scrollbar-thumb{
+    background:#FFA711;
+    border-radius:4px;
+}
+.scroll::-webkit-scrollbar-corner {
+    background:#82AFFF;
+}
+.header{
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    overflow: hidden;
+}
+.headerCon{
+    width: 7.5rem;
+    height: 1rem;
+    background: #c7ddef;
+}
+.navButton {
+    height: 1rem;
+    width: 1.2rem;
+    float: right;
+    background: url("../images/mainNav.png") no-repeat center;
+    background-size: 0.48rem;
+}
+.con {
+    width: 7.5rem;
+    margin: 1rem 0;
+}
+.logo{
+    float: left;
+    padding: 0.14rem;
+}
+.logo img{
+    width: 0.72rem;
+    height: 0.72rem;
+}
+
+.navList {
+    width: 0;
+    position: fixed;
+    top: 0;
+    z-index: 21 ;
+    margin-left: 7.5rem;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: #f5f5f5;
+}
+.navList .oneNav {
+    width: 3.8rem;
+    height: 1rem;
+    margin-bottom: 0.13rem;
+    line-height: 1rem;
+    text-align: center;
+    font-size: .3rem;
+    color: #4c4c4c;
+}
+.navList li:last-child .oneNav {
+    margin: 0;
+}
+.navList li.on .oneNav ,.navList li:hover .oneNav{
+    height: 1rem;
+    background: #fa8897;
+    position: relative;
+    z-index: 36;
+    color: #ffffff;
+}
+.navList .twoNav{
+    text-align: center;
+    width: 3.8rem;
+    font-size: 0.2rem;
+    line-height: 0.3rem;
+    display: none;
+}
+.navList .twoNav .on a{
+    color: #e37e3b;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 7.5rem;
+    z-index: 22;
+    background: #c7ddef;
+}
+.footer li{
+    float: left;
+    width: 20%;
+    padding-top: 0.07rem    ;
+    line-height: 0.36rem;
+    font-size: 0.22rem;
+    text-align: center;
+}
+.footer .on a{
+    color: #e37e3b;
+}
+.footer li img{
+    width: 0.42rem;
+    height: 0.42rem;
+    margin: 0 auto;
+}
+.footer li img:last-child{
+    display: none;
+}
+.footer .on img:last-child{
+    display: block;
+}
+.footer .on img:first-child{
+    display: none;
+}
+.banner{
+    width: 7.5rem;
+    height: 5rem;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+.content {
+    width: 7.5rem;
+    overflow: hidden;
+    margin-left: 0;
+    min-height: 100%;
+    background: #f0f0f0;
+}
