@@ -15,51 +15,34 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.6678301">
       <split-first>
-        <splitter split-orientation="vertical" split-proportion="0.13725491">
-          <split-first>
-            <leaf>
-              <file leaf-file-name="手机右侧边导航.html" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/手机右侧边导航.html">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="48">
-                      <caret line="32" column="28" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="28" />
-                      <folding>
-                        <element signature="e#1354#1360#0" expanded="true" />
-                        <element signature="e#1360#1366#0" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf>
-              <file leaf-file-name="animation.js" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/js/animation.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="105">
-                      <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-                      <folding>
-                        <element signature="e#32#397#0" />
-                        <element signature="e#799#1506#0" />
-                        <element signature="e#1120#1295#0" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="animation.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/animation.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-196">
+                  <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="114">
+                  <caret line="41" column="26" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="26" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="570">
-                  <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
+                  <caret line="132" column="21" selection-start-line="132" selection-start-column="21" selection-end-line="132" selection-end-column="21" />
                   <folding>
                     <element signature="e#27#43#0" />
                     <element signature="e#81#114#0" />
@@ -67,22 +50,42 @@
                     <element signature="e#219#315#0" />
                     <element signature="e#348#398#0" />
                     <element signature="e#433#460#0" />
-                    <element signature="e#948#986#0" />
-                    <element signature="e#1029#1037#0" />
-                    <element signature="e#1006#1160#0" />
-                    <element signature="e#1174#1213#0" />
-                    <element signature="e#1227#1263#0" />
-                    <element signature="e#1281#1349#0" />
-                    <element signature="e#484#641#0" />
-                    <element signature="e#656#810#0" />
-                    <element signature="e#852#1009#0" />
-                    <element signature="e#1317#1325#0" />
-                    <element signature="e#1409#1417#0" />
-                    <element signature="e#1441#1449#0" />
-                    <element signature="e#1531#1539#0" />
-                    <element signature="e#1442#1462#0" />
-                    <element signature="e#1506#1528#0" />
-                    <element signature="e#1556#1579#0" />
+                    <element signature="e#468#543#0" />
+                    <element signature="e#554#619#0" />
+                    <element signature="e#631#782#0" />
+                    <element signature="e#788#830#0" />
+                    <element signature="e#836#878#0" />
+                    <element signature="e#888#932#0" />
+                    <element signature="e#943#1127#0" />
+                    <element signature="e#1145#1302#0" />
+                    <element signature="e#1334#1352#0" />
+                    <element signature="e#1402#1509#0" />
+                    <element signature="e#1526#1639#0" />
+                    <element signature="e#1662#1685#0" />
+                    <element signature="e#1693#1793#0" />
+                    <element signature="e#1804#1944#0" />
+                    <element signature="e#1958#1981#0" />
+                    <element signature="e#1996#2060#0" />
+                    <element signature="e#2086#2108#0" />
+                    <element signature="e#2135#2158#0" />
+                    <element signature="e#2186#2208#0" />
+                    <element signature="e#2216#2256#0" />
+                    <element signature="e#2268#2306#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="base.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/base.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-177">
+                  <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+                  <folding>
+                    <element signature="e#1#59#0" />
+                    <element signature="e#130#162#0" />
+                    <element signature="e#183#233#0" />
+                    <element signature="e#239#264#0" />
                   </folding>
                 </state>
               </provider>
@@ -118,10 +121,11 @@
         <option value="$PROJECT_DIR$/rem.js" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/../project/finishProject/weixingutai/weixingutai-shouji/js/index.js" />
-        <option value="$PROJECT_DIR$/css/base.css" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/手机右侧边导航.html" />
         <option value="$PROJECT_DIR$/js/animation.js" />
+        <option value="$PROJECT_DIR$/css/base.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -150,23 +154,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="测试" type="b2602c69:ProjectViewProjectNode" />
-              <item name="测试" type="462c0819:PsiDirectoryNode" />
+              <item name="手机右侧边导航" type="b2602c69:ProjectViewProjectNode" />
+              <item name="手机右侧边导航" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="测试" type="b2602c69:ProjectViewProjectNode" />
-              <item name="测试" type="462c0819:PsiDirectoryNode" />
+              <item name="手机右侧边导航" type="b2602c69:ProjectViewProjectNode" />
+              <item name="手机右侧边导航" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="测试" type="b2602c69:ProjectViewProjectNode" />
-              <item name="测试" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="测试" type="b2602c69:ProjectViewProjectNode" />
-              <item name="测试" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -177,7 +171,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../project/finishProject/nanjianfuyou/nanjianfuyou-shouji" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -216,15 +210,15 @@
       <option name="presentableId" value="Default" />
       <updated>1536716099647</updated>
       <workItem from="1536716101933" duration="14793000" />
+      <workItem from="1536746270589" duration="457000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14793000" />
+    <option name="totallyTimeSpent" value="15250000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0943098" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -252,66 +246,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/rem.js">
+    <entry file="file://$PROJECT_DIR$/js/animation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" selection-start-line="3" selection-end-line="30" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../project/finishProject/weixingutai/weixingutai-shouji/js/swiper.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-741" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../project/finishProject/weixingutai/weixingutai-shouji/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="54" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery-1.8.3.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2451">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../project/finishProject/weixingutai/weixingutai-shouji/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding>
-            <element signature="e#1#59#0" />
-            <element signature="e#130#162#0" />
-            <element signature="e#183#233#0" />
-            <element signature="e#239#264#0" />
-            <element signature="e#439#463#0" />
-            <element signature="e#467#515#0" />
-            <element signature="e#517#587#0" />
-            <element signature="e#616#638#0" />
-            <element signature="e#696#819#0" />
-            <element signature="e#849#964#0" />
-            <element signature="e#988#1099#0" />
-            <element signature="e#1108#1186#0" />
-            <element signature="e#1194#1347#0" />
-          </folding>
+        <state relative-caret-position="437">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
+        <state relative-caret-position="1406">
           <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
           <folding>
             <element signature="e#27#43#0" />
@@ -320,45 +264,100 @@
             <element signature="e#219#315#0" />
             <element signature="e#348#398#0" />
             <element signature="e#433#460#0" />
-            <element signature="e#948#986#0" />
-            <element signature="e#1029#1037#0" />
-            <element signature="e#1006#1160#0" />
-            <element signature="e#1174#1213#0" />
-            <element signature="e#1227#1263#0" />
-            <element signature="e#1281#1349#0" />
-            <element signature="e#484#641#0" />
-            <element signature="e#656#810#0" />
-            <element signature="e#852#1009#0" />
-            <element signature="e#1317#1325#0" />
-            <element signature="e#1409#1417#0" />
-            <element signature="e#1441#1449#0" />
-            <element signature="e#1531#1539#0" />
-            <element signature="e#1442#1462#0" />
-            <element signature="e#1506#1528#0" />
-            <element signature="e#1556#1579#0" />
+            <element signature="e#468#543#0" />
+            <element signature="e#554#619#0" />
+            <element signature="e#631#782#0" />
+            <element signature="e#788#830#0" />
+            <element signature="e#836#878#0" />
+            <element signature="e#888#932#0" />
+            <element signature="e#943#1127#0" />
+            <element signature="e#1145#1302#0" />
+            <element signature="e#1334#1352#0" />
+            <element signature="e#1402#1509#0" />
+            <element signature="e#1526#1639#0" />
+            <element signature="e#1662#1685#0" />
+            <element signature="e#1693#1793#0" />
+            <element signature="e#1804#1944#0" />
+            <element signature="e#1958#1981#0" />
+            <element signature="e#1996#2060#0" />
+            <element signature="e#2086#2108#0" />
+            <element signature="e#2135#2158#0" />
+            <element signature="e#2186#2208#0" />
+            <element signature="e#2216#2256#0" />
+            <element signature="e#2268#2306#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/手机右侧边导航.html">
+    <entry file="file://$PROJECT_DIR$/js/rem.js" />
+    <entry file="file://$PROJECT_DIR$/../project/finishProject/weixingutai/weixingutai-shouji/js/swiper.min.js" />
+    <entry file="file://$PROJECT_DIR$/../project/finishProject/weixingutai/weixingutai-shouji/index.html" />
+    <entry file="file://$PROJECT_DIR$/js/jquery-1.8.3.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="28" />
-          <folding>
-            <element signature="e#1354#1360#0" expanded="true" />
-            <element signature="e#1360#1366#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-2451" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../project/finishProject/weixingutai/weixingutai-shouji/js/index.js" />
+    <entry file="file://$PROJECT_DIR$/手机右侧边导航.html" />
     <entry file="file://$PROJECT_DIR$/js/animation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="-196">
           <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-177">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
           <folding>
-            <element signature="e#32#397#0" />
-            <element signature="e#799#1506#0" />
-            <element signature="e#1120#1295#0" />
+            <element signature="e#1#59#0" />
+            <element signature="e#130#162#0" />
+            <element signature="e#183#233#0" />
+            <element signature="e#239#264#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="41" column="26" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="132" column="21" selection-start-line="132" selection-start-column="21" selection-end-line="132" selection-end-column="21" />
+          <folding>
+            <element signature="e#27#43#0" />
+            <element signature="e#81#114#0" />
+            <element signature="e#152#179#0" />
+            <element signature="e#219#315#0" />
+            <element signature="e#348#398#0" />
+            <element signature="e#433#460#0" />
+            <element signature="e#468#543#0" />
+            <element signature="e#554#619#0" />
+            <element signature="e#631#782#0" />
+            <element signature="e#788#830#0" />
+            <element signature="e#836#878#0" />
+            <element signature="e#888#932#0" />
+            <element signature="e#943#1127#0" />
+            <element signature="e#1145#1302#0" />
+            <element signature="e#1334#1352#0" />
+            <element signature="e#1402#1509#0" />
+            <element signature="e#1526#1639#0" />
+            <element signature="e#1662#1685#0" />
+            <element signature="e#1693#1793#0" />
+            <element signature="e#1804#1944#0" />
+            <element signature="e#1958#1981#0" />
+            <element signature="e#1996#2060#0" />
+            <element signature="e#2086#2108#0" />
+            <element signature="e#2135#2158#0" />
+            <element signature="e#2186#2208#0" />
+            <element signature="e#2216#2256#0" />
+            <element signature="e#2268#2306#0" />
           </folding>
         </state>
       </provider>
