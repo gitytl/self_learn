@@ -14,4 +14,31 @@
     </noscript>
     <div id="root"></div>
   </body>
+  <script type="text/javascript">
+    document.onload=function () {
+        var xmlhttp;
+        if (window.XMLHttpRequest)
+        {
+            //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {
+            // IE6, IE5 浏览器执行代码
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                var oMeta = document.createElement('meta');
+                oMeta.name = 'keywords';
+                oMeta.content=JSON.parse(xmlhttp.responseText).data.keywords;
+                document.getElementsByTagName('head')[0].appendChild(oMeta);
+            }
+        }
+        xmlhttp.open("GET","https://www.easy-mock.com/mock/5ab0ade88bd78f52e4d9698c/yy/config",true);
+        xmlhttp.send();
+    }
+  </script>
 </html>

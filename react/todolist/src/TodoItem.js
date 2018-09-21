@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component,Fragment} from 'react';
 
 class TodoItem extends Component{
     constructor(props){
@@ -10,9 +10,9 @@ class TodoItem extends Component{
     }
     render() {
         return (
-            <div>
-                <div onClick={this.getIndex}>{this.props.content}</div>
-            </div>
+            <Fragment>
+                <li onClick={this.getIndex}>{this.props.content}</li>
+            </Fragment>
         );
     }
 }
