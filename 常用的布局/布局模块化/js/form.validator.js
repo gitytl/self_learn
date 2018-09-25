@@ -8,12 +8,21 @@ define(['jquery'],function ($) {
         this.$el=$('html,body');//缓存标签
     }
     ScrollTop.prototype.move=function () {
-        this.$el.animate({
-            scrollTop:this.opts.topNum
-        },this.opts.speed);
+        var opts=this.opts;
+            topNum=opts.topNum;
+        if($(window).scrollTop!=topNum){
+            if(!this.$el.is(":animated")){
+                this.$el.animate({
+                    scrollTop:topNum
+                },opts.speed);
+            }
+        }
     };
     ScrollTop.prototype.go=function () {
-        this.$el.scrollTop(this.opts.topNum);
+        var topNum=this.opts.topNum;
+        if($(window).scrollTop!=topNum) {
+            this.$el.scrollTop(topNum);
+        }
     };
     var result=null;
     return{

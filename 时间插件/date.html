@@ -10,15 +10,16 @@
 <a href="http://www.my97.net/demo/index.htm">使用说明地址</a>
 <div>
     <div>限制可选天数并禁选周末并打印选中时间</div>
-    <input type="text" class="Wdate"/>
+    <input type="text" class="Wdate" value="2018-09-27"/>
     <script>
         $(function () {
-            $(".Wdate").click(function () {
+            var dateBox=$(".Wdate");
+            dateBox.click(function () {
                 WdatePicker({dchanged:cFunc, Mchanged:cFunc, ychanged:cFunc,minDate:'%y-%M-{%d+1}',el:this,maxDate:'%y-%M-{%d+4}',disabledDays:[0,6]});
                 function cFunc(){
                     var Y='y',M='M',D='d',c = $dp.cal;
-                    $(".Wdate").val(c.date[Y]+'-'+c.date[M]+"-"+c.date[D]);
-                    console.log($(".Wdate").val());
+                    var nullDate=c.date[Y]+'-'+c.date[M]+"-"+c.date[D];
+                    dateBox.val(nullDate);
                 }
             });
         });
