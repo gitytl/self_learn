@@ -1,7 +1,7 @@
 define(['jquery'],function ($) {
     ScrollTop.DEFAULTS={
         topNum:0,
-        speed:800
+        speed:0
     }
     function ScrollTop(opts) {
         this.opts=$.extend({},ScrollTop.DEFAULTS,opts);//把用户传的值替换掉默认的值并返回一个对象
