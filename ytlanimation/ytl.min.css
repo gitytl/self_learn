@@ -154,6 +154,9 @@ img{width:auto;vertical-align:middle}
   position: absolute;
   bottom: 60px;
   right: 40px;
+  font-family: "宋体";
+  text-align: center;
+  line-height: 60px;
 }
 .ytl_prev,.ytl_next{
   position: absolute;
@@ -341,4 +344,100 @@ img{width:auto;vertical-align:middle}
   margin: 0 10px;
   width: 230px;
   height: 150px;
+}
+/*时间轴*/
+.ytl_dateList {
+  width: 1200px;
+  height: 126px;
+  margin: 54px auto 0;
+  position: relative;
+}
+.ytl_dateList .ytl_prevNext {
+  position: absolute;
+  z-index: 5;
+  bottom: 125px;
+  right: 0;
+  width: 100%;
+}
+.ytl_dateList .ytl_prev{
+  left:20px;
+}
+.ytl_dateList .ytl_next{
+  right:20px;
+}
+.ytl_dateList .listCon{
+  width: 1128px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.ytl_dateList ul {
+  margin-left: -10px;
+  position: relative;
+}
+.ytl_dateList ul li{
+  width: 38px;
+  height: 42px;
+  float: left;
+  margin-left: 110px;
+  line-height: 24px;
+  text-align: center;
+  position: relative;
+}
+.ytl_dateList ul li:after,.ytl_dateList ul li:before{
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 1px;
+  bottom: 11px;
+  right: 12px;
+  z-index: 0;
+  background: #cccccc;
+}
+.ytl_dateList ul li:first-child:after{
+  background: #cccccc;
+}
+.ytl_dateList ul li:last-child:before{
+  left: 12px;
+}
+.ytl_dateList ul .on .year{
+  color: #b38643;
+  font-weight: bold;
+  font-size: 16px;
+}
+.ytl_dateList ul .on .year:after,.ytl_dateList ul .on:after{
+  background: #b38643;
+}
+.ytl_dateList ul .year{
+  position: relative;
+}
+.ytl_dateList .year:after{
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-radius: 100%;
+  border: 1px solid #e3e1e0;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+}
+.ytl_dateList ol{
+  width: 925px;
+  margin: 0 auto;
+  color: #4c4c4c;
+}
+.ytl_dateList ol .listTitle{
+  color: #b38643;
+  margin-top: 44px;
+  height: 21px;
+  overflow: hidden;
+}
+.ytl_dateList ol .con{
+  line-height: 32px;
+  margin-top: 24px;
+  height: 96px;
+  overflow: hidden;
 }

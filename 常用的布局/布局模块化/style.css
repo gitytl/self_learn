@@ -2,16 +2,12 @@ html,body{
     height: 3000px;
 }
 .moveTop{
-    position: fixed;
-    right: 80px;
-    bottom: 100px;
-    width: 100px;
-    height: 210px;
-}
-.moveTop a{
     width: 100px;
     height: 100px;
     color: #fff;
+    position: fixed;
+    right: 80px;
+    bottom: 100px;
     font-size: 20px;
     line-height: 100px;
     text-align: center;

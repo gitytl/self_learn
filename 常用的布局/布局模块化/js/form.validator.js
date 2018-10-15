@@ -1,18 +1,27 @@
 define(['jquery'],function ($) {
     ScrollTop.DEFAULTS={
         topNum:0,
-        speed:0
+        speed:0,
+        pos:$(window).height()
     }
-    function ScrollTop(opts) {
+    function ScrollTop(el,opts) {
         this.opts=$.extend({},ScrollTop.DEFAULTS,opts);//把用户传的值替换掉默认的值并返回一个对象
-        this.$el=$('html,body');//缓存标签
+        this.$el=$(el);//缓存标签
+        this._showHide();
+        if(this.opts.speed!=0){
+            this.$el.on('click',$.proxy(this.move,this));
+        }
+        else {
+            this.$el.on('click',$.proxy(this.go,this));
+        }
+        $(window).on('scroll',$.proxy(this._showHide,this));
     }
     ScrollTop.prototype.move=function () {
-        var opts=this.opts;
+        var opts=this.opts,
             topNum=opts.topNum;
-        if($(window).scrollTop!=topNum){
+        if($(window).scrollTop()!=topNum){
             if(!this.$el.is(":animated")){
-                this.$el.animate({
+                $("body,html").animate({
                     scrollTop:topNum
                 },opts.speed);
             }
@@ -21,7 +30,14 @@ define(['jquery'],function ($) {
     ScrollTop.prototype.go=function () {
         var topNum=this.opts.topNum;
         if($(window).scrollTop!=topNum) {
-            this.$el.scrollTop(topNum);
+            $("body,html").scrollTop(topNum);
+        }
+    };
+    ScrollTop.prototype._showHide=function () {
+        if($(window).scrollTop()>this.opts.pos){
+            this.$el.fadeIn();
+        }else {
+            this.$el.fadeOut();
         }
     };
     var result=null;
