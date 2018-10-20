@@ -18,12 +18,23 @@ class TodoList extends Component {//class App extends Component=class App extend
       this.addClick=this.addClick.bind(this);
       this.deleteClick=this.deleteClick.bind(this);
     this.state={
-      list:[
-          '111','222'
-      ],
+      list:[],
         inputValue:''
     }
   }
+    getData(){ //请求数据函数
+        fetch(`https://www.easy-mock.com/mock/5bc555851e3c5836f86870ad/react/list`,{
+            method: 'GET'
+        }).then(res => res.json()).then(
+            data => {
+                this.setState({list:data.data});
+            }
+        )
+    }
+
+    componentWillMount(){
+        this.getData();
+    }
     addClick(){
         if(!this.state.inputValue.match(/^[ ]*$/)){
           this.setState({
