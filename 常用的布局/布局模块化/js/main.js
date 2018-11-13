@@ -6,7 +6,7 @@ requirejs.config({
 });
 requirejs(['jquery','formV'],function ($,formV) {
     console.log(formV.isEqual(1,1));
-    console.log(formV.rule('phone','13108801889',1));
+    console.log(formV.rule('phone','13108801889'));
     new formV.ScrollTop(".moveTop",{
         mode:'move',
         pos:'0',

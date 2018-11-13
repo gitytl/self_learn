@@ -46,9 +46,9 @@ define(['jquery'],function ($) {
             (str1===str2)? result=true:result=false;
             return result;
         },
-        rule:function (style,str,len) {
+        rule:function (style,str) {
             var phoneRule=/^1(3|4|5|7|8)\d{9}$/;
-            if(style=='phone'){return phoneRule.test(str);}
+            if(style=='phone'&&phoneRule.test(str)){return str;}
         },
         ScrollTop:ScrollTop
     }
