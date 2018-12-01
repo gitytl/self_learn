@@ -129,6 +129,21 @@ img{width:auto;vertical-align:middle}
   top: 0;
   overflow: hidden;
 }
+.ytl_picCarousel li .img{
+  width: 100%;
+  height: 100%;
+}
+.ytl_picCarousel li .tit{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 560px;
+  padding: 0 20px;
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+}
 .ytl_pointLists{
   position: absolute;
   text-align: center;
@@ -533,4 +548,20 @@ img{width:auto;vertical-align:middle}
   margin-right: 66px;
   font-size: 18px;
   padding: 20px;
+}
+
+/*图片等比缩放*/
+.ytl_imgScale{
+  width: 640px;
+  height: 213px;
+  display: inline-block;
+  margin: 0 20px;
+}
+.ytl_imgScale li{
+  width: 193px;
+  height: 193px;
+  margin: 10px;
+  float: left;
+  background: #8da6ce;
+  overflow: hidden;
 }

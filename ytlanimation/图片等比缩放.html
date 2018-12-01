@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片等比缩放</title>
+    <script src="jquery-1.8.3.min.js"></script>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .baseBox,.baseImg{
+            width: 640px;
+            height: 213px;
+            display: inline-block;
+            margin: 0 20px;
+        }
+        .baseBox li,.baseImg li{
+            width: 193px;
+            height: 193px;
+            margin: 10px;
+            float: left;
+            background: #8da6ce;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div style="width: 1365px;margin: 0 auto">
+    <ul class="baseImg">
+        <li class="img"><img src="images/science/u=1833417603,1662678131&fm=26&gp=0.jpg" alt=""></li>
+        <li class="img"><img src="images/science/u=1312334410,337918023&fm=200&gp=0.jpg" alt=""></li>
+        <li class="img"><img src="images/science/u=794945328,1514551785&fm=27&gp=0.jpg" alt=""></li>
+    </ul>
+    <ul class="baseBox">
+        <li class="img"><img src="https://f10.baidu.com/it/u=3250680277,1257668285&fm=72" alt=""></li>
+        <li class="img"><img src="http://img5.imgtn.bdimg.com/it/u=2570951709,2879148906&fm=26&gp=0.jpg" alt=""></li>
+        <li class="img"><img src="http://img0.imgtn.bdimg.com/it/u=581168944,3862143606&fm=26&gp=0.jpg" alt=""></li>
+    </ul>
+</div>
+</body>
+<script type="text/javascript">
+    $(function () {
+        scaleImg(false,$(".baseBox"),10);
+        function scaleImg(showAll,$this){
+            var imgWH=$this.find('img'),
+                imgBox=$this.find('.img'),
+                imgTag=$this.find('.img img');
+            time=setInterval(function () {
+                for (var i = 0; i < imgWH.length; i++) {
+                    var imginnerWidth = imgWH[i].naturalWidth;
+                    var imginnerHeight = imgWH[i].naturalHeight;
+                    var boxWidth = imgBox.width();
+                    var boxHeight = imgBox.height();
+                    var imgScale=imginnerWidth / imginnerHeight;/*图片比例*/
+                    var boxScale=boxWidth / boxHeight;/*盒子比例*/
+                    var imgWidth = imgScale * boxHeight;
+                    var imgHeight = (imginnerHeight / imginnerWidth) * boxWidth;
+                    /*全图显示*/
+                    if(showAll){
+                        if (imgScale > boxScale) {
+                            imgTag.eq(i).css({'width': '100%'});
+                            imgTag.eq(i).css({'margin-top': -(imgHeight - boxHeight) / 2 + 'px'});
+                        }/*原生比例大于盒子比例——原生宽大于盒子宽*/
+
+                        if (imgScale == boxScale) {
+                            imgTag.eq(i).css({'width': '100%'});
+                        }/*原生比例等于盒子比例*/
+
+                        if (imgScale < boxScale) {
+                            imgTag.eq(i).css({'height': '100%'});
+                            imgTag.eq(i).css({'margin-left': -(imgWidth - boxWidth) / 2 + 'px'});
+                        } /*原生比例小于盒子比例——原生高大于盒子高*/
+                    }
+                    /*正中图显示*/
+                    else {
+                        /*原生宽大于等于盒子宽*/
+                        if (imginnerWidth >= boxWidth) {
+
+                            if (imginnerHeight >= boxHeight) {
+
+                                if (imgScale > boxScale) {large();}/*原生比例大于盒子比例——原生宽大于盒子宽*/
+
+                                if (imgScale == boxScale) {equal();}/*原生比例等于盒子比例*/
+
+                                if (imgScale < boxScale) {small();}/*原生比例小于盒子比例——原生高大于盒子高*/
+
+                            } /*原生高大于等于盒子高*/
+
+                            else {large();}/*原生高小于盒子高*/
+
+                        } else {/*原生宽小于盒子宽*/
+
+                            if (imginnerHeight >= boxHeight) {small();}/*原生高大于等于盒子高*/
+
+                            else {
+
+                                if (imgScale > boxScale) {large();}/*原生比例大于盒子比例——原生宽大于盒子宽*/
+
+                                if (imgScale == boxScale) {equal();}/*原生比例等于盒子比例*/
+
+                                if (imgScale < boxScale) {small();} /*原生比例小于盒子比例——原生高大于盒子高*/
+                            }
+                        }
+                    }
+                    /*比例：大、等、小*/
+                    function large() {
+                        imgTag.eq(i).css({'width': imgWidth, 'height': 100% + 'px'});
+                        imgTag.eq(i).css({'margin-left': -(imgWidth - boxWidth) / 2 + 'px'});
+                    }
+                    function equal() {
+                        imgTag.eq(i).css({'width': boxWidth + 'px', 'height': boxHeight + 'px'});
+                    }
+                    function small() {
+                        imgTag.eq(i).css({'width': 100% + 'px', 'height': imgHeight + 'px'});
+                        imgTag.eq(i).css({'margin-top': -(imgHeight-boxHeight) / 2 + 'px'});
+                    }
+                }
+            },10)
+        }
+        /*setTimeout(function () {
+            for (var i = 0; i < imgWH.length; i++) {
+                var imginnerWidth = imgWH[i].naturalWidth;
+                var imginnerHeight = imgWH[i].naturalHeight;
+                var boxWidth = imgBox.width();
+                var boxHeight = imgBox.height();
+                var imgScale=imginnerWidth / imginnerHeight;/!*图片比例*!/
+                var boxScale=boxWidth / boxHeight;/!*盒子比例*!/
+                var imgWidth = imgScale * boxHeight;
+                var imgHeight = (imginnerHeight / imginnerWidth) * boxWidth;
+                /!*全图显示*!/
+                if(showAll){
+                    if (imgScale > boxScale) {
+                        imgTag.eq(i).css({'width': '100%'});
+                        imgTag.eq(i).css({'margin-top': -(imgHeight - boxHeight) / 2 + 'px'});
+                    }/!*原生比例大于盒子比例——原生宽大于盒子宽*!/
+
+                    if (imgScale == boxScale) {
+                        imgTag.eq(i).css({'width': '100%'});
+                    }/!*原生比例等于盒子比例*!/
+
+                    if (imgScale < boxScale) {
+                        imgTag.eq(i).css({'height': '100%'});
+                        imgTag.eq(i).css({'margin-left': -(imgWidth - boxWidth) / 2 + 'px'});
+                    } /!*原生比例小于盒子比例——原生高大于盒子高*!/
+                }
+                /!*正中图显示*!/
+                else {
+                    /!*原生宽大于等于盒子宽*!/
+                    if (imginnerWidth >= boxWidth) {
+
+                        if (imginnerHeight >= boxHeight) {
+
+                            if (imgScale > boxScale) {large();}/!*原生比例大于盒子比例——原生宽大于盒子宽*!/
+
+                            if (imgScale == boxScale) {equal();}/!*原生比例等于盒子比例*!/
+
+                            if (imgScale < boxScale) {small();}/!*原生比例小于盒子比例——原生高大于盒子高*!/
+
+                        } /!*原生高大于等于盒子高*!/
+
+                        else {large();}/!*原生高小于盒子高*!/
+
+                    } else {/!*原生宽小于盒子宽*!/
+
+                        if (imginnerHeight >= boxHeight) {small();}/!*原生高大于等于盒子高*!/
+
+                        else {
+
+                            if (imgScale > boxScale) {large();}/!*原生比例大于盒子比例——原生宽大于盒子宽*!/
+
+                            if (imgScale == boxScale) {equal();}/!*原生比例等于盒子比例*!/
+
+                            if (imgScale < boxScale) {small();} /!*原生比例小于盒子比例——原生高大于盒子高*!/
+                        }
+                    }
+                }
+                /!*比例：大、等、小*!/
+                function large() {
+                    imgTag.eq(i).css({'width': imgWidth, 'height': 100% + 'px'});
+                    imgTag.eq(i).css({'margin-left': -(imgWidth - boxWidth) / 2 + 'px'});
+                }
+                function equal() {
+                    imgTag.eq(i).css({'width': boxWidth + 'px', 'height': boxHeight + 'px'});
+                }
+                function small() {
+                    imgTag.eq(i).css({'width': 100% + 'px', 'height': imgHeight + 'px'});
+                    imgTag.eq(i).css({'margin-top': -(imgHeight-boxHeight) / 2 + 'px'});
+                }
+            }
+        },3000)*/
+    });
+</script>
+</html>
