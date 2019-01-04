@@ -352,7 +352,7 @@ img{width:auto;vertical-align:middle}
 .ytl_animation .ytl_active{
   width: 250px;
   height: 200px;
-  margin: 0 40px;
+  margin: -25px 40px 0;
 }
 .ytl_animation li{
   float: left;

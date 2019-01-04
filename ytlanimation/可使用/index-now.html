@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="ytl.min.css">
+    <link rel="stylesheet" href="ytl-now.min.css">
     <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="ytl.min.js"></script>
+    <script type="text/javascript" src="ytl-now.min.js"></script>
     <script type="text/javascript">
         $(function () {
             /*新闻滚动——相关参数：timer，moseHover，autoPlay*/
@@ -36,7 +36,7 @@
                 showNum:4,
                 moveNum:1,
                 prevNext:true,
-                saveCarousel: "1",
+                saveCarousel: "1,2,3,4,5",
                 direction:'horizontal'//存在horizontal和vertical两种
             });
             /*tab切换同时含有轮播图(显示点时可以点击)——相关参数：timer,showNum,group,autoPlay,createPoint,divLevelNum,wordList,prevNext*/
@@ -45,6 +45,7 @@
                 timer:2000,
                 showNum:4,
                 group:false,
+                prevNext:true,
                 createPoint:true,//显示的前提是要分组并且组数大于1
                 divLevelNum:1,//分行排列一定要moveNum和showNum，并且group为true
             });
@@ -94,9 +95,18 @@
             /*时间轴*/
             $(".ytl_dateList").dateLine({
                 timer:500,
+                showNum:7
             });
             /*弹出层*/
             $(".ytl_layout").layout();
+            /*js图片等比放大缩小——相关参数：timer,scale——true：等比放大（不能给最大宽高），false：等比缩小（不能给背景颜色）*/
+            $(".baseImg").imgScale({scale:false});
+            $(".baseBox").imgScale({scale:true});
+
+            /*上下居中对齐显示*/
+            $(".ytl_animation2").alignTBC({
+                timer:2000,
+            });
         });
     </script>
 </head>
@@ -266,12 +276,12 @@
             <div class="ytl_marquee">
                 <div class="ytl_marqueeCon">
                     <ul class="ytl_marqueeList">
-                        <li><img src="../images/animal/201510221452093659724.jpg" alt=""></li>
-                        <li><img src="../images/animal/mid_f7b14383c07ea3e.jpg" alt=""></li>
-                        <li><img src="../images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt=""></li>
-                        <li><img src="../images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
-                        <li><img src="../images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
-                        <li><img src="../images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
+                        <li><img src="images/animal/201510221452093659724.jpg" alt=""></li>
+                        <li><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt=""></li>
+                        <li><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt=""></li>
+                        <li><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
+                        <li><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
+                        <li><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
                     </ul>
                 </div>
             </div>
@@ -300,15 +310,25 @@
         <div style="float:left;margin-left: 5%">
             <div class="ytl_picAnimation" style="margin-top: 60px">
                 <ul class="ytl_picCarousel">
-                    <li><img src="../images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt=""></li>
-                    <li><img src="../images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt=""></li>
-                    <li><img src="../images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt=""></li>
-                    <li><img src="../images/animal/201510221452093659724.jpg" alt=""></li>
-                    <li><img src="../images/animal/mid_f7b14383c07ea3e.jpg" alt=""></li>
-                    <li><img src="../images/animal/u=2163105592,2371140567&fm=27&gp=0.jpg" alt=""></li>
-                    <li><img src="../images/animal/u=1871337630,1458141109&fm=27&gp=0.jpg" alt=""></li>
-                    <li><img src="../images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
-                    <li><img src="../images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt=""></li>
+                    <!--<li><div class="img"><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题1</p></li>
+                    <li><div class="img"><img src="images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题2</p></li>
+                    <li><div class="img"><img src="images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题3</p></li>
+                    <li><div class="img"><img src="images/animal/201510221452093659724.jpg" alt=""></div><p class="tit">图片标题4</p></li>
+                    <li><div class="img"><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt=""></div><p class="tit">图片标题5</p></li>
+                    <li><div class="img"><img src="images/animal/u=2163105592,2371140567&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题6</p></li>
+                    <li><div class="img"><img src="images/animal/u=1871337630,1458141109&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题7</p></li>
+                    <li><div class="img"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题8</p></li>
+                    <li><div class="img"><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题9</p></li>-->
+
+                    <li><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt=""></li>
+                    <li><img src="images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt=""></li>
+                    <li><img src="images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt=""></li>
+                    <li><img src="images/animal/201510221452093659724.jpg" alt=""></li>
+                    <li><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt=""></li>
+                    <li><img src="images/animal/u=2163105592,2371140567&fm=27&gp=0.jpg" alt=""></li>
+                    <li><img src="images/animal/u=1871337630,1458141109&fm=27&gp=0.jpg" alt=""></li>
+                    <li><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></li>
+                    <li><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt=""></li>
                 </ul>
                 <ol class='ytl_pointLists'></ol>
                 <div class="ytl_smallImgLists"><ol class="ytl_smallImgList clearFix"></ol></div>
@@ -353,28 +373,36 @@
                 </div>
                 <div class="ytl_listBox on">
                     <ul class="ytl_list clearFix">
-                        <li><a href="#"><img src="../images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
                     </ul>
                     <ol class='ytl_pointLists'></ol>
+                    <div class="ytl_prevNext">
+                        <div class="ytl_prev"></div>
+                        <div class="ytl_next"></div>
+                    </div>
                 </div>
                 <div class="ytl_listBox">
                     <ul class="ytl_list clearFix">
-                        <li><a href="#"><img src="../images/animal/201510221452093659724.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/mid_f7b14383c07ea3e.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=1871337630,1458141109&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2163105592,2371140567&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/201510221452093659724.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=1871337630,1458141109&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2163105592,2371140567&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
                     </ul>
                     <ol class='ytl_pointLists'></ol>
+                    <div class="ytl_prevNext">
+                        <div class="ytl_prev"></div>
+                        <div class="ytl_next"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -412,41 +440,41 @@
                 </div>
                 <div class="ytl_listBox on">
                     <ul class="ytl_list clearFix">
-                        <li><a href="#"><img src="../images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
                     </ul>
                     <ol class='ytl_pointLists'></ol>
                 </div>
                 <div class="ytl_listBox">
                     <ul class="ytl_list clearFix">
-                        <li><a href="#"><img src="../images/animal/201510221452093659724.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/mid_f7b14383c07ea3e.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=1871337630,1458141109&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2163105592,2371140567&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/201510221452093659724.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/mid_f7b14383c07ea3e.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=1871337630,1458141109&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2163105592,2371140567&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/201510221452093659724.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=1871337630,1458141109&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2163105592,2371140567&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/201510221452093659724.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=1871337630,1458141109&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2163105592,2371140567&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
                     </ul>
                     <ol class='ytl_pointLists'></ol>
                 </div>
@@ -489,26 +517,26 @@
                 </div>
                 <div class="ytl_listBox on">
                     <ul class="ytl_list clearFix">
-                        <li><a href="#"><img src="../images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
                     </ul>
                     <ol class='ytl_pointLists'></ol>
                 </div>
                 <div class="ytl_listBox">
                     <ul class="ytl_list clearFix">
-                        <li><a href="#"><img src="../images/animal/201510221452093659724.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/mid_f7b14383c07ea3e.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=1871337630,1458141109&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2163105592,2371140567&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/201510221452093659724.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=1871337630,1458141109&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2163105592,2371140567&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
                     </ul>
                     <ol class='ytl_pointLists'></ol>
                 </div>
@@ -547,26 +575,26 @@
                 </div>
                 <div class="ytl_listBox on">
                     <ul class="ytl_list clearFix">
-                        <li><a href="#"><img src="../images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                        <li><a href="#"><img src="../images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                        <li><a href="#"><img src="images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
                     </ul>
                     <ol class='ytl_pointLists'></ol>
                 </div>
                 <div class="ytl_listBox">
                     <ul class="ytl_list clearFix">
-                        <li><a href="#"><img src="../images/animal/201510221452093659724.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/mid_f7b14383c07ea3e.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=1871337630,1458141109&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2163105592,2371140567&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                        <li><a href="#"><img src="../images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/201510221452093659724.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=1871337630,1458141109&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2163105592,2371140567&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                        <li><a href="#"><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
                     </ul>
                     <ol class='ytl_pointLists'></ol>
                 </div>
@@ -610,12 +638,12 @@
                 <div class="ytl_listBox on">
                     <div class="ytl_listLeft">
                         <ul class="ytl_list clearFix">
-                            <li><a href="#"><img src="../images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                            <li><a href="#"><img src="../images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                            <li><a href="#"><img src="../images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                            <li><a href="#"><img src="../images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                            <li><a href="#"><img src="../images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
-                            <li><a href="#"><img src="../images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                            <li><a href="#"><img src="images/view/u=748369348,3991083532&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                            <li><a href="#"><img src="images/view/u=1627985717,322631194&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                            <li><a href="#"><img src="images/view/u=2153927957,342443939&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                            <li><a href="#"><img src="images/view/u=2616243285,253992402&fm=27&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                            <li><a href="#"><img src="images/view/u=3318756932,4101953169&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
+                            <li><a href="#"><img src="images/view/u=3535515084,3761125132&fm=200&gp=0.jpg" alt="图片"></a><p>风景</p></li>
                         </ul>
                         <ol class='ytl_pointLists'></ol>
                         <div class="ytl_prevNext">
@@ -635,12 +663,12 @@
                 <div class="ytl_listBox">
                     <div class="ytl_listLeft">
                         <ul class="ytl_list clearFix">
-                            <li><a href="#"><img src="../images/animal/201510221452093659724.jpg" alt="图片"></a><p>动物</p></li>
-                            <li><a href="#"><img src="../images/animal/mid_f7b14383c07ea3e.jpg" alt="图片"></a><p>动物</p></li>
-                            <li><a href="#"><img src="../images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                            <li><a href="#"><img src="../images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                            <li><a href="#"><img src="../images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
-                            <li><a href="#"><img src="../images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                            <li><a href="#"><img src="images/animal/201510221452093659724.jpg" alt="图片"></a><p>动物</p></li>
+                            <li><a href="#"><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt="图片"></a><p>动物</p></li>
+                            <li><a href="#"><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                            <li><a href="#"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                            <li><a href="#"><img src="images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
+                            <li><a href="#"><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt="图片"></a><p>动物</p></li>
                         </ul>
                         <ol class='ytl_pointLists'></ol>
                     </div>
@@ -712,12 +740,12 @@
             <div style="border-top:1px solid #ffffff;">
                 <div class="ytl_animation ytl_animation1">
                     <ul class="ytl_list clearFix">
-                        <li><img src="../images/science/u=7062480,2757210393&fm=27&gp=0.jpg" alt=""></li>
-                        <li><img src="../images/science/u=336457624,4067156263&fm=200&gp=0.jpg" alt=""></li>
-                        <li class="ytl_active"><img src="../images/science/u=794945328,1514551785&fm=27&gp=0.jpg" alt=""></li>
-                        <li><img src="../images/science/u=875735926,3420285005&fm=200&gp=0.jpg" alt=""></li>
-                        <li><img src="../images/science/u=2200395957,3640679743&fm=27&gp=0.jpg" alt=""></li>
-                        <li><img src="../images/science/u=2720120862,3012596723&fm=200&gp=0.jpg" alt=""></li>
+                        <li><img src="images/science/u=7062480,2757210393&fm=27&gp=0.jpg" alt=""></li>
+                        <li><img src="images/science/u=336457624,4067156263&fm=200&gp=0.jpg" alt=""></li>
+                        <li class="ytl_active"><img src="images/science/u=794945328,1514551785&fm=27&gp=0.jpg" alt=""></li>
+                        <li><img src="images/science/u=875735926,3420285005&fm=200&gp=0.jpg" alt=""></li>
+                        <li><img src="images/science/u=2200395957,3640679743&fm=27&gp=0.jpg" alt=""></li>
+                        <li><img src="images/science/u=2720120862,3012596723&fm=200&gp=0.jpg" alt=""></li>
                     </ul>
                 </div>
             </div>
@@ -727,29 +755,20 @@
         <div style="background-color:#0c1021;padding: 30px 20px 20px">
             <h3 style="font-size: 18px;line-height: 40px;">时间轴</h3>
             <div class="clearFix">
-                <dl class="clearFix" style="width:40%;float:left;padding: 20px 0">
-                    <dt style="float:left;width: 30%">css</dt>
-                    <dd style="float: left;max-height:324px;overflow: auto;width: 70%;">
-                        <p></p>
-                        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><span style="color:#aeaeae;">/*中间大图显示——相关参数：timer,showNum,autoPlay,moseHover*/<br></span><span style="color:#ff6400;">$</span>(<span style="color:#61ce3c;">'.</span><span style="color:#ff6400;">ytl_animation1</span><span style="color:#61ce3c;">'</span>).<span style="color:#ff6400;">highlight</span>({<br> <span style="color:#ff6400;">showNum</span><span style="color:#fbde2d;">:</span><span style="color:#d8fa3c;">5</span>,<br> <span style="color:#ff6400;">timer</span><span style="color:#fbde2d;">:</span><span style="color:#d8fa3c;">1500</span>,<br>});</pre>
-</pre>
-                        <p></p>
-                    </dd>
-                </dl>
                 <dl class="clearFix" style="width:20%;float:left;padding: 20px 83px">
                     <dt style="float:left;width: 30%">js</dt>
                     <dd style="float: left;max-height:324px;overflow: auto;width: 70%;">
                         <p></p>
-                        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><span style="color:#aeaeae;">/*中间大图显示——相关参数：timer,showNum,autoPlay,moseHover*/<br></span><span style="color:#ff6400;">$</span>(<span style="color:#61ce3c;">'.</span><span style="color:#ff6400;">ytl_animation1</span><span style="color:#61ce3c;">'</span>).<span style="color:#ff6400;">highlight</span>({<br> <span style="color:#ff6400;">showNum</span><span style="color:#fbde2d;">:</span><span style="color:#d8fa3c;">5</span>,<br> <span style="color:#ff6400;">timer</span><span style="color:#fbde2d;">:</span><span style="color:#d8fa3c;">1500</span>,<br>});</pre>
-</pre>
+                        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><span style="color:#aeaeae;">/*时间轴*/<br></span><span style="color:#ff6400;">$</span>(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">ytl_dateList</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">dateLine</span>({<br> <span style="color:#ff6400;">timer</span><span style="color:#fbde2d;">:</span><span style="color:#d8fa3c;">500</span>,<br> <span style="color:#ff6400;">showNum</span><span style="color:#fbde2d;">:</span><span style="color:#d8fa3c;">7<br></span>});</pre>
                         <p></p>
                     </dd>
                 </dl>
-                <dl class="clearFix" style="width:30%;float:left;border-left:1px solid #ffffff;padding: 20px 0">
-                    <dt style="float:left;width: 30%">html</dt>
-                    <dd style="float: left;max-height:324px;overflow: auto;width: 70%;">
+                <dl class="clearFix" style="width:70%;float:left;border-left:1px solid #ffffff;padding: 20px 0">
+                    <dt style="float:left;width: 14%;text-align: center;">html</dt>
+                    <dd style="float: left;max-height:160px;overflow: auto;width: 80%;">
                         <p></p>
-                        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_animation ytl_animation1"</span>&gt;<br> &lt;<span style="color:#7f90aa;">ul </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_list clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/science/u=7062480,2757210393&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/science/u=336457624,4067156263&amp;fm=200&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_active"</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/science/u=794945328,1514551785&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/science/u=875735926,3420285005&amp;fm=200&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/science/u=2200395957,3640679743&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/science/u=2720120862,3012596723&amp;fm=200&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;/<span style="color:#7f90aa;">ul</span>&gt;<br>&lt;/<span style="color:#7f90aa;">div</span>&gt;</pre>
+                        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_dateList"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_prevNext"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_prev"</span>&gt;<span style="color:#d8fa3c;font-weight:bold;">&amp;lt;</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_next"</span>&gt;<span style="color:#d8fa3c;font-weight:bold;">&amp;gt;</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"listCon"</span>&gt;<br> &lt;<span style="color:#7f90aa;">ul </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">li </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"on"</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"year"</span>&gt;<span style="font-weight:bold;">2009</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"year"</span>&gt;<span style="font-weight:bold;">2010</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"year"</span>&gt;<span style="font-weight:bold;">2011</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"year"</span>&gt;<span style="font-weight:bold;">2012</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"year"</span>&gt;<span style="font-weight:bold;">2013</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"year"</span>&gt;<span style="font-weight:bold;">2014</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"year"</span>&gt;<span style="font-weight:bold;">2015</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"year"</span>&gt;<span style="font-weight:bold;">2016</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"year"</span>&gt;<span style="font-weight:bold;">2017</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"year"</span>&gt;<span style="font-weight:bold;">2018</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;/<span style="color:#7f90aa;">ul</span>&gt;<br> &lt;<span style="color:#7f90aa;">ol</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_con"</span>&gt;<span style="font-weight:bold;">2009该时间发生的事件</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_con"</span>&gt;<span style="font-weight:bold;">2010该时间发生的事件</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_con"</span>&gt;<span style="font-weight:bold;">2011该时间发生的事件</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_con"</span>&gt;<span style="font-weight:bold;">2012该时间发生的事件</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_con"</span>&gt;<span style="font-weight:bold;">2013该时间发生的事件</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_con"</span>&gt;<span style="font-weight:bold;">2014该时间发生的事件</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_con"</span>&gt;<span style="font-weight:bold;">2015该时间发生的事件</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_con"</span>&gt;<span style="font-weight:bold;">2016该时间发生的事件</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_con"</span>&gt;<span style="font-weight:bold;">2017该时间发生的事件</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_con"</span>&gt;<span style="font-weight:bold;">2018该时间发生的事件</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;/<span style="color:#7f90aa;">ol</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br>&lt;/<span style="color:#7f90aa;">div</span>&gt;</pre>
+</pre>
                         <p></p>
                     </dd>
                 </dl>
@@ -774,36 +793,137 @@
                             <li><div class="year">2018</div></li>
                         </ul>
                         <ol>
-                            <li>
-                                <div class="ytl_con">2009该时间发生的事件</div>
-                            </li>
-                            <li>
-                                <div class="ytl_con">2010该时间发生的事件</div>
-                            </li>
-                            <li>
-                                <div class="ytl_con">2011该时间发生的事件</div>
-                            </li>
-                            <li>
-                                <div class="ytl_con">2012该时间发生的事件</div>
-                            </li>
-                            <li>
-                                <div class="ytl_con">2013该时间发生的事件</div>
-                            </li>
-                            <li>
-                                <div class="ytl_con">2014该时间发生的事件</div>
-                            </li>
-                            <li>
-                                <div class="ytl_con">2015该时间发生的事件</div>
-                            </li>
-                            <li>
-                                <div class="ytl_con">2016该时间发生的事件</div>
-                            </li>
-                            <li>
-                                <div class="ytl_con">2017该时间发生的事件</div>
-                            </li>
-                            <li>
-                                <div class="ytl_con">2018该时间发生的事件</div>
-                            </li>
+                            <li><div class="ytl_con">2009该时间发生的事件</div></li>
+                            <li><div class="ytl_con">2010该时间发生的事件</div></li>
+                            <li><div class="ytl_con">2011该时间发生的事件</div></li>
+                            <li><div class="ytl_con">2012该时间发生的事件</div></li>
+                            <li><div class="ytl_con">2013该时间发生的事件</div></li>
+                            <li><div class="ytl_con">2014该时间发生的事件</div></li>
+                            <li><div class="ytl_con">2015该时间发生的事件</div></li>
+                            <li><div class="ytl_con">2016该时间发生的事件</div></li>
+                            <li><div class="ytl_con">2017该时间发生的事件</div></li>
+                            <li><div class="ytl_con">2018该时间发生的事件</div></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li style="width: 90%;margin: 50px auto">
+        <div style="background-color:#0c1021;padding: 30px 20px 20px">
+            <h3 style="font-size: 18px;line-height: 40px;">图片等比缩放（img的父标签样式一定要写宽和高）</h3>
+            <div class="clearFix">
+                <div style="float: left;width: 40%">
+                    <h4 style="font-size: 16px;line-height: 30px;padding-left: 2em">一、等比缩小（可以看到整张图）</h4>
+                    <div class="clearFix">
+                        <dl class="clearFix" style="width:95%;margin: 20px auto">
+                            <dt style="float:left;width: 20%;text-align: center">js</dt>
+                            <dd style="float: left;max-height:324px;overflow: auto;width: 70%;">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><span style="color:#aeaeae;">/*js图片等比放大缩小——相关参数：scale——true：等比放大（不能给最大宽高），false：等比缩小（不能给背景颜色）*/<br></span><span style="color:#ff6400;">$</span>(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">baseImg</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">imgScale</span>({<span style="color:#ff6400;">scale</span><span style="color:#fbde2d;">:fase</span>});</pre>
+                                <p></p>
+                            </dd>
+                        </dl>
+                        <dl class="clearFix" style="width:95%;border-top:1px solid #ffffff;margin: 20px auto">
+                            <dt style="float:left;width: 20%;text-align: center">html</dt>
+                            <dd style="float: left;max-height:324px;overflow: auto;width: 80%;">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">ul </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_imgScale baseImg"</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/science/u=1833417603,1662678131&amp;fm=26&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/science/u=1312334410,337918023&amp;fm=200&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/science/u=794945328,1514551785&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br>&lt;/<span style="color:#7f90aa;">ul</span>&gt;</pre>
+                                <p></p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div style="border-top:1px solid #ffffff;">
+                        <ul class="ytl_imgScale baseImg">
+                            <li class="img"><img src="images/science/u=1833417603,1662678131&fm=26&gp=0.jpg" alt=""></li>
+                            <li class="img"><img src="images/science/u=1312334410,337918023&fm=200&gp=0.jpg" alt=""></li>
+                            <li class="img"><img src="images/science/u=794945328,1514551785&fm=27&gp=0.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="width: 3px;background: #fff;float:left;height: 375px;"></div>
+                <div style="float: left;width: 40%">
+                    <h4 style="font-size: 16px;line-height: 30px;padding-left: 2em">二、等比放大（看到图片的中间位置）</h4>
+                    <div class="clearFix">
+                        <dl class="clearFix" style="width:95%;margin: 20px auto">
+                            <dt style="float:left;width: 20%;text-align: center">js</dt>
+                            <dd style="float: left;max-height:324px;overflow: auto;width: 70%;">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><span style="color:#aeaeae;">/*js图片等比放大缩小——相关参数：scale——true：等比放大（不能给最大宽高），false：等比缩小（不能给背景颜色）*/<br></span><span style="color:#ff6400;">$</span>(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">baseBox</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">imgScale</span>({<span style="color:#ff6400;">scale</span><span style="color:#fbde2d;">:true</span>});</pre>
+                                <p></p>
+                            </dd>
+                        </dl>
+                        <dl class="clearFix" style="width:95%;border-top:1px solid #ffffff;margin: 20px auto">
+                            <dt style="float:left;width: 20%;text-align: center">html</dt>
+                            <dd style="float: left;max-height:324px;overflow: auto;width: 80%;">
+                                <p></p>
+                                <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">ul </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_imgScale baseBox"</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/science/u=1833417603,1662678131&amp;fm=26&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/science/u=1312334410,337918023&amp;fm=200&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/science/u=794945328,1514551785&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br>&lt;/<span style="color:#7f90aa;">ul</span>&gt;</pre>
+                                <p></p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div style="border-top:1px solid #ffffff;">
+                        <ul class="ytl_imgScale baseBox">
+                            <li class="img"><img src="images/science/u=1833417603,1662678131&fm=26&gp=0.jpg" alt=""></li>
+                            <li class="img"><img src="images/science/u=1312334410,337918023&fm=200&gp=0.jpg" alt=""></li>
+                            <li class="img"><img src="images/science/u=794945328,1514551785&fm=27&gp=0.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li style="width: 90%;margin: 50px auto">
+        <div style="background-color:#0c1021;padding: 30px 20px 20px">
+            <h3 style="font-size: 18px;line-height: 40px;">上下居中对齐显示</h3>
+            <div class="clearFix">
+                <dl class="clearFix" style="width:20%;float:left;padding: 20px 83px">
+                    <dt style="float:left;width: 30%">js</dt>
+                    <dd style="float: left;max-height:324px;overflow: auto;width: 70%;">
+                        <p></p>
+                        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><span style="color:#aeaeae;">/*上下居中对齐显示*/<br></span><span style="color:#ff6400;">$</span>(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">ytl_animation2</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">alignTBC</span>({<br> <span style="color:#ff6400;">timer</span><span style="color:#fbde2d;">:</span><span style="color:#d8fa3c;">2000<br></span>});</pre>
+                        <p></p>
+                    </dd>
+                </dl>
+                <dl class="clearFix" style="width:70%;float:left;border-left:1px solid #ffffff;padding: 20px 0">
+                    <dt style="float:left;width: 14%;text-align: center;">html</dt>
+                    <dd style="float: left;max-height:180px;overflow: auto;width: 70%;">
+                        <p></p>
+                        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_alignTBC ytl_animation2"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_prevNext"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_prev"</span>&gt;<span style="color:#d8fa3c;font-weight:bold;">&amp;lt;</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_next"</span>&gt;<span style="color:#d8fa3c;font-weight:bold;">&amp;gt;</span>&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"listCon"</span>&gt;<br> &lt;<span style="color:#7f90aa;">ul </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题一</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题二</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题三</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题四</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题五</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题六</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题七</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题八</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题九</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题十</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;/<span style="color:#7f90aa;">ul</span>&gt;<br> &lt;<span style="color:#7f90aa;">ol </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"clearFix"</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题一对应内容</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题二对应内容</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题三对应内容</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题四对应内容</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题五对应内容</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题六对应内容</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题七对应内容</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题八对应内容</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题九对应内容</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;<span style="font-weight:bold;">标题十对应内容</span>&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;/<span style="color:#7f90aa;">ol</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br>&lt;/<span style="color:#7f90aa;">div</span>&gt;</pre>
+                        <p></p>
+                    </dd>
+                </dl>
+            </div>
+            <div style="border-top:1px solid #ffffff;">
+                <div class="ytl_alignTBC ytl_animation2">
+                    <div class="ytl_prevNext">
+                        <div class="ytl_prev">&lt;</div>
+                        <div class="ytl_next">&gt;</div>
+                    </div>
+                    <div class="listCon">
+                        <ul class="clearFix">
+                            <li>标题一</li>
+                            <li>标题二</li>
+                            <li>标题三</li>
+                            <li>标题四</li>
+                            <li>标题五</li>
+                            <li>标题六</li>
+                            <li>标题七</li>
+                            <li>标题八</li>
+                            <li>标题九</li>
+                            <li>标题十</li>
+                        </ul>
+                        <ol class="clearFix">
+                            <li>标题一对应内容</li>
+                            <li>标题二对应内容</li>
+                            <li>标题三对应内容</li>
+                            <li>标题四对应内容</li>
+                            <li>标题五对应内容</li>
+                            <li>标题六对应内容</li>
+                            <li>标题七对应内容</li>
+                            <li>标题八对应内容</li>
+                            <li>标题九对应内容</li>
+                            <li>标题十对应内容</li>
                         </ol>
                     </div>
                 </div>
