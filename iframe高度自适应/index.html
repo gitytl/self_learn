@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<dl class="choose"><dd onclick="change('other1/other1.html')">other1</dd><dd onclick="change('other/other.html')">other</dd></dl>
+<div style="max-width: 1200px;margin: 0 auto">
+    <iframe onload="changeFrameHeight()" class="context" src="other1/other1.html" frameborder="0" scrolling="no" id="midFraim" style="width:100%;min-height:1000px"></iframe>
+</div>
+
+<script type="text/javascript">
+    function changeFrameHeight() {
+        var ifm = document.getElementById("midFraim");
+        var bHeight=0;
+        try{
+            bHeight = parseFloat(ifm.contentWindow.document.body.scrollHeight)+34;
+            ifm.height = bHeight;
+            ifm.width='100%';
+        }catch (ex){}
+    }
+    window.onresize = function() {
+        var time=setInterval(function () {
+            changeFrameHeight();
+        });
+    }
+    var time=setInterval(function () {
+        changeFrameHeight();
+    });
+    function change(url) {
+        var ifm = document.getElementById("midFraim").src = url;
+        var time=setInterval(function () {
+            changeFrameHeight();
+        });
+    }
+</script>
+</body>
+</html>

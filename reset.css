@@ -17,6 +17,12 @@ img{width:auto;max-width:100%;vertical-align:middle;}
 select {appearance: none;-moz-appearance: none;-webkit-appearance: none;padding-right: 14px;padding-left: 10px;}/*很关键：将默认的select选择框样式清除,并添加padding为下拉小箭头留出一点位置，避免被文字覆盖*/
 select::-ms-expand {display: none;}
 .scrollbar-nw::-webkit-scrollbar { /*滚动条整体样式*/width: 0; /*高宽分别对应横竖滚动条的尺寸*/ }
+.scrollbar-nw{
+    /*隐藏滚动条，当IE下溢出，仍然可以滚动*/
+    -ms-overflow-style:none;
+    /*火狐下隐藏滚动条*/
+    overflow:-moz-scrollbars-none;
+}
 .tst-all,.img-hover img{-webkit-transition: all 0.5s;-moz-transition: all 0.5s;-ms-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;}
 .img-hover img:hover{-webkit-transform: scale(1.05);-moz-transform: scale(1.05);-ms-transform: scale(1.05);-o-transform: scale(1.05);transform: scale(1.05);}
 .one-line{text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
