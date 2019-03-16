@@ -1,0 +1,26 @@
+.changePage1 {
+  text-align: center;
+  height: 38px;
+  margin: 30px 0 35px;
+  .con {
+    display: inline-block;
+  }
+  a{
+    width: 22px;
+    height: 22px;
+    float: left;
+    line-height: 22px;
+    color: #999999;
+    margin: 0 3px;
+    font-size: 14px;
+    border: 1px solid #e0e0e0;
+  }
+  .pre, .next {
+    font-family: "宋体";
+  }
+  .curr, a:hover {
+    background: #128b4b;
+    color: #ffffff;
+    border: 1px solid #128b4b;
+  }
+}

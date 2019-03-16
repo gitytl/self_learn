@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用布局</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="base.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+           $(".base_con").width($(window).width()-$(".base_nav").width()-30);
+           $(".base_con").css({"left":$(".base_nav").width()});
+           $(window).resize(function () {
+               $(".base_con").width($(window).width()-$(".base_nav").width()-30);
+               $(".base_con").css({"left":$(".base_nav").width()});
+           });
+           $(".base_nav").height($(window).height());
+            $(".base_nav li").removeClass('on').eq(0).addClass('on');
+            $(".base_con>li").removeClass('on').eq(0).addClass('on');
+            $(".base_nav li").click(function () {
+                $(".base_nav li").removeClass('on').eq($(this).index()).addClass('on');
+                $(".base_con>li").removeClass('on').eq($(this).index()).addClass('on');
+            });
+        });
+    </script>
+</head>
+<body>
+<ul class="base_nav">
+    <li>导航</li>
+    <li>图文列表</li>
+    <li>全文列表</li>
+    <li>人文列表</li>
+    <li>分页列表</li>
+    <li>按钮美化</li>
+    <li>动画特效</li>
+    <li>友情链接</li>
+    <li>多种形状</li>
+    <li>表单提交</li>
+    <li>快捷导航</li>
+</ul>
+<ol class="base_con">
+    <!--导航--><li>
+        <h3>展示效果如下：</h3>
+        <h4>导航一(nav1)</h4>
+        <div class="mainNav">
+    <ul class="mainNavCon clearFix">
+        <li class="on">
+            <a>网站首页</a>
+        </li>
+        <li>
+            <a>信息公开</a>
+            <div class="subNav">
+                <a>信息公开1</a>
+                <a>信息公开2</a>
+                <a>信息公开3</a>
+            </div>
+        </li>
+        <li>
+            <a>联系我们</a>
+            <div class="subNav">
+                <a>联系我们1</a>
+                <a>联系我们2</a>
+            </div>
+        </li>
+    </ul>
+</div>
+        <div class="js">
+            <p></p>
+            <pre style="margin: 0px; padding: 0px; list-style-type: none; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: rgb(12, 16, 33); color: rgb(248, 248, 248); font-family: 宋体; font-size: 9pt;">(<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(251, 222, 45);">function </span>() {<br style="margin: 0px; padding: 0px; list-style-type: none;"> <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">$</span>(<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(97, 206, 60);">'.</span><span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">mainNavCon li</span><span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(97, 206, 60);">'</span>).<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">hover</span>(<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(251, 222, 45);">function </span>() {<br style="margin: 0px; padding: 0px; list-style-type: none;"> <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">$</span>(<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(251, 222, 45);">this</span>).<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">find</span>(<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(97, 206, 60);">'.</span><span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">subNav</span><span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(97, 206, 60);">'</span>).<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">stop</span>(<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(251, 222, 45);">true</span>,<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(251, 222, 45);">true</span>).<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">hide</span>(<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(216, 250, 60);">500</span>);<br style="margin: 0px; padding: 0px; list-style-type: none;"> <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">$</span>(<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(251, 222, 45);">this</span>).<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">find</span>(<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(97, 206, 60);">'.</span><span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">subNav</span><span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(97, 206, 60);">'</span>).<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">stop</span>(<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(251, 222, 45);">true</span>,<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(251, 222, 45);">true</span>).<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">show</span>(<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(216, 250, 60);">500</span>);<br style="margin: 0px; padding: 0px; list-style-type: none;"> },<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(251, 222, 45);">function</span>(){<br style="margin: 0px; padding: 0px; list-style-type: none;"> <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">$</span>(<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(251, 222, 45);">this</span>).<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">find</span>(<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(97, 206, 60);">'.</span><span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">subNav</span><span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(97, 206, 60);">'</span>).<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">stop</span>(<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(251, 222, 45);">true</span>,<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(251, 222, 45);">true</span>).<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">hide</span>(<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(216, 250, 60);">500</span>);<br style="margin: 0px; padding: 0px; list-style-type: none;"> });<br style="margin: 0px; padding: 0px; list-style-type: none;">})();</pre>
+            <p></p>
+        </div>
+        <script>
+            $(function () {
+                    $('.mainNavCon li').hover(function () {
+                        $(this).find('.subNav').stop(true,true).hide(500);
+                        $(this).find('.subNav').stop(true,true).show(500);
+                    },function(){
+                        $(this).find('.subNav').stop(true,true).hide(500);
+                    });
+            });
+        </script>
+        <h4>导航二(nav2)</h4>
+        <div class="mainNav1">
+    <ul class="mainNavCon clearFix">
+        <li><a>首&nbsp;&nbsp;&nbsp;页</a></li>
+        <li>
+            <a>党群工作</a>
+            <div class="subNavBox">
+                <div class="subNav" style="background-image: url('../baseimg/img3.png')">
+                    <div>党群工作</div>
+                    <dl>
+                        <dd><a>廉政建设</a></dd>
+                        <dd><a>党建动态</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a>联系我们</a>
+            <div class="subNavBox">
+                <div class="subNav" style="background-image: url('../baseimg/img3.png')">
+                    <div>联系我们</div>
+                    <dl>
+                        <dd><a>在线留言</a></dd>
+                        <dd><a>互动信箱</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+        <div class="js">
+            <p></p>
+            <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">$(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">mainNav1</span><span style="color:#61ce3c;"> .</span><span style="color:#ff6400;">mainNavCon li</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">each</span>(<span style="color:#fbde2d;">function </span>(index) {<br> (index<span style="color:#fbde2d;">&lt;</span><span style="color:#d8fa3c;">5</span>)<span style="color:#fbde2d;">?</span>$(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">find</span>(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">subNavBox</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">css</span>({<span style="color:#61ce3c;">"left"</span><span style="color:#fbde2d;">:</span><span style="color:#d8fa3c;">0</span>,<span style="color:#61ce3c;">"right"</span><span style="color:#fbde2d;">:</span><span style="color:#61ce3c;">"auto"</span>})<span style="color:#fbde2d;">:</span>$(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">find</span>(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">subNavBox</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">css</span>({<span style="color:#61ce3c;">"right"</span><span style="color:#fbde2d;">:</span><span style="color:#d8fa3c;">0</span>,<span style="color:#61ce3c;">"left"</span><span style="color:#fbde2d;">:</span><span style="color:#61ce3c;">"auto"</span>});<br>});<br>$(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">mainNav1</span><span style="color:#61ce3c;"> .</span><span style="color:#ff6400;">mainNavCon li</span><span style="color:#61ce3c;">"</span>).hover(<span style="color:#fbde2d;">function </span>() {<br> $(<span style="color:#fbde2d;">this</span>).siblings().<span style="color:#ff6400;">css</span>({<span style="color:#61ce3c;">'background'</span><span style="color:#fbde2d;">:</span><span style="color:#61ce3c;">'none'</span>});<br> $(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">find</span>(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">subNavBox</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">stop</span>().slideDown();<br> $(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">css</span>({<span style="color:#61ce3c;">'background'</span><span style="color:#fbde2d;">:</span><span style="color:#61ce3c;">'#215341'</span>});<br>},<span style="color:#fbde2d;">function </span>() {<br> $(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">find</span>(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">subNavBox</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">stop</span>().slideUp();<br> ($(<span style="color:#fbde2d;">this</span>).hasClass(<span style="color:#61ce3c;">'on'</span>))<span style="color:#fbde2d;">?</span>$(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">css</span>({<span style="color:#61ce3c;">'background'</span><span style="color:#fbde2d;">:</span><span style="color:#61ce3c;">'#215341'</span>})<span style="color:#fbde2d;">:</span>$(<span style="color:#fbde2d;">this</span>).<span style="color:#ff6400;">css</span>({<span style="color:#61ce3c;">'background'</span><span style="color:#fbde2d;">:</span><span style="color:#61ce3c;">'none'</span>});<br>});</pre>
+            <p></p>
+        </div>
+        <script>
+            $(function () {
+                $(".mainNav1 .mainNavCon li").each(function (index) {
+                    (index<5)?$(this).find(".subNavBox").css({"left":0,"right":"auto"}):$(this).find(".subNavBox").css({"right":0,"left":"auto"});
+                });
+                $(".mainNav1 .mainNavCon li").hover(function () {
+                    $(this).siblings().css({'background':'none'});
+                    $(this).find(".subNavBox").stop().slideDown();
+                    $(this).css({'background':'#215341'});
+                },function () {
+                    $(this).find(".subNavBox").stop().slideUp();
+                    ($(this).hasClass('on'))?$(this).css({'background':'#215341'}):$(this).css({'background':'none'});
+                });
+            });
+        </script>
+        <h4>导航三(nav3)</h4>
+        <div class="mainNav2">
+    <ul class="mainNavCon clearFix">
+        <li class="on"><a>网站首页</a></li>
+        <li><a>医院概况</a></li>
+        <li><a>信息公开</a></li>
+        <li><a>联系我们</a></li>
+    </ul>
+    <canvas></canvas>
+</div>
+        <div class="js">
+            <p></p>
+            <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><span style="color:#ff6400;">particle</span>(<span style="color:#61ce3c;">'canvas'</span>);<br><span style="color:#aeaeae;">/*粒子效果*/<br></span><span style="color:#fbde2d;">function </span><span style="color:#ff6400;">particle</span>(canvas) {<br> <span style="color:#fbde2d;">var </span><span style="color:#ff6400;">canvas </span><span style="color:#fbde2d;">= </span><span style="font-style:italic;">document</span>.<span style="color:#ff6400;">querySelector</span>(canvas);<br> <span style="color:#ff6400;">canvas</span>.height <span style="color:#fbde2d;">= </span><span style="color:#d8fa3c;">60</span>;<br> <span style="color:#ff6400;">canvas</span>.width <span style="color:#fbde2d;">= </span><span style="color:#d8fa3c;">934</span>;<br> <span style="color:#ff6400;">c </span><span style="color:#fbde2d;">= </span><span style="color:#ff6400;">canvas</span>.<span style="color:#ff6400;">getContext</span>(<span style="color:#61ce3c;">'2d'</span>);<br><br> <span style="color:#fbde2d;">var </span><span style="color:#ff6400;">mouse </span><span style="color:#fbde2d;">= </span>{<br> <span style="color:#ff6400;">x</span><span style="color:#fbde2d;">: undefined</span>,<br> <span style="color:#ff6400;">y</span><span style="color:#fbde2d;">: undefined<br></span><span style="color:#fbde2d;"> </span>};<br> <span style="color:#ff6400;">canvas</span>.<span style="color:#ff6400;">addEventListener</span>(<span style="color:#61ce3c;">'mousemove'</span>, <span style="color:#fbde2d;">function </span>(event) {<br> <span style="color:#ff6400;">mouse</span>.<span style="color:#ff6400;">x </span><span style="color:#fbde2d;">= </span>event.offsetX;<br> <span style="color:#ff6400;">mouse</span>.<span style="color:#ff6400;">y </span><span style="color:#fbde2d;">= </span>event.offsetY;<br> <span style="color:#ff6400;">drawCircles</span>();<br> });<br> <span style="color:#fbde2d;">var </span><span style="color:#ff6400;">circleArray </span><span style="color:#fbde2d;">= </span>[];<br> <span style="color:#fbde2d;">var </span><span style="color:#ff6400;">colorArray </span><span style="color:#fbde2d;">= </span>[<br> <span style="color:#61ce3c;">'142,198,64'<br></span><span style="color:#61ce3c;"> </span>];<br> <span style="color:#fbde2d;">var </span><span style="color:#ff6400;">frame </span><span style="color:#fbde2d;">= </span><span style="color:#d8fa3c;">0</span>;<br> <span style="color:#ff6400;">animate</span>();<br> <span style="color:#fbde2d;">function </span><span style="color:#ff6400;">drawCircles</span>(){<br> <span style="color:#fbde2d;">for </span>(<span style="color:#fbde2d;">let </span><span style="color:#ff6400;">i </span><span style="color:#fbde2d;">= </span><span style="color:#d8fa3c;">0</span>; <span style="color:#ff6400;">i </span><span style="color:#fbde2d;">&lt; </span><span style="color:#d8fa3c;">2</span>; <span style="color:#ff6400;">i</span><span style="color:#fbde2d;">++</span>) {<br> <span style="color:#fbde2d;">let </span><span style="color:#ff6400;">radius </span><span style="color:#fbde2d;">= </span><span style="font-style:italic;">Math</span>.<span style="color:#ff6400;">floor</span>(<span style="font-style:italic;">Math</span>.<span style="color:#ff6400;">random</span>() <span style="color:#fbde2d;">* </span><span style="color:#d8fa3c;">8</span>) <span style="color:#fbde2d;">+ </span><span style="color:#d8fa3c;">2</span>;<span style="color:#aeaeae;">/*调整粒子大小*/<br></span><span style="color:#aeaeae;"> </span><span style="color:#fbde2d;">let </span><span style="color:#ff6400;">vx </span><span style="color:#fbde2d;">= </span>(<span style="font-style:italic;">Math</span>.<span style="color:#ff6400;">random</span>() <span style="color:#fbde2d;">* </span><span style="color:#d8fa3c;">2</span>) <span style="color:#fbde2d;">- </span><span style="color:#d8fa3c;">1</span>;<br> <span style="color:#fbde2d;">let </span><span style="color:#ff6400;">vy </span><span style="color:#fbde2d;">= </span>(<span style="font-style:italic;">Math</span>.<span style="color:#ff6400;">random</span>() <span style="color:#fbde2d;">* </span><span style="color:#d8fa3c;">2</span>) <span style="color:#fbde2d;">- </span><span style="color:#d8fa3c;">1</span>;<br> <span style="color:#fbde2d;">let </span><span style="color:#ff6400;">spawnFrame </span><span style="color:#fbde2d;">= </span><span style="color:#ff6400;">frame</span>;<br> <span style="color:#fbde2d;">let </span><span style="color:#ff6400;">rgb </span><span style="color:#fbde2d;">= </span><span style="color:#ff6400;">colorArray</span>[<span style="font-style:italic;">Math</span>.<span style="color:#ff6400;">floor</span>(<span style="font-style:italic;">Math</span>.<span style="color:#ff6400;">random</span>() <span style="color:#fbde2d;">* </span><span style="color:#ff6400;">colorArray</span>.length)];<br> <span style="color:#fbde2d;">let </span><span style="color:#ff6400;">life </span><span style="color:#fbde2d;">= </span><span style="color:#d8fa3c;">50</span>;<br> <span style="color:#ff6400;">circleArray</span>.<span style="color:#ff6400;">push</span>(<span style="color:#fbde2d;">new </span><span style="color:#ff6400;">Circle</span>(<span style="color:#ff6400;">mouse</span>.<span style="color:#ff6400;">x</span>, <span style="color:#ff6400;">mouse</span>.<span style="color:#ff6400;">y</span>, <span style="color:#ff6400;">radius</span>, <span style="color:#ff6400;">vx</span>, <span style="color:#ff6400;">vy</span>, <span style="color:#ff6400;">rgb</span>, <span style="color:#d8fa3c;">1</span>, <span style="color:#ff6400;">spawnFrame</span>, <span style="color:#ff6400;">life</span>));<br><br> }<br> }<br> <span style="color:#fbde2d;">function </span><span style="color:#ff6400;">animate</span>() {<br> <span style="color:#ff6400;">requestAnimationFrame</span>(<span style="color:#ff6400;">animate</span>);<br> <span style="color:#ff6400;">frame </span><span style="color:#fbde2d;">+= </span><span style="color:#d8fa3c;">1</span>;<br> <span style="color:#ff6400;">c</span>.<span style="color:#ff6400;">clearRect</span>(<span style="color:#d8fa3c;">0</span>, <span style="color:#d8fa3c;">0</span>, <span style="font-style:italic;">innerWidth</span>, <span style="font-style:italic;">innerHeight</span>);<br> <span style="color:#fbde2d;">for </span>(<span style="color:#fbde2d;">let </span><span style="color:#ff6400;">i </span><span style="color:#fbde2d;">= </span><span style="color:#d8fa3c;">0</span>; <span style="color:#ff6400;">i </span><span style="color:#fbde2d;">&lt; </span><span style="color:#ff6400;">circleArray</span>.length; <span style="color:#ff6400;">i</span><span style="color:#fbde2d;">++ </span>){<br> <span style="color:#ff6400;">circleArray</span>[<span style="color:#ff6400;">i</span>].<span style="color:#ff6400;">update</span>();<br> }<br> }<br> <span style="color:#fbde2d;">function </span><span style="color:#ff6400;">Circle</span>(x, y, radius, vx, vy, rgb, opacity, birth, life){<br> <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">x </span><span style="color:#fbde2d;">= </span>x;<br> <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">y </span><span style="color:#fbde2d;">= </span>y;<br> <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">radius </span><span style="color:#fbde2d;">= </span>radius;<br> <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">minRadius </span><span style="color:#fbde2d;">= </span>radius;<br> <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">vx </span><span style="color:#fbde2d;">= </span>vx;<br> <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">vy </span><span style="color:#fbde2d;">= </span>vy;<br> <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">birth </span><span style="color:#fbde2d;">= </span>birth;<br> <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">life </span><span style="color:#fbde2d;">= </span>life;<br> <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">opacity </span><span style="color:#fbde2d;">= </span>opacity;<br><br> <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">draw </span><span style="color:#fbde2d;">= function</span>() {<br> <span style="color:#ff6400;">c</span>.<span style="color:#ff6400;">beginPath</span>();<br> <span style="color:#ff6400;">c</span>.<span style="color:#ff6400;">arc</span>(<span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">x</span>, <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">y</span>, <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">radius</span>, <span style="font-style:italic;">Math</span>.PI <span style="color:#fbde2d;">* </span><span style="color:#d8fa3c;">2</span>, <span style="color:#fbde2d;">false</span>);<br> <span style="color:#ff6400;">c</span>.fillStyle <span style="color:#fbde2d;">= </span><span style="color:#61ce3c;">'rgba(' </span><span style="color:#fbde2d;">+ </span>rgb <span style="color:#fbde2d;">+</span><span style="color:#61ce3c;">','</span><span style="color:#fbde2d;">+ this</span>.<span style="color:#ff6400;">opacity </span><span style="color:#fbde2d;">+</span><span style="color:#61ce3c;">')'</span>;<br> <span style="color:#ff6400;">c</span>.<span style="color:#ff6400;">fill</span>();<br> }<br><br> <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">update </span><span style="color:#fbde2d;">= function</span>(){<br> <span style="color:#fbde2d;">if </span>(<span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">x </span><span style="color:#fbde2d;">+ this</span>.<span style="color:#ff6400;">radius </span><span style="color:#fbde2d;">&gt; </span><span style="font-style:italic;">innerWidth </span><span style="color:#fbde2d;">|| this</span>.<span style="color:#ff6400;">x </span><span style="color:#fbde2d;">- this</span>.<span style="color:#ff6400;">radius </span><span style="color:#fbde2d;">&lt; </span><span style="color:#d8fa3c;">0</span>) {<br> <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">vx </span><span style="color:#fbde2d;">= -this</span>.<span style="color:#ff6400;">vx</span>;<br> }<br><br> <span style="color:#fbde2d;">if </span>(<span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">y </span><span style="color:#fbde2d;">+ this</span>.<span style="color:#ff6400;">radius </span><span style="color:#fbde2d;">&gt; </span><span style="font-style:italic;">innerHeight </span><span style="color:#fbde2d;">|| this</span>.<span style="color:#ff6400;">y </span><span style="color:#fbde2d;">- this</span>.<span style="color:#ff6400;">radius </span><span style="color:#fbde2d;">&lt; </span><span style="color:#d8fa3c;">0</span>) {<br> <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">vy </span><span style="color:#fbde2d;">= -this</span>.<span style="color:#ff6400;">vy</span>;<br> }<br><br> <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">x </span><span style="color:#fbde2d;">+= this</span>.<span style="color:#ff6400;">vx</span>;<br> <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">y </span><span style="color:#fbde2d;">+= this</span>.<span style="color:#ff6400;">vy</span>;<br><br> <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">opacity </span><span style="color:#fbde2d;">= </span><span style="color:#d8fa3c;">1</span><span style="color:#fbde2d;">- </span>(((<span style="color:#ff6400;">frame </span><span style="color:#fbde2d;">- this</span>.<span style="color:#ff6400;">birth</span>) <span style="color:#fbde2d;">* </span><span style="color:#d8fa3c;">1</span>) <span style="color:#fbde2d;">/ this</span>.<span style="color:#ff6400;">life</span>);<br><br> <span style="color:#fbde2d;">if </span>(<span style="color:#ff6400;">frame </span><span style="color:#fbde2d;">&gt; this</span>.<span style="color:#ff6400;">birth </span><span style="color:#fbde2d;">+ this</span>.<span style="color:#ff6400;">life</span>){<br> <span style="color:#fbde2d;">for </span>(<span style="color:#fbde2d;">let </span><span style="color:#ff6400;">i </span><span style="color:#fbde2d;">= </span><span style="color:#d8fa3c;">0</span>; <span style="color:#ff6400;">i </span><span style="color:#fbde2d;">&lt; </span><span style="color:#ff6400;">circleArray</span>.length; <span style="color:#ff6400;">i</span><span style="color:#fbde2d;">++</span>){<br> <span style="color:#fbde2d;">if </span>(<span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">birth </span><span style="color:#fbde2d;">== </span><span style="color:#ff6400;">circleArray</span>[<span style="color:#ff6400;">i</span>].<span style="color:#ff6400;">birth </span><span style="color:#fbde2d;">&amp;&amp; this</span>.<span style="color:#ff6400;">life </span><span style="color:#fbde2d;">== </span><span style="color:#ff6400;">circleArray</span>[<span style="color:#ff6400;">i</span>].<span style="color:#ff6400;">life</span>){<br> <span style="color:#ff6400;">circleArray</span>.<span style="color:#ff6400;">splice</span>(<span style="color:#ff6400;">i</span>, <span style="color:#d8fa3c;">1</span>);<br> <span style="color:#fbde2d;">break</span>;<br> }<br> }<br> } <span style="color:#fbde2d;">else</span>{<br> <span style="color:#fbde2d;">this</span>.<span style="color:#ff6400;">draw</span>();<br> }<br> }<br><br> }<br>}</pre>
+            <p></p>
+        </div>
+        <script>
+            $(function () {
+                particle('canvas');
+                /*粒子效果*/
+                function particle(canvas) {
+                    var canvas = document.querySelector(canvas);
+                    canvas.height = 60;
+                    canvas.width = 934;
+                    c = canvas.getContext('2d');
+
+                    var mouse = {
+                        x: undefined,
+                        y: undefined
+                    };
+                    canvas.addEventListener('mousemove', function (event) {
+                        mouse.x = event.offsetX;
+                        mouse.y = event.offsetY;
+                        drawCircles();
+                    });
+                    var circleArray = [];
+                    var colorArray = [
+                        '142,198,64'
+                    ];
+                    var frame = 0;
+                    animate();
+                    function drawCircles(){
+                        for (let i = 0; i < 2; i++) {
+                            let radius = Math.floor(Math.random() * 8) + 2;/*调整粒子大小*/
+                            let vx = (Math.random() * 2) - 1;
+                            let vy = (Math.random() * 2) - 1;
+                            let spawnFrame = frame;
+                            let rgb = colorArray[Math.floor(Math.random() * colorArray.length)];
+                            let life = 50;
+                            circleArray.push(new Circle(mouse.x, mouse.y, radius, vx, vy, rgb, 1, spawnFrame, life));
+
+                        }
+                    }
+                    function animate() {
+                        requestAnimationFrame(animate);
+                        frame += 1;
+                        c.clearRect(0, 0, innerWidth, innerHeight);
+                        for (let i = 0; i < circleArray.length; i++ ){
+                            circleArray[i].update();
+                        }
+                    }
+                    function Circle(x, y, radius, vx, vy, rgb, opacity, birth, life){
+                        this.x = x;
+                        this.y = y;
+                        this.radius = radius;
+                        this.minRadius = radius;
+                        this.vx = vx;
+                        this.vy = vy;
+                        this.birth = birth;
+                        this.life = life;
+                        this.opacity = opacity;
+
+                        this.draw = function() {
+                            c.beginPath();
+                            c.arc(this.x, this.y, this.radius, Math.PI * 2, false);
+                            c.fillStyle = 'rgba(' + rgb +','+ this.opacity +')';
+                            c.fill();
+                        }
+
+                        this.update = function(){
+                            if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
+                                this.vx = -this.vx;
+                            }
+
+                            if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
+                                this.vy = -this.vy;
+                            }
+
+                            this.x += this.vx;
+                            this.y += this.vy;
+
+                            this.opacity = 1- (((frame - this.birth) * 1) / this.life);
+
+                            if (frame > this.birth + this.life){
+                                for (let i = 0; i < circleArray.length; i++){
+                                    if (this.birth == circleArray[i].birth && this.life == circleArray[i].life){
+                                        circleArray.splice(i, 1);
+                                        break;
+                                    }
+                                }
+                            } else{
+                                this.draw();
+                            }
+                        }
+
+                    }
+                }
+            });
+        </script>
+    </li>
+    <!--图文列表--><li>
+        <h3>展示效果如下：</h3>
+        <div class="inlineblock">
+            <h4>列表一(list1)</h4>
+            <ul class="picWordDesc">
+    <li>
+        <a class="img"><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3109714868,298594192&fm=27&gp=0.jpg" alt=""/></a>
+        <div class="con">
+            <a class="tit">花卉病虫害冬季怎样防治 花卉病虫害冬季的防治措施</a>
+            <p class="desc">花卉，具有观赏价值的草本植物，是用来欣赏的植物的统称，喜阳且耐寒，具有繁殖功能的短枝，有许多种类。典型的花</p>
+            <span class="date">【2017-11-12】</span>
+            <a class="more">查看更多</a>
+        </div>
+    </li>
+</ul>
+        </div>
+        <div class="inlineblock">
+            <h4>列表二(list2)</h4>
+            <ul class="picWordDesc3 clearFix">
+    <li>
+        <div class="img"><img src="../baseimg/img3.png" alt=""/><div class="opacity"></div></div>
+        <a class="tit">四维彩超技术</a>
+        <div class="desc">四维彩超就是四维成像技术（4D），是在三维的基础上加上时间维度参数</div>
+    </li>
+</ul>
+        </div>
+        <div class="inlineblock">
+            <h4>列表三(list3)</h4>
+            <ul class="picWord clearFix">
+    <li>
+        <a class="con">
+            <div class="img"><img src="../baseimg/img3.png" alt="家装案例图片"></div>
+            <p class="tit">1903公园家居装饰经典木门</p>
+            <div class="bg"></div>
+        </a>
+    </li>
+</ul>
+        </div>
+        <div class="inlineblock">
+            <h4>列表四(list4)</h4>
+            <ul class="picWordDesc4">
+    <li>
+        <div class="img"><img src="../baseimg/img3.png" alt="新闻图片"></div>
+        <div class="con">
+            <a class="tit">2018同源木业官网全新上线</a>
+            <p class="date">2017-08-27</p>
+            <div class="desc">业制作高中档实木门及套装门系列及建材、地板、线条等木制品产品的现代化企业，公司从事木材加工已有20多年历史，拥有7000多平米的生产基地，具有先进的管理水平和雄厚的技术力量。</div>
+            <a class="more">View&emsp;more</a>
+        </div>
+    </li>
+</ul>
+        </div>
+    </li>
+    <!--全文列表--><li>
+        <h3>展示效果如下：</h3>
+        <div class="inlineblock">
+            <h4>列表五(list5)</h4>
+            <ul class="wordList">
+    <li>
+        <dl class="date">
+            <dd>07</dd>
+            <dd>2018</dd>
+            <dt>06</dt>
+        </dl>
+        <div class="con">
+            <a class="tit">不忘初心，搞好科研，服务疾控 保障人民健康——高福院士出席病毒病所中心组学习习近...平总书记“七一”重要讲话精神. </a>
+            <p class="tip"><span>发布者：弥勒疾控中心</span><input type="button"><span>1256&nbsp;&nbsp;浏览</span></p>
+            <div class="desc"> 2016年7月12日下午，病毒病所党委组织理论学习中心组成员在新址二楼会议室，集体学习习近平总书记在庆祝中国共产党成立95周年大会上的重要讲话，所党政领导班子成员科室正、副主任，支部书记30余人参加了学习，高福院士在百忙之中抽出时间参加学习。会议由党委书记武桂珍主持。纪委书记白雪平出席...并担任评委。...问题，确保病原微生物的安全运输，中国疾控中心定于2018年7月在吉林省长春市举办2018年第二期全国病原微生物运输管理培训班，该培训班为国家级继续医学教育项目，项目编号为2018-12-07-180(国)，参会人员可授予国家I类继续医学教育学分6分。具体通知如下： </div>
+        </div>
+    </li>
+</ul>
+        </div>
+        <div class="inlineblock">
+            <h4>列表六(list6)</h4>
+            <ul class="wordList2">
+    <li>
+        <dl>
+            <dt><a class="tit">密云一男子扎伤5人撞伤9人 已致1人死亡仍在潜逃</a></dt>
+            <dd class="date">2017-06-28</dd>
+            <dd class="desc">据警方通报，7月23日15时许，在北京市密云区发生一起刑事案件。一男子持剪刀在巨各庄镇一搅拌站内扎伤5人后，驾驶面包车逃跑。逃跑过程中，在密兴路(旧路)久远庄至康各庄路段，先后撞伤9人，造成其中1人死亡。</dd>
+            <dd class="more">more>></dd>
+        </dl>
+    </li>
+</ul>
+        </div>
+        <div class="inlineblock">
+            <h4>列表七(list7)</h4>
+            <ul class="wordList3">
+    <li>
+        <dl class="date">
+            <dt>15</dt>
+            <dd>2017-02</dd>
+        </dl>
+        <dl class="con">
+            <dt><a class="tit">南涧县妇幼保健院积极应对情人节婚检高潮</a></dt>
+            <dd class="desc">2月14日是西方的一个传统节日 — 情人节，很多恋人选择这天登记结婚，我院婚检中心排...</dd>
+        </dl>
+        <a class="more"></a>
+    </li>
+</ul>
+        </div>
+        <div class="inlineblock">
+            <h4>列表八(list8)</h4>
+            <ul class="wordList4">
+    <li>
+        <dl class="date">
+            <dt>03</dt>
+            <dd>2016-03</dd>
+        </dl>
+        <div class="con">
+            <a class="tit">招标信息：牟定县人民医院住院大楼招标中</a>
+            <p class="desc">招标信息：牟定县人民医院住院大楼招标中</p>
+        </div>
+    </li>
+</ul>
+        </div>
+        <div class="inlineblock">
+            <h4>列表九(list9)</h4>
+            <ul class="wordList5">
+    <li>
+        <a class="tit">医保政策十一</a><span class="date">2017-08-08</span>
+    </li>
+</ul>
+        </div>
+        <div class="inlineblock">
+            <h4>列表十(list10)</h4>
+            <ul class="wordDetailList">
+    <li>
+        <div class="titleCon">
+            <span class="tit">网页设计师</span>
+            <span>招聘2人</span>
+            <div>详情</div>
+        </div>
+        <div class="detail">
+            <p>我们不是在找美工，我们是在找一个有逼格的人，我们都厌倦这个世界的庸常，请用</p>
+            <p>你手中的画笔，描绘我们未来希望-we need you</p>
+            <p>爱搞机、追求完美、对细节执着、对品牌有见地、热情奔放、灵感爆棚</p>
+        </div>
+    </li>
+</ul>
+        </div>
+        <script>
+            $(function () {
+                $(".wordDetailList .titleCon").on('click',function(){
+                    $(this).siblings().slideToggle();
+                    if($(this).parent().hasClass('on')){
+                        $(this).parent().removeClass("on");
+                        $(this).find("div").text("详情");
+                    }
+                    else {
+                        $(this).parent().addClass("on");
+                        $(this).find("div").text("收起");
+                    }
+                });
+            });
+        </script>
+    </li>
+    <!--人文列表--><li>
+        <h3>展示效果如下：</h3>
+        <div class="inlineblock">
+            <h4>列表十一(list11)</h4>
+            <ul class="personNameDesc clearFix">
+    <li class="list">
+        <a class="img"><img src="../baseimg/img3.png" alt=""/></a>
+        <a class="name">张医生</a>
+        <div class="line"></div>
+        <div class="job">儿科&emsp;&emsp;主治医师</div>
+        <div class="desc">擅长：儿科、其他等儿童综合性疾病</div>
+        <a class="href">立即咨询</a>
+    </li>
+</ul>
+        </div>
+        <div class="inlineblock">
+            <h4>列表十二(list12)</h4>
+            <ul class="personNameDesc1 clearFix">
+    <li>
+        <a class="img"><img src="../baseimg/img3.png" alt=""></a>
+        <div class="con">
+            <a class="name">唐 衡</a>
+            <div class="job">院长/副主任医师</div>
+            <div class="desc">简介：罗平宜康医院院长，云南省第一人民医院普外副主任，毕业于昆明医科大学，曾在云南省第一人民医院……</div>
+            <a class="consult">立即咨询</a>
+        </div>
+    </li>
+</ul>
+        </div>
+        <div class="inlineblock">
+            <h4>列表十三(list13)</h4>
+            <ul class="personNameDesc2">
+    <li>
+        <a class="img"><img src="../baseimg/img3.png" alt=""></a>
+        <div class="con">
+            <div class="nameMore clearFix">
+                <a class="name">杨绍银</a>
+                <a class="more">more+</a>
+            </div>
+            <p class="job"><span class="tip">职务：</span>主任医师、外科主任</p>
+            <p class="desc"><span class="tip">简介：</span>大外科主任，主任医师，教授，大学本科学历。毕业于四川大学（原华西医科大学）临床医学专业，毕业后从事大外科临床工作40余年，从事骨科专业20余年......</p>
+        </div>
+    </li>
+</ul>
+        </div>
+        <div class="inlineblock">
+            <h4>列表十四(list14)</h4>
+            <ul class="personNameDesc3">
+    <li>
+        <a class="img"><img src="../baseimg/img3.png" alt=""></a>
+        <div class="con">
+            <a class="name"><span>康有福</span>&nbsp;&nbsp;&nbsp;69岁&nbsp;&nbsp;彝族</a>
+            <p class="desc">2017年11月24日因高血压引起脑溢血产生半身不遂，在XX州人民医院做微创手术，手术后16天出院，转到XX州中医院，在那里治疗4个多月未果，出院在家休养20多天2017年11月24日因高血压引起脑溢血产生半身不遂，在XX州人民医院做微创手术，手术后16天出院，转到XX州中医院，在那里治疗4个多月未果，出院在家休养20多天2017年11月24日因高血压引起脑溢血产生半身不遂，在XX州人民医院做微创手术，手术后16天出院，转到XX州中医院，在那里治疗4个多月未果，出院在家休养20多天</p>
+        </div>
+    </li>
+</ul>
+        </div>
+    </li>
+    <!--分页列表--><li>
+        <h3>展示效果如下：</h3>
+        <div class="inlineblock">
+            <h4>列表十五(list15)</h4>
+            <div class="changePage">
+    <div class="con">
+        <a class="pre">&lt</a>
+        <a>1</a>
+        <a class="on">2</a>
+        <a>3</a>
+        <a>4</a>
+        <a>5</a>
+        <a>6</a>
+        <a>7</a>
+        <a>8</a>
+        <a>9</a>
+        <a>10</a>
+        <a>11</a>
+        <a>12</a>
+        <a>13</a>
+        <a>14</a>
+        <a class="next">&gt</a>
+    </div>
+</div>
+        </div>
+        <div class="inlineblock">
+            <h4>列表十六(list16)</h4>
+            <div class="pageChange">
+    <div class="con">
+        <a class="prev">上一页</a>
+        <a>1</a>
+        <a class="on">2</a>
+        <a>3</a>
+        <a class="next">下一页</a>
+    </div>
+</div>
+        </div>
+        <div class="inlineblock">
+            <h4>列表十七(list17)</h4>
+            <div class="changePage1">
+    <div class="con">
+        <a class="pre">&lt</a>
+        <a>1</a>
+        <a class="curr">2</a>
+        <a>3</a>
+        <a>4</a>
+        <a>5</a>
+        <a>6</a>
+        <a class="next">&gt</a>
+    </div>
+</div>
+        </div>
+        <div class="inlineblock">
+            <h4>列表十八(list18)</h4>
+            <div class="pageChange2">
+    <a class="pre">上一页</a>
+    <a class="curr">1</a>
+    <a>2</a>
+    <a>3</a>
+    <a>4</a>
+    <a class="next">下一页</a>
+</div>
+        </div>
+    </li>
+    <!--按钮美化--><li>
+        <h3>展示效果如下：</h3>
+        <div class="inlineblock">
+            <h4>按钮一(radio1)</h4>
+            <div class="ytl_choose">
+    <form action="" method="get">
+        <h2>复选框:</h2>
+        <span class="ytl_check">
+         <input type="checkbox" id="check_1">
+         <label for="check_1"><span>选项1</span></label>
+        </span>
+                <br><br>
+                <span class="ytl_check">
+         <input type="checkbox" id="check_2">
+         <label for="check_2"><span>选项2</span></label>
+        </span>
+    </form>
+</div>
+        </div>
+        <div class="inlineblock">
+            <h4>按钮二(radio2)</h4>
+            <div class="ytl_choose">
+    <form action="" method="get">
+        <h2>单选框:</h2>
+        <span class="ytl_radio">
+         <input type="radio" id="radio_1" name="radio" checked="">
+         <label for="radio_1"><span>选项1</span></label>
+        </span>
+                <br><br>
+                <span class="ytl_radio">
+         <input type="radio" id="radio_2" name="radio">
+         <label for="radio_2"><span>选项2</span></label>
+        </span>
+    </form>
+</div>
+        </div>
+    </li>
+    <!--动画特效--><li>
+        <h3>展示效果如下：</h3>
+    <div>
+        <h4>扩散的点(cssanimation1)</h4>
+        <div class="point">
+    <div class="point1"></div>
+    <div class="point2"></div>
+    <div class="point3"></div>
+</div>
+    </div>
+    <div>
+        <h4>鼠标移入效果(hover)</h4>
+        <div class="inlineblock">
+    <div class="hover1"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">hover1</span>{<br> <span style="color:#8da6ce;">background</span>:<span style="color:#6897bb;">#1AAB8A</span>;<br> <span style="color:#8da6ce;">color</span>:<span style="color:#6897bb;">#fff</span>;<br> <span style="color:#8da6ce;">border</span>:<span style="color:#8da6ce;font-weight:bold;">none</span>;<br> <span style="color:#8da6ce;">position</span>:<span style="color:#8da6ce;font-weight:bold;">relative</span>;<br> <span style="color:#8da6ce;">height</span>:<span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">font-size</span>:<span style="color:#d8fa3c;">1.6</span><span style="color:#8da6ce;font-weight:bold;">em</span>;<br> <span style="color:#8da6ce;">padding</span>:<span style="color:#d8fa3c;">0 2</span><span style="color:#8da6ce;font-weight:bold;">em</span>;<br> <span style="color:#8da6ce;">cursor</span>:<span style="color:#8da6ce;font-weight:bold;">pointer</span>;<br> <span style="color:#8da6ce;">transition</span>:<span style="color:#d8fa3c;">800</span><span style="color:#8da6ce;font-weight:bold;">ms ease all</span>;<br> <span style="color:#8da6ce;">outline</span>:<span style="color:#8da6ce;font-weight:bold;">none</span>;<br> <span style="color:#ff6400;">&amp;</span>:<span style="color:#ff6400;">hover</span>{<br> <span style="color:#8da6ce;">background</span>:<span style="color:#6897bb;">#fff</span>;<br> <span style="color:#8da6ce;">color</span>:<span style="color:#6897bb;">#1AAB8A</span>;<br> }<br> <span style="color:#ff6400;">&amp;</span>:<span style="color:#ff6400;">before</span>,<span style="color:#ff6400;">&amp;</span>:<span style="color:#ff6400;">after</span>{<br> <span style="color:#8da6ce;">content</span>:<span style="color:#61ce3c;">''</span>;<br> <span style="color:#8da6ce;">position</span>:<span style="color:#8da6ce;font-weight:bold;">absolute</span>;<br> <span style="color:#8da6ce;">top</span>:<span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">right</span>:<span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">height</span>:<span style="color:#d8fa3c;">2</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">width</span>:<span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#1AAB8A</span>;<br> <span style="color:#8da6ce;">transition</span>:<span style="color:#d8fa3c;">400</span><span style="color:#8da6ce;font-weight:bold;">ms ease all</span>;<br> }<br> <span style="color:#ff6400;">&amp;</span>:<span style="color:#ff6400;">after</span>{<br> <span style="color:#8da6ce;">right</span>:<span style="color:#8da6ce;font-weight:bold;">inherit</span>;<br> <span style="color:#8da6ce;">top</span>:<span style="color:#8da6ce;font-weight:bold;">inherit</span>;<br> <span style="color:#8da6ce;">left</span>:<span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">bottom</span>:<span style="color:#d8fa3c;">0</span>;<br> }<br> <span style="color:#ff6400;">&amp;</span>:<span style="color:#ff6400;">hover</span>:<span style="color:#ff6400;">before</span>,<span style="color:#ff6400;">&amp;</span>:<span style="color:#ff6400;">hover</span>:<span style="color:#ff6400;">after</span>{<br> <span style="color:#8da6ce;">width</span>:<span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">transition</span>:<span style="color:#d8fa3c;">800</span><span style="color:#8da6ce;font-weight:bold;">ms ease all</span>;<br> }<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <a class="hover2"></a>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">hover2</span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">300</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#60eeff</span>;<br> <span style="color:#ff6400;">&amp;</span>:<span style="color:#ff6400;">hover</span>{<br> <span style="color:#ff6400;">&amp;</span>:<span style="color:#ff6400;">before</span>{<br> <span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotateX</span>(<span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotateX</span>(<span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">rotateX</span>(<span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">rotateX</span>(<span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">transform</span>: <span style="color:#8da6ce;">rotateX</span>(<span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> }<br> }<br> <span style="color:#ff6400;">&amp;</span>:<span style="color:#ff6400;">before</span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#999999</span>;<br> <span style="color:#8da6ce;">display</span>: <span style="color:#8da6ce;font-weight:bold;">block</span>;<br> <span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotateX</span>(<span style="color:#d8fa3c;">90</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotateX</span>(<span style="color:#d8fa3c;">90</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">rotateX</span>(<span style="color:#d8fa3c;">90</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">rotateX</span>(<span style="color:#d8fa3c;">90</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">transform</span>: <span style="color:#8da6ce;">rotateX</span>(<span style="color:#d8fa3c;">90</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-webkit-transition</span>: <span style="color:#8da6ce;font-weight:bold;">all </span><span style="color:#d8fa3c;">0.3</span><span style="color:#8da6ce;font-weight:bold;">s</span>;<br> <span style="color:#8da6ce;">-moz-transition</span>: <span style="color:#8da6ce;font-weight:bold;">all </span><span style="color:#d8fa3c;">0.3</span><span style="color:#8da6ce;font-weight:bold;">s</span>;<br> <span style="color:#8da6ce;">-ms-transition</span>: <span style="color:#8da6ce;font-weight:bold;">all </span><span style="color:#d8fa3c;">0.3</span><span style="color:#8da6ce;font-weight:bold;">s</span>;<br> <span style="color:#8da6ce;">-o-transition</span>: <span style="color:#8da6ce;font-weight:bold;">all </span><span style="color:#d8fa3c;">0.3</span><span style="color:#8da6ce;font-weight:bold;">s</span>;<br> <span style="color:#8da6ce;">transition</span>: <span style="color:#8da6ce;font-weight:bold;">all </span><span style="color:#d8fa3c;">0.3</span><span style="color:#8da6ce;font-weight:bold;">s</span>;<br> }<br>}</pre>
+        <p></p>
+    </div>
+</div>
+    </div>
+    </li>
+    <!--友情链接--><li>
+        <h3>展示效果如下：</h3>
+        <div class="inlineblock">
+            <h4>友情链接(friendlink1)</h4>
+            <div class="friend-link">
+    <div class="friend-con wm">
+        <span>友情链接：</span>
+        <div class="more">查看更多</div>
+        <div class="con">
+            <ul>
+                <li><a href="http://www.nhc.gov.cn/" target="_blank">国家卫生健康委员会</a></li>
+                <li><a href="http://www.pbh.yn.gov.cn/wjwWebsite/web/index" target="_blank">云南省卫生健康委员会</a></li>
+                <li><a href="http://www.chuanhai.net/" target="_blank">川海科技</a></li>
+                <li><a href="http://www.nhc.gov.cn/" target="_blank">国家卫生健康委员会</a></li>
+                <li><a href="http://www.pbh.yn.gov.cn/wjwWebsite/web/index" target="_blank">云南省卫生健康委员会</a></li>
+                <li><a href="http://www.chuanhai.net/" target="_blank">川海科技</a></li>
+                <li><a href="http://www.nhc.gov.cn/" target="_blank">国家卫生健康委员会</a></li>
+                <li><a href="http://www.pbh.yn.gov.cn/wjwWebsite/web/index" target="_blank">云南省卫生健康委员会</a></li>
+                <li><a href="http://www.chuanhai.net/" target="_blank">川海科技</a></li>
+                <li><a href="http://www.nhc.gov.cn/" target="_blank">国家卫生健康委员会</a></li>
+                <li><a href="http://www.pbh.yn.gov.cn/wjwWebsite/web/index" target="_blank">云南省卫生健康委员会</a></li>
+                <li><a href="http://www.chuanhai.net/" target="_blank">川海科技</a></li>
+                <div class="clearFix"></div>
+            </ul>
+        </div>
+    </div>
+</div>
+        </div>
+        <div class="js">
+            <p></p>
+            <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><span style="color:#fbde2d;">var </span><span style="color:#ff6400;">ulBox</span><span style="color:#fbde2d;">=</span>$(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">friend-con ul</span><span style="color:#61ce3c;">"</span>);<span style="color:#ff6400;">conBox</span><span style="color:#fbde2d;">=</span>$(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">friend-con</span><span style="color:#61ce3c;">"</span>),<span style="color:#ff6400;">moreBox</span><span style="color:#fbde2d;">=</span>$(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">friend-con</span><span style="color:#61ce3c;"> .</span><span style="color:#ff6400;">more</span><span style="color:#61ce3c;">"</span>);<br><span style="color:#fbde2d;">var </span><span style="color:#ff6400;">defaultH</span><span style="color:#fbde2d;">=</span><span style="color:#ff6400;">conBox</span>.<span style="color:#ff6400;">height</span>();<br><span style="color:#ff6400;">moreBox</span>.<span style="color:#ff6400;">click</span>(<span style="color:#fbde2d;">function </span>() {<br> (<span style="color:#ff6400;">conBox</span>.<span style="color:#ff6400;">height</span>()<span style="color:#fbde2d;">==</span><span style="color:#ff6400;">ulBox</span>.<span style="color:#ff6400;">height</span>())<span style="color:#fbde2d;">?</span><span style="color:#ff6400;">conBox</span>.<span style="color:#ff6400;">animate</span>({<span style="color:#61ce3c;">"height"</span><span style="color:#fbde2d;">:</span><span style="color:#ff6400;">defaultH</span>})<span style="color:#fbde2d;">:</span><span style="color:#ff6400;">conBox</span>.<span style="color:#ff6400;">animate</span>({<span style="color:#61ce3c;">"height"</span><span style="color:#fbde2d;">:</span><span style="color:#ff6400;">ulBox</span>.<span style="color:#ff6400;">height</span>()});<br>});</pre>
+            <p></p>
+        </div>
+        <script>
+            $(function () {
+                var ulBox=$(".friend-con ul");conBox=$(".friend-con"),moreBox=$(".friend-con .more");
+                var defaultH=conBox.height();
+                moreBox.click(function () {
+                    (conBox.height()==ulBox.height())?conBox.animate({"height":defaultH}):conBox.animate({"height":ulBox.height()});
+                });
+            });
+        </script>
+    </li>
+    <!--多种形状--><li>
+        <h3>展示效果如下：</h3>
+        <h4>多种形状(triangle)</h4>
+        <div class="inlineblock">
+    <div class="triangle-up"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">triangle-up </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="triangle-down"></div>
+    <div class="css">
+        <p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">triangle-down </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br> }</pre>
+        </p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="triangle-left"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">triangle-left </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="triangle-right"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">triangle-right </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="triangle-topleft"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">triangle-topleft </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="triangle-topright"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">triangle-topright </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="triangle-bottomleft"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">triangle-bottomleft </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="triangle-bottomright"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">triangle-bottomright </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="curvedarrow"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">curvedarrow </span>{<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">9</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">9</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">10</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">10</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">10</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">10</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);}<br>.<span style="color:#ff6400;">curvedarrow</span>:<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">0 </span><span style="color:#8da6ce;font-weight:bold;">solid transparent</span>;<span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">3</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 0 0</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">12</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">9</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">12</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">12</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="trapezoid"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">trapezoid </span>{<br> <span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="parallelogram"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">parallelogram </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">150</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">skew</span>(<span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">skew</span>(<span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">skew</span>(<span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="star-six"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">star-six </span>{<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;}<br>.<span style="color:#ff6400;">star-six</span>:<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">30</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="star-five"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">star-five </span>{<span style="color:#8da6ce;">margin</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">display</span>: <span style="color:#8da6ce;font-weight:bold;">block</span>;<span style="color:#8da6ce;">color</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">70</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">35</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">35</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">35</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">35</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);}<br>.<span style="color:#ff6400;">star-five</span>:<span style="color:#ff6400;">before </span>{<span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">80</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">30</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">30</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">65</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">display</span>: <span style="color:#8da6ce;font-weight:bold;">block</span>;<span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">''</span>;<span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">35</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">35</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">35</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">35</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);}<br>.<span style="color:#ff6400;">star-five</span>:<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">display</span>: <span style="color:#8da6ce;font-weight:bold;">block</span>;<span style="color:#8da6ce;">color</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">3</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">105</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">''</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">70</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">70</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">70</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">70</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">70</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="pentagon"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">pentagon </span>{<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">54</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">border-width</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">18</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">border-style</span>: <span style="color:#8da6ce;font-weight:bold;">solid</span>;<span style="color:#8da6ce;">border-color</span>: <span style="color:#8da6ce;font-weight:bold;">red transparent</span>;}<br>.<span style="color:#ff6400;">pentagon</span>:<span style="color:#ff6400;">before </span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">85</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">18</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">border-width</span>: <span style="color:#d8fa3c;">0 45</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">35</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">border-style</span>: <span style="color:#8da6ce;font-weight:bold;">solid</span>;<br> <span style="color:#8da6ce;">border-color</span>: <span style="color:#8da6ce;font-weight:bold;">transparent transparent red</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="hexagon"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">hexagon </span>{<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">55</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;}<br>.<span style="color:#ff6400;">hexagon</span>:<span style="color:#ff6400;">before </span>{<span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">25</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">25</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;}<br>.<span style="color:#ff6400;">hexagon</span>:<span style="color:#ff6400;">after </span>{<span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">bottom</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">25</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">25</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="octagon"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">octagon </span>{<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;}<br>.<span style="color:#ff6400;">octagon</span>:<span style="color:#ff6400;">before </span>{<span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">29</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">29</span><span style="color:#8da6ce;font-weight:bold;">px solid </span><span style="color:#6897bb;">#eee</span>;<span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">29</span><span style="color:#8da6ce;font-weight:bold;">px solid </span><span style="color:#6897bb;">#eee</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">42</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;}<br>.<span style="color:#ff6400;">octagon</span>:<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">bottom</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">42</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">29</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">29</span><span style="color:#8da6ce;font-weight:bold;">px solid </span><span style="color:#6897bb;">#eee</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">29</span><span style="color:#8da6ce;font-weight:bold;">px solid </span><span style="color:#6897bb;">#eee</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="heart"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">heart </span>{<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">90</span><span style="color:#8da6ce;font-weight:bold;">px</span>;}<br>.<span style="color:#ff6400;">heart</span>:<span style="color:#ff6400;">before</span>, .<span style="color:#ff6400;">heart</span>:<span style="color:#ff6400;">after </span>{<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">80</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">-moz-border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 0</span>;<span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 0</span>;<span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-webkit-transform-origin</span>: <span style="color:#d8fa3c;">0 100</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">-moz-transform-origin</span>: <span style="color:#d8fa3c;">0 100</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">-ms-transform-origin</span>: <span style="color:#d8fa3c;">0 100</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">-o-transform-origin</span>: <span style="color:#d8fa3c;">0 100</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">transform-origin</span>: <span style="color:#d8fa3c;">0 100</span><span style="color:#fbde2d;">%</span>;}<br>.<span style="color:#ff6400;">heart</span>:<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-webkit-transform-origin</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">% </span><span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">-moz-transform-origin</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">% </span><span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">-ms-transform-origin</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">% </span><span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">-o-transform-origin</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">% </span><span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">transform-origin </span>:<span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">% </span><span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="infinity"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">infinity </span>{<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">180</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px</span>;}<br>.<span style="color:#ff6400;">infinity</span>:<span style="color:#ff6400;">before</span>, .<span style="color:#ff6400;">infinity</span>:<span style="color:#ff6400;">after </span>{<span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">17</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<span style="color:#8da6ce;">-moz-border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 50</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 50</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);}<br>.<span style="color:#ff6400;">infinity</span>:<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">left</span>: <span style="color:#8da6ce;font-weight:bold;">auto</span>;<span style="color:#8da6ce;">right</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">-moz-border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="diamond"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">diamond </span>{<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<span style="color:#8da6ce;">border-bottom-color</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px</span>;}<br>.<span style="color:#ff6400;">diamond</span>:<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">''</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-top-color</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="diamond-shield"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">diamond-shield </span>{<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px</span>;}<br>.<span style="color:#ff6400;">diamond-shield</span>:<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">''</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px</span>; <span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">70</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="diamond-narrow"></div>
+    <div class="css">
+        <p></p>
+        <pre style="margin: 0px; padding: 0px; list-style-type: none; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: rgb(12, 16, 33); color: rgb(248, 248, 248); font-family: 宋体; font-size: 9pt;">.<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">diamond-narrow </span>{<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(141, 166, 206);">width</span>: <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(216, 250, 60);">0</span>;<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(141, 166, 206);">height</span>: <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(216, 250, 60);">0</span>;<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(141, 166, 206);">border</span>: <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(216, 250, 60);">50</span><span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(104, 232, 104); font-weight: bold;">px solid transparent</span>;<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(141, 166, 206);">border-bottom</span>: <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(216, 250, 60);">70</span><span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(104, 232, 104); font-weight: bold;">px solid red</span>;<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(141, 166, 206);">position</span>: <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(104, 232, 104); font-weight: bold;">relative</span>;<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(141, 166, 206);">top</span>: <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(251, 222, 45);">-</span><span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(216, 250, 60);">50</span><span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(104, 232, 104); font-weight: bold;">px</span>;}<br style="margin: 0px; padding: 0px; list-style-type: none;">.<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">diamond-narrow</span>:<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(255, 100, 0);">after </span>{<br style="margin: 0px; padding: 0px; list-style-type: none;"> <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(141, 166, 206);">content</span>: <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(97, 206, 60);">''</span>;<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(141, 166, 206);">position</span>: <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(104, 232, 104); font-weight: bold;">absolute</span>;<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(141, 166, 206);">left</span>: <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(251, 222, 45);">-</span><span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(216, 250, 60);">50</span><span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(104, 232, 104); font-weight: bold;">px</span>; <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(141, 166, 206);">top</span>: <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(216, 250, 60);">70</span><span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(104, 232, 104); font-weight: bold;">px</span>;<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(141, 166, 206);">width</span>: <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(216, 250, 60);">0</span>;<span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(141, 166, 206);">height</span>: <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(216, 250, 60);">0</span>;<br style="margin: 0px; padding: 0px; list-style-type: none;"> <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(141, 166, 206);">border</span>: <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(216, 250, 60);">50</span><span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(104, 232, 104); font-weight: bold;">px solid transparent</span>;<br style="margin: 0px; padding: 0px; list-style-type: none;"> <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(141, 166, 206);">border-top</span>: <span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(216, 250, 60);">70</span><span style="margin: 0px; padding: 0px; list-style-type: none; color: rgb(104, 232, 104); font-weight: bold;">px solid red</span>;<br style="margin: 0px; padding: 0px; list-style-type: none;">}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="cut-diamond"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">cut-diamond </span>{<span style="color:#8da6ce;">border-style</span>: <span style="color:#8da6ce;font-weight:bold;">solid</span>;<span style="color:#8da6ce;">border-color</span>: <span style="color:#8da6ce;font-weight:bold;">transparent transparent red transparent</span>;<span style="color:#8da6ce;">border-width</span>: <span style="color:#d8fa3c;">0 25</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">25</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">25</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">margin</span>: <span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">0</span>;}<br>.<span style="color:#ff6400;">cut-diamond</span>:<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">25</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">25</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-style</span>: <span style="color:#8da6ce;font-weight:bold;">solid</span>;<br> <span style="color:#8da6ce;">border-color</span>: <span style="color:#8da6ce;font-weight:bold;">red transparent transparent transparent</span>;<br> <span style="color:#8da6ce;">border-width</span>: <span style="color:#d8fa3c;">70</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 50</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="egg"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">egg </span>{<br> <span style="color:#8da6ce;">display</span>:<span style="color:#8da6ce;font-weight:bold;">block</span>;<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">126</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">180</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">background-color</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<br> <span style="color:#8da6ce;">-webkit-border-radius</span>: <span style="color:#d8fa3c;">63</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">63</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">63</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">63</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#fbde2d;">/ </span><span style="color:#d8fa3c;">108</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">108</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">72</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">72</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">% </span><span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">% </span><span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">% </span><span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">% / </span><span style="color:#d8fa3c;">60</span><span style="color:#fbde2d;">% </span><span style="color:#d8fa3c;">60</span><span style="color:#fbde2d;">% </span><span style="color:#d8fa3c;">40</span><span style="color:#fbde2d;">% </span><span style="color:#d8fa3c;">40</span><span style="color:#fbde2d;">%</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="pacman"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">pacman </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">border-top-left-radius</span>: <span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">border-top-right-radius</span>: <span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">border-bottom-left-radius</span>: <span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">border-bottom-right-radius</span>: <span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="talkbubble"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">talkbubble </span>{<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">120</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">80</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">-moz-border-radius</span>: <span style="color:#d8fa3c;">10</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">-webkit-border-radius</span>: <span style="color:#d8fa3c;">10</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">10</span><span style="color:#8da6ce;font-weight:bold;">px</span>;}<br>.<span style="color:#ff6400;">talkbubble</span>:<span style="color:#ff6400;">before </span>{<br> <span style="color:#8da6ce;">content</span>:<span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">right</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">26</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">13</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">26</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">13</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="burst-12"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">burst-12 </span>{<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">80</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">80</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">text-align</span>: <span style="color:#8da6ce;font-weight:bold;">center</span>;}<br>.<span style="color:#ff6400;">burst-12</span>:<span style="color:#ff6400;">before</span>, .<span style="color:#ff6400;">burst-12</span>:<span style="color:#ff6400;">after </span>{<span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">80</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">80</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;}<br>.<span style="color:#ff6400;">burst-12</span>:<span style="color:#ff6400;">before </span>{<span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">30</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">30</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">30</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">30</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);}<br>.<span style="color:#ff6400;">burst-12</span>:<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="burst-8"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">burst-8 </span>{<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">80</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">80</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">text-align</span>: <span style="color:#8da6ce;font-weight:bold;">center</span>;<span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">20</span><span style="color:#ff6400;">eg</span>);}<br>.<span style="color:#ff6400;">burst-8</span>:<span style="color:#ff6400;">before </span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">80</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">80</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<br> <span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">135</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">135</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">135</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">135</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="yin-yang"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">talkbubble </span>{<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">120</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">80</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">-moz-border-radius</span>: <span style="color:#d8fa3c;">10</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">-webkit-border-radius</span>: <span style="color:#d8fa3c;">10</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">10</span><span style="color:#8da6ce;font-weight:bold;">px</span>;}<br>.<span style="color:#ff6400;">talkbubble</span>:<span style="color:#ff6400;">before </span>{<br> <span style="color:#8da6ce;">content</span>:<span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">right</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">26</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">13</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">26</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">13</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="badge-ribbon"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">badge-ribbon </span>{<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">-moz-border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">-webkit-border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px</span>;}<br>.<span style="color:#ff6400;">badge-ribbon</span>:<span style="color:#ff6400;">before</span>, .<span style="color:#ff6400;">badge-ribbon</span>:<span style="color:#ff6400;">after </span>{<span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">''</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">70</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">40</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">40</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">70</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">10</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">140</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">140</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">140</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">140</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);}<br>.<span style="color:#ff6400;">badge-ribbon</span>:<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">left</span>: <span style="color:#8da6ce;font-weight:bold;">auto</span>;<br> <span style="color:#8da6ce;">right</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">10</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">140</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">140</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">140</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">140</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="space-invader"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">space-invader</span>{<br> <span style="color:#8da6ce;">box-shadow</span>: <span style="color:#d8fa3c;">0 0 0 1</span><span style="color:#8da6ce;font-weight:bold;">em red</span>, <span style="color:#d8fa3c;">0 1</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 1</span><span style="color:#8da6ce;font-weight:bold;">em red</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">2.5</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">1.5</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 .5</span><span style="color:#8da6ce;font-weight:bold;">em red</span>, <span style="color:#d8fa3c;">2.5</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">1.5</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 .5</span><span style="color:#8da6ce;font-weight:bold;">em red</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">3</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">3</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#d8fa3c;">3</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">3</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">2</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">2</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#d8fa3c;">2</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">2</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">3</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">1</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">2</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">1</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#d8fa3c;">2</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">1</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#d8fa3c;">3</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">1</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">4</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">3</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#d8fa3c;">3</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#d8fa3c;">4</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">5</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">1</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">4</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">1</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#d8fa3c;">4</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">1</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#d8fa3c;">5</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">1</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">5</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">2</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#d8fa3c;">5</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">2</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">5</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">3</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">3</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">3</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#d8fa3c;">3</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">3</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#d8fa3c;">5</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">3</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">2</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">4</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">1</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">4</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#d8fa3c;">1</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">4</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>, <span style="color:#d8fa3c;">2</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">4</span><span style="color:#8da6ce;font-weight:bold;">em </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">1</span><span style="color:#8da6ce;font-weight:bold;">em</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">1</span><span style="color:#8da6ce;font-weight:bold;">em</span>;<br> <span style="color:#8da6ce;">overflow</span>: <span style="color:#8da6ce;font-weight:bold;">hidden</span>;<br> <span style="color:#8da6ce;">margin</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 70</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">65</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="tv"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">tv </span>{<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">200</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">150</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">margin</span>: <span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">% / </span><span style="color:#d8fa3c;">10</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">color</span>: <span style="color:#8da6ce;font-weight:bold;">white</span>;<span style="color:#8da6ce;">text-align</span>: <span style="color:#8da6ce;font-weight:bold;">center</span>;<span style="color:#8da6ce;">text-indent</span>: <span style="color:#d8fa3c;">.1</span><span style="color:#8da6ce;font-weight:bold;">em</span>;}<br>.<span style="color:#ff6400;">tv</span>:<span style="color:#ff6400;">before </span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">''</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">10</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">bottom</span>: <span style="color:#d8fa3c;">10</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">right</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">5</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">5</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">inherit</span>;<br> <span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">5</span><span style="color:#fbde2d;">% / </span><span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">%</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="magnifying-glass"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"> .<span style="color:#ff6400;">magnifying-glass </span>{<span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">10</span><span style="color:#8da6ce;font-weight:bold;">em</span>; <span style="color:#aeaeae;">/* This controls the size. */</span><span style="color:#8da6ce;">display</span>: <span style="color:#8da6ce;font-weight:bold;">inline-block</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0.4</span><span style="color:#8da6ce;font-weight:bold;">em</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0.4</span><span style="color:#8da6ce;font-weight:bold;">em</span>;<span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">0.1</span><span style="color:#8da6ce;font-weight:bold;">em solid red</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">0.35</span><span style="color:#8da6ce;font-weight:bold;">em</span>;}<br>.<span style="color:#ff6400;">magnifying-glass</span>::<span style="color:#ff6400;">before<br></span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">display</span>: <span style="color:#8da6ce;font-weight:bold;">inline-block</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">right</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">0.25</span><span style="color:#8da6ce;font-weight:bold;">em</span>;<span style="color:#8da6ce;">bottom</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">0.1</span><span style="color:#8da6ce;font-weight:bold;">em</span>;<span style="color:#8da6ce;">border-width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0.35</span><span style="color:#8da6ce;font-weight:bold;">em</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0.08</span><span style="color:#8da6ce;font-weight:bold;">em</span>;<br> <span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">45</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="facebook-icon"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">facebook-icon </span>{<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">text-indent</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">999</span><span style="color:#8da6ce;font-weight:bold;">em</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">110</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">5</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">overflow</span>: <span style="color:#8da6ce;font-weight:bold;">hidden</span>;<span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">15</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">0</span>;}<br>.<span style="color:#ff6400;">facebook-icon</span>::<span style="color:#ff6400;">before </span>{<span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">"/20"</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">40</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">90</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">bottom</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">30</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">right</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">37</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">border</span>: <span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">px solid </span><span style="color:#6897bb;">#eee</span>;<span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">25</span><span style="color:#8da6ce;font-weight:bold;">px</span>;}<br>.<span style="color:#ff6400;">facebook-icon</span>::<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">"/20"</span>;<br> <span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">55</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">right</span>: <span style="color:#d8fa3c;">5</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#6897bb;">#eee</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="moon"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">moon </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">80</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">80</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">box-shadow</span>: <span style="color:#d8fa3c;">15</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">15</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">0 0 </span><span style="color:#8da6ce;font-weight:bold;">red</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="flag"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">flag </span>{<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">110</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">56</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">padding-top</span>: <span style="color:#d8fa3c;">15</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">color</span>: <span style="color:#8da6ce;font-weight:bold;">white</span>;<span style="color:#8da6ce;">font-size</span>: <span style="color:#d8fa3c;">11</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">letter-spacing</span>: <span style="color:#d8fa3c;">0.2</span><span style="color:#8da6ce;font-weight:bold;">em</span>;<span style="color:#8da6ce;">text-align</span>: <span style="color:#8da6ce;font-weight:bold;">center</span>;<span style="color:#8da6ce;">text-transform</span>: <span style="color:#8da6ce;font-weight:bold;">uppercase</span>;}<br>.<span style="color:#ff6400;">flag</span>:<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">bottom</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">13</span><span style="color:#8da6ce;font-weight:bold;">px solid </span><span style="color:#6897bb;">#0c1021</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">55</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">55</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="cone"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">cone </span>{<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">70</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">70</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">-moz-border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">-webkit-border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">%</span>;<br> <span style="color:#8da6ce;">border-radius</span>: <span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">%</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="cross"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">cross </span>{<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">px</span>;}<br>.<span style="color:#ff6400;">cross</span>:<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">left</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">40</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">40</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="base"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">base </span>{<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">display</span>: <span style="color:#8da6ce;font-weight:bold;">inline-block</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">55</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">margin-left</span>: <span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">margin-top</span>: <span style="color:#d8fa3c;">55</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">100</span><span style="color:#8da6ce;font-weight:bold;">px</span>;}<br>.<span style="color:#ff6400;">base</span>:<span style="color:#ff6400;">before </span>{<br> <span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">35</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-right</span>: <span style="color:#d8fa3c;">50</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">35</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="pointer"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">pointer </span>{<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">200</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">40</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>}<br>.<span style="color:#ff6400;">pointer</span>:<span style="color:#ff6400;">after </span>{<span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">bottom</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">px solid </span><span style="color:#6897bb;">#0c1021</span>;<span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;}<br>.<span style="color:#ff6400;">pointer</span>:<span style="color:#ff6400;">before </span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<br> <span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<br> <span style="color:#8da6ce;">right</span>: <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">bottom</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">border-left</span>: <span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">px solid red</span>;<br> <span style="color:#8da6ce;">border-top</span>: <span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br> <span style="color:#8da6ce;">border-bottom</span>: <span style="color:#d8fa3c;">20</span><span style="color:#8da6ce;font-weight:bold;">px solid transparent</span>;<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="chevron"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">chevron </span>{<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<span style="color:#8da6ce;">text-align</span>: <span style="color:#8da6ce;font-weight:bold;">center</span>;<span style="color:#8da6ce;">padding</span>: <span style="color:#d8fa3c;">12</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">margin-bottom</span>: <span style="color:#d8fa3c;">6</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">200</span><span style="color:#8da6ce;font-weight:bold;">px</span>;}<br>.<span style="color:#ff6400;">chevron</span>:<span style="color:#ff6400;">before </span>{<span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">''</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">51</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">skew</span>(<span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">deg</span>, <span style="color:#d8fa3c;">6</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">skew</span>(<span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">deg</span>, <span style="color:#d8fa3c;">6</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">skew</span>(<span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">deg</span>, <span style="color:#d8fa3c;">6</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">skew</span>(<span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">deg</span>, <span style="color:#d8fa3c;">6</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<span style="color:#8da6ce;">transform</span>: <span style="color:#8da6ce;">skew</span>(<span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">deg</span>, <span style="color:#d8fa3c;">6</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);}<br>.<span style="color:#ff6400;">chevron</span>:<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">''</span>;<span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">right</span>: <span style="color:#d8fa3c;">0</span>;<span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">100</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">50</span><span style="color:#fbde2d;">%</span>;<span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;font-weight:bold;">red</span>;<br> <span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">skew</span>(<span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">deg</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">6</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">skew</span>(<span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">deg</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">6</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-ms-transform</span>: <span style="color:#8da6ce;">skew</span>(<span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">deg</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">6</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-o-transform</span>: <span style="color:#8da6ce;">skew</span>(<span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">deg</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">6</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">transform</span>: <span style="color:#8da6ce;">skew</span>(<span style="color:#d8fa3c;">0</span><span style="color:#8da6ce;font-weight:bold;">deg</span>, <span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">6</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br>}</pre>
+        <p></p>
+    </div>
+</div>
+<div class="inlineblock">
+    <div class="triangle1"></div>
+    <div class="css">
+        <p></p>
+        <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">.<span style="color:#ff6400;">triangle1</span>{<br> <span style="color:#8da6ce;">list-style</span>: <span style="color:#8da6ce;font-weight:bold;">none</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;">rgba</span>(<span style="color:#d8fa3c;">0</span>,<span style="color:#d8fa3c;">0</span>,<span style="color:#d8fa3c;">0</span>,<span style="color:#d8fa3c;">.5</span>);<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">105</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">180</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">margin</span>: <span style="color:#d8fa3c;">30</span><span style="color:#8da6ce;font-weight:bold;">px </span><span style="color:#d8fa3c;">5</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">relative</span>;<br> <span style="color:#ff6400;">&amp;</span>:<span style="color:#ff6400;">before </span>,<span style="color:#ff6400;">&amp;</span>:<span style="color:#ff6400;">after</span>{<br> <span style="color:#8da6ce;">content</span>: <span style="color:#61ce3c;">""</span>;<br> <span style="color:#8da6ce;">height</span>: <span style="color:#d8fa3c;">105</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">width</span>: <span style="color:#d8fa3c;">180</span><span style="color:#8da6ce;font-weight:bold;">px</span>;<br> <span style="color:#8da6ce;">background</span>: <span style="color:#8da6ce;">rgba</span>(<span style="color:#d8fa3c;">0</span>,<span style="color:#d8fa3c;">0</span>,<span style="color:#d8fa3c;">0</span>,<span style="color:#d8fa3c;">.5</span>);<br> <span style="color:#8da6ce;">position</span>: <span style="color:#8da6ce;font-weight:bold;">absolute</span>;<br> <span style="color:#8da6ce;">top</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">left</span>: <span style="color:#d8fa3c;">0</span>;<br> <span style="color:#8da6ce;">transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> }<br> <span style="color:#ff6400;">&amp;</span>:<span style="color:#ff6400;">before </span>{<br> <span style="color:#8da6ce;">transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> }<br> <span style="color:#ff6400;">&amp;</span>:<span style="color:#ff6400;">after </span>{<br> <span style="color:#8da6ce;">z-index</span>: <span style="color:#d8fa3c;">1</span>;<br> <span style="color:#8da6ce;">transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-webkit-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> <span style="color:#8da6ce;">-moz-transform</span>: <span style="color:#8da6ce;">rotate</span>(<span style="color:#fbde2d;">-</span><span style="color:#d8fa3c;">60</span><span style="color:#8da6ce;font-weight:bold;">deg</span>);<br> }<br>}</pre>
+        <p></p>
+    </div>
+</div>
+    </li>
+    <!--表单提交--><li>
+        <h3>展示效果如下：</h3>
+        <h4>表单一(form1)</h4>
+        <div class="formSubmit">
+    <div class="formSubmitT">
+        <div class="warmPrompt">感谢您写下宝贵留言，南涧县妇幼保健计划服务中心全心为您服务！</div>
+        <div class="con">
+            <div class="name">
+                <span class="tip">姓&nbsp;&nbsp;名：</span>
+                <input type="text"/>
+            </div>
+            <div class="msg">
+                <span class="tip">留&nbsp;&nbsp;言：</span>
+                <textarea></textarea>
+            </div>
+            <div><span class="tip"></span><input type="button" class="submit" value="提&nbsp;&nbsp;&nbsp;&nbsp;交"/></div>
+        </div>
+    </div>
+    <div class="formSubmitD">
+        <div class="list">
+            <div class="top clearFix">
+                <div class="topCon">
+                    <span>李患者</span>
+                    <span class="date">发布时间：2016-01-01</span>
+                    <span class="topTime">12：00：00</span>
+                </div>
+                <span class="tip">内容：</span>
+                <span class="con">医院拥有美国GE全数字化乳腺钼靶机、联影全数字化X线摄影系统、彩色四维超声诊断仪、全自动生化分析仪、电子阴道镜、中央胎监、电脑中频药物导入治疗仪</span>
+            </div>
+            <div class="down clearFix">
+                <div class="downCon">
+                    <span>周医生</span>
+                    <span class="date">发布时间：2016-01-01</span>
+                    <span class="downTime">12：00：00</span>
+                </div>
+                <span class="tip">回复：</span>
+                <span class="con">医院拥有美国GE全数字化乳腺钼靶机、联影全数字化X线摄影系统、彩色四维超声诊断仪、全自动生化分析仪、电子阴道镜、中央胎监、电脑中频药物导入治疗仪</span>
+            </div>
+        </div>
+        <div class="list">
+            <div class="top clearFix">
+                <div class="topCon">
+                    <span>李患者</span>
+                    <span class="date">发布时间：2016-01-01</span>
+                    <span class="topTime">12：00：00</span>
+                </div>
+                <span class="tip">内容：</span>
+                <span class="con">医院拥有美国GE全数字化乳腺钼靶机、联影全数字化X线摄影系统、彩色四维超声诊断仪、全自动生化分析仪、电子阴道镜、中央胎监、电脑中频药物导入治疗仪</span>
+            </div>
+            <div class="down clearFix">
+                <div class="downCon">
+                    <span>周医生</span>
+                    <span class="date">发布时间：2016-01-01</span>
+                    <span class="downTime">12：00：00</span>
+                </div>
+                <span class="tip">回复：</span>
+                <span class="con">医院拥有美国GE全数字化乳腺钼靶机、联影全数字化X线摄影系统、彩色四维超声诊断仪、全自动生化分析仪、电子阴道镜、中央胎监、电脑中频药物导入治疗仪</span>
+            </div>
+        </div>
+    </div>
+</div>
+        <h4>表单二(form2)</h4>
+        <div class="formSubmit3">
+    <div class="topTip">您所给出的任何评价，都是我们日后在工作过程中最宝贵的意见，感谢您的支持！</div>
+    <div class="part0">
+        <div class="title">一、您对我们医院的医疗条件有怎样的评价？</div>
+        <ul>
+            <li><input id="part000" name="part0" type="radio"/><label for="part000">非常好</label></li>
+            <li><input id="part001" name="part0" type="radio"/><label for="part001">很好</label></li>
+            <li><input id="part002" name="part0" type="radio"/><label for="part002">一般</label></li>
+            <li><input id="part003" name="part0" type="radio"/><label for="part003">不好</label></li>
+        </ul>
+    </div>
+    <div class="part1">
+        <div class="title">二、您对我们医院的医疗环境有怎样的评价？</div>
+        <ul>
+            <li><input id="part110" name="part1" type="radio"/><label for="part110">非常好</label></li>
+            <li><input id="part111" name="part1" type="radio"/><label for="part111">很好</label></li>
+            <li><input id="part112" name="part1" type="radio"/><label for="part112">一般</label></li>
+            <li><input id="part113" name="part1" type="radio"/><label for="part113">不好</label></li>
+        </ul>
+    </div>
+    <div class="part2">
+        <div class="title">三、您对我们医院的专家医生有怎样的评价？</div>
+        <ul>
+            <li><input id="part220" name="part2" type="radio"/><label for="part220">非常好</label></li>
+            <li><input id="part221" name="part2" type="radio"/><label for="part221">很好</label></li>
+            <li><input id="part222" name="part2" type="radio"/><label for="part222">一般</label></li>
+            <li><input id="part223" name="part2" type="radio"/><label for="part223">不好</label></li>
+        </ul>
+    </div>
+    <div class="part3">
+        <div class="title">四、其它的建议，欢迎您反馈给我们。</div>
+        <textarea></textarea>
+    </div>
+    <div class="submit"><input type="submit" value="提&emsp;交"/></div>
+    <div class="downTip">
+        <p>以上资料均为匿名填写，绝不泄漏任何人的个人信息！请认真填写，非常感谢您的配合！</p>
+        <p>若有任何疑问，欢迎拨打服务电话：0872-8525937&emsp;0872-8521211</p>
+    </div>
+</div>
+        <h4>表单三(form3)</h4>
+        <div class="formSubmit4 clearFix">
+    <div class="box"><span class="tip">姓名：</span><input type="text"></div>
+    <div class="box ">
+        <span class="tip">性别：</span>
+        <select class="selectd">
+            <option></option>
+            <option>男</option>
+            <option>女</option>
+        </select>
+    </div>
+    <div class="box"><span class="tip">电话：</span><input type="text"></div>
+    <div class="box "><span class="tip">年龄：</span><input class="inputAge" type="text"></div>
+    <div class="box ">
+        <span class="tip">科室：</span>
+        <select>
+            <option></option>
+            <option>科室名称</option>
+        </select>
+    </div>
+    <div class="box ">
+        <span class="tip">医生：</span>
+        <select>
+            <option></option>
+            <option>医生名称</option>
+        </select>
+    </div>
+    <div class="box boxMsg">
+        <span class="tip">备注：</span>
+        <textarea></textarea>
+    </div>
+    <div class="submit">
+        <span class="tip"></span>
+        <input type="submit" value="提交预约">
+    </div>
+    <p class="warmPrompt">专业品质、用心服务，祝您早日康复，我院保护患者隐私，请放心预约!</p>
+</div>
+        <h4>表单四(form4)</h4>
+        <div class="formSubmit5 clearFix">
+    <div class="con clearFix">
+        <span>姓&ensp;&ensp;&ensp;&ensp;名：</span>
+        <input type="text"/>
+    </div>
+    <div class="con clearFix">
+        <span>电&ensp;&ensp;&ensp;&ensp;话：</span>
+        <input type="text" maxlength="11"/>
+    </div>
+    <div class="con clearFix">
+        <span>科&ensp;&ensp;&ensp;&ensp;室：</span>
+        <input type="text"/>
+    </div>
+    <div class="con clearFix">
+        <span>预约日期：</span>
+        <input type="text"/>
+    </div>
+    <div class="desc clearFix">
+        <span>病情描述：</span>
+        <textarea></textarea>
+    </div>
+    <div class="bottom clearFix"><input type="button" value="提交"/><div class="warmPrompt">本院将认真保护患者的隐私，请放心预约！</div></div>
+</div>
+    </li>
+    <!--快捷导航--><li>
+        <h3>展示效果如下：</h3>
+        <h4>快捷导航(fixed)</h4>
+        <div class="fixed">
+    <ul>
+        <li>
+            <a href="javascript:;" class="fixedImg" style="background: #266f58">预约</a>
+            <a href="javascript:;" class="fixedCon">预约挂号</a>
+        </li>
+        <li>
+            <a href="javascript:;" class="fixedImg" style="background: #128b4b">微信</a>
+            <a href="javascript:;" class="fixedCon"><img src="../baseimg/ewm.png" alt="二维码"></a>
+        </li>
+        <li>
+            <a href="javascript:;" class="fixedImg" style="background: #2ca766">客服</a>
+            <a href="javascript:;" class="fixedCon">在线客服</a>
+        </li>
+        <li>
+            <a href="javascript:;" class="fixedImg goTop" style="background: #6fc37f">置顶</a>
+        </li>
+    </ul>
+</div>
+        <div class="js">
+            <p></p>
+            <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">$(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">fixed</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">css</span>({<span style="color:#61ce3c;">"top"</span><span style="color:#fbde2d;">:</span>($(<span style="font-style:italic;">window</span>).<span style="color:#ff6400;">height</span>()<span style="color:#fbde2d;">-</span>$(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">fixed</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">height</span>())<span style="color:#fbde2d;">/</span><span style="color:#d8fa3c;">2</span>});<br>$(<span style="font-style:italic;">window</span>).<span style="color:#ff6400;">scroll</span>(<span style="color:#fbde2d;">function </span>() {<br> <span style="color:#fbde2d;">if</span>($(<span style="font-style:italic;">window</span>).scrollTop()<span style="color:#fbde2d;">&gt;</span><span style="color:#d8fa3c;">0</span>){<br> $(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">fixed</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">show</span>(<span style="color:#d8fa3c;">500</span>);<br> }<span style="color:#fbde2d;">else </span>{<br> $(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">fixed</span><span style="color:#61ce3c;">"</span>).hide(<span style="color:#d8fa3c;">500</span>);<br> }<br>});<br>$(<span style="color:#61ce3c;">".</span><span style="color:#ff6400;">goTop</span><span style="color:#61ce3c;">"</span>).<span style="color:#ff6400;">click</span>(<span style="color:#fbde2d;">function </span>() {<br> $(<span style="font-style:italic;">window</span>).scrollTop(<span style="color:#d8fa3c;">0</span>);<br>});</pre>
+            <p></p>
+        </div>
+        <script>
+            $(function () {
+                $(".fixed").css({"top":($(window).height()-$(".fixed").height())/2});
+                $(window).scroll(function () {
+                    if($(window).scrollTop()>0){
+                        $(".fixed").show(500);
+                    }else {
+                        $(".fixed").hide(500);
+                    }
+                });
+                $(".goTop").click(function () {
+                    $(window).scrollTop(0);
+                });
+            });
+        </script>
+    </li>
+</ol>
+</body>
+</html>

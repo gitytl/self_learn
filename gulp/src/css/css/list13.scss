@@ -1,0 +1,56 @@
+.personNameDesc2 {
+  li {
+    height: 297px;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 30px 20px;
+    background: #ffffff;
+  }
+  .img {
+    float: left;
+    width: 223px;
+    height: 297px;
+    overflow: hidden;
+    background: #0abbb9;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .con {
+    float: right;
+    width: 560px;
+    padding-left: 20px;
+  }
+  .nameMore {
+    padding: 24px 0 0;
+  }
+  .name {
+    float: left;
+    font-size: 20px;
+  }
+  .more {
+    width: 60px;
+    height: 12px;
+    float: right;
+    padding: 9px 0;
+    font-family: "Arial";
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  .name:hover ,.more:hover{
+    color: #0abbb9;
+  }
+  .job {
+    padding: 20px 0 0;
+  }
+  .tip {
+    color: #333333;
+  }
+  .desc {
+    height: 152px;
+    overflow: hidden;
+    padding: 20px 0 0;
+    -webkit-line-clamp: 5;
+  }
+}

@@ -1,0 +1,68 @@
+.picWordDesc4 {
+  li {
+    height: 320px;
+    &:hover {
+      -webkit-box-shadow: 0 0 30px #e5e5e5;
+      -moz-box-shadow: 0 0 30px #e5e5e5;
+      box-shadow: 0 0 30px #e5e5e5;
+      .title {
+        color: #b38643;
+      }
+      .more {
+        background: #b38643;
+      }
+      .con {
+        height: 275px;
+        border-bottom: 3px solid #d3ad75;
+      }
+    }
+  }
+  .img {
+    width: 242px;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    background: #cccccc;
+    img {
+      width: 427px;
+      height: 100%;
+    }
+  }
+  .con {
+    width: 600px;
+    height: 277px;
+    float: right;
+    background: #ffffff;
+    padding-left: 50px;
+    padding-right: 42px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding-top: 41px;
+  }
+  .tit {
+    color: #4d4d4d;
+    font-size: 20px;
+  }
+  .date {
+    padding-top: 19px;
+    color: #999999;
+    font-size: 12px;
+    font-family: "Arial";
+  }
+  .desc {
+    line-height: 30px;
+    padding-top: 26px;
+    height: 60px;
+    overflow: hidden;
+  }
+  .more {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    background: #020305;
+    margin-top: 36px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

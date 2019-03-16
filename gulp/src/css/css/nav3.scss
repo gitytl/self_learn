@@ -1,0 +1,58 @@
+.mainNav2 {
+  height: 60px;
+  background: #3255a6;
+  text-align: center;
+  position: relative;
+  canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2; }
+  .mainNavCon {
+    height: 16px;
+    padding-left: 30px;
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+    li {
+      width: 69px;
+      float: left;
+      height: 16px;
+      cursor: pointer;
+      line-height: 60px;
+      padding: 0 10px;
+      margin-right: 20px;
+      position: relative;
+      -webkit-transition: all 0.1s;
+      -moz-transition: all 0.1s;
+      -ms-transition: all 0.1s;
+      -o-transition: all 0.1s;
+      transition: all 0.1s;
+      a {
+        color: #ffffff;
+        line-height: 16px;
+        margin: 22px 0; }
+    }
+    .on:before, li:hover:before {
+      content: "";
+      position: absolute;
+      bottom: -44px;
+      left: 0;
+      width: 100%;
+      border-bottom: 3px solid #8ec640; }
+  }
+  .subNav {
+    min-width: 107px;
+    background: #ffffff;
+    display: none;
+    left: 0;
+    position: absolute;
+    z-index: 10;
+    border: 1px solid #1fb4b1;
+    a:hover {
+      color: #fec53e;
+      background: #1fb4b1; }
+  }
+}

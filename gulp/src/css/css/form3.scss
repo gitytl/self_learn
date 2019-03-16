@@ -1,0 +1,83 @@
+.formSubmit4 {
+  width: 530px;
+  background: #ffffff;
+  padding: 64px 240px 64px 18px;
+  .tip {
+    float: left;
+    width: 48px;
+    height: 35px;
+    font-size: 16px;
+    color: #4c4c4c;
+  }
+  .box {
+    width: 260px;
+    float: left;
+    line-height: 35px;
+    padding-bottom: 20px;
+    input {
+      width: 168px;
+      padding: 0 10px;
+      height: 33px;
+      color: #4c4c4c;
+      background: #f0f0f0;
+      border: 1px solid #e0e0e0;
+    }
+    select {
+      width: 190px;
+      height: 36px;
+      color: #4c4c4c;
+      outline: none;
+      border: 1px solid #e0e0e0;
+      /*很关键：将默认的select选择框样式清除*/
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      /*在选择框的最右侧中间显示小箭头图片*/
+      background: #f0f0f0 url("../baseimg/sanjiao.png") no-repeat 170px center;
+      /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+      padding-right: 14px;
+      padding-left: 10px;
+    }
+    select::-ms-expand {
+      display: none;
+    }
+    .inputAge {
+      width: 78px;
+    }
+    .selectd {
+      width: 100px;
+      padding: 0 10px;
+      background: #f0f0f0 url("../baseimg/sanjiao.png") no-repeat 80px center;
+    }
+    textarea {
+      float: left;
+      padding: 10px;
+      width: 680px;
+      height: 168px;
+      background: #f0f0f0;
+      border: 1px solid #e0e0e0;
+      outline: none;
+      resize: none;
+    }
+  }
+  .boxMsg {
+    width: 750px;
+  }
+  .submit {
+    padding-top: 60px;
+    input[type='submit'] {
+      width: 130px;
+      height: 40px;
+      color: #fff;
+      background: #2ca766;
+      border-radius: 40px;
+      font-size: 16px;
+      border: none;
+      margin-top: 31px;
+    }
+  }
+  .warmPrompt {
+    padding-top: 19px;
+    color: #808080;
+  }
+}

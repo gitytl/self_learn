@@ -1,0 +1,58 @@
+.wordList3 {
+  li {
+    height: 52px;
+    padding: 50px 20px;
+    background: #ffffff;
+    &:hover {
+      .date dt, .con a {
+        color: #7dd3fd;
+      }
+    }
+  }
+  .date {
+    padding-right: 22px;
+    float: left;
+    text-align: center;
+    border-right: 1px solid #d6d6d6;
+    dt {
+      font-size: 44px;
+      font-weight: 700;
+      color: #cdcdcd;
+      line-height: 34px;
+    }
+    dd {
+      font-size: 12px;
+      color: #999999;
+      padding-top: 7px;
+      line-height: 12px;
+    }
+  }
+  .con {
+    width: 578px;
+    float: left;
+    padding-left: 22px;
+    .tit {
+      font-size: 16px;
+      color: #666666;
+      line-height: 16px;
+    }
+    .desc {
+      color: #808080;
+      padding-top: 22px;
+      line-height: 14px;
+    }
+  }
+  .more {
+    width: 76px;
+    height: 30px;
+    float: right;
+    margin-top: 6px;
+    border-left: 1px solid #d6d6d6;
+    background-image: url(" ../baseimg/other_xxgk.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    &:hover{
+      background-position: left 10px center;
+    }
+  }
+}

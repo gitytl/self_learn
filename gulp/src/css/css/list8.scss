@@ -1,0 +1,53 @@
+.wordList4 {
+  li {
+    height: 80px;
+    padding: 33px 20px 36px;
+    background: #ffffff;
+    &:hover {
+      .date {
+        background: #2ca766;
+        color: #ffffff;
+      }
+      dd {
+        border-top: 1px solid #ffffff;
+      }
+      .tit {
+        color: #2ca766;
+      }
+    }
+  }
+  .date {
+    float: left;
+    width: 60px;
+    height: 56px;
+    background: #ebebeb;
+    border-radius: 6px;
+    text-align: center;
+    padding: 12px 5px;
+    -webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -ms-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s;
+  }
+  dt {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  dd {
+    padding-top: 5px;
+    border-top: 1px solid #b3b3b3;
+  }
+  .con {
+    float: right;
+    width: 680px;
+    padding-left: 20px;
+    padding-top: 14px;
+  }
+  .tit {
+    font-size: 16px;
+  }
+  .desc {
+    padding-top: 11px;
+  }
+}

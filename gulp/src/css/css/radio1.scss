@@ -1,0 +1,72 @@
+/*选择按钮美化*/
+.ytl_choose {
+  width: 600px;
+  margin: 50px auto;
+  form {
+    float: left;
+    margin: 0 100px;
+  }
+
+  input {
+    width: 0;
+  }
+}
+
+/*复选*/
+.ytl_check {
+  display: inline-block;
+  position: relative;
+  label {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #cacaca;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  label:hover {
+    border: 2px solid #f78642;
+  }
+
+  label:after {
+    content: '';
+    width: 8px;
+    height: 4px;
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    border: 2px solid #cacaca;
+    border-top: none;
+    border-right: none;
+    opacity: 0.4;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+  label:hover:after {
+    border: 2px solid #f78642;
+    border-top: none;
+    border-right: none;
+  }
+
+  input:checked + label {
+    border: 2px solid #f78642;
+  }
+
+  input:checked + label:after {
+    opacity: 1;
+    border: 2px solid #f78642;
+    border-top: none;
+    border-right: none;
+  }
+
+  span {
+    padding-left: 30px;
+    width: 50px;
+    display: inline-block;
+  }
+}

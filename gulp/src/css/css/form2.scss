@@ -1,0 +1,49 @@
+.formSubmit3 {
+  background: #ffffff;
+  padding: 37px 13px 28px;
+  .topTip {
+    line-height: 50px;
+    color: #8ec54a;
+    margin-bottom: 13px;
+  }
+  .title {
+    font-size: 16px;
+    line-height: 37px;
+    color: #484848;
+    padding: 0 16px;
+    background: #f0f0f0;
+  }
+  ul {
+    color: #484848;
+    padding: 14px 50px;
+  }
+  textarea {
+    border: 1px solid #c6c6c6;
+    margin: 16px 0;
+    width: 692px;
+    height: 136px;
+    color: #666666;
+    line-height: 24px;
+    padding: 14px 50px;
+    font-family: "微软雅黑";
+  }
+  input[type=radio], label {
+    cursor: pointer;
+  }
+  input[type=radio] {
+    margin-right: 16px;
+  }
+  .submit input {
+    width: 90px;
+    height: 34px;
+    cursor: pointer;
+    background: #2ca766;
+    color: #ffffff;
+    margin-top: 7px;
+  }
+  .downTip {
+    color: #484848;
+    line-height: 30px;
+    margin-top: 22px;
+  }
+}

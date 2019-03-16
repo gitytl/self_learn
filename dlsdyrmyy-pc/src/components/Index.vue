@@ -3,10 +3,10 @@
     <div class="part1 clearFix">
       <div class="part1_l clearFix">
         <div class="part1_ll" v-show="part1tab">
-          <Animation :list="index_yyxw" :part1animation="true"></Animation>
+          <Animation :list="index_yyxw.slice(0,5)" :part1animation="true"></Animation>
         </div>
         <div class="part1_ll" v-show="!part1tab">
-          <Animation :list="index_hyxw" :part1animation="true"></Animation>
+          <Animation :list="index_hyxw.slice(0,5)" :part1animation="true"></Animation>
         </div>
         <div class="part1_lr">
           <dl class="title clearFix">
@@ -16,7 +16,7 @@
             <dd v-show="!part1tab"><a href="#">更多<span>>></span></a></dd>
           </dl>
           <ul v-show="part1tab">
-            <li v-for="(item,index) in index_yyxw">
+            <li v-for="(item,index) in index_yyxw.slice(0,5)">
               <div v-if="index===0" class="one">
                 <div class="part1_lrl">
                   <p>医院新闻</p>
@@ -34,7 +34,7 @@
             </li>
           </ul>
           <ul v-show="!part1tab">
-            <li v-for="(item,index) in index_hyxw">
+            <li v-for="(item,index) in index_hyxw.slice(0,5)">
               <div v-if="index===0" class="one">
                 <div class="part1_lrl">
                   <p>行业新闻</p>

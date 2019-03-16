@@ -1,0 +1,43 @@
+.personNameDesc3 {
+  li {
+    height: 200px;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 47px 20px 23px;
+    background: #ffffff;
+  }
+  .img {
+    float: left;
+    width: 268px;
+    height: 200px;
+    background: #38adff;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .con {
+    float: left;
+    width: 520px;
+    padding-left: 26px;
+    color: #999999;
+  }
+  .name {
+    font-size: 16px;
+    padding: 28px 0 0;
+    span {
+      font-size: 24px;
+      cursor: pointer;
+      &:hover {
+        color: #a4494b;
+      }
+    }
+  }
+  .desc {
+    padding: 16px 0 0;
+    line-height: 24px;
+    max-height: 120px;
+    overflow: hidden;
+  }
+}

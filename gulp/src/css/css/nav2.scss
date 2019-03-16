@@ -1,0 +1,70 @@
+.mainNav1 {
+  height: 52px;
+  background: #266f58;
+  .mainNavCon {
+    width: 384px;
+    margin: 0 auto;
+    position: relative;
+  }
+  li {
+    float: left;
+    line-height: 52px;
+    padding: 0 32px;
+    position: relative;
+    &.on {
+      background: #215341 !important;
+    }
+  }
+  a {
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  .subNavBox {
+    position: absolute;
+    /*width: 300px;*/
+    display: none;
+    z-index: 30;
+    overflow: hidden;
+  }
+  .subNav {
+    width: 300px;
+    min-height: 120px;
+    padding: 34px 25px;
+    border: 3px solid #266f58;
+    background: #ffffff;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    a:hover {
+      color: #266f58;
+    }
+    div {
+      font-size: 16px;
+      color: #128b4b;
+      line-height: 26px;
+      font-weight: bold;
+    }
+  }
+  dl{
+    dd {
+      float: left;
+      width: 126px;
+      margin-right: 6px;
+      &:before{
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #38a79d;
+        display: block;
+        float: left;
+        margin: 24px 10px;
+      }
+    }
+    a {
+      width: 96px;
+      color: #4c4c4c;
+      display: inline-block;
+    }
+  }
+}

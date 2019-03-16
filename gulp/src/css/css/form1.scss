@@ -1,0 +1,117 @@
+.formSubmit {
+  padding: 0 20px 10px;
+  background: #ffffff;
+  .formSubmitT {
+    padding: 39px 0 0;
+    .name {
+      padding-top: 37px;
+    }
+    input[type=text],.msg textarea{
+      font-size: 14px;
+      color: #4b4b4b;
+      border: 1px solid #e1e1e1;
+      background-color: #fafafa;
+      outline: none;
+      font-family: "微软雅黑";
+    }
+    input[type=text] {
+      width: 322px;
+      height: 43px;
+      text-indent: 6px;
+    }
+    .tip{
+      width: 52px;
+      height: 45px;
+      float: left;
+      padding-right: 13px;
+      color: #4b4b4b;
+    }
+    .name span {
+      line-height: 45px;
+    }
+    .msg {
+      padding-top: 34px;
+    }
+    .msg textarea {
+      width: 737px;
+      height: 202px;
+      line-height: 30px;
+      padding: 0 6px;
+      margin-top: -5px;
+    }
+    .submit {
+      width: 120px;
+      height: 38px;
+      border-radius: 38px;
+      font-size: 16px;
+      color: #ffffff;
+      background: #f7cf54;
+      margin-top: 32px;
+      cursor: pointer;
+      line-height: 38px;
+    }
+  }
+  .warmPrompt {
+    color: #7dd3fd;
+    padding-left: 6px;
+  }
+  .formSubmitD {
+    padding-top: 18px;
+    .top {
+      padding: 0;
+    }
+    .list {
+      padding: 20px 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .topCon {
+      color: #59c4f0;
+      padding-left: 30px;
+      line-height: 24px;
+      margin: 16px 0 9px;
+      background: url("../baseimg/other_zxly1.png") no-repeat left center;
+    }
+    .downCon {
+      color: #fa8897;
+      padding-left: 30px;
+      line-height: 24px;
+      margin: 5px 0 7px;
+      background: url("../baseimg/other_zxly2.png") no-repeat left center;
+    }
+    .topTime, .downTime {
+      color: #59c4f0;
+      font-family: "宋体";
+      font-size: 12px;
+    }
+    .downTime {
+      color: #fa8897;
+    }
+    .date{
+      color: #777777;
+      padding: 0 25px 0 39px;
+      font-family: "宋体";
+      font-size: 12px;
+    }
+    .tip{
+      font-size: 14px;
+      line-height: 30px;
+      color: #4b4b4b;
+      display: block;
+      float: left;
+    }
+    .con{
+      font-family: "宋体";
+      font-size: 12px;
+      color: #4c4c4c;
+      line-height: 25px;
+      padding-top: 2px;
+      width: 765px;
+      display: block;
+      float: left;
+    }
+    .down {
+      padding-top: 11px;
+      padding-bottom: 6px;
+    }
+  }
+}

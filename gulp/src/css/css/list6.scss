@@ -1,0 +1,35 @@
+.wordList2{
+  width: 800px;
+  li {
+    padding: 3px 20px 12px;
+    background: #ffffff;
+    color: #999999;
+  }
+  .tit {
+    font-size: 16px;
+    color: #666666;
+    padding-top: 8px;
+    &:hover {
+      color: #a4494b;
+    }
+  }
+  .desc {
+    height: 60px;
+    overflow: hidden;
+    line-height: 30px;
+  }
+  .date {
+    color: #999999;
+    line-height: 25px;
+    padding-top: 2px;
+    font-family: "Arial";
+  }
+  .more {
+    color: #a4494b;
+    line-height: 25px;
+    font-family: "Arial";
+    &:hover {
+      padding-left: 10px;
+    }
+  }
+}

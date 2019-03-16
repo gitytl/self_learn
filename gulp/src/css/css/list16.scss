@@ -1,0 +1,38 @@
+.pageChange {
+  text-align: center;
+  height: 22px;
+  padding: 46px 0 18px;
+  .con {
+    display: inline-block;
+    line-height: 22px;
+    background: #ffffff;
+  }
+  a {
+    width: 22px;
+    height: 22px;
+    background: #e6e6e6;
+    border-radius: 50%;
+    float: left;
+    color: #4c4c4c;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .on {
+    background: #fa8897;
+    color: #ffffff;
+  }
+  .prev,.next{
+    float: left;
+    width: auto;
+    height: auto;
+    background: none;
+    &:hover{
+      color: #fa8897;
+      background: none;
+    }
+  }
+  a:hover {
+    background: #fa8897;
+    color: #ffffff;
+  }
+}

@@ -1,0 +1,61 @@
+.wordDetailList{
+  width: 770px;
+  margin-top: 27px;
+  line-height: 30px;
+  padding: 0 20px 20px;
+  position: relative;
+  li {
+    margin-bottom: 20px;
+    &:hover .titleCon {
+      border: 1px solid #e5e5e5;
+      border-left: 1px solid #f0f0f0;
+      border-right: 1px solid #f0f0f0;
+      background-color: #f0f0f0;
+      cursor: pointer;
+    }
+    &.on {
+      border-top: none;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      border-bottom: none;
+      .detail {
+        border-bottom: 1px dashed #e5e5e5;
+      }
+      .titleCon {
+        background-color: #f0f0f0;
+        margin-bottom: 0;
+        border: 1px dashed #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+      }
+    }
+  }
+  .titleCon {
+    height: 40px;
+    line-height: 40px;
+    padding: 5px 20px;
+    color: #999999;
+    border: 1px solid #e5e5e5;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    span {
+      display: inline-block;
+    }
+    div {
+      float: right;
+    }
+    .tit {
+      width: 35%;
+      padding-right: 5%;
+      color: #666666;
+    }
+  }
+  .detail {
+    display: none;
+    line-height: 48px;
+    border-left: 1px dashed #e5e5e5;
+    border-right: 1px dashed #e5e5e5;
+    padding: 9px 20px 29px;
+    border-bottom: none;
+    color: #666666;
+  }
+}

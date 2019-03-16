@@ -58,7 +58,7 @@ export default new Router({
       },*/
       children: [
         {
-          path: ':sub_nav_name/:sub_nav_id',
+          path: ':sub_nav_name/:sub_nav_id/:module',
           name:'sub_nav',
           components: {
             single: single,

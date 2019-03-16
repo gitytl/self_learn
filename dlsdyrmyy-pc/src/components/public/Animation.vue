@@ -2,7 +2,7 @@
   <div>
     <div class="fade banner" v-show="banner">
       <ul>
-        <li v-for="(item,index) in list" :class="{'on':index===currentIndex}" :style="item"></li>
+        <li v-for="(item,index) in list" :class="{'on':index===currentIndex}" :style="'background-image: url('+item.images+')'"></li>
       </ul>
       <ol :style="{zIndex:list.length}">
         <li v-for="(item,index) in list" :class="{'on':index===currentIndex}" @mouseover="stop" @mouseleave="go" @click="change(index)"></li>
@@ -120,7 +120,7 @@
         background-color: #eeeeee;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: auto 100%;
+        background-size: cover;
         -webkit-transition: all 1s;
         -moz-transition: all 1s;
         -ms-transition: all 1s;

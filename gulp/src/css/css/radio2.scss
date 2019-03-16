@@ -1,0 +1,68 @@
+/*选择按钮美化*/
+.ytl_choose {
+  width: 600px;
+  margin: 50px auto;
+  form {
+    float: left;
+    margin: 0 100px;
+  }
+
+  input {
+    width: 0;
+  }
+}
+
+/*单选*/
+.ytl_radio {
+  display: inline-block;
+  position: relative;
+  label {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #cacaca;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  label:hover {
+    border: 2px solid #ef4949;
+  }
+
+  label:hover:after {
+    content: '';
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    opacity: 0.4;
+    background: #ef4949;
+    border-radius: 50%;
+  }
+
+  input:checked + label {
+    border: 2px solid #ef4949;
+  }
+
+  input:checked + label::after {
+    content: '';
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    opacity: 0.4;
+    background: #ef4949;
+    border-radius: 50%;
+  }
+
+  span {
+    padding-left: 30px;
+    width: 50px;
+    display: inline-block;
+  }
+}

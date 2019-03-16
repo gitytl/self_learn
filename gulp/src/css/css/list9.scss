@@ -1,0 +1,27 @@
+.wordList5 {
+  background: #ffffff;
+  padding: 0 20px;
+  li {
+    width: 736px;
+    height: 72px;
+    line-height: 72px;
+    padding-left: 13px;
+    background-image: url("../baseimg/other_listbg.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    &:hover {
+      .tit,.date {
+        color: #0abbb9;
+      }
+    }
+  }
+  .tit {
+    max-width: 600px;
+    color: #666666;
+    float: left;
+  }
+  .date {
+    color: #999999;
+    float: right;
+  }
+}
