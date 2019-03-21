@@ -3,7 +3,7 @@
     <div class="fade banner" id="banner" v-show="banner" ref="homePage">
       <ul>
         <li v-for="(item,index) in list" :class="{'on':index===currentIndex}" :style="'background-image: url('+item.images+')'">
-          <div class="desc" :class="{'desc_on':index===currentIndex}">{{item.content}}</div>
+          <div v-if="$route.path=='/'" class="desc" :class="{'desc_on':index===currentIndex}">{{item.content}}</div>
         </li>
       </ul>
       <ol :style="{zIndex:list.length}" v-show="false">

@@ -1,8 +1,9 @@
 <template>
-    <div class="other_page content">
+    <div class="other_page">
       <router-view
         :name="this.$route.params.module"
-        :hobby_lists="hobby_lists"
+        :collect_lists="collect_lists"
+        :fullHeight="fullHeight"
       ></router-view>
     </div>
 </template>
@@ -10,7 +11,7 @@
 <script>
     export default {
       name: "Other",
-      props:["main_nav","hobby_lists"],
+      props:["main_nav","collect_lists","fullHeight"],
       data(){
         return{
 

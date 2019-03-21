@@ -24,6 +24,7 @@ input::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder {
 input:-ms-input-placeholder, textarea:-ms-input-placeholder, select:-ms-input-placeholder {
     /* Internet Explorer 10+ */
     color: #999999; }
+.scrollbar::-webkit-scrollbar{width: 100%;height: 100%;}
 img{width:auto;vertical-align:middle;}
 .selectBg {appearance: none;-moz-appearance: none;-webkit-appearance: none;padding-right: 14px;padding-left: 10px;}/*很关键：将默认的select选择框样式清除,并添加padding为下拉小箭头留出一点位置，避免被文字覆盖*/
 .selectBg::-ms-expand {display: none;}

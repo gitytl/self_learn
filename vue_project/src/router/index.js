@@ -3,12 +3,14 @@ import Router from 'vue-router'
 import promise from 'es6-promise'
 import baseConfig from "../baseConfig";
 import Axios from "axios";
+import VirtualCollection from 'vue-virtual-collection'
+
+Vue.use(VirtualCollection);
 
 import Index from '@/components/Index'
 import Other from '@/components/public/Other'
 import single_intro from '@/components/single_intro'
-import lists_hobby from '@/components/lists_hobby'
-import lists_poetry from '@/components/lists_poetry'
+import lists_collect from '@/components/lists_collect'
 
 Vue.use(Router)
 Vue.use(baseConfig)
@@ -43,8 +45,7 @@ export default new Router({
           name:'sub_nav',
           components: {
             single_intro: single_intro,
-            lists_hobby: lists_hobby,
-            lists_poetry: lists_poetry,
+            lists_collect: lists_collect,
           },
         },
       ]
