@@ -516,15 +516,6 @@
     -ms-transform: skewX(6deg);
     -o-transform: skewX(6deg);
     transform: skewX(6deg);
-    &.on{
-      -webkit-transform: skewX(0);
-      -moz-transform: skewX(0);
-      -ms-transform: skewX(0);
-      -o-transform: skewX(0);
-      transform: skewX(0);
-      top: 0 !important;
-      left: auto !important;
-    }
     .click_tag{
       width: 50px;
       height: 67px;
@@ -533,21 +524,27 @@
       bottom: 0;
       cursor: pointer;
       background: url("./assets/sb.png") no-repeat center;
-      &:nth-of-type(2n){
-        -webkit-transform: rotateY(180deg);
-        -moz-transform: rotateY(180deg);
-        -ms-transform: rotateY(180deg);
-        -o-transform: rotateY(180deg);
-        transform: rotateY(180deg);
-      }
     }
-
     &:nth-of-type(1){
-      background: linear-gradient(#ffffff,#d2650d),url("./assets/xsp.png") no-repeat center,url("./assets/jp.png") no-repeat left top;
+      /*z-index: 0 !important;*/
+      background: url("./assets/xsp.png") no-repeat center,url("./assets/jp.png") no-repeat left top,linear-gradient(#ffffff,#d2650d);
       .con{
-        margin: 240px 112px;
+        margin: 222px 112px;
         font-size: 22px;
         line-height: 50px;
+        span{
+          font-weight: bold;
+          color: #d2650d;
+        }
+      }
+      .img{
+        width: 108px;
+        height: 141px;
+        overflow: hidden;
+        position: absolute;
+        right: 98px;
+        top: 196px;
+        background: #f5f5f5;
       }
       .tit{
         position: absolute;
@@ -557,32 +554,37 @@
         font-weight: bold;
       }
     }
-    &:nth-of-type(1){
-      left: 0;
+    .con {
+      margin: 40px;
+    }
+    &.on{
+      -webkit-transform: skewX(0);
+      -moz-transform: skewX(0);
+      -ms-transform: skewX(0);
+      -o-transform: skewX(0);
+      transform: skewX(0);
+      top: 0 !important;
+      left: auto !important;
+    }
+    &.prev_page{
       right: auto;
+      z-index: 2 !important;
       -webkit-transform: rotateY(180deg);
       -moz-transform: rotateY(180deg);
       -ms-transform: rotateY(180deg);
       -o-transform: rotateY(180deg);
       transform: rotateY(180deg);
     }
-    /*&:nth-of-type(2){
-      left: 0;
+    &.next_page{
       right: auto;
-      z-index: 4 !important;
       .click_tag{
         left: 0;
-        display: block !important;
         -webkit-transform: rotateY(180deg);
         -moz-transform: rotateY(180deg);
         -ms-transform: rotateY(180deg);
         -o-transform: rotateY(180deg);
         transform: rotateY(180deg);
       }
-    }*/
-    .con span{
-      font-weight: bold;
-      color: #d2650d;
     }
   }
   .more{
