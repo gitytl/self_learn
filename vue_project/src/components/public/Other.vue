@@ -4,6 +4,7 @@
         :name="this.$route.params.module"
         :collect_lists="collect_lists"
         :fullHeight="fullHeight"
+        :intro_lists="intro_lists"
       ></router-view>
     </div>
 </template>
@@ -11,7 +12,7 @@
 <script>
     export default {
       name: "Other",
-      props:["main_nav","collect_lists","fullHeight"],
+      props:["main_nav","collect_lists","fullHeight","intro_lists"],
       data(){
         return{
 
