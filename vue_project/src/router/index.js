@@ -20,7 +20,7 @@ Vue.prototype.$axios = Axios;
 export default new Router({
   linkActiveClass: 'on',
   linkExactActiveClass: 'on',
-  mode: 'history',
+  /*mode: 'history',*/
   routes: [
     {
       path: '/',
