@@ -110,16 +110,17 @@ img{width:auto;vertical-align:middle}
 /*图片轮播动画*/
 .ytl_picAnimation{
   width: 600px;
-  height: 500px;
+  height: 400px;
+  padding-bottom: 100px;
   margin: 40px auto;
   /*overflow: hidden;*/
   position: relative;
 }
 .ytl_picCarousel{
-  width: 600px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  position: absolute;
+  position: relative;
 }
 .ytl_picCarousel li{
   width: 100%;
@@ -135,14 +136,24 @@ img{width:auto;vertical-align:middle}
 }
 .ytl_picCarousel li .tit{
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 560px;
   padding: 0 20px;
   height: 60px;
   line-height: 60px;
   color: #fff;
+  z-index: 6;
   background: rgba(0,0,0,0.5);
+}
+.ytl_createImg{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ytl_createImg div{
+  position: absolute;
+  background-repeat: no-repeat;
 }
 .ytl_pointLists{
   position: absolute;
@@ -152,7 +163,7 @@ img{width:auto;vertical-align:middle}
   bottom: 30px;
   z-index: 50;
 }
-.ytl_pointList{
+.ytl_pointLists li{
   width: 10px;
   height: 10px;
   float: left;
@@ -162,7 +173,7 @@ img{width:auto;vertical-align:middle}
   background: #008182;
   border-radius: 50%;
 }
-.ytl_pointActive{
+.ytl_pointLists .on{
   background: #007aff;
 }
 .ytl_prevNext{
@@ -212,7 +223,7 @@ img{width:auto;vertical-align:middle}
 .ytl_smallImgLists_vertical li{
   float: none;
 }
-.ytl_smallImgLists .ytl_smallImgActive{
+.ytl_smallImgLists .on{
   border: 1px solid #007aff;
 }
 /*tab切换同时含有轮播图*/

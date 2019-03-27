@@ -97,9 +97,14 @@
                 timer:2000,
             });
             /*banner——相关参数：timer,hover_box*/
-            $('.ytl_picAnimation').banner({
+            $('.ytl_picAnimation1').banner({
                 timer: 3000,
-                hover_box:".ytl_picAnimation .ytl_pointLists li,.ytl_picAnimation .ytl_next,.ytl_picAnimation .ytl_prev",
+                hover_box:".ytl_picAnimation1 .ytl_pointLists li,.ytl_picAnimation1 .ytl_smallImgLists li,.ytl_picAnimation1 .ytl_next,.ytl_picAnimation1 .ytl_prev",
+            });
+            /*百合窗——相关参数：timer
+            * 注：图片需要固定尺寸*/
+            $('.ytl_picAnimation2').lilyWindow({
+                timer: 3000,
             });
         });
     </script>
@@ -871,6 +876,48 @@
                 <dt style="float:left;width: 30%">js</dt>
                 <dd style="float: left;max-height:324px;overflow: auto;width: 70%;">
                     <p></p>
+                    <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><span style="color:#aeaeae;">/*banner——相关参数：timer,hover_box*/<br></span>$(<span style="color:#61ce3c;">'.</span><span style="color:#ff6400;">ytl_picAnimation1</span><span style="color:#61ce3c;">'</span>).<span style="color:#ff6400;">banner</span>({<br> <span style="color:#ff6400;">timer</span><span style="color:#fbde2d;">: </span><span style="color:#d8fa3c;">3000</span>,<br> <span style="color:#ff6400;">hover_box</span><span style="color:#fbde2d;">:</span><span style="color:#61ce3c;">".ytl_picAnimation1 .ytl_pointLists li,.ytl_picAnimation1 .ytl_next,.ytl_picAnimation1 .ytl_prev"</span>,<br>});</pre>
+                    <p></p>
+                </dd>
+            </dl>
+            <dl class="clearFix" style="background-color:#0c1021;border-top:1px solid #ffffff;padding: 20px 40px">
+                <dt style="float:left;width: 30%">html</dt>
+                <dd style="float: left;max-height:324px;overflow: auto;width: 70%;">
+                    <p></p>
+                    <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;">&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_picAnimation1" </span><span style="color:#ff6400;">style=</span><span style="color:#61ce3c;font-weight:bold;">"</span><span style="color:#8da6ce;">margin-top</span>: <span style="color:#d8fa3c;">60</span><span style="color:#68e868;font-weight:bold;">px</span><span style="color:#61ce3c;font-weight:bold;">"</span>&gt;<br> &lt;<span style="color:#7f90aa;">ul </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_picCarousel"</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"img"</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/animal/u=2848572277,3725990236&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;<span style="color:#7f90aa;">p </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"tit"</span>&gt;<span style="font-weight:bold;">图片标题1</span>&lt;/<span style="color:#7f90aa;">p</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"img"</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/animal/u=2234791910,2341305257&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;<span style="color:#7f90aa;">p </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"tit"</span>&gt;<span style="font-weight:bold;">图片标题2</span>&lt;/<span style="color:#7f90aa;">p</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"img"</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/animal/u=2240020562,1787991393&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;<span style="color:#7f90aa;">p </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"tit"</span>&gt;<span style="font-weight:bold;">图片标题3</span>&lt;/<span style="color:#7f90aa;">p</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"img"</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/animal/201510221452093659724.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;<span style="color:#7f90aa;">p </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"tit"</span>&gt;<span style="font-weight:bold;">图片标题4</span>&lt;/<span style="color:#7f90aa;">p</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"img"</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/animal/mid_f7b14383c07ea3e.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;<span style="color:#7f90aa;">p </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"tit"</span>&gt;<span style="font-weight:bold;">图片标题5</span>&lt;/<span style="color:#7f90aa;">p</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"img"</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/animal/u=2163105592,2371140567&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;<span style="color:#7f90aa;">p </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"tit"</span>&gt;<span style="font-weight:bold;">图片标题6</span>&lt;/<span style="color:#7f90aa;">p</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"img"</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/animal/u=1871337630,1458141109&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;<span style="color:#7f90aa;">p </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"tit"</span>&gt;<span style="font-weight:bold;">图片标题7</span>&lt;/<span style="color:#7f90aa;">p</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"img"</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/animal/u=901157752,3902736631&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;<span style="color:#7f90aa;">p </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"tit"</span>&gt;<span style="font-weight:bold;">图片标题8</span>&lt;/<span style="color:#7f90aa;">p</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;<span style="color:#7f90aa;">li</span>&gt;&lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"img"</span>&gt;&lt;<span style="color:#7f90aa;">img </span><span style="color:#ff6400;">src=</span><span style="color:#61ce3c;font-weight:bold;">"images/animal/u=23143412,801814173&amp;fm=27&amp;gp=0.jpg" </span><span style="color:#ff6400;">alt=</span><span style="color:#61ce3c;font-weight:bold;">""</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;&lt;<span style="color:#7f90aa;">p </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"tit"</span>&gt;<span style="font-weight:bold;">图片标题9</span>&lt;/<span style="color:#7f90aa;">p</span>&gt;&lt;/<span style="color:#7f90aa;">li</span>&gt;<br> &lt;/<span style="color:#7f90aa;">ul</span>&gt;<br> &lt;<span style="color:#7f90aa;">ol </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">'ytl_pointLists'</span>&gt;&lt;/<span style="color:#7f90aa;">ol</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_smallImgLists"</span>&gt;&lt;<span style="color:#7f90aa;">ol </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_smallImgList clearFix"</span>&gt;&lt;/<span style="color:#7f90aa;">ol</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_prevNext"</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_prev"</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;<span style="color:#7f90aa;">div </span><span style="color:#ff6400;">class=</span><span style="color:#61ce3c;font-weight:bold;">"ytl_next"</span>&gt;&lt;/<span style="color:#7f90aa;">div</span>&gt;<br> &lt;/<span style="color:#7f90aa;">div</span>&gt;<br>&lt;/<span style="color:#7f90aa;">div</span>&gt;</pre>
+                    <p></p>
+                </dd>
+            </dl>
+        </div>
+        <div style="float:left;margin-left: 5%">
+            <div class="ytl_picAnimation ytl_picAnimation1" style="margin-top: 60px">
+                <ul class="ytl_picCarousel">
+                    <li><div class="img"><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题1</p></li>
+                    <li><div class="img"><img src="images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题2</p></li>
+                    <li><div class="img"><img src="images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题3</p></li>
+                    <li><div class="img"><img src="images/animal/201510221452093659724.jpg" alt=""></div><p class="tit">图片标题4</p></li>
+                    <li><div class="img"><img src="images/animal/mid_f7b14383c07ea3e.jpg" alt=""></div><p class="tit">图片标题5</p></li>
+                    <li><div class="img"><img src="images/animal/u=2163105592,2371140567&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题6</p></li>
+                    <li><div class="img"><img src="images/animal/u=1871337630,1458141109&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题7</p></li>
+                    <li><div class="img"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题8</p></li>
+                    <li><div class="img"><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题9</p></li>
+                </ul>
+                <ol class='ytl_pointLists'></ol>
+                <div class="ytl_smallImgLists"><ol class="ytl_smallImgList clearFix"></ol></div>
+                <div class="ytl_prevNext">
+                    <div class="ytl_prev"></div>
+                    <div class="ytl_next"></div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="clearFix" style="width: 90%;margin: 0 auto 50px">
+        <div style="float:left;width: 40%">
+            <h3 style="font-size: 18px;line-height: 40px;">百合窗</h3>
+            <dl class="clearFix" style="background-color:#0c1021;padding: 20px 40px">
+                <dt style="float:left;width: 30%">js</dt>
+                <dd style="float: left;max-height:324px;overflow: auto;width: 70%;">
+                    <p></p>
                     <pre style="background-color:#0c1021;color:#f8f8f8;font-family:'宋体';font-size:9.0pt;"><span style="color:#aeaeae;">/*banner——相关参数：timer,hover_box*/<br></span>$(<span style="color:#61ce3c;">'.</span><span style="color:#ff6400;">ytl_picAnimation</span><span style="color:#61ce3c;">'</span>).<span style="color:#ff6400;">banner</span>({<br> <span style="color:#ff6400;">timer</span><span style="color:#fbde2d;">: </span><span style="color:#d8fa3c;">3000</span>,<br> <span style="color:#ff6400;">hover_box</span><span style="color:#fbde2d;">:</span><span style="color:#61ce3c;">".ytl_picAnimation .ytl_pointLists li,.ytl_picAnimation .ytl_next,.ytl_picAnimation .ytl_prev"</span>,<br>});</pre>
                     <p></p>
                 </dd>
@@ -885,9 +932,9 @@
             </dl>
         </div>
         <div style="float:left;margin-left: 5%">
-            <div class="ytl_picAnimation" style="margin-top: 60px">
+            <div class="ytl_picAnimation ytl_picAnimation2" style="margin-top: 60px">
                 <ul class="ytl_picCarousel">
-                    <li><div class="img"><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题1</p></li>
+                    <li><div class="img" style="background: url('images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg')"><img src="images/animal/u=2848572277,3725990236&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题1</p></li>
                     <li><div class="img"><img src="images/animal/u=2234791910,2341305257&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题2</p></li>
                     <li><div class="img"><img src="images/animal/u=2240020562,1787991393&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题3</p></li>
                     <li><div class="img"><img src="images/animal/201510221452093659724.jpg" alt=""></div><p class="tit">图片标题4</p></li>
@@ -897,6 +944,9 @@
                     <li><div class="img"><img src="images/animal/u=901157752,3902736631&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题8</p></li>
                     <li><div class="img"><img src="images/animal/u=23143412,801814173&fm=27&gp=0.jpg" alt=""></div><p class="tit">图片标题9</p></li>
                 </ul>
+                <div class="ytl_createImg">
+
+                </div>
                 <ol class='ytl_pointLists'></ol>
                 <div class="ytl_smallImgLists"><ol class="ytl_smallImgList clearFix"></ol></div>
                 <div class="ytl_prevNext">
