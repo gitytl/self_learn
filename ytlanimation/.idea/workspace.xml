@@ -19,8 +19,8 @@
           <file leaf-file-name="ytl-now.min.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ytl-now.min.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="433">
-                  <caret line="800" column="51" selection-start-line="800" selection-start-column="51" selection-end-line="800" selection-end-column="51" />
+                <state relative-caret-position="452">
+                  <caret line="763" column="30" selection-start-line="763" selection-start-column="30" selection-end-line="763" selection-end-column="30" />
                   <folding>
                     <element signature="e#92#1619#0" />
                     <element signature="e#183#288#0" />
@@ -42,9 +42,6 @@
                     <element signature="e#25592#26922#0" />
                     <element signature="e#26981#29208#0" />
                     <element signature="e#29268#33245#0" />
-                    <element signature="e#33223#36451#0" />
-                    <element signature="e#35390#35464#0" />
-                    <element signature="e#35525#35585#0" />
                     <element signature="e#37569#37609#0" />
                     <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
                   </folding>
@@ -64,8 +61,8 @@
           <file leaf-file-name="index-now.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index-now.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="503">
-                  <caret line="947" selection-start-line="947" selection-end-line="947" />
+                <state relative-caret-position="389">
+                  <caret line="904" column="34" selection-start-line="904" selection-start-column="27" selection-end-line="904" selection-end-column="34" />
                   <folding>
                     <element signature="n#li#1;n#ul#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#div#1;n#li#1;n#ul#0;n#body#0;n#html#0;n#!!top" />
@@ -83,7 +80,6 @@
                     <element signature="n#li#12;n#ul#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#li#13;n#ul#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#li#14;n#ul#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#style#0;n#pre#0;n#dd#0;n#dl#0;n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#span#0;n#pre#0;n#dd#0;n#dl#0;n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -117,7 +113,6 @@
                     <element signature="n#style#0;n#span#10;n#pre#0;n#dd#0;n#dl#0;n#div#0;n#li#16;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="e#197428#197432#0" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#1;n#li#16;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#li#16;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -151,8 +146,8 @@
           <file leaf-file-name="ytl-now.min.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ytl-now.min.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="299">
-                  <caret line="138" column="8" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="8" />
+                <state relative-caret-position="185">
+                  <caret line="132" column="8" selection-start-line="132" selection-start-column="1" selection-end-line="132" selection-end-column="8" />
                 </state>
               </provider>
             </entry>
@@ -200,8 +195,8 @@
       <find>true</find>
       <find>hover_box</find>
       <find>'</find>
-      <find>animate</find>
       <find>currentImage</find>
+      <find>animate</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -242,11 +237,11 @@
         <option value="$PROJECT_DIR$/可使用/ytl-now.min.css" />
         <option value="$PROJECT_DIR$/可使用/ytl-now.min.js" />
         <option value="$PROJECT_DIR$/../rem.js" />
-        <option value="$PROJECT_DIR$/可使用/index-now.html" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp08814/Application/Home/View/default/Contact/contact_map.html" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp11935/Application/Home/View/mobile/Contact/contact_map.html" />
         <option value="$PROJECT_DIR$/bak.js" />
         <option value="$USER_HOME$/Desktop/jiaoben1532/js/jquery.nivo.slider.pack.js" />
+        <option value="$PROJECT_DIR$/可使用/index-now.html" />
         <option value="$PROJECT_DIR$/index-now.html" />
         <option value="$PROJECT_DIR$/ytl-now.min.css" />
         <option value="$PROJECT_DIR$/ytl-now.min.js" />
@@ -400,18 +395,18 @@
       <workItem from="1550559281351" duration="3806000" />
       <workItem from="1550624735433" duration="4632000" />
       <workItem from="1553585139853" duration="5791000" />
-      <workItem from="1553648440766" duration="13336000" />
+      <workItem from="1553648440766" duration="15063000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="523472000" />
+    <option name="totallyTimeSpent" value="525199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.103793465" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.103793465" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -521,13 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/可使用/index-now.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="871" column="83" selection-start-line="871" selection-start-column="83" selection-end-line="871" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp08814/Application/Home/View/default/Contact/contact_map.html" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/scp11935/Application/Home/View/mobile/Contact/contact_map.html" />
     <entry file="file://$PROJECT_DIR$/../rem.js">
@@ -554,10 +542,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index-now.html">
+    <entry file="file://$USER_HOME$/Desktop/jiaoben1532/js/jquery.nivo.slider.pack.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="947" selection-start-line="947" selection-end-line="947" />
+        <state relative-caret-position="-25">
+          <caret line="200" column="29" selection-start-line="200" selection-start-column="29" selection-end-line="200" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/可使用/index-now.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="102" column="15" selection-start-line="102" selection-start-column="15" selection-end-line="102" selection-end-column="15" />
           <folding>
             <element signature="n#li#1;n#ul#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#li#1;n#ul#0;n#body#0;n#html#0;n#!!top" />
@@ -576,6 +571,50 @@
             <element signature="n#li#13;n#ul#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#li#14;n#ul#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#pre#0;n#dd#0;n#dl#0;n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#pre#0;n#dd#0;n#dl#0;n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#pre#0;n#dd#0;n#dl#0;n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#pre#0;n#dd#0;n#dl#0;n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#3;n#pre#0;n#dd#0;n#dl#0;n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#4;n#pre#0;n#dd#0;n#dl#0;n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#5;n#pre#0;n#dd#0;n#dl#0;n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#6;n#pre#0;n#dd#0;n#dl#0;n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#7;n#pre#0;n#dd#0;n#dl#0;n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#8;n#pre#0;n#dd#0;n#dl#0;n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#9;n#pre#0;n#dd#0;n#dl#0;n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#10;n#pre#0;n#dd#0;n#dl#0;n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#180280#180302#0" expanded="true" />
+            <element signature="e#180464#180468#0" expanded="true" />
+            <element signature="e#181516#181520#0" expanded="true" />
+            <element signature="e#181520#181524#0" expanded="true" />
+            <element signature="e#181530#181552#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index-now.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="904" column="34" selection-start-line="904" selection-start-column="27" selection-end-line="904" selection-end-column="34" />
+          <folding>
+            <element signature="n#li#1;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#li#1;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#2;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#3;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#4;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#5;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#6;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#7;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#8;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#9;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#10;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#11;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#li#11;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#12;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#13;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#14;n#ul#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#pre#0;n#dd#0;n#dl#0;n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#pre#0;n#dd#0;n#dl#0;n#div#0;n#li#15;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -609,29 +648,21 @@
             <element signature="n#style#0;n#span#10;n#pre#0;n#dd#0;n#dl#0;n#div#0;n#li#16;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#197428#197432#0" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#li#16;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#li#16;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/jiaoben1532/js/jquery.nivo.slider.pack.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="200" column="29" selection-start-line="200" selection-start-column="29" selection-end-line="200" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ytl-now.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="138" column="8" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="8" />
+        <state relative-caret-position="185">
+          <caret line="132" column="8" selection-start-line="132" selection-start-column="1" selection-end-line="132" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ytl-now.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="800" column="51" selection-start-line="800" selection-start-column="51" selection-end-line="800" selection-end-column="51" />
+        <state relative-caret-position="452">
+          <caret line="763" column="30" selection-start-line="763" selection-start-column="30" selection-end-line="763" selection-end-column="30" />
           <folding>
             <element signature="e#92#1619#0" />
             <element signature="e#183#288#0" />
@@ -653,9 +684,6 @@
             <element signature="e#25592#26922#0" />
             <element signature="e#26981#29208#0" />
             <element signature="e#29268#33245#0" />
-            <element signature="e#33223#36451#0" />
-            <element signature="e#35390#35464#0" />
-            <element signature="e#35525#35585#0" />
             <element signature="e#37569#37609#0" />
             <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
           </folding>
