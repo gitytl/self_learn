@@ -16,11 +16,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.76954734">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="ytl-now.min.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ytl-now.min.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ytl-now.min.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-82">
-                  <caret line="818" column="47" selection-start-line="818" selection-start-column="47" selection-end-line="818" selection-end-column="47" />
+                <state relative-caret-position="441">
+                  <caret line="902" column="50" selection-start-line="902" selection-start-column="35" selection-end-line="902" selection-end-column="50" />
                   <folding>
                     <element signature="e#92#1617#0" />
                     <element signature="e#183#288#0" />
@@ -197,10 +197,16 @@
                     <element signature="e#36966#37071#0" />
                     <element signature="e#37089#37186#0" />
                     <element signature="e#37366#37372#0" />
-                    <element signature="e#39125#40147#0" />
-                    <element signature="e#40819#41440#0" />
-                    <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="reset.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../reset.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="323">
+                  <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
                 </state>
               </provider>
             </entry>
@@ -217,7 +223,7 @@
           <file leaf-file-name="bak.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/bak.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="706">
+                <state relative-caret-position="5453">
                   <caret line="287" column="25" selection-start-line="287" selection-start-column="20" selection-end-line="287" selection-end-column="25" />
                 </state>
               </provider>
@@ -226,8 +232,8 @@
           <file leaf-file-name="index-now.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index-now.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="589">
-                  <caret line="107" column="40" selection-start-line="107" selection-start-column="40" selection-end-line="107" selection-end-column="40" />
+                <state relative-caret-position="133">
+                  <caret line="113" column="68" lean-forward="true" selection-start-line="113" selection-start-column="68" selection-end-line="113" selection-end-column="68" />
                   <folding>
                     <element signature="n#li#1;n#ul#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#div#1;n#li#1;n#ul#0;n#body#0;n#html#0;n#!!top" />
@@ -341,7 +347,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/old/css.css" />
         <option value="$PROJECT_DIR$/old/index.html" />
         <option value="$PROJECT_DIR$/old/css/ytl.min.css" />
         <option value="$PROJECT_DIR$/old/js/ytl.min.js" />
@@ -392,6 +397,7 @@
         <option value="$PROJECT_DIR$/ytl-now.min.css" />
         <option value="$PROJECT_DIR$/index-now.html" />
         <option value="$PROJECT_DIR$/ytl-now.min.js" />
+        <option value="$PROJECT_DIR$/../reset.css" />
       </list>
     </option>
   </component>
@@ -545,14 +551,16 @@
       <workItem from="1553648440766" duration="15241000" />
       <workItem from="1553734155494" duration="22920000" />
       <workItem from="1553822738113" duration="21103000" />
+      <workItem from="1554080230640" duration="1169000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="569400000" />
+    <option name="totallyTimeSpent" value="570569000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.103793465" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -566,11 +574,11 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +593,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/jq22jQueryVideo.js7.1.07514201807161137/vide7.1.0/index.html" />
     <entry file="file://$USER_HOME$/Desktop/jq22jQuery-video2797201702170013/jQuery-video/index.html" />
     <entry file="file://$PROJECT_DIR$/视频去除广告.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -692,10 +699,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/jiaoben1532/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bak.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5453">
+          <caret line="287" column="25" selection-start-line="287" selection-start-column="20" selection-end-line="287" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index-now.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="107" column="40" selection-start-line="107" selection-start-column="40" selection-end-line="107" selection-end-column="40" />
+        <state relative-caret-position="133">
+          <caret line="113" column="68" lean-forward="true" selection-start-line="113" selection-start-column="68" selection-end-line="113" selection-end-column="68" />
           <folding>
             <element signature="n#li#1;n#ul#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#li#1;n#ul#0;n#body#0;n#html#0;n#!!top" />
@@ -745,24 +766,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/jiaoben1532/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bak.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="706">
-          <caret line="287" column="25" selection-start-line="287" selection-start-column="20" selection-end-line="287" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ytl-now.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-82">
-          <caret line="818" column="47" selection-start-line="818" selection-start-column="47" selection-end-line="818" selection-end-column="47" />
+        <state relative-caret-position="441">
+          <caret line="902" column="50" selection-start-line="902" selection-start-column="35" selection-end-line="902" selection-end-column="50" />
           <folding>
             <element signature="e#92#1617#0" />
             <element signature="e#183#288#0" />
@@ -939,10 +946,14 @@
             <element signature="e#36966#37071#0" />
             <element signature="e#37089#37186#0" />
             <element signature="e#37366#37372#0" />
-            <element signature="e#39125#40147#0" />
-            <element signature="e#40819#41440#0" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
         </state>
       </provider>
     </entry>
