@@ -1,0 +1,47 @@
+.mainNav {
+  height: 60px;
+  background: #1fb4b1;
+  text-align: center;
+  .mainNavCon {
+    height: 60px;
+    display: inline-block;
+    li {
+      width: 69px;
+      float: left;
+      height: 60px;
+      cursor: pointer;
+      line-height: 60px;
+      color: #ffffff;
+      font-size: 16px;
+      padding: 0 20px;
+      position: relative;
+      background: url("baseimg/index_navline.png") no-repeat right center;
+      -webkit-transition: color 0.3s;
+      -moz-transition: color 0.3s;
+      -ms-transition: color 0.3s;
+      -o-transition: color 0.3s;
+      transition: color 0.3s;
+      &:last-child{
+        background: none;
+      }
+    }
+  }
+  .on>a,li:hover>a {
+    color: #fec53e;
+    height: 57px;
+    border-bottom: 3px solid #fec53e;
+  }
+  .subNav {
+    min-width: 107px;
+    background: #ffffff;
+    display: none;
+    left: 0;
+    position: absolute;
+    z-index: 10;
+    border: 1px solid #1fb4b1;
+    a:hover {
+      color: #fec53e;
+      background: #1fb4b1;
+    }
+  }
+}

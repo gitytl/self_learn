@@ -1,0 +1,31 @@
+@charset "UTF-8";
+*{margin:0;padding:0;list-style-type:none}
+body,div,ul,li,form,input,textarea,span,a,i,dl,dt,dd,h1,h2,h3,h4,h5,h6{margin:0;padding:0}
+ul,ol,dl,dt,dd,ol,li{list-style:none;list-style-type:none}
+h1,h2{font-weight:bold;font-size:100%}
+body,html{font-size:100px;font-family:'微软雅黑';background: #fafafa;color: #666666}
+body{font-size: 14px;}
+a{color:#333;text-decoration:none;display: block}
+a,img{border:0}
+table{max-width: 100%;}
+input,button{outline:0;border:0;padding:0}
+input[type=text],input[type=submit],input[type=button],textarea{background:none;padding:0;border-radius:0;border:0;outline:0;-webkit-appearance:none;appearance:none;font-family:'微软雅黑';}
+input, textarea, select {
+    outline: none; }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, select::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #d3d3d3; }
+input:-moz-placeholder, textarea:-moz-placeholder, select:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #d3d3d3; }
+input::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #d3d3d3; }
+input:-ms-input-placeholder, textarea:-ms-input-placeholder, select:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #d3d3d3; }
+img{width:auto;vertical-align:middle;}
+.selectBg {appearance: none;-moz-appearance: none;-webkit-appearance: none;padding-right: 14px;padding-left: 10px;}/*很关键：将默认的select选择框样式清除,并添加padding为下拉小箭头留出一点位置，避免被文字覆盖*/
+.selectBg::-ms-expand {display: none;}
+.oneLine{text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.clearFix:after {content: " ";display: block;font-size: 0;height: 0;clear: both;visibility: hidden;}

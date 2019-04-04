@@ -1,0 +1,184 @@
+@import "base_pc.css";
+@mixin tstAll($time:0.5s){
+  -webkit-transition: all $time;
+  -moz-transition: all $time;
+  -ms-transition: all $time;
+  -o-transition: all $time;
+  transition: all $time;
+  cursor: pointer;
+}
+@mixin scale($num:1.03){
+  -webkit-transform: scale($num);
+  -moz-transform: scale($num);
+  -ms-transform: scale($num);
+  -o-transform: scale($num);
+  transform: scale($num);
+}
+@mixin one_line(){
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+body,html{
+  min-width: 120px;
+}
+.inlineblock{
+  display: inline-grid;
+}
+.base_nav{
+  float: left;
+  width: 18%;
+  max-width: 220px;
+  height: 100%;
+  z-index: 20;
+  overflow-y: scroll;
+  background: #50a793;
+  li{
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #fafafa;
+    font-size: 22px;
+    padding: 0 20px;
+    cursor: pointer;
+    letter-spacing: 8px;
+    &.on{
+      background: #facb7f;
+    }
+  }
+}
+.base_con{
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 1020px;
+  height: 100%;
+  overflow-y: scroll;
+  &>li{
+    padding-left: 40px;
+    display: none;
+    h3{
+      margin-top: 40px;
+    }
+    h4{
+      font-size: 15px;
+      color: #ab6363;
+      margin: 20px 0;
+    }
+    &.on{
+      display: block;
+    }
+  }
+  .css{
+    width: 300px;
+    margin-top: 30px;
+    overflow-x: scroll;
+  }
+}
+a{
+  cursor: pointer;
+}
+@import "nav1";
+@import "nav2";
+@import "nav3";
+@import "list1";
+@import "list2";
+@import "list3";
+@import "list4";
+@import "list5";
+@import "list6";
+@import "list7";
+@import "list8";
+@import "list9";
+@import "list10";
+@import "list11";
+@import "list12";
+@import "list13";
+@import "list14";
+@import "list15";
+@import "list16";
+@import "list17";
+@import "list18";
+@import "radio1";
+@import "radio2";
+@import "cssanimation1";
+@import "friendlink1";
+@import "triangle";
+@import "form1";
+@import "form2";
+@import "form3";
+@import "form4";
+@import "fixed";
+.wordList3 .con .desc,
+.picWordDesc .tit,
+.picWord .tit,
+.wordList2 .tit,
+.picWordDesc4 .tit,
+.wordList .tit,
+.wordList4 .tit,
+.wordList5 .tit,
+.personNameDesc2 .name,
+.personNameDesc1 .name,
+.personNameDesc li .name,
+.wordList3 .con .tit,
+.picWordDesc3 li .tit{
+  @include one_line;
+}
+.personNameDesc2 .name,
+.personNameDesc1 .name,
+.personNameDesc li .name,
+.picWordDesc4 .tit,
+.picWordDesc .tit,
+.wordList2 .tit,
+.wordList4 .tit,
+.wordList3 .con .tit,
+.picWordDesc3 li .tit,
+.wordList5 .tit,
+.personNameDesc1 .consult,
+.personNameDesc li .href,
+.personNameDesc2 .more,
+.picWordDesc .more,
+.picWordDesc4 .more,
+.wordList2 .more,
+.wordList3 .date dt,
+.wordList5 .date,
+.picWordDesc4 li,
+.pageChange a,
+.changePage1 a,
+.pageChange2 a,
+.personNameDesc3 .name span,
+.picWord .img img,
+.personNameDesc3 .img img,
+.personNameDesc li .img img,
+.picWordDesc4 .img img,
+.picWordDesc3 .img img,
+.personNameDesc2 .img img,
+.personNameDesc1 .img img,
+.picWordDesc .img img{
+  @include tstAll();
+}
+.picWordDesc4 .img,
+.picWord .img,
+.personNameDesc3 .img,
+.personNameDesc2 .img,
+.personNameDesc li .img,
+.picWordDesc .img,
+.personNameDesc1 .img,
+.picWordDesc3 .img{
+  &:hover{
+    img{
+      @include scale();
+    }
+  }
+}
+.picWordDesc3 li .opacity:hover {
+  background: url("../baseimg/other_xjsbhover.png") no-repeat center;
+  -webkit-animation: hoverChange linear 0.8s infinite alternate;
+  -o-animation: hoverChange linear 0.8s infinite alternate;
+  animation: hoverChange linear 0.8s infinite alternate;
+}
+@keyframes hoverChange {
+  100% {
+   @include scale();
+  }
+}
