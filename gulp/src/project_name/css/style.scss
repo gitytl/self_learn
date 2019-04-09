@@ -19,3 +19,10 @@
   -o-transform: scale($size);
   transform: scale($size);
 }
+body,html{
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: #999999;
+  margin-top: 30px;
+}
