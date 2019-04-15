@@ -38,13 +38,13 @@ gulp.task("watch",async ()=>{
         gulp.src('src/'+project_name+'/css/*.scss')
             .pipe(sass()) // Converts Sass to CSS with gulp-sass
             .pipe(minifycss())
-            .pipe(gulp.dest('dist/'+project_name+'/style_js'))
+            .pipe(gulp.dest('dist/'+project_name+'/css'))
             .pipe(reload({stream:true}));
-        gulp.src('src/'+project_name+'/css/*.js')
-            .pipe(gulp.dest('dist/'+project_name+'/style_js'))
+        gulp.src('src/'+project_name+'/js/*.js')
+            .pipe(gulp.dest('dist/'+project_name+'/js'))
             .pipe(reload({stream:true}));
         gulp.src('src/'+project_name+'/css/*.css')
-            .pipe(gulp.dest('dist/'+project_name+'/style_js'))
+            .pipe(gulp.dest('dist/'+project_name+'/css'))
             .pipe(reload({stream:true}));
         /*图片压缩任务*/
         gulp.src('src/'+project_name+'/images/*.*')          //监听路径
