@@ -32,7 +32,6 @@ img{width:auto;vertical-align:middle}
   width: 300px;
   height: 100px;
   overflow: hidden;
-  margin: 40px auto;
   text-align: center;
   position: relative;
   border: 2px solid #1595a4;
@@ -43,7 +42,6 @@ img{width:auto;vertical-align:middle}
 /*手风琴*/
 .ytl_sfq{
   width: 300px;
-  margin: 40px auto;
   border: 1px solid #666666;
 }
 .ytl_sfqListLtR{
@@ -80,7 +78,6 @@ img{width:auto;vertical-align:middle}
 }
 .ytl_marquee{
   overflow: hidden;
-  margin: 40px auto;
   border: 2px solid #00bae3;
 }
 /*无缝左右滚动*/
@@ -111,10 +108,9 @@ img{width:auto;vertical-align:middle}
 .ytl_picAnimation{
   width: 600px;
   height: 400px;
-  padding-bottom: 100px;
-  margin: 40px auto;
   overflow: hidden;
   position: relative;
+  padding-bottom: 100px;
 }
 .ytl_picCarousel{
   width: 100%;
@@ -233,7 +229,6 @@ img{width:auto;vertical-align:middle}
 .ytl_tabScroll {
   width: 1130px;
   background: #ffffff;
-  margin: 100px auto 0;
   padding: 32px 35px 36px;
   position: relative;}
 .ytl_tabScroll .ytl_title {
@@ -302,7 +297,6 @@ img{width:auto;vertical-align:middle}
   height: 60px;
   z-index: 30;
   position: relative;
-  margin: 50px auto;
 }
 .ytl_chooseResult{
   height: 60px;
@@ -376,10 +370,10 @@ img{width:auto;vertical-align:middle}
 }
 /*时间轴*/
 .ytl_dateList {
-  width: 1200px;
+  width: 1128px;
   height: 126px;
-  margin: 54px auto 0;
   position: relative;
+  overflow: hidden;
 }
 .ytl_dateList .ytl_prevNext {
   position: absolute;
@@ -389,16 +383,16 @@ img{width:auto;vertical-align:middle}
   width: 100%;
 }
 .ytl_dateList .ytl_prev{
-  left:20px;
+  left:0;
 }
 .ytl_dateList .ytl_next{
-  right:20px;
+  right:0;
 }
-.ytl_dateList .listCon{
+/*.ytl_dateList .listCon{
   width: 1128px;
   overflow: hidden;
   margin: 0 auto;
-}
+}*/
 .ytl_dateList ul {
   margin-left: -10px;
   position: relative;
@@ -454,21 +448,8 @@ img{width:auto;vertical-align:middle}
   z-index: 1;
 }
 .ytl_dateList ol{
-  width: 925px;
-  margin: 0 auto;
+  padding: 20px;
   color: #4c4c4c;
-}
-.ytl_dateList ol .listTitle{
-  color: #b38643;
-  margin-top: 44px;
-  height: 21px;
-  overflow: hidden;
-}
-.ytl_dateList ol .con{
-  line-height: 32px;
-  margin-top: 24px;
-  height: 96px;
-  overflow: hidden;
 }
 .ytl_layoutBtn{
   width: 120px;
@@ -477,7 +458,6 @@ img{width:auto;vertical-align:middle}
   text-align: center;
   background: #4d9075;
   cursor: pointer;
-  margin-top: 60px;
 }
 .ytl_layoutBg{
   position: fixed;
@@ -522,8 +502,7 @@ img{width:auto;vertical-align:middle}
 }
 /*上下居中对齐显示*/
 .ytl_alignTBC{
-  width: 1200px;
-  margin: 0 auto;
+  width: 712px;
   position: relative;
 }
 .ytl_alignTBC .listCon{
@@ -554,12 +533,12 @@ img{width:auto;vertical-align:middle}
 }
 .ytl_alignTBC ol{
   margin-top: 20px;
+  margin-left: -168px;
 }
 .ytl_alignTBC ol li{
-  width: 317px;
   height: 180px;
   background: #0abbb9;
-  margin-right: 66px;
+  margin-right: 40px;
   font-size: 18px;
   padding: 20px;
 }
@@ -568,8 +547,6 @@ img{width:auto;vertical-align:middle}
 .ytl_imgScale{
   width: 640px;
   height: 213px;
-  display: inline-block;
-  margin: 0 20px;
 }
 .ytl_imgScale li{
   width: 193px;
